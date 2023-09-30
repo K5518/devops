@@ -1,1 +1,0 @@
-import{r}from"./index.ed373d49.js";function u(){const[t,o]=r.useState(!1),s=e=>{navigator.clipboard.writeText(e).then(),o(!0)};return r.useEffect(()=>{let e;return t&&(e=setTimeout(()=>{o(!1)},2e3)),()=>clearTimeout(e)},[t]),{isCopied:t,copyText:s}}export{u};
