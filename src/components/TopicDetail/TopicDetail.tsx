@@ -119,6 +119,7 @@ export function TopicDetail(props: TopicDetailProps) {
     setError('');
     setIsLoading(true);
     setIsActive(true);
+    setError('');
     sponsorHidden.set(true);
 
     setContributionAlertMessage('');
@@ -211,6 +212,34 @@ export function TopicDetail(props: TopicDetailProps) {
           </div>
         )}
 
+        {!isContributing && !isLoading && error && (
+          <div class="items-center justify-center gap-7 py-2 md:py-4">
+            <div className="mb-2">
+              <button
+                type="button"
+                id="close-topic"
+                className="absolute right-2.5 top-2.5 inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900"
+                onClick={() => {
+                  setIsActive(false);
+                  setIsContributing(false);
+                  setError('')
+                }}
+              >
+                <img alt="Close" class="h-5 w-5" src={CloseIcon} />
+              </button>
+            </div>
+
+            <div class="text-left md:text-left">
+              <h1 class="bg-gradient-to-t from-black to-gray-600 bg-clip-text text-2xl font-extrabold leading-normal text-transparent md:text-5xl md:leading-normal">
+                {error}
+              </h1>
+              <p class="text-md mb-2 md:text-xl">
+                Sorry, we are facing some techinal issue. Come back later.
+              </p>
+            </div>
+          </div>
+        )}
+
         {!isLoading && isContributing && (
           <ContributionForm
             resourceType={resourceType}
@@ -247,6 +276,7 @@ export function TopicDetail(props: TopicDetailProps) {
                 onClick={() => {
                   setIsActive(false);
                   setIsContributing(false);
+                  setError('')
                 }}
               >
                 <img alt="Close" className="h-5 w-5" src={CloseIcon.src} />
