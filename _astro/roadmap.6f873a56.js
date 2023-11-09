@@ -1,0 +1,1 @@
+const o=new Proxy({src:"/_astro/roadmap.136fcaf6.svg",width:24,height:24,format:"svg"},{get(e,r,s){return r==="clone"?structuredClone(e):(globalThis.astroAsset.referencedImages.add(e.fsPath),e[r])}});export{o as R};

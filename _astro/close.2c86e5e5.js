@@ -1,0 +1,1 @@
+const o=new Proxy({src:"/_astro/close.d6d9ba76.svg",width:20,height:20,format:"svg"},{get(e,s,r){return s==="clone"?structuredClone(e):(globalThis.astroAsset.referencedImages.add(e.fsPath),e[s])}});export{o as C};
