@@ -1,0 +1,1 @@
+import{c as e}from"./createLucideIcon.3c9fdece.js";const c=e("UserPlus2",[["path",{d:"M14 19a6 6 0 0 0-12 0",key:"vej9p1"}],["circle",{cx:"8",cy:"9",r:"4",key:"143rtg"}],["line",{x1:"19",x2:"19",y1:"8",y2:"14",key:"1bvyxn"}],["line",{x1:"22",x2:"16",y1:"11",y2:"11",key:"1shjgl"}]]);export{c as U};
