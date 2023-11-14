@@ -4,7 +4,7 @@
 <p>There are no arguments for the <code>RANK()</code> function. However, since it’s a window function, the function operates on a set of rows (window) defined by the <code>OVER</code> clause, which is mandatory.</p>
 <h2 id="syntax">Syntax</h2>
 <p>The syntax of <code>RANK</code> function is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#8BE9FD">RANK</span><span style="color:#F8F8F2"> () </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">RANK</span><span style="color:#F8F8F2"> () </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    [PARTITION BY column_1, column_2,…]</span></span>
 <span class="line"><span style="color:#FF79C6">    ORDER BY</span><span style="color:#F8F8F2"> column_3,column_4,… </span></span>
 <span class="line"><span style="color:#F8F8F2">)</span></span></code></pre>
@@ -13,7 +13,7 @@
 <p>If <code>PARTITION BY</code> is not specified, the function treats all rows in the result set as a single partition.</p>
 <h2 id="examples">Examples</h2>
 <p>Here’s an example query using the <code>RANK()</code> function:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span></span>
 <span class="line"><span style="color:#F8F8F2">    product_name, </span></span>
 <span class="line"><span style="color:#F8F8F2">    brand, </span></span>
 <span class="line"><span style="color:#8BE9FD">    RANK</span><span style="color:#F8F8F2"> () </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span></span>

@@ -1,7 +1,7 @@
 <h1 id="row_number">Row_number</h1>
 <p><strong>ROW_NUMBER()</strong> is a SQL window function that assigns a unique number to each row in the result set.</p>
 <p>Syntax:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#8BE9FD">ROW_NUMBER</span><span style="color:#F8F8F2">() </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">ROW_NUMBER</span><span style="color:#F8F8F2">() </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">[ORDER BY column_name]</span></span>
 <span class="line"><span style="color:#F8F8F2">)</span></span></code></pre>
 <h2 id="features">Features:</h2>
@@ -12,14 +12,14 @@
 </ul>
 <h2 id="examples">Examples:</h2>
 <p><strong>Example 1:</strong> Basic usage of ROW_NUMBER() on a single column</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">    name</span><span style="color:#F8F8F2">, </span></span>
 <span class="line"><span style="color:#8BE9FD">    ROW_NUMBER</span><span style="color:#F8F8F2">() </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">ORDER BY</span><span style="color:#FF79C6"> name</span><span style="color:#F8F8F2">) row_number</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#F8F8F2">    employees;</span></span></code></pre>
 <p>In this example, <code>ROW_NUMBER()</code> is used to assign a unique number to each row in the employees table, ordered by the employee names alphabetically.</p>
 <p><strong>Example 2:</strong> Using ROW_NUMBER() to rank rows in each partition</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#F8F8F2">    department_id, </span></span>
 <span class="line"><span style="color:#F8F8F2">    first_name, </span></span>
 <span class="line"><span style="color:#F8F8F2">    salary, </span></span>

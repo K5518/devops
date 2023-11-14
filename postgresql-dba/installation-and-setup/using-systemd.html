@@ -5,31 +5,31 @@
 <ul>
 <li>
 <p>To start the PostgreSQL service, run:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>sudo systemctl start postgresql</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>sudo systemctl start postgresql</span></span></code></pre>
 </li>
 <li>
 <p>To stop the PostgreSQL service, run:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>sudo systemctl stop postgresql</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>sudo systemctl stop postgresql</span></span></code></pre>
 </li>
 <li>
 <p>To restart the PostgreSQL service, run:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>sudo systemctl restart postgresql</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>sudo systemctl restart postgresql</span></span></code></pre>
 </li>
 </ul>
 <h2 id="checking-postgresql-service-status">Checking PostgreSQL Service Status</h2>
 <p>To check the status of the PostgreSQL service, you can use the <code>systemctl status</code> command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> systemctl</span><span style="color:#F1FA8C"> status</span><span style="color:#F1FA8C"> postgresql</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> systemctl</span><span style="color:#F1FA8C"> status</span><span style="color:#F1FA8C"> postgresql</span></span></code></pre>
 <p>This command will display information about the PostgreSQL service, including its current state (active or inactive) and any recent logs.</p>
 <h2 id="enablingdisabling-postgresql-startup-at-boot">Enabling/Disabling PostgreSQL Startup at Boot</h2>
 <p>To enable or disable the PostgreSQL service to start automatically at boot time, you can use the <code>systemctl enable</code> and <code>systemctl disable</code> commands, respectively:</p>
 <ul>
 <li>
 <p>To enable PostgreSQL to start at boot, run:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>sudo systemctl enable postgresql</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>sudo systemctl enable postgresql</span></span></code></pre>
 </li>
 <li>
 <p>To disable PostgreSQL from starting at boot, run:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>sudo systemctl disable postgresql</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>sudo systemctl disable postgresql</span></span></code></pre>
 </li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>

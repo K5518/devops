@@ -2,7 +2,7 @@
 <p>A foreign key is a key used to link two tables together. It is a field (or collection of fields) in one table that refers to the primary key in another table. The table with the foreign key is called the child table, and the one with the primary key is called the referenced or parent table.</p>
 <h2 id="basic-syntax">Basic Syntax</h2>
 <p>The SQL used to add a foreign key constraint is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> child_table</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> child_table</span></span>
 <span class="line"><span style="color:#FF79C6">ADD</span><span style="color:#FF79C6"> FOREIGN KEY</span><span style="color:#F8F8F2"> (fk_column)</span></span>
 <span class="line"><span style="color:#FF79C6">REFERENCES</span><span style="color:#F8F8F2"> parent_table (parent_key_column)</span></span></code></pre>
 <p>Where:</p>
@@ -14,7 +14,7 @@
 </ul>
 <h2 id="example">Example</h2>
 <p>Suppose we have two tables, <code>Orders</code> and <code>Customers</code> where <code>Orders</code> table has a column <code>customer_id</code> that should point to a Customer. If <code>Customers</code> has a <code>customer_id</code> column as the primary key then you can create a foreign key as follows</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> Orders</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> Orders</span></span>
 <span class="line"><span style="color:#FF79C6">ADD</span><span style="color:#FF79C6"> FOREIGN KEY</span><span style="color:#F8F8F2"> (customer_id)</span></span>
 <span class="line"><span style="color:#FF79C6">REFERENCES</span><span style="color:#F8F8F2"> Customers (customer_id);</span></span></code></pre>
 <p>This means that for every row in <code>Orders</code>, the <code>customer_id</code> value must match a value in the <code>Customers</code> table, ensuring data integrity.</p>

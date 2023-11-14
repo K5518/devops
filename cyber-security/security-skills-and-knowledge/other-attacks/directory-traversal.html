@@ -3,9 +3,9 @@
 <h2 id="how-it-works">How it Works</h2>
 <p>In a directory traversal attack, the attacker attempts to exploit an input field (e.g., a file or image upload form, URL parameters, etc.) that takes a file path as input. By supplying specially crafted input, an attacker can manipulate the server into providing access to unauthorized files and directories.</p>
 <p>For example, consider a web application that allows users to view the contents of a specific file by specifying its path through a URL parameter, such as:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>https://www.example.com/file.php?path=/user/documents/report.pdf</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>https://www.example.com/file.php?path=/user/documents/report.pdf</span></span></code></pre>
 <p>In this case, an attacker could manipulate the <code>path</code> parameter to traverse the server’s directories, like this:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>https://www.example.com/file.php?path=../../../../etc/passwd</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>https://www.example.com/file.php?path=../../../../etc/passwd</span></span></code></pre>
 <p>If the server doesn’t properly validate and sanitize the input, it might reveal the contents of the <code>/etc/passwd</code> file, which contains sensitive information about system users.</p>
 <h2 id="mitigation-techniques">Mitigation Techniques</h2>
 <p>There are several methods to prevent directory traversal attacks:</p>

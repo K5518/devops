@@ -5,25 +5,25 @@
 <ul>
 <li><strong>Aggregate functions:</strong> These functions compute a single output value for a group of input values (like averages, sums).</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> department, salary,</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> department, salary,</span></span>
 <span class="line"><span style="color:#8BE9FD">AVG</span><span style="color:#F8F8F2">(salary) </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">PARTITION</span><span style="color:#FF79C6"> BY</span><span style="color:#F8F8F2"> department) </span><span style="color:#FF79C6">as</span><span style="color:#F8F8F2"> avg_departmental_salary</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> employee;</span></span></code></pre>
 <ul>
 <li><strong>Ranking functions:</strong> These functions allocate a unique rank to each row within each window partition.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> department, salary,</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> department, salary,</span></span>
 <span class="line"><span style="color:#8BE9FD">RANK</span><span style="color:#F8F8F2">() </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">PARTITION</span><span style="color:#FF79C6"> BY</span><span style="color:#F8F8F2"> department </span><span style="color:#FF79C6">ORDER BY</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">DESC</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">as</span><span style="color:#F8F8F2"> salary_rank</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> employee;</span></span></code></pre>
 <ul>
 <li><strong>Value functions:</strong> These functions provide information about the window partition or the row’s position within it, for example - <code>FIRST_VALUE</code>, <code>LAST_VALUE</code>, <code>NTH_VALUE</code>.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> department, salary,</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> department, salary,</span></span>
 <span class="line"><span style="color:#8BE9FD">FIRST_VALUE</span><span style="color:#F8F8F2">(salary) </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">PARTITION</span><span style="color:#FF79C6"> BY</span><span style="color:#F8F8F2"> department </span><span style="color:#FF79C6">ORDER BY</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">DESC</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">as</span><span style="color:#F8F8F2"> highest_salary</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> employee;</span></span></code></pre>
 <ul>
 <li><strong>Offset functions:</strong> The offset functions provide a way of accessing data from another row in the same result set without joining the table to itself. They can answer questions concerning the value on the row before or after the current row, for example - <code>LEAD</code>, <code>LAG</code>.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> department, salary,</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> department, salary,</span></span>
 <span class="line"><span style="color:#8BE9FD">LAG</span><span style="color:#F8F8F2">(salary) </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">PARTITION</span><span style="color:#FF79C6"> BY</span><span style="color:#F8F8F2"> department </span><span style="color:#FF79C6">ORDER BY</span><span style="color:#F8F8F2"> salary) </span><span style="color:#FF79C6">as</span><span style="color:#F8F8F2"> previous_salary,</span></span>
 <span class="line"><span style="color:#8BE9FD">LEAD</span><span style="color:#F8F8F2">(salary) </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">PARTITION</span><span style="color:#FF79C6"> BY</span><span style="color:#F8F8F2"> department </span><span style="color:#FF79C6">ORDER BY</span><span style="color:#F8F8F2"> salary) </span><span style="color:#FF79C6">as</span><span style="color:#F8F8F2"> next_salary</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> employee;</span></span></code></pre>

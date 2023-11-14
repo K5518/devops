@@ -1,13 +1,13 @@
 <h1 id="group-by">GROUP BY</h1>
 <p>“Group By” is a clause in SQL that is used to arrange identical data into groups. This clause comes under the category of Group Functions, alongside the likes of Count, Sum, Average, etc.</p>
 <p>The syntax for ‘Group by’ is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name</span></span>
 <span class="line"><span style="color:#FF79C6">GROUP BY</span><span style="color:#F8F8F2"> column1, column2;</span></span></code></pre>
 <p>Here, column1, column2, are the names of the columns based on which we want to group the results.</p>
 <h2 id="example">Example:</h2>
 <p>Assume we have a “Sales” table. This table has three columns: ID, Item, and Amount.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#F8F8F2">ID     Item    Amount</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">ID     Item    Amount</span></span>
 <span class="line"><span style="color:#6272A4">---   ------   ------</span></span>
 <span class="line"><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">      A        </span><span style="color:#BD93F9">150</span></span>
 <span class="line"><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">      B        </span><span style="color:#BD93F9">200</span></span>
@@ -17,23 +17,23 @@
 <span class="line"><span style="color:#BD93F9">6</span><span style="color:#F8F8F2">      A        </span><span style="color:#BD93F9">100</span></span>
 <span class="line"><span style="color:#BD93F9">7</span><span style="color:#F8F8F2">      B        </span><span style="color:#BD93F9">150</span></span></code></pre>
 <p>Execute the following SQL statement…</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> Item, </span><span style="color:#8BE9FD">SUM</span><span style="color:#F8F8F2">(Amount)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> Item, </span><span style="color:#8BE9FD">SUM</span><span style="color:#F8F8F2">(Amount)</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Sales</span></span>
 <span class="line"><span style="color:#FF79C6">GROUP BY</span><span style="color:#F8F8F2"> Item;</span></span></code></pre>
 <p>This will concatenate, or “group”, all items that are the same into one row, applying the SUM() function on their respective Amounts. The output will then be:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#F8F8F2">Item    </span><span style="color:#8BE9FD">SUM</span><span style="color:#F8F8F2">(Amount)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">Item    </span><span style="color:#8BE9FD">SUM</span><span style="color:#F8F8F2">(Amount)</span></span>
 <span class="line"><span style="color:#6272A4">------  ----------</span></span>
 <span class="line"><span style="color:#F8F8F2">A        </span><span style="color:#BD93F9">550</span></span>
 <span class="line"><span style="color:#F8F8F2">B        </span><span style="color:#BD93F9">400</span></span></code></pre>
 <h2 id="group-by-with-having-clause">Group By with Having Clause</h2>
 <p>The Group By clause can also be used with the Having keyword. The Having keyword allows you to filter the results of the group function.</p>
 <p>For example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> Item, </span><span style="color:#8BE9FD">SUM</span><span style="color:#F8F8F2">(Amount)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> Item, </span><span style="color:#8BE9FD">SUM</span><span style="color:#F8F8F2">(Amount)</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Sales</span></span>
 <span class="line"><span style="color:#FF79C6">GROUP BY</span><span style="color:#F8F8F2"> Item</span></span>
 <span class="line"><span style="color:#FF79C6">HAVING</span><span style="color:#8BE9FD"> SUM</span><span style="color:#F8F8F2">(Amount) </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 150</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <p>This will return all grouped items where the total amount is more than 150. Hence, the result will be:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#F8F8F2">Item    </span><span style="color:#8BE9FD">SUM</span><span style="color:#F8F8F2">(Amount)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">Item    </span><span style="color:#8BE9FD">SUM</span><span style="color:#F8F8F2">(Amount)</span></span>
 <span class="line"><span style="color:#6272A4">------  ----------</span></span>
 <span class="line"><span style="color:#F8F8F2">A        </span><span style="color:#BD93F9">550</span></span>
 <span class="line"><span style="color:#F8F8F2">B        </span><span style="color:#BD93F9">400</span></span></code></pre>

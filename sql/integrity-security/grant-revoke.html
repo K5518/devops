@@ -3,20 +3,20 @@
 <h2 id="grant">GRANT</h2>
 <p>The <code>GRANT</code> statement allows database administrators to grant permissions or privileges on a database object to users. There are various types of privileges like SELECT, INSERT, UPDATE, DELETE, REFERENCES, ALL.</p>
 <p>You can use the <code>GRANT</code> statement as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">GRANT</span><span style="color:#F8F8F2"> privilege_name</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">GRANT</span><span style="color:#F8F8F2"> privilege_name</span></span>
 <span class="line"><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> object_name</span></span>
 <span class="line"><span style="color:#FF79C6">TO</span><span style="color:#F8F8F2"> {user_name |PUBLIC |role_name}</span></span>
 <span class="line"><span style="color:#F8F8F2">[WITH GRANT OPTION];</span></span></code></pre>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">GRANT</span><span style="color:#FF79C6"> SELECT</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">TO</span><span style="color:#F8F8F2"> user1;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">GRANT</span><span style="color:#FF79C6"> SELECT</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">TO</span><span style="color:#F8F8F2"> user1;</span></span></code></pre>
 <p>In this example, <code>user1</code> is granted permission to read/perform SELECT operations on the <code>employees</code> table.</p>
 <h2 id="revoke">REVOKE</h2>
 <p>The <code>REVOKE</code> statement can be used when we want to revoke some or all of the privileges that were assigned earlier to a user or a group of users. The syntax for using the <code>REVOKE</code> command is similar to the <code>GRANT</code> command.</p>
 <p>Here’s the syntax:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">REVOKE</span><span style="color:#F8F8F2"> privilege_name</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">REVOKE</span><span style="color:#F8F8F2"> privilege_name</span></span>
 <span class="line"><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> object_name</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> {user_name |PUBLIC |role_name}</span></span></code></pre>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">REVOKE</span><span style="color:#FF79C6"> SELECT</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> user1;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">REVOKE</span><span style="color:#FF79C6"> SELECT</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> user1;</span></span></code></pre>
 <p>In this example, <code>user1</code> is revoked from the permission to read/perform SELECT operations on the <code>employees</code> table.</p>
 <p>Permission management is an important aspect of database management, understanding, and using <code>GRANT</code> and <code>REVOKE</code> operations help in maintaining the integrity and security of your data in SQL.</p>

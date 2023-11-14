@@ -3,7 +3,7 @@
 <p>Dynamic polymorphism is achieved through <strong>virtual functions</strong>, which are member functions of a base class marked with the <code>virtual</code> keyword. When you specify a virtual function in a base class, it can be overridden in any derived class to provide a different implementation.</p>
 <h2 id="example">Example</h2>
 <p>Here’s an example in C++ demonstrating dynamic polymorphism.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">// Base class</span></span>
 <span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Shape</span><span style="color:#F8F8F2"> {</span></span>
@@ -49,6 +49,6 @@
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <p>This code defines a base class <code>Shape</code> with a virtual function <code>draw</code>. Two derived classes <code>Circle</code> and <code>Rectangle</code> both override the <code>draw</code> function to provide their own implementations. Then in the <code>main</code> function, a pointer of type <code>Shape</code> is used to call the respective <code>draw</code> functions of <code>Circle</code> and <code>Rectangle</code> objects. The output of this program will be:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>Drawing a circle</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Drawing a circle</span></span>
 <span class="line"><span>Drawing a rectangle</span></span></code></pre>
 <p>As you can see, using dynamic polymorphism, we can determine at runtime which <code>draw</code> method should be called based on the type of object being used.</p>

@@ -8,10 +8,10 @@
 <li><code>default_value</code> - the value returned when the <code>LEAD</code> function navigates past the last row. If it’s omitted, it returns NULL.</li>
 </ol>
 <p>The syntax of the <code>LEAD</code> function is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#8BE9FD">LEAD</span><span style="color:#F8F8F2">(value_expression, [offset], [default_value]) </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> ([PARTITION BY partition_expression] </span><span style="color:#FF79C6">ORDER BY</span><span style="color:#F8F8F2"> sort_expression [ASC | DESC])</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">LEAD</span><span style="color:#F8F8F2">(value_expression, [offset], [default_value]) </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> ([PARTITION BY partition_expression] </span><span style="color:#FF79C6">ORDER BY</span><span style="color:#F8F8F2"> sort_expression [ASC | DESC])</span></span></code></pre>
 <h2 id="example">Example</h2>
 <p>Consider a simple example where you have a “sales” table and you want to compare each monthly sale with the sale of the next month.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span></span>
 <span class="line"><span style="color:#FF79C6">    month</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    sale,</span></span>
 <span class="line"><span style="color:#8BE9FD">    LEAD</span><span style="color:#F8F8F2">(sale) </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">ORDER BY</span><span style="color:#FF79C6"> month</span><span style="color:#F8F8F2">) NextMonthSale</span></span>

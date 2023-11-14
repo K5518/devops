@@ -4,7 +4,7 @@
 <p>The <code>LATERAL</code> keyword in PostgreSQL is used in conjunction with a subquery in the <code>FROM</code> clause of a query. It helps you to write more concise and powerful queries, as it allows the subquery to reference columns from preceding tables in the query.</p>
 <p>The main advantage of using the <code>LATERAL</code> keyword is that it enables you to refer to columns from a preceding table in a subquery that is part of the <code>FROM</code> clause when performing a join operation.</p>
 <p>Here’s a simple illustration of the lateral join syntax:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F8F8F2">column_list</span><span style="color:#FF79C6">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F8F8F2">column_list</span><span style="color:#FF79C6">></span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F8F8F2">table1</span><span style="color:#FF79C6">></span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">LATERAL (</span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2">subquery</span><span style="color:#FF79C6">></span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">AS</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F8F8F2">alias</span><span style="color:#FF79C6">></span></span></code></pre>
 <h2 id="when-to-use-lateral-joins">When to Use Lateral Joins?</h2>
@@ -16,7 +16,7 @@
 </ul>
 <h2 id="example-of-lateral-join">Example of Lateral Join</h2>
 <p>Consider the following example, where you have two tables: <code>employees</code> and <code>salaries</code>. We’ll calculate the total salary by department and the average salary for each employee.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> employees</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> employees</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">  id </span><span style="color:#FF79C6">serial</span><span style="color:#FF79C6"> PRIMARY KEY</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#FF79C6">  name</span><span style="color:#FF79C6"> varchar</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">100</span><span style="color:#F8F8F2">),</span></span>
 <span class="line"><span style="color:#F8F8F2">  department </span><span style="color:#FF79C6">varchar</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">50</span><span style="color:#F8F8F2">)</span></span>

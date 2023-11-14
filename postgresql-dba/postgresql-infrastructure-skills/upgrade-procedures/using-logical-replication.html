@@ -16,13 +16,13 @@
 <p>Set up your source (publisher) and target (subscriber) systems. You’ll need to modify the <code>postgresql.conf</code> file on both systems to enable logical replication by adding or updating these parameters:</p>
 </li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>wal_level = logical</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>wal_level = logical</span></span>
 <span class="line"><span>max_replication_slots = &#x3C;desired_number_of_slots></span></span>
 <span class="line"><span>max_wal_senders = &#x3C;desired number_of_senders></span></span></code></pre>
 <ul>
 <li>You’ll also need to configure the <code>pg_hba.conf</code> file on the publisher system to allow connections from the subscriber. Add an entry like the following:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">host</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">replication_databas</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">replication_use</span><span style="color:#F8F8F2">r</span><span style="color:#FF79C6">></span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">subscriber_I</span><span style="color:#F8F8F2">P</span><span style="color:#FF79C6">></span><span style="color:#F1FA8C">/32</span><span style="color:#F1FA8C"> md5</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">host</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">replication_databas</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">replication_use</span><span style="color:#F8F8F2">r</span><span style="color:#FF79C6">></span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">subscriber_I</span><span style="color:#F8F8F2">P</span><span style="color:#FF79C6">></span><span style="color:#F1FA8C">/32</span><span style="color:#F1FA8C"> md5</span></span></code></pre>
 <ul>
 <li>
 <p>Restart both source and target PostgreSQL services to apply the configuration changes.</p>
@@ -31,11 +31,11 @@
 <p>Create a publication on the source system using the following SQL command:</p>
 </li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#F8F8F2"> PUBLICATION my_publication </span><span style="color:#FF79C6">FOR</span><span style="color:#FF79C6"> TABLE</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F8F8F2">table_name1</span><span style="color:#FF79C6">></span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2">table_name2</span><span style="color:#FF79C6">></span><span style="color:#F8F8F2">, ...;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#F8F8F2"> PUBLICATION my_publication </span><span style="color:#FF79C6">FOR</span><span style="color:#FF79C6"> TABLE</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F8F8F2">table_name1</span><span style="color:#FF79C6">></span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2">table_name2</span><span style="color:#FF79C6">></span><span style="color:#F8F8F2">, ...;</span></span></code></pre>
 <ul>
 <li>On the target system, create a subscription to the publication:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#F8F8F2"> SUBSCRIPTION my_subscription</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#F8F8F2"> SUBSCRIPTION my_subscription</span></span>
 <span class="line"><span style="color:#F8F8F2">    CONNECTION </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">host=&#x3C;publisher_IP> port=&#x3C;publisher_port> dbname=&#x3C;database_name> user=&#x3C;replication_user> password=&#x3C;password></span><span style="color:#E9F284">'</span></span>
 <span class="line"><span style="color:#F8F8F2">    PUBLICATION my_publication;</span></span></code></pre>
 <p>###2.3 Monitoring and Managing Logical Replication</p>
@@ -48,11 +48,11 @@
 <ul>
 <li>To refresh the already copied data and schema from the publisher to the subscriber:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#F8F8F2"> SUBSCRIPTION my_subscription REFRESH PUBLICATION;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#F8F8F2"> SUBSCRIPTION my_subscription REFRESH PUBLICATION;</span></span></code></pre>
 <ul>
 <li>To remove a subscription or a publication:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#F8F8F2"> SUBSCRIPTION my_subscription;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#F8F8F2"> SUBSCRIPTION my_subscription;</span></span>
 <span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#F8F8F2"> PUBLICATION my_publication;</span></span></code></pre>
 <p>###2.4 Finalizing the upgrade</p>
 <p>Once the replication is complete and you’re satisfied with the upgrade, you can switch the application to the target system (the newer PostgreSQL version). When you’re ready, you can stop the publisher system and remove it.</p>

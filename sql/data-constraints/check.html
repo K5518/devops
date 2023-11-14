@@ -3,13 +3,13 @@
 <p><code>CHECK</code> constraint can be used in a column definition when you create or modify a table.</p>
 <h2 id="syntax">Syntax</h2>
 <p>To use the <code>CHECK</code> constraint, you can follow this syntax:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> table_name</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> table_name</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    column1 datatype </span><span style="color:#FF79C6">CONSTRAINT</span><span style="color:#F8F8F2"> constraint_name </span><span style="color:#FF79C6">CHECK</span><span style="color:#F8F8F2"> (condition),</span></span>
 <span class="line"><span style="color:#F8F8F2">    column2 datatype,</span></span>
 <span class="line"><span style="color:#F8F8F2">    ...</span></span>
 <span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
 <p>If you need to apply the <code>CHECK</code> constraint on multiple columns, use the following syntax:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> table_name</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> table_name</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    column1 datatype,</span></span>
 <span class="line"><span style="color:#F8F8F2">    column2 datatype,</span></span>
 <span class="line"><span style="color:#F8F8F2">    ...,</span></span>
@@ -17,14 +17,14 @@
 <span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
 <h2 id="examples">Examples</h2>
 <p>Here is an example of applying a <code>CHECK</code> constraint on a single column:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    Age </span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    Salary </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> CHECK</span><span style="color:#F8F8F2"> (Salary</span><span style="color:#FF79C6">></span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">),</span></span>
 <span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
 <p>Above SQL statement ensures that the salary of all employees in the Employees table must be more than 0.</p>
 <p>Here is an example of applying a <code>CHECK</code> constraint on multiple columns:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    Age </span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    Salary </span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2">,</span></span>
@@ -32,6 +32,6 @@
 <span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
 <p>Above SQL ensures that the persons’ age must be greater than or equal to 18, and their salary is more than or equal to 0.</p>
 <p>It is also possible to use the <code>ALTER TABLE</code> command to add a <code>CHECK</code> constraint after the table has been created.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> Employees</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> Employees</span></span>
 <span class="line"><span style="color:#FF79C6">ADD</span><span style="color:#FF79C6"> CONSTRAINT</span><span style="color:#F8F8F2"> CHK_EmployeeAge </span><span style="color:#FF79C6">CHECK</span><span style="color:#F8F8F2"> (Age </span><span style="color:#FF79C6">>=</span><span style="color:#BD93F9"> 21</span><span style="color:#FF79C6"> AND</span><span style="color:#F8F8F2"> Age </span><span style="color:#FF79C6">&#x3C;=</span><span style="color:#BD93F9"> 60</span><span style="color:#F8F8F2">);</span></span></code></pre>
 <p>Above SQL ensures that the employees’ age must be between 21 and 60.</p>

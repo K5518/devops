@@ -3,7 +3,7 @@
 <p>In this section, we will cover the basics of grep and how to wield its power for efficient incident response.</p>
 <h2 id="basic-syntax">Basic Syntax</h2>
 <p>The basic syntax of grep is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>grep [options] pattern [files/directories]</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>grep [options] pattern [files/directories]</span></span></code></pre>
 <ul>
 <li><code>options</code>: Modify the behavior of grep (e.g., case-insensitive search, display line numbers)</li>
 <li><code>pattern</code>: The search pattern, which can be a fixed string, a regular expression, or a combination of both</li>
@@ -22,14 +22,14 @@
 <ul>
 <li>Case-insensitive search for the word “password”:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>grep -i "password" /var/log/syslog</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>grep -i "password" /var/log/syslog</span></span></code></pre>
 <ul>
 <li>Display line numbers for lines containing “error” in log files:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>grep -n "error" /var/log/*.log</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>grep -n "error" /var/log/*.log</span></span></code></pre>
 <ul>
 <li>Search for IP addresses in a web server access log:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>grep -E -o "([0-9]{1,3}\.){3}[0-9]{1,3}" /var/log/apache2/access.log</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>grep -E -o "([0-9]{1,3}\.){3}[0-9]{1,3}" /var/log/apache2/access.log</span></span></code></pre>
 <h2 id="conclusion">Conclusion</h2>
 <p>Grep is an indispensable tool for incident response and discovery tasks in cyber security. It allows you to quickly pinpoint specific patterns in large volumes of data, making it easier to identify potential threats and respond accordingly. As you become more proficient with grep and its wide array of options, you’ll gain a valuable resource in your cyber security toolkit.</p>

@@ -13,7 +13,7 @@
 <li>Using <code>EXECUTE IMMEDIATE</code>:</li>
 </ol>
 <p>Here, a table name is passed as a variable to a PL/SQL block. The block concatenates the variable into a DELETE statement, which is executed dynamically.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">DECLARE</span><span style="color:#F8F8F2"> </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DECLARE</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#F8F8F2">   table_name </span><span style="color:#FF79C6">VARCHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">30</span><span style="color:#F8F8F2">) :</span><span style="color:#FF79C6">=</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">employees</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">; </span></span>
 <span class="line"><span style="color:#F8F8F2">   sql_stmt   </span><span style="color:#FF79C6">VARCHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">100</span><span style="color:#F8F8F2">); </span></span>
 <span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#F8F8F2"> </span></span>
@@ -24,7 +24,7 @@
 <li>Using <code>OPEN-FOR, FETCH, CLOSE</code></li>
 </ol>
 <p>In this example, a dynamic SQL query is being built and executed using the <code>OPEN-FOR, FETCH, CLOSE</code> statements.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">DECLARE</span><span style="color:#F8F8F2"> </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DECLARE</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#F8F8F2">   sql_stmt  </span><span style="color:#FF79C6">VARCHAR2</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">1000</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"><span style="color:#F8F8F2">   emp_id    </span><span style="color:#FF79C6">NUMBER</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">4</span><span style="color:#F8F8F2">) :</span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 7566</span><span style="color:#F8F8F2">; </span></span>
 <span class="line"><span style="color:#F8F8F2">   emp_rec   emp%ROWTYPE; </span></span>

@@ -10,7 +10,7 @@
 </ul>
 <h2 id="creating-triggers">Creating Triggers</h2>
 <p>To create a trigger, you must first define a trigger function, and then bind it to a table or a view. A trigger function can be written in various languages, such as PL/pgSQL, PL/Tcl, or others. The following is an example of creating a simple trigger function and trigger:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE OR REPLACE</span><span style="color:#FF79C6"> FUNCTION</span><span style="color:#50FA7B"> update_modified_column</span><span style="color:#F8F8F2">()</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE OR REPLACE</span><span style="color:#FF79C6"> FUNCTION</span><span style="color:#50FA7B"> update_modified_column</span><span style="color:#F8F8F2">()</span></span>
 <span class="line"><span style="color:#FF79C6">RETURNS</span><span style="color:#F8F8F2"> TRIGGER </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> $$</span></span>
 <span class="line"><span style="color:#FF79C6">BEGIN</span></span>
 <span class="line"><span style="color:#BD93F9">   NEW</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">modified</span><span style="color:#FF79C6"> =</span><span style="color:#FF79C6"> NOW</span><span style="color:#F8F8F2">();</span></span>
@@ -32,7 +32,7 @@
 <li>TRUNCATE</li>
 </ul>
 <p>You can also associate multiple events with a single trigger by using the <code>OR</code> keyword:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TRIGGER</span><span style="color:#50FA7B"> your_trigger</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TRIGGER</span><span style="color:#50FA7B"> your_trigger</span></span>
 <span class="line"><span style="color:#FF79C6">BEFORE</span><span style="color:#FF79C6"> INSERT</span><span style="color:#FF79C6"> OR</span><span style="color:#FF79C6"> UPDATE</span><span style="color:#FF79C6"> OR</span><span style="color:#FF79C6"> DELETE</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> your_table</span></span>
 <span class="line"><span style="color:#F8F8F2">...</span></span></code></pre>
 <h2 id="timing">Timing</h2>

@@ -13,7 +13,7 @@
 <h2 id="use-idempotent-sql-to-rollback">Use Idempotent SQL to Rollback</h2>
 <p>When working with databases, it’s only a matter of time before you might need to rollback a change. Ensure that each <code>UP</code> migration script has a corresponding <code>DOWN</code> migration script to revert changes.</p>
 <p>Example: In <code>20210616_add_email_to_users.sql</code>:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#6272A4">-- UP</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">-- UP</span></span>
 <span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> users </span><span style="color:#FF79C6">ADD</span><span style="color:#F8F8F2"> COLUMN email </span><span style="color:#FF79C6">TEXT</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">-- DOWN</span></span>

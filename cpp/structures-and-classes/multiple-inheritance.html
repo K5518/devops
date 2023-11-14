@@ -3,14 +3,14 @@
 <p>When a class inherits multiple base classes, it becomes a mixture of their properties and behaviors, and can override or extend them as needed.</p>
 <h2 id="syntax">Syntax</h2>
 <p>Here is the syntax to declare a class with multiple inheritance:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> DerivedClass</span><span style="color:#F8F8F2"> : access-specifier BaseClass1, </span><span style="color:#8BE9FD;font-style:italic">access</span><span style="color:#F8F8F2">-specifier BaseClass2, ...</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> DerivedClass</span><span style="color:#F8F8F2"> : access-specifier BaseClass1, </span><span style="color:#8BE9FD;font-style:italic">access</span><span style="color:#F8F8F2">-specifier BaseClass2, ...</span></span>
 <span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#6272A4">    // class body</span></span>
 <span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
 <p>The <code>DerivedClass</code> will inherit members from both <code>BaseClass1</code> and <code>BaseClass2</code>. The <code>access-specifier</code> (like <code>public</code>, <code>protected</code>, or <code>private</code>) determines the accessibility of the inherited members.</p>
 <h2 id="example">Example</h2>
 <p>Here is an example of multiple inheritance in action:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">// Base class 1</span></span>
 <span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Animal</span></span>

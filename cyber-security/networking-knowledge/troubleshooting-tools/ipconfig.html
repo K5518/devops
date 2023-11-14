@@ -2,42 +2,42 @@
 <p><strong>IPConfig</strong> is a command-line tool that is available on Windows operating systems. It is used to display the current network configuration settings of a computer, such as IP address, subnet mask, and default gateway. This tool helps users diagnose and troubleshoot network connectivity issues by providing essential details about the system’s network connections.</p>
 <h2 id="using-ipconfig">Using IPConfig</h2>
 <p>To use IPConfig, open the Command Prompt or PowerShell and enter the following command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>ipconfig</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>ipconfig</span></span></code></pre>
 <p>This command will display the network configuration details for all the active network connections on your system.</p>
 <h2 id="ipconfig-options">IPConfig Options</h2>
 <p>IPConfig has several options that can provide more comprehensive information or perform different tasks, such as:</p>
 <ul>
 <li>
 <p><strong>/all</strong>: This option displays the full configuration data for all the network connections, including DHCP (Dynamic Host Configuration Protocol) server and lease information.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>ipconfig /all</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>ipconfig /all</span></span></code></pre>
 </li>
 <li>
 <p><strong>/release</strong>: This command releases the IP address obtained from the DHCP server for the specified network adapter or all network adapters if none is specified.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>ipconfig /release</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>ipconfig /release</span></span></code></pre>
 </li>
 <li>
 <p><strong>/renew</strong>: This command requests a new IP address from the DHCP server for the specified network adapter or all network adapters if none is specified.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>ipconfig /renew</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>ipconfig /renew</span></span></code></pre>
 </li>
 <li>
 <p><strong>/flushdns</strong>: This option clears the DNS (Domain Name System) resolver cache, which stores the recent DNS queries and their corresponding IP addresses.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>ipconfig /flushdns</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>ipconfig /flushdns</span></span></code></pre>
 </li>
 <li>
 <p><strong>/registerdns</strong>: This command refreshes all DHCP leases and re-registers DNS names for your system.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>ipconfig /registerdns</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>ipconfig /registerdns</span></span></code></pre>
 </li>
 <li>
 <p><strong>/displaydns</strong>: This option displays the contents of the DNS resolver cache, allowing you to view recently resolved domain names and IP addresses.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>ipconfig /displaydns</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>ipconfig /displaydns</span></span></code></pre>
 </li>
 <li>
 <p><strong>/setclassid</strong>: This command allows you to modify the DHCP class ID for the specified network adapter.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>ipconfig /setclassid</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>ipconfig /setclassid</span></span></code></pre>
 </li>
 <li>
 <p><strong>/showclassid</strong>: This option displays the DHCP class ID for the specified network adapter.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>ipconfig /showclassid</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>ipconfig /showclassid</span></span></code></pre>
 </li>
 </ul>
 <p>In conclusion, IPConfig is a powerful and handy tool for managing and troubleshooting network connections on Windows systems. It allows you to view and modify network configuration settings, lease IP addresses, and interact with the DNS resolver cache easily.</p>

@@ -2,14 +2,14 @@
 <p>Grep is a powerful command-line tool used for searching plain-text data sets against specific patterns. It was originally developed for the Unix operating system and has since become available on almost every platform. When analyzing PostgreSQL logs, you may find the <code>grep</code> command an incredibly useful resource for quickly finding specific entries or messages.</p>
 <h2 id="basic-usage">Basic Usage</h2>
 <p>The basic syntax of the <code>grep</code> command is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">grep</span><span style="color:#F8F8F2"> [options] pattern [file]</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">grep</span><span style="color:#F8F8F2"> [options] pattern [file]</span></span></code></pre>
 <ul>
 <li><code>pattern</code>: The string to be searched for within the text files.</li>
 <li><code>file</code>: The name of the file(s) to search in.</li>
 <li><code>options</code>: Various options to modify the search behavior.</li>
 </ul>
 <p>For instance, to search for a specific error message in your PostgreSQL log file, you can use a command like:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">grep</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">ERROR:  syntax error</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> /var/log/postgresql/postgresql-10-main.log</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">grep</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">ERROR:  syntax error</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> /var/log/postgresql/postgresql-10-main.log</span></span></code></pre>
 <p>This will find and display all lines from the logfile containing the string ‘ERROR:  syntax error’.</p>
 <h2 id="useful-grep-options-for-log-analysis">Useful Grep Options for Log Analysis</h2>
 <p>Below are some useful options to fine-tune your search when analyzing PostgreSQL logs:</p>
@@ -17,27 +17,27 @@
 <li>
 <p><code>-i</code>: Ignore case when searching. This is helpful when you want to find both upper and lower case instances of a string.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">grep</span><span style="color:#BD93F9"> -i</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">error</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> /var/log/postgresql/postgresql-10-main.log</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">grep</span><span style="color:#BD93F9"> -i</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">error</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> /var/log/postgresql/postgresql-10-main.log</span></span></code></pre>
 </li>
 <li>
 <p><code>-v</code>: Invert the search, displaying lines that do not contain the search pattern. Useful to filter out unwanted messages in the log files.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">grep</span><span style="color:#BD93F9"> -v</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">SELECT</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> /var/log/postgresql/postgresql-10-main.log</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">grep</span><span style="color:#BD93F9"> -v</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">SELECT</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> /var/log/postgresql/postgresql-10-main.log</span></span></code></pre>
 </li>
 <li>
 <p><code>-c</code>: Display the count of matching lines rather than the lines themselves.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">grep</span><span style="color:#BD93F9"> -c</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">ERROR</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> /var/log/postgresql/postgresql-10-main.log</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">grep</span><span style="color:#BD93F9"> -c</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">ERROR</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> /var/log/postgresql/postgresql-10-main.log</span></span></code></pre>
 </li>
 <li>
 <p><code>-n</code>: Display the line number along with the found text. Handy for finding the context around the log entry.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">grep</span><span style="color:#BD93F9"> -n</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">FATAL</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> /var/log/postgresql/postgresql-10-main.log</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">grep</span><span style="color:#BD93F9"> -n</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">FATAL</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> /var/log/postgresql/postgresql-10-main.log</span></span></code></pre>
 </li>
 <li>
 <p><code>-A num</code>, <code>-B num</code>, <code>-C num</code>: Show the specified number of lines (<code>num</code>) after (<code>-A</code>), before (<code>-B</code>), or around (<code>-C</code>) the matched line.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">grep</span><span style="color:#BD93F9"> -A</span><span style="color:#BD93F9"> 3</span><span style="color:#BD93F9"> -B</span><span style="color:#BD93F9"> 2</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">ERROR</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> /var/log/postgresql/postgresql-10-main.log</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">grep</span><span style="color:#BD93F9"> -A</span><span style="color:#BD93F9"> 3</span><span style="color:#BD93F9"> -B</span><span style="color:#BD93F9"> 2</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">ERROR</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> /var/log/postgresql/postgresql-10-main.log</span></span></code></pre>
 </li>
 </ul>
 <p>These are just a few of the many options available with the <code>grep</code> command. By utilizing these commands while analyzing PostgreSQL logs, you can quickly discern pertinent information for troubleshooting and optimizing your database operations.</p>

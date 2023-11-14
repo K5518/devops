@@ -3,7 +3,7 @@
 <h2 id="insertone">insertOne()</h2>
 <p>The <code>insertOne()</code> method is used to insert a single document into a collection. This method returns an <code>InsertOneResult</code> object, that shows the outcome of the operation.</p>
 <p><strong>Syntax:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">insertOne</span><span style="color:#F8F8F2">(</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">insertOne</span><span style="color:#F8F8F2">(</span></span>
 <span class="line"><span style="color:#F8F8F2">   &#x3C;</span><span style="color:#FF79C6">document</span><span style="color:#F8F8F2">>,</span></span>
 <span class="line"><span style="color:#FF79C6">   {</span></span>
 <span class="line"><span style="color:#F8F8F2">      writeConcern: &#x3C;</span><span style="color:#FF79C6">document</span><span style="color:#F8F8F2">>,</span></span>
@@ -20,14 +20,14 @@
 <li><code>comment:</code> An optional string or BSON that can be used for descriptive purposes when profiling operations.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">db.inventory.</span><span style="color:#50FA7B">insertOne</span><span style="color:#F8F8F2">({</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.inventory.</span><span style="color:#50FA7B">insertOne</span><span style="color:#F8F8F2">({</span></span>
 <span class="line"><span style="color:#F8F8F2">  item</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">book</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  qty</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">});</span></span></code></pre>
 <h2 id="insertmany">insertMany()</h2>
 <p>The <code>insertMany()</code> method is used to insert multiple documents into a collection at once. It returns an <code>InsertManyResult</code> object, displaying the status of the operation.</p>
 <p><strong>Syntax:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">insertMany</span><span style="color:#F8F8F2">(</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">insertMany</span><span style="color:#F8F8F2">(</span></span>
 <span class="line"><span style="color:#F8F8F2">   [ &#x3C;</span><span style="color:#8BE9FD;font-style:italic">document_1</span><span style="color:#F8F8F2">>, &#x3C;</span><span style="color:#8BE9FD;font-style:italic">document_2</span><span style="color:#F8F8F2">>, ... ],</span></span>
 <span class="line"><span style="color:#FF79C6">   {</span></span>
 <span class="line"><span style="color:#F8F8F2">      writeConcern: &#x3C;</span><span style="color:#FF79C6">document</span><span style="color:#F8F8F2">>,</span></span>
@@ -44,7 +44,7 @@
 <li><code>comment:</code> Same as mentioned in <code>insertOne()</code> method.</li>
 </ul>
 <p><strong>Example:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">db.inventory.</span><span style="color:#50FA7B">insertMany</span><span style="color:#F8F8F2">([</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.inventory.</span><span style="color:#50FA7B">insertMany</span><span style="color:#F8F8F2">([</span></span>
 <span class="line"><span style="color:#F8F8F2">  { item</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">pen</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, qty</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 5</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { item</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">pencil</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, qty</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 10</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { item</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">notebook</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, qty</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 25</span><span style="color:#F8F8F2"> },</span></span>

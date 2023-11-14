@@ -29,7 +29,7 @@
 <h2 id="4-dockerfile">4. Dockerfile</h2>
 <p>A Dockerfile is a script containing instructions to build a Docker image. You can use the Docker CLI to build, update, and manage Docker images using a Dockerfile.</p>
 <p>Here is a simple example of a Dockerfile:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="dockerfile"><code><span class="line"><span style="color:#6272A4"># Set the base image to use</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4"># Set the base image to use</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> alpine:3.7</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4"># Update the system and install packages</span></span>
@@ -44,11 +44,11 @@
 <span class="line"><span style="color:#6272A4"># Set the entry point</span></span>
 <span class="line"><span style="color:#FF79C6">ENTRYPOINT</span><span style="color:#F8F8F2"> [</span><span style="color:#F1FA8C">"./app.sh"</span><span style="color:#F8F8F2">]</span></span></code></pre>
 <p>To build the image, use the command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> build</span><span style="color:#BD93F9"> -t</span><span style="color:#F1FA8C"> my-image</span><span style="color:#F1FA8C"> .</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> build</span><span style="color:#BD93F9"> -t</span><span style="color:#F1FA8C"> my-image</span><span style="color:#F1FA8C"> .</span></span></code></pre>
 <h2 id="5-docker-compose">5. Docker Compose</h2>
 <p>Docker Compose is a CLI tool for defining and managing multi-container Docker applications using YAML files. It works together with the Docker CLI, offering a consistent way to manage multiple containers and their dependencies.</p>
 <p>Install Docker Compose using the official <a href="https://docs.docker.com/compose/install/" rel="noopener noreferrer nofollow" target="_blank">installation guide</a>, and then you can create a <code>docker-compose.yml</code> file to define and run multi-container applications:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="yaml"><code><span class="line"><span style="color:#8BE9FD">version</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">3</span><span style="color:#E9F284">'</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">version</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">3</span><span style="color:#E9F284">'</span></span>
 <span class="line"><span style="color:#8BE9FD">services</span><span style="color:#FF79C6">:</span></span>
 <span class="line"><span style="color:#8BE9FD">  web</span><span style="color:#FF79C6">:</span></span>
 <span class="line"><span style="color:#8BE9FD">    image</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> webapp-image</span></span>
@@ -59,5 +59,5 @@
 <span class="line"><span style="color:#8BE9FD">    environment</span><span style="color:#FF79C6">:</span></span>
 <span class="line"><span style="color:#FF79C6">      -</span><span style="color:#F1FA8C"> MYSQL_ROOT_PASSWORD=my-secret-pw</span></span></code></pre>
 <p>Run the application using the command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">docker-compose</span><span style="color:#F1FA8C"> up</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker-compose</span><span style="color:#F1FA8C"> up</span></span></code></pre>
 <p>In conclusion, the Docker CLI is a robust and versatile tool for managing all aspects of Docker containers and resources. Once familiar with its commands and capabilities, you’ll be well-equipped to develop, maintain and deploy applications using Docker with ease.</p>

@@ -4,7 +4,7 @@
 <h2 id="platform-specific-code">Platform-specific Code</h2>
 <p>While React Native Web is designed to provide a consistent experience across platforms, there may still be cases where you want to use platform-specific code for an improved native experience.</p>
 <p>For example, let’s say you have a React Native app with the following styles:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> styles </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> StyleSheet.</span><span style="color:#50FA7B">create</span><span style="color:#F8F8F2">({</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> styles </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> StyleSheet.</span><span style="color:#50FA7B">create</span><span style="color:#F8F8F2">({</span></span>
 <span class="line"><span style="color:#F8F8F2">  container</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#F8F8F2">    flex</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    justifyContent</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">center</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>
@@ -16,7 +16,7 @@
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
 <span class="line"><span style="color:#F8F8F2">});</span></span></code></pre>
 <p>Now, let’s say you want to apply some platform-specific styling. You can create separate stylesheets for each platform, like <code>styles.native.js</code> and <code>styles.web.js</code>. The contents of <code>styles.native.js</code> would look like this:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { StyleSheet } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react-native</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { StyleSheet } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react-native</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">export</span><span style="color:#FF79C6"> default</span><span style="color:#F8F8F2"> StyleSheet.</span><span style="color:#50FA7B">create</span><span style="color:#F8F8F2">({</span></span>
 <span class="line"><span style="color:#F8F8F2">  container</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> {</span></span>
@@ -27,7 +27,7 @@
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
 <span class="line"><span style="color:#F8F8F2">});</span></span></code></pre>
 <p>And the contents of <code>styles.web.js</code> would look like this:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { StyleSheet } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react-native</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { StyleSheet } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react-native</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">export</span><span style="color:#FF79C6"> default</span><span style="color:#F8F8F2"> StyleSheet.</span><span style="color:#50FA7B">create</span><span style="color:#F8F8F2">({</span></span>
 <span class="line"><span style="color:#F8F8F2">  container</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> {</span></span>
@@ -38,12 +38,12 @@
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
 <span class="line"><span style="color:#F8F8F2">});</span></span></code></pre>
 <p>Then, in your main component file, you can import the appropriate styles for each platform automatically:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> styles </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">./styles</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> styles </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">./styles</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">// Now, your styles are platform-specific!</span></span></code></pre>
 <p>This way, you can cater your styles to the specific platform your app is running on, without having to clutter your main component code with conditional styling.</p>
 <p>React Native Web also provides a utility called <code>Platform</code> that you can use to determine the current platform and apply platform-specific code directly:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { Platform, StyleSheet } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react-native</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { Platform, StyleSheet } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react-native</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> styles </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> StyleSheet.</span><span style="color:#50FA7B">create</span><span style="color:#F8F8F2">({</span></span>
 <span class="line"><span style="color:#F8F8F2">  container</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> {</span></span>

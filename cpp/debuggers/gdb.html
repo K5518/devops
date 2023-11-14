@@ -2,9 +2,9 @@
 <p>GDB, or the GNU Project Debugger, is a powerful command-line debugger used primarily for C, C++, and other languages. It can help you find runtime errors, examine the program’s execution state, and manipulate the flow to detect and fix bugs easily.</p>
 <h2 id="getting-started-with-gdb">Getting started with GDB</h2>
 <p>To start using GDB, you first need to compile your code with the <code>-g</code> flag, which includes debugging information in the executable:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">g++</span><span style="color:#BD93F9"> -g</span><span style="color:#F1FA8C"> myfile.cpp</span><span style="color:#BD93F9"> -o</span><span style="color:#F1FA8C"> myfile</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">g++</span><span style="color:#BD93F9"> -g</span><span style="color:#F1FA8C"> myfile.cpp</span><span style="color:#BD93F9"> -o</span><span style="color:#F1FA8C"> myfile</span></span></code></pre>
 <p>Now, you can load your compiled program into GDB:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">gdb</span><span style="color:#F1FA8C"> myfile</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">gdb</span><span style="color:#F1FA8C"> myfile</span></span></code></pre>
 <h2 id="basic-gdb-commands">Basic GDB Commands</h2>
 <p>Here are some common GDB commands you’ll find useful when debugging:</p>
 <ul>
@@ -20,7 +20,7 @@
 </ul>
 <h2 id="example-usage">Example Usage</h2>
 <p>Suppose you have a simple <code>cpp</code> file called <code>example.cpp</code>:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">void</span><span style="color:#50FA7B"> my_function</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> i</span><span style="color:#F8F8F2">) {</span></span>
 <span class="line"><span style="color:#F8F8F2">  std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">In my_function with i = </span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> i </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
@@ -33,14 +33,14 @@
 <span class="line"><span style="color:#FF79C6">  return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <p>First, compile the code with debugging symbols:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">g++</span><span style="color:#BD93F9"> -g</span><span style="color:#F1FA8C"> example.cpp</span><span style="color:#BD93F9"> -o</span><span style="color:#F1FA8C"> example</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">g++</span><span style="color:#BD93F9"> -g</span><span style="color:#F1FA8C"> example.cpp</span><span style="color:#BD93F9"> -o</span><span style="color:#F1FA8C"> example</span></span></code></pre>
 <p>Start GDB and load the <code>example</code> program:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">gdb</span><span style="color:#F1FA8C"> example</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">gdb</span><span style="color:#F1FA8C"> example</span></span></code></pre>
 <p>Set a breakpoint in the <code>my_function</code> function and run the program:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>(gdb) break my_function</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>(gdb) break my_function</span></span>
 <span class="line"><span>(gdb) run</span></span></code></pre>
 <p>Once stopped at the breakpoint, use <code>next</code>, <code>print</code>, and <code>continue</code> to examine the program’s state:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>(gdb) next</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>(gdb) next</span></span>
 <span class="line"><span>(gdb) print i</span></span>
 <span class="line"><span>(gdb) continue</span></span></code></pre>
 <p>Finally, exit GDB with the <code>quit</code> command.</p>

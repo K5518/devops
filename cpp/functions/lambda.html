@@ -2,7 +2,7 @@
 <p>A lambda function, or simply “lambda”, is an anonymous (unnamed) function that is defined in place, within your source code, and with a concise syntax. Lambda functions were introduced in C++11 and have since become a widely used feature, especially in combination with the Standard Library algorithms.</p>
 <h2 id="syntax">Syntax</h2>
 <p>Here is a basic syntax of a lambda function in C++:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#F8F8F2">[capture</span><span style="color:#FF79C6">-</span><span style="color:#FFB86C;font-style:italic">list</span><span style="color:#F8F8F2">](</span><span style="color:#8BE9FD;font-style:italic">parameters</span><span style="color:#F8F8F2">) -> </span><span style="color:#FF79C6">return_type</span><span style="color:#F8F8F2"> {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">[capture</span><span style="color:#FF79C6">-</span><span style="color:#FFB86C;font-style:italic">list</span><span style="color:#F8F8F2">](</span><span style="color:#8BE9FD;font-style:italic">parameters</span><span style="color:#F8F8F2">) -> </span><span style="color:#FF79C6">return_type</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#6272A4">    // function body</span></span>
 <span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
 <ul>
@@ -16,21 +16,21 @@
 <ul>
 <li>Lambda function with no capture, parameters, or return type.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">auto</span><span style="color:#F8F8F2"> printHello </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> []() {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">auto</span><span style="color:#F8F8F2"> printHello </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> []() {</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Hello, World!</span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
 <span class="line"><span style="color:#F8F8F2">};</span></span>
 <span class="line"><span style="color:#50FA7B">printHello</span><span style="color:#F8F8F2">();</span><span style="color:#6272A4"> // Output: Hello, World!</span></span></code></pre>
 <ul>
 <li>Lambda function with parameters.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">auto</span><span style="color:#F8F8F2"> add </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> [](</span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> a</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> b</span><span style="color:#F8F8F2">) {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">auto</span><span style="color:#F8F8F2"> add </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> [](</span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> a</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> b</span><span style="color:#F8F8F2">) {</span></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#F8F8F2"> a </span><span style="color:#FF79C6">+</span><span style="color:#F8F8F2"> b;</span></span>
 <span class="line"><span style="color:#F8F8F2">};</span></span>
 <span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> result </span><span style="color:#FF79C6">=</span><span style="color:#50FA7B"> add</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">3</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4</span><span style="color:#F8F8F2">);</span><span style="color:#6272A4"> // result = 7</span></span></code></pre>
 <ul>
 <li>Lambda function with capture-by-value.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> multiplier </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2">;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> multiplier </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">auto</span><span style="color:#F8F8F2"> times </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> [</span><span style="color:#FFB86C;font-style:italic">multiplier</span><span style="color:#F8F8F2">](</span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> a</span><span style="color:#F8F8F2">) {</span></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#F8F8F2"> a </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2"> multiplier;</span></span>
 <span class="line"><span style="color:#F8F8F2">};</span></span>
@@ -38,7 +38,7 @@
 <ul>
 <li>Lambda function with capture-by-reference.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> expiresInDays </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 45</span><span style="color:#F8F8F2">;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> expiresInDays </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 45</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">auto</span><span style="color:#F8F8F2"> updateDays </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> [</span><span style="color:#FF79C6">&#x26;</span><span style="color:#FFB86C;font-style:italic">expiresInDays</span><span style="color:#F8F8F2">](</span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> newDays</span><span style="color:#F8F8F2">) {</span></span>
 <span class="line"><span style="color:#F8F8F2">    expiresInDays </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> newDays;</span></span>
 <span class="line"><span style="color:#F8F8F2">};</span></span>

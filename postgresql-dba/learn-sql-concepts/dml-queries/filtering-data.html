@@ -3,7 +3,7 @@
 <h2 id="the-where-clause">The WHERE Clause</h2>
 <p>The <strong>WHERE</strong> clause is used to filter records from a specific table. This clause is used along with the <strong>SELECT</strong>, <strong>UPDATE</strong>, or <strong>DELETE</strong> statements to get the desired output.</p>
 <h2 id="syntax">Syntax</h2>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span></code></pre>
 <h2 id="example">Example</h2>
@@ -43,7 +43,7 @@
 
 <table><thead><tr><th>id</th><th>name</th><th>department</th><th>position</th><th>salary</th></tr></thead><tbody><tr><td>1</td><td>John</td><td>HR</td><td>Manager</td><td>5000</td></tr><tr><td>2</td><td>Jane</td><td>IT</td><td>Developer</td><td>4500</td></tr><tr><td>3</td><td>Mark</td><td>Marketing</td><td>Designer</td><td>4000</td></tr></tbody></table>
 <p>To select all records from the <code>employees</code> table where <code>salary</code> is greater than 4000:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> employees</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 4000</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <h2 id="comparison-operators">Comparison Operators</h2>
@@ -67,22 +67,22 @@
 <ul>
 <li><strong>AND:</strong></li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition1 </span><span style="color:#FF79C6">AND</span><span style="color:#F8F8F2"> condition2;</span></span></code></pre>
 <ul>
 <li><strong>OR:</strong></li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition1 </span><span style="color:#FF79C6">OR</span><span style="color:#F8F8F2"> condition2;</span></span></code></pre>
 <h2 id="example-1">Example</h2>
 <p>Using the previous <code>employees</code> table, to select records where the department is ‘IT’ and the salary is greater than or equal to 4500:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> employees</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> department </span><span style="color:#FF79C6">=</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">IT</span><span style="color:#E9F284">'</span><span style="color:#FF79C6"> AND</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">>=</span><span style="color:#BD93F9"> 4500</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <p>And to select records where either the position is ‘Manager’ or the salary is less than or equal to 4000:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> employees</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> position </span><span style="color:#FF79C6">=</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Manager</span><span style="color:#E9F284">'</span><span style="color:#FF79C6"> OR</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">&#x3C;=</span><span style="color:#BD93F9"> 4000</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <p>In summary, filtering data in PostgreSQL is achieved using the WHERE clause along with various comparison and logical operators. This powerful feature allows you to retrieve, update, or delete records that meet specific criteria.</p>

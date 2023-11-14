@@ -2,11 +2,11 @@
 <p><code>NULLIF</code> is a built-in conditional function in SQL Server. The <code>NULLIF</code> function compares two expressions and returns NULL if they are equal or the first expression if they are not.</p>
 <h2 id="syntax">Syntax</h2>
 <p>Here’s the syntax of the <code>NULLIF</code> function:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#8BE9FD">NULLIF</span><span style="color:#F8F8F2">(expression1, expression2);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">NULLIF</span><span style="color:#F8F8F2">(expression1, expression2);</span></span></code></pre>
 <p><code>NULLIF</code> compares <code>expression1</code> to <code>expression2</code>. If <code>expression1</code> and <code>expression2</code> are equal, the function returns NULL. Otherwise, it returns <code>expression1</code>. Both expressions must have the same data type.</p>
 <h2 id="example">Example</h2>
 <p>Consider the following example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#F8F8F2">    first_name, </span></span>
 <span class="line"><span style="color:#F8F8F2">    last_name,</span></span>
 <span class="line"><span style="color:#8BE9FD">    NULLIF</span><span style="color:#F8F8F2">(email, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">NA</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> email</span></span>
@@ -14,7 +14,7 @@
 <span class="line"><span style="color:#F8F8F2">    users;</span></span></code></pre>
 <p>In this SQL Server <code>NULLIF</code> function example, if the field email is ‘NA’, then NULL would be returned. Otherwise the actual <code>email</code> field value is returned.</p>
 <p>In another example, consider a division operation:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#F8F8F2">    avg_salary,</span></span>
 <span class="line"><span style="color:#8BE9FD">    NULLIF</span><span style="color:#F8F8F2">(avg_salary, </span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> avg_salary_no_zero</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> </span></span>

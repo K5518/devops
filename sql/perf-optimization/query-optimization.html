@@ -2,32 +2,32 @@
 <p>SQL Query Optimization is a crucial aspect of database management, aiming to maximize the speed and efficiency of SQL queries. Optimization takes into consideration a variety of factors like the query structure, data distribution, hardware specifics, and data-indexing.</p>
 <h2 id="1-utilize-indexes">1. Utilize Indexes:</h2>
 <p>Indexes enable the database engine to quickly find records just like an index in a book helps facilitate faster information location.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> INDEX</span><span style="color:#50FA7B"> index_name</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> INDEX</span><span style="color:#50FA7B"> index_name</span></span>
 <span class="line"><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> table_name (column1, column2, ...); </span></span></code></pre>
 <h2 id="2-use-joins-instead-of-multiple-queries">2. Use Joins instead of Multiple Queries:</h2>
 <p>Multiple separate queries to retrieve data can be merged into a single JOIN query for a more efficient process.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#BD93F9"> Orders</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">OrderID</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">Customers</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerName</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#BD93F9"> Orders</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">OrderID</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">Customers</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerName</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Orders</span></span>
 <span class="line"><span style="color:#FF79C6">INNER JOIN</span><span style="color:#F8F8F2"> Customers</span></span>
 <span class="line"><span style="color:#FF79C6">ON</span><span style="color:#BD93F9"> Orders</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerID</span><span style="color:#FF79C6">=</span><span style="color:#BD93F9">Customers</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerID</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <h2 id="3-limit-the-number-of-rows">3. Limit the Number of Rows:</h2>
 <p>Only request the number of rows you need. The <code>LIMIT</code> clause reduces the number of records returned by a SQL statement.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column </span><span style="color:#FF79C6">FROM</span><span style="color:#FF79C6"> table</span><span style="color:#F8F8F2"> </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column </span><span style="color:#FF79C6">FROM</span><span style="color:#FF79C6"> table</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">ORDER BY</span><span style="color:#F8F8F2"> column </span><span style="color:#FF79C6">DESC</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">LIMIT</span><span style="color:#BD93F9"> 10</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <h2 id="4-avoid-select-">4. Avoid SELECT * :</h2>
 <p>Select only the columns you need to prevent the overhead of loading unnecessary data.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2  </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2  </span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#FF79C6"> table</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <h2 id="5-use-where-instead-of-having-for-filtering">5. Use WHERE instead of HAVING for Filtering:</h2>
 <p><code>WHERE</code> clause filters records before grouping while <code>HAVING</code> filters after. Utilizing <code>WHERE</code> can optimize the query performance.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, </span><span style="color:#8BE9FD">COUNT</span><span style="color:#F8F8F2">(column2)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, </span><span style="color:#8BE9FD">COUNT</span><span style="color:#F8F8F2">(column2)</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#FF79C6"> table</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition </span></span>
 <span class="line"><span style="color:#FF79C6">GROUP BY</span><span style="color:#F8F8F2"> column1;</span></span></code></pre>
 <h2 id="6-if-possible-avoid-the-use-of-subqueries">6. If Possible Avoid the use of Subqueries:</h2>
 <p>A subquery is a SQL query enclosed in a larger SQL query. Often they may result in complex and less optimized queries.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column_name(s)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column_name(s)</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table1</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> column_name operator</span></span>
 <span class="line"><span style="color:#F8F8F2">   (</span><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column_name(s) </span><span style="color:#FF79C6">from</span><span style="color:#F8F8F2"> table2);</span></span></code></pre>

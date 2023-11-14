@@ -3,32 +3,32 @@
 <h2 id="ps-process-status">ps (Process Status)</h2>
 <p><code>ps</code> is a command used to provide information about the currently running processes, including the PostgreSQL server and its child processes. The command has various options to filter and format the output to suit your needs.</p>
 <p><strong>Example:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">ps</span><span style="color:#BD93F9"> -u</span><span style="color:#F1FA8C"> postgres</span><span style="color:#BD93F9"> -f</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">ps</span><span style="color:#BD93F9"> -u</span><span style="color:#F1FA8C"> postgres</span><span style="color:#BD93F9"> -f</span></span></code></pre>
 <p>This command lists all processes owned by the ‘postgres’ user in full format.</p>
 <h2 id="top-and-htop">top and htop</h2>
 <p><code>top</code> and <code>htop</code> are real-time, interactive process monitoring tools that provide a dynamic view of system processes and the resources they consume. They display information about CPU, memory, and other system statistics essential for troubleshooting performance-related issues in PostgreSQL.</p>
 <p><strong>Usage:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">top</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">top</span></span>
 <span class="line"><span style="color:#50FA7B">htop</span></span></code></pre>
 <h2 id="lsof-list-open-files">lsof (List Open Files)</h2>
 <p><code>lsof</code> is a utility that displays information about open files and the processes associated with them. This tool can help identify which files PostgreSQL has open and which network connections are active.</p>
 <p><strong>Example:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">lsof</span><span style="color:#BD93F9"> -u</span><span style="color:#F1FA8C"> postgres</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">lsof</span><span style="color:#BD93F9"> -u</span><span style="color:#F1FA8C"> postgres</span></span></code></pre>
 <p>This command lists all open files owned by the ‘postgres’ user.</p>
 <h2 id="netstat-network-statistics">netstat (Network Statistics)</h2>
 <p><code>netstat</code> is a helpful command that provides information about network connections, routing tables, interface statistics, and more. You can use it to check if PostgreSQL is bound to the correct IP address and listening on appropriate ports.</p>
 <p><strong>Example:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">netstat</span><span style="color:#BD93F9"> -plunt</span><span style="color:#FF79C6"> |</span><span style="color:#50FA7B"> grep</span><span style="color:#F1FA8C"> postgres</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">netstat</span><span style="color:#BD93F9"> -plunt</span><span style="color:#FF79C6"> |</span><span style="color:#50FA7B"> grep</span><span style="color:#F1FA8C"> postgres</span></span></code></pre>
 <p>This command displays listening sockets for the ‘postgres’ process.</p>
 <h2 id="df-and-du-disk-usage-and-free-space">df and du (Disk Usage and Free Space)</h2>
 <p><code>df</code> and <code>du</code> are file system utilities that allow you to analyze disk usage and free space. Monitoring disk space is crucial for the overall health of your PostgreSQL installation, as running out of disk space can lead to severe performance problems, crashes, or data corruption.</p>
 <p><strong>Usage:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">df</span><span style="color:#BD93F9"> -h</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">df</span><span style="color:#BD93F9"> -h</span></span>
 <span class="line"><span style="color:#50FA7B">du</span><span style="color:#BD93F9"> -sh</span><span style="color:#F1FA8C"> /path/to/postgresql/data</span></span></code></pre>
 <h2 id="tail---tail-logs-and-files">tail - Tail logs and files</h2>
 <p><code>tail</code> is a utility that allows you to display the end of a file or to follow the content of a file in real-time. You can use <code>tail</code> to monitor PostgreSQL log files for any errors or information that could be helpful when troubleshooting issues.</p>
 <p><strong>Example:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">tail</span><span style="color:#BD93F9"> -f</span><span style="color:#F1FA8C"> /path/to/postgresql/log/logfile</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tail</span><span style="color:#BD93F9"> -f</span><span style="color:#F1FA8C"> /path/to/postgresql/log/logfile</span></span></code></pre>
 <p>This command will show the end of the log file and keep the output updated as new lines are added.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>Understanding and using these operating system tools is a vital first step in diagnosing and troubleshooting any PostgreSQL problems. Make sure you are comfortable with the tools mentioned above and practice using them to manage your databases more effectively. Remember, each tool has additional flags and options that you can explore to tailor the output to your needs. Make sure to consult the relevant man pages or the <code>--help</code> option for further information.</p>

@@ -5,7 +5,7 @@
 <li>
 <p><strong>Define your <code>.proto</code> file:</strong> Create a <code>.proto</code> file that defines the structure of your messages.</p>
 <p><em>Example:</em></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>syntax = "proto3";</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>syntax = "proto3";</span></span>
 <span class="line"><span></span></span>
 <span class="line"><span>message Person {</span></span>
 <span class="line"><span>    string name = 1;</span></span>
@@ -16,13 +16,13 @@
 <li>
 <p><strong>Compile the <code>.proto</code> file:</strong> You need to compile your <code>.proto</code> file to generate C++ classes for serialization and deserialization.</p>
 <p><em>Example:</em></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">protoc</span><span style="color:#BD93F9"> --cpp_out=.</span><span style="color:#F1FA8C"> person.proto</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">protoc</span><span style="color:#BD93F9"> --cpp_out=.</span><span style="color:#F1FA8C"> person.proto</span></span></code></pre>
 <p>This will generate two files: <code>person.pb.cc</code> and <code>person.pb.h</code> that contains the C++ class definitions.</p>
 </li>
 <li>
 <p><strong>Include protobuf library and generated files into your C++ code:</strong> You’ll need to include the protobuf library and the generated files in your main C++ code.</p>
 <p><em>Example:</em></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
 <span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">fstream</span><span style="color:#E9F284">></span></span>
 <span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">person.pb.h</span><span style="color:#E9F284">"</span></span>
 <span class="line"></span>
@@ -59,7 +59,7 @@
 <li>
 <p><strong>Compile and link your C++ code:</strong> Finally, compile your C++ code and link it to the protobuf library.</p>
 <p><em>Example:</em></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">g++</span><span style="color:#BD93F9"> -std=c++11</span><span style="color:#BD93F9"> -o</span><span style="color:#F1FA8C"> main</span><span style="color:#F1FA8C"> main.cpp</span><span style="color:#F1FA8C"> person.pb.cc</span><span style="color:#BD93F9"> -lprotobuf</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">g++</span><span style="color:#BD93F9"> -std=c++11</span><span style="color:#BD93F9"> -o</span><span style="color:#F1FA8C"> main</span><span style="color:#F1FA8C"> main.cpp</span><span style="color:#F1FA8C"> person.pb.cc</span><span style="color:#BD93F9"> -lprotobuf</span></span></code></pre>
 </li>
 </ul>
 <p>For more information and examples, you can refer to the <a href="https://developers.google.com/protocol-buffers/docs/cpptutorial" rel="noopener noreferrer nofollow" target="_blank">official protobuf C++ tutorial</a>.</p>

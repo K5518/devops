@@ -3,13 +3,13 @@
 <h2 id="try--">try { … }</h2>
 <p>In the <code>try</code> block, you write the code that can possibly generate an exception. If an exception is encountered, the control is passed to the relevant <code>catch</code> block to handle the issue.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">try</span><span style="color:#F8F8F2"> {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">try</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#6272A4">  // code that might throw an exception</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <h2 id="catch---">catch (…) { … }</h2>
 <p>The <code>catch</code> block follows the <code>try</code> block and is responsible for handling the exceptions thrown by the <code>try</code> block. There can be multiple <code>catch</code> blocks to handle different types of exceptions.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">catch</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> e) {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">catch</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> e) {</span></span>
 <span class="line"><span style="color:#6272A4">  // handle exception of type int</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span>
 <span class="line"><span style="color:#FF79C6">catch</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">char</span><span style="color:#F8F8F2"> e) {</span></span>
@@ -21,7 +21,7 @@
 <h2 id="throw-">throw … ;</h2>
 <p>In case an error occurs within the <code>try</code> block, you can use the <code>throw</code> keyword to generate an exception of the specific type. This will then be caught and handled by the corresponding <code>catch</code> block.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">try</span><span style="color:#F8F8F2"> {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">try</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#FF79C6">  int</span><span style="color:#F8F8F2"> num1 </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 10</span><span style="color:#F8F8F2">, num2 </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">  if</span><span style="color:#F8F8F2"> (num2 </span><span style="color:#FF79C6">==</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">) {</span></span>
 <span class="line"><span style="color:#FF79C6">    throw</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Division by zero not allowed!</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">;</span></span>

@@ -1,7 +1,7 @@
 <h1 id="ambient-modules">Ambient Modules</h1>
 <p>Ambient modules in TypeScript are used to declare external modules or third-party libraries in a TypeScript program. Ambient modules provide type information for modules that have no TypeScript declarations, but are available in the global scope.</p>
 <p>Here’s an example of how you can use ambient modules in TypeScript:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="typescript"><code><span class="line"><span style="color:#6272A4">// myModule.d.ts</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">// myModule.d.ts</span></span>
 <span class="line"><span style="color:#FF79C6">declare</span><span style="color:#FF79C6"> module</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">my-module</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#FF79C6">  export</span><span style="color:#FF79C6"> function</span><span style="color:#50FA7B"> doSomething</span><span style="color:#F8F8F2">()</span><span style="color:#FF79C6">:</span><span style="color:#8BE9FD;font-style:italic"> void</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span>

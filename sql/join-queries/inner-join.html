@@ -8,7 +8,7 @@
 </ul>
 <h2 id="syntax">Syntax</h2>
 <p>Here is the syntax for an SQL <code>INNER JOIN</code>:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column_name(s)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column_name(s)</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table1</span></span>
 <span class="line"><span style="color:#FF79C6">INNER JOIN</span><span style="color:#F8F8F2"> table2</span></span>
 <span class="line"><span style="color:#FF79C6">ON</span><span style="color:#BD93F9"> table1</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">column_name</span><span style="color:#FF79C6"> =</span><span style="color:#BD93F9"> table2</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">column_name</span><span style="color:#F8F8F2">;</span></span></code></pre>
@@ -70,7 +70,7 @@
 
 <table><thead><tr><th>CustomerID</th><th>Name</th><th>Country</th></tr></thead><tbody><tr><td>100</td><td>Ana</td><td>Germany</td></tr><tr><td>101</td><td>Ben</td><td>USA</td></tr><tr><td>103</td><td>Charlie</td><td>Australia</td></tr></tbody></table>
 <p>Now, if you want to select all orders, and any matching customer information:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#BD93F9"> Orders</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">OrderID</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">Customers</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerName</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">Orders</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">OrderAmount</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#BD93F9"> Orders</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">OrderID</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">Customers</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerName</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">Orders</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">OrderAmount</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Orders</span></span>
 <span class="line"><span style="color:#FF79C6">INNER JOIN</span><span style="color:#F8F8F2"> Customers</span></span>
 <span class="line"><span style="color:#FF79C6">ON</span><span style="color:#BD93F9"> Orders</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerID</span><span style="color:#FF79C6"> =</span><span style="color:#BD93F9"> Customers</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerID</span><span style="color:#F8F8F2">;</span></span></code></pre>

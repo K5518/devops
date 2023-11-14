@@ -1,12 +1,12 @@
 <h1 id="expo-file-system">Expo File System</h1>
 <p>Expo File System is a universal module that provides access to the file system on the device. Using this module, you can perform various file operations like reading, writing, copying, moving, and deleting files and folders. It also supports reading file metadata and querying file URI.</p>
 <p>To use the Expo File System library, you need to install the <code>expo-file-system</code> package:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">expo</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> expo-file-system</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">expo</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> expo-file-system</span></span></code></pre>
 <p>First, import the <code>expo-file-system</code> module:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#BD93F9"> *</span><span style="color:#FF79C6"> as</span><span style="color:#F8F8F2"> FileSystem </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">expo-file-system</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#BD93F9"> *</span><span style="color:#FF79C6"> as</span><span style="color:#F8F8F2"> FileSystem </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">expo-file-system</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <p>Here are some examples of how to use the Expo File System:</p>
 <h2 id="reading-a-file">Reading a file</h2>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#FF79C6">async</span><span style="color:#FF79C6"> function</span><span style="color:#50FA7B"> readFileAsync</span><span style="color:#F8F8F2">() {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">async</span><span style="color:#FF79C6"> function</span><span style="color:#50FA7B"> readFileAsync</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#FF79C6">    const</span><span style="color:#F8F8F2"> fileUri </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> FileSystem.documentDirectory </span><span style="color:#FF79C6">+</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">myFile.txt</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    try</span><span style="color:#F8F8F2"> {</span></span>
@@ -17,7 +17,7 @@
 <span class="line"><span style="color:#F8F8F2">    }</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <h2 id="writing-a-file">Writing a file</h2>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#FF79C6">async</span><span style="color:#FF79C6"> function</span><span style="color:#50FA7B"> writeFileAsync</span><span style="color:#F8F8F2">() {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">async</span><span style="color:#FF79C6"> function</span><span style="color:#50FA7B"> writeFileAsync</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#FF79C6">    const</span><span style="color:#F8F8F2"> fileUri </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> FileSystem.documentDirectory </span><span style="color:#FF79C6">+</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">myFile.txt</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">    const</span><span style="color:#F8F8F2"> content </span><span style="color:#FF79C6">=</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Hello, World!</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
@@ -29,7 +29,7 @@
 <span class="line"><span style="color:#F8F8F2">    }</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <h2 id="copying--moving-a-file">Copying &#x26; Moving a file</h2>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#FF79C6">async</span><span style="color:#FF79C6"> function</span><span style="color:#50FA7B"> copyAndMoveFileAsync</span><span style="color:#F8F8F2">() {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">async</span><span style="color:#FF79C6"> function</span><span style="color:#50FA7B"> copyAndMoveFileAsync</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#FF79C6">    const</span><span style="color:#F8F8F2"> srcUri </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> FileSystem.documentDirectory </span><span style="color:#FF79C6">+</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">myFile.txt</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">    const</span><span style="color:#F8F8F2"> destUri </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> FileSystem.documentDirectory </span><span style="color:#FF79C6">+</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">copiedFile.txt</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
@@ -45,7 +45,7 @@
 <span class="line"><span style="color:#F8F8F2">    }</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <h2 id="deleting-a-file">Deleting a file</h2>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#FF79C6">async</span><span style="color:#FF79C6"> function</span><span style="color:#50FA7B"> deleteFileAsync</span><span style="color:#F8F8F2">() {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">async</span><span style="color:#FF79C6"> function</span><span style="color:#50FA7B"> deleteFileAsync</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#FF79C6">    const</span><span style="color:#F8F8F2"> fileUri </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> FileSystem.documentDirectory </span><span style="color:#FF79C6">+</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">myFile.txt</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    try</span><span style="color:#F8F8F2"> {</span></span>

@@ -34,7 +34,7 @@
 <table><thead><tr><th>ID</th><th>NAME</th><th>ADDRESS</th><th>EMAIL</th></tr></thead><tbody><tr><td>1</td><td>John</td><td>NY</td><td><a href="mailto:john@example.com">john@example.com</a></td></tr><tr><td>2</td><td>Jane</td><td>LA</td><td><a href="mailto:jane@example.com">jane@example.com</a></td></tr><tr><td>3</td><td>Jim</td><td>Chicago</td><td><a href="mailto:jim@example.com">jim@example.com</a></td></tr></tbody></table>
 <p>Each of these line of data is referred to as a ‘row’ in the SQL table.</p>
 <p>To select a row, you would use a <code>SELECT</code> statement. Here’s an example of how you might select a row:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> customers </span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> ID </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <p>This would output:</p>
@@ -57,7 +57,7 @@
 
 <table><thead><tr><th>ID</th><th>Name</th><th>ADDRESS</th><th>Email</th></tr></thead><tbody><tr><td>1</td><td>John</td><td>NY</td><td><a href="mailto:john@example.com">john@example.com</a></td></tr></tbody></table>
 <p>The <code>*</code> in the statement refers to all columns. If you want to only select specific columns, you can replace <code>*</code> with the column name(s):</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> NAME</span><span style="color:#F8F8F2">, EMAIL</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> NAME</span><span style="color:#F8F8F2">, EMAIL</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> customers </span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> ID </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <p>In this case, the output would be:</p>

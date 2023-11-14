@@ -5,7 +5,7 @@
 <li>
 <p><strong>NOT NULL Constraint</strong>: Ensures that a column cannot have a NULL value.</p>
 <p>For Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Students</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Students</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#FF79C6">    Name</span><span style="color:#FF79C6"> varchar</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">255</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    Age </span><span style="color:#FF79C6">int</span></span>
@@ -14,7 +14,7 @@
 <li>
 <p><strong>UNIQUE Constraint</strong>: Ensures that all values in a column are different.</p>
 <p>For Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Students</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Students</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#FF79C6"> UNIQUE</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#FF79C6">    Name</span><span style="color:#FF79C6"> varchar</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">255</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    Age </span><span style="color:#FF79C6">int</span></span>
@@ -23,7 +23,7 @@
 <li>
 <p><strong>PRIMARY KEY Constraint</strong>: Uniquely identifies each record in a database table. Primary keys must contain UNIQUE values. Exactly the same as the UNIQUE constraint but there can be many unique constraints in a table, but only one PRIMARY KEY constraint per table.</p>
 <p>For Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Students</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Students</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#FF79C6">    Name</span><span style="color:#FF79C6"> varchar</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">255</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    Age </span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2">,</span></span>
@@ -33,7 +33,7 @@
 <li>
 <p><strong>FOREIGN KEY Constraint</strong>: Prevents actions that would destroy links between tables. A FOREIGN KEY is a field (or collection of fields) in one table that refers to the PRIMARY KEY in another table.</p>
 <p>For Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Orders</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Orders</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    OrderID </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    OrderNumber </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2">,</span></span>
@@ -44,7 +44,7 @@
 <li>
 <p><strong>CHECK Constraint</strong>: The CHECK constraint ensures that all values in a column satisfies certain conditions.</p>
 <p>For Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Students</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Students</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#FF79C6">    Name</span><span style="color:#FF79C6"> varchar</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">255</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    Age </span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2">,</span></span>
@@ -54,7 +54,7 @@
 <li>
 <p><strong>DEFAULT Constraint</strong>: Provides a default value for a column when none is specified.</p>
 <p>For Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Students</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Students</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#FF79C6">    Name</span><span style="color:#FF79C6"> varchar</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">255</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    Age </span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2">,</span></span>
@@ -64,7 +64,7 @@
 <li>
 <p><strong>INDEX Constraint</strong>: Used to create and retrieve data from the database very quickly.</p>
 <p>For Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> INDEX</span><span style="color:#50FA7B"> idx_name</span><span style="color:#F8F8F2"> </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> INDEX</span><span style="color:#50FA7B"> idx_name</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> Students (</span><span style="color:#FF79C6">Name</span><span style="color:#F8F8F2">);</span></span></code></pre>
 <p>Note: Indexes are not a part of the SQL standard and are not supported by all databases.</p>
 </li>

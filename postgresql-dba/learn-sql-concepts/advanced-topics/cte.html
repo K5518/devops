@@ -2,14 +2,14 @@
 <p>A Common Table Expression, also known as CTE, is a named temporary result set that can be referenced within a <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, or <code>DELETE</code> statement. CTEs are particularly helpful when dealing with complex queries, as they enable you to break down the query into smaller, more readable chunks.</p>
 <h2 id="syntax">Syntax</h2>
 <p>The basic syntax for a CTE is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#F8F8F2"> cte_name (column_name1, column_name2, ...)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#F8F8F2"> cte_name (column_name1, column_name2, ...)</span></span>
 <span class="line"><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#6272A4">    -- CTE query goes here</span></span>
 <span class="line"><span style="color:#F8F8F2">)</span></span>
 <span class="line"><span style="color:#6272A4">-- Main query that references the CTE</span></span></code></pre>
 <h2 id="simple-example">Simple Example</h2>
 <p>Here is a simple example illustrating the use of a CTE:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#F8F8F2"> employees_over_30 (</span><span style="color:#FF79C6">name</span><span style="color:#F8F8F2">, age) </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#F8F8F2"> employees_over_30 (</span><span style="color:#FF79C6">name</span><span style="color:#F8F8F2">, age) </span></span>
 <span class="line"><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#FF79C6">    SELECT</span><span style="color:#FF79C6"> name</span><span style="color:#F8F8F2">, age </span></span>
 <span class="line"><span style="color:#FF79C6">    FROM</span><span style="color:#F8F8F2"> employees </span></span>
@@ -20,7 +20,7 @@
 <p>In this example, we create a CTE called <code>employees_over_30</code>, which contains the name and age of employees who are older than 30. We then reference this CTE in our main query to get the desired results.</p>
 <h2 id="recursive-ctes">Recursive CTEs</h2>
 <p>One powerful feature of CTEs is the ability to create recursive queries. Recursive CTEs make it easier to work with hierarchical or tree-structured data. The basic syntax for a recursive CTE is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#FF79C6"> RECURSIVE</span><span style="color:#F8F8F2"> cte_name (column_name1, column_name2, ...)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#FF79C6"> RECURSIVE</span><span style="color:#F8F8F2"> cte_name (column_name1, column_name2, ...)</span></span>
 <span class="line"><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#6272A4">    -- Non-recursive term</span></span>
 <span class="line"><span style="color:#FF79C6">    SELECT</span><span style="color:#F8F8F2"> ...</span></span>
@@ -33,7 +33,7 @@
 <p>A recursive CTE consists of two parts: the non-recursive term and the recursive term, combined using the <code>UNION ALL</code> clause. The non-recursive term acts as the base case, while the recursive term is used to build the hierarchy iteratively.</p>
 <h2 id="recursive-example">Recursive Example</h2>
 <p>Here’s an example of a recursive CTE that calculates the factorial of a number:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#FF79C6"> RECURSIVE</span><span style="color:#F8F8F2"> factorial (n, fact) </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#FF79C6"> RECURSIVE</span><span style="color:#F8F8F2"> factorial (n, fact) </span></span>
 <span class="line"><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#6272A4">    -- Non-recursive term</span></span>
 <span class="line"><span style="color:#FF79C6">    SELECT</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1</span></span>

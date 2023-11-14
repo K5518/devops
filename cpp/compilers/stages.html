@@ -3,7 +3,7 @@
 <h2 id="preprocessing">Preprocessing</h2>
 <p>The first stage is the preprocessing of the source code. Preprocessors modify the source code before the actual compilation process. They handle directives that start with a <code>#</code> (hash) symbol, like <code>#include</code>, <code>#define</code>, and <code>#if</code>. In this stage, included header files are expanded, macros are replaced, and conditional compilation statements are processed.</p>
 <p><strong>Code Example:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
 <span class="line"><span style="color:#FF79C6">#define</span><span style="color:#50FA7B"> PI</span><span style="color:#F8F8F2"> 3.14</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">int</span><span style="color:#50FA7B"> main</span><span style="color:#F8F8F2">() {</span></span>
@@ -13,7 +13,7 @@
 <h2 id="compilation">Compilation</h2>
 <p>The second stage is the actual compilation of the preprocessed source code. The compiler translates the modified source code into an intermediate representation, usually specific to the target processor architecture. This step also involves performing syntax checking, semantic analysis, and producing error messages for any issues encountered in the source code.</p>
 <p><strong>Code Example:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#50FA7B"> main</span><span style="color:#F8F8F2">() {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#50FA7B"> main</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#FF79C6">    int</span><span style="color:#F8F8F2"> a </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 10</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">    int</span><span style="color:#F8F8F2"> b </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 20</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">    int</span><span style="color:#F8F8F2"> sum </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> a </span><span style="color:#FF79C6">+</span><span style="color:#F8F8F2"> b;</span></span>
@@ -22,11 +22,11 @@
 <h2 id="assembly">Assembly</h2>
 <p>The third stage is converting the compiler’s intermediate representation into assembly language. This stage generates assembly code using mnemonics and syntax that is specific to the target processor architecture. Assemblers then convert this assembly code into object code (machine code).</p>
 <p><strong>Code Example (x86 Assembly):</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>mov eax, 10</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>mov eax, 10</span></span>
 <span class="line"><span>mov ebx, 20</span></span>
 <span class="line"><span>add eax, ebx</span></span></code></pre>
 <h2 id="linking">Linking</h2>
 <p>The final stage is the linking of the object code with the necessary libraries and other object files. In this stage, the linker merges multiple object files and libraries, resolves external references from other modules or libraries, allocates memory addresses for functions and variables, and generates an executable file that can be run on the target platform.</p>
 <p><strong>Code Example (linking objects and libraries):</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">$</span><span style="color:#F1FA8C"> g++</span><span style="color:#F1FA8C"> main.o</span><span style="color:#BD93F9"> -o</span><span style="color:#F1FA8C"> main</span><span style="color:#BD93F9"> -lm</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">$</span><span style="color:#F1FA8C"> g++</span><span style="color:#F1FA8C"> main.o</span><span style="color:#BD93F9"> -o</span><span style="color:#F1FA8C"> main</span><span style="color:#BD93F9"> -lm</span></span></code></pre>
 <p>In summary, the compilation process in C++ involves four primary stages: preprocessing, compilation, assembly, and linking. Each stage plays a crucial role in transforming the source code into an executable program.</p>

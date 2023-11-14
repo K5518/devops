@@ -32,7 +32,7 @@
 </ul>
 <h2 id="creating-an-sp-gist-index">Creating an SP-GiST Index</h2>
 <p>To create an SP-GiST index, you can use the <code>CREATE INDEX</code> command with the <code>USING spgist</code> option. Here’s an example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> INDEX</span><span style="color:#50FA7B"> my_spgist_index</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> my_table </span><span style="color:#FF79C6">USING</span><span style="color:#F8F8F2"> spgist (column_name);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> INDEX</span><span style="color:#50FA7B"> my_spgist_index</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> my_table </span><span style="color:#FF79C6">USING</span><span style="color:#F8F8F2"> spgist (column_name);</span></span></code></pre>
 <p>Replace <code>my_spgist_index</code>, <code>my_table</code>, and <code>column_name</code> with the appropriate names for your specific use case.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>SP-GiST is a powerful and flexible indexing method in PostgreSQL that can handle diverse data types and query patterns. It’s a reliable choice for applications dealing with geometrical, network-based, or other irregular data distributions. However, keep in mind the index creation time and size when choosing SP-GiST, and always test its performance with your specific data and use case.</p>

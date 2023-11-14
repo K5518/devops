@@ -4,7 +4,7 @@
 <ul>
 <li><strong>Manual Vacuum</strong>: Initiated by the user, a manual vacuum can be performed using the <code>VACUUM</code> SQL command. It scans the tables and indexes and removes dead rows where appropriate.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#F8F8F2">VACUUM table_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">VACUUM table_name;</span></span></code></pre>
 <ul>
 <li><strong>Automatic Vacuum</strong>: To automate the vacuuming process, PostgreSQL implements the <em>autovacuum daemon</em>. This background process starts upon initiating a PostgreSQL instance and operates on the entire cluster. It monitors and analyzes the database for bloated tables and reclaims storage space according to predefined settings in the <code>postgresql.conf</code> configuration file.</li>
 </ul>
@@ -12,23 +12,23 @@
 <ul>
 <li><strong>Vacuum</strong>: The basic vacuum process removes dead rows and optimizes the free space in the database. However, it doesn’t reclaim storage space or optimize the indexes for the underlying file system.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#F8F8F2">VACUUM table_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">VACUUM table_name;</span></span></code></pre>
 <ul>
 <li><strong>Vacuum Full</strong>: The <code>VACUUM FULL</code> command not only removes dead rows but also compacts the table and its indexes, reclaiming storage space for the file system. Be cautious with this command, as it might lock the table for a long time during the operation.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#F8F8F2">VACUUM FULL table_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">VACUUM FULL table_name;</span></span></code></pre>
 <ul>
 <li><strong>Analyze</strong>: The <code>ANALYZE</code> command updates the statistics about the distribution of the key values in the tables and indexes. These statistics help the PostgreSQL query planner to choose the most efficient execution plan for the queries.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#F8F8F2">ANALYZE table_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">ANALYZE table_name;</span></span></code></pre>
 <ul>
 <li><strong>Vacuum Analyze</strong>: Combining both <code>VACUUM</code> and <code>ANALYZE</code>, this command is useful when you want to perform vacuum processing and update the statistics simultaneously.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#F8F8F2">VACUUM ANALYZE table_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">VACUUM ANALYZE table_name;</span></span></code></pre>
 <ul>
 <li><strong>Vacuum Freeze</strong>: The <code>VACUUM FREEZE</code> command is primarily used for tables with a high update frequency. It marks all rows as “frozen,” which means the transaction information is no longer needed for MVCC, reducing the need for subsequent vacuum processing.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#F8F8F2">VACUUM FREEZE table_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">VACUUM FREEZE table_name;</span></span></code></pre>
 <h2 id="customizing-vacuum-processing">Customizing Vacuum Processing</h2>
 <p>Vacuum processing behavior can be adjusted by modifying the following configuration parameters in the <code>postgresql.conf</code> file:</p>
 <ul>

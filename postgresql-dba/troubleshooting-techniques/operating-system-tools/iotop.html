@@ -10,7 +10,7 @@
 </ul>
 <h2 id="installation">Installation</h2>
 <p>To install <code>iotop</code> on your system, use the following commands depending on your package manager:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#6272A4"># Debian/Ubuntu</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4"># Debian/Ubuntu</span></span>
 <span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> apt-get</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> iotop</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4"># Fedora</span></span>
@@ -20,7 +20,7 @@
 <span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> yum</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> iotop</span></span></code></pre>
 <h2 id="usage">Usage</h2>
 <p>To start using <code>iotop</code>, simply run the following command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> iotop</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> iotop</span></span></code></pre>
 <p>By default, <code>iotop</code> will display the top I/O-consuming processes sorted by their current disk usage. The output will include process ID, user, disk read &#x26; write speeds, swapin speed, IO %, and command details.</p>
 <p>You can control the output using various options like:</p>
 <ul>
@@ -30,7 +30,7 @@
 <li><code>-d &#x3C;seconds></code>: Time interval between updates</li>
 </ul>
 <p>For example, you can use the following command to display only processes with I/O activities and exit after five iterations with a delay of 3 seconds between each update:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> iotop</span><span style="color:#BD93F9"> -o</span><span style="color:#BD93F9"> -n</span><span style="color:#BD93F9"> 5</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> 3</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> iotop</span><span style="color:#BD93F9"> -o</span><span style="color:#BD93F9"> -n</span><span style="color:#BD93F9"> 5</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> 3</span></span></code></pre>
 <h2 id="additional-resources">Additional Resources</h2>
 <ul>
 <li>iotop’s official website: <a href="http://guichaz.free.fr/iotop/" rel="noopener noreferrer nofollow" target="_blank">http://guichaz.free.fr/iotop/</a></li>

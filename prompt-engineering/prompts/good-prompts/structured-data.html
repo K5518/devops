@@ -13,12 +13,12 @@
 </li>
 </ul>
 <p>Here is an example demonstrating the use of structured data.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>Help me generate a JSON object with keys `product` (name of product), `isPositive` (boolean), `summary` (one sentence summary of review) from the text enclosed in &#x3C;review> tag.</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Help me generate a JSON object with keys `product` (name of product), `isPositive` (boolean), `summary` (one sentence summary of review) from the text enclosed in &#x3C;review> tag.</span></span>
 <span class="line"><span></span></span>
 <span class="line"><span>&#x3C;review>Regrettably, the "XYZ ProTech 2000" product failed to meet even the most basic expectations. From its lackluster build quality and confusing user interface to its abysmal performance and disappointing customer support, this product left me deeply dissatisfied. If you're considering purchasing the "XYZ ProTech 2000," I strongly advise you to explore alternative options that offer superior quality and reliability.</span></span>
 <span class="line"><span>&#x3C;/review></span></span></code></pre>
 <p>Output from the above prompt:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="json"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#8BE9FE">  "</span><span style="color:#8BE9FD">product</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">XYZ ProTech 2000</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#8BE9FE">  "</span><span style="color:#8BE9FD">isPositive</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> false</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#8BE9FE">  "</span><span style="color:#8BE9FD">summary</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Failed to meet expectations due to lackluster build quality, confusing user interface, abysmal performance, and disappointing customer support.</span><span style="color:#E9F284">"</span></span>

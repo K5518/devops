@@ -2,11 +2,11 @@
 <p>Variadic templates are a feature in C++11 that allows you to define a template with a variable number of arguments. This is especially useful when you need to write a function or class that can accept different numbers and types of arguments.</p>
 <h2 id="syntax">Syntax</h2>
 <p>The syntax for variadic templates is very simple. To define a variadic template, use the <code>...</code> (ellipsis) notation:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">template</span><span style="color:#F8F8F2"> &#x3C;</span><span style="color:#FF79C6">typename</span><span style="color:#F8F8F2">... </span><span style="color:#8BE9FD;font-style:italic">Args</span><span style="color:#F8F8F2">></span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">template</span><span style="color:#F8F8F2"> &#x3C;</span><span style="color:#FF79C6">typename</span><span style="color:#F8F8F2">... </span><span style="color:#8BE9FD;font-style:italic">Args</span><span style="color:#F8F8F2">></span></span></code></pre>
 <p>This notation represents a parameter pack, which can contain zero or more arguments. You can use this parameter pack as a variable list of template parameters in your template definition.</p>
 <h2 id="examples">Examples</h2>
 <h3 id="summing-multiple-arguments-using-variadic-templates">Summing Multiple Arguments Using Variadic Templates</h3>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">// Base case for recursion</span></span>
 <span class="line"><span style="color:#FF79C6">template</span><span style="color:#F8F8F2"> &#x3C;</span><span style="color:#FF79C6">typename</span><span style="color:#8BE9FD;font-style:italic"> T</span><span style="color:#F8F8F2">></span></span>
@@ -27,7 +27,7 @@
 <span class="line"><span style="color:#FF79C6">  return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <h3 id="tuple-class-using-variadic-templates">Tuple Class Using Variadic Templates</h3>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">template</span><span style="color:#F8F8F2"> &#x3C;</span><span style="color:#FF79C6">typename</span><span style="color:#F8F8F2">... </span><span style="color:#8BE9FD;font-style:italic">Types</span><span style="color:#F8F8F2">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">template</span><span style="color:#F8F8F2"> &#x3C;</span><span style="color:#FF79C6">typename</span><span style="color:#F8F8F2">... </span><span style="color:#8BE9FD;font-style:italic">Types</span><span style="color:#F8F8F2">></span></span>
 <span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Tuple</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">// Base case: empty tuple</span></span>

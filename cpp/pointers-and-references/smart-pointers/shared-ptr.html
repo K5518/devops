@@ -3,7 +3,7 @@
 <p>When using a <code>shared_ptr</code>, the reference counter is automatically incremented every time a new pointer is created, and decremented when each pointer goes out of scope. Once the reference counter reaches zero, the system will clean up the memory.</p>
 <h2 id="code-example">Code Example</h2>
 <p>Here’s an example of how to use <code>shared_ptr</code>:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
 <span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">memory</span><span style="color:#E9F284">></span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> MyClass</span><span style="color:#F8F8F2"> {</span></span>
@@ -31,7 +31,7 @@
 <span class="line"><span style="color:#6272A4">    // this causes the MyClass object to be deleted and the destructor is called</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <p>Output:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>Constructor is called.</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Constructor is called.</span></span>
 <span class="line"><span>Inside the inner scope.</span></span>
 <span class="line"><span>Outside the inner scope.</span></span>
 <span class="line"><span>Destructor is called.</span></span></code></pre>

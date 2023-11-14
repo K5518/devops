@@ -4,7 +4,7 @@
 <h2 id="platform-specific-component-files">Platform-Specific Component Files</h2>
 <p>You can create separate files for each platform’s specific components, keeping the implementation and styling different for Android and iOS.</p>
 <p>For example, if you have a <code>Header</code> component, you can create two separate files <code>Header.ios.js</code> and <code>Header.android.js</code>. React Native will automatically pick the right file depending on the platform it’s running on.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#6272A4">// Header.ios.js</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">// Header.ios.js</span></span>
 <span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> React </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { View, Text } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react-native</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
@@ -17,7 +17,7 @@
 <span class="line"><span style="color:#F8F8F2">};</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">export</span><span style="color:#FF79C6"> default</span><span style="color:#F8F8F2"> Header;</span></span></code></pre>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#6272A4">// Header.android.js</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">// Header.android.js</span></span>
 <span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> React </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { View, Text } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react-native</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
@@ -32,7 +32,7 @@
 <span class="line"><span style="color:#FF79C6">export</span><span style="color:#FF79C6"> default</span><span style="color:#F8F8F2"> Header;</span></span></code></pre>
 <h2 id="platform-specific-code-within-a-file">Platform-Specific Code within a File</h2>
 <p>You can also use the <code>Platform</code> module from React Native to determine which platform-specific code to run within a single file.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { Platform, StyleSheet, Text } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react-native</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { Platform, StyleSheet, Text } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react-native</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">const</span><span style="color:#50FA7B"> ComponentWithPlatformSpecificCode</span><span style="color:#FF79C6"> =</span><span style="color:#F8F8F2"> () </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#FF79C6">  return</span><span style="color:#F8F8F2"> &#x3C;</span><span style="color:#8BE9FD;font-style:italic">Text</span><span style="color:#50FA7B;font-style:italic"> style</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">styles.content</span><span style="color:#FF79C6">}</span><span style="color:#F8F8F2">>Hello World!&#x3C;/</span><span style="color:#8BE9FD;font-style:italic">Text</span><span style="color:#F8F8F2">>;</span></span>

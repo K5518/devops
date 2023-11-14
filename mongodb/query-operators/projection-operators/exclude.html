@@ -2,7 +2,7 @@
 <p>In MongoDB, the projection operators help you to specify the fields you want to include or exclude in the query result. The <code>exclude</code> operator, as the name suggests, helps you to exclude certain fields from the result.</p>
 <p>To exclude a field from the query result, you need to set its value to <code>0</code> in the projection document. Let’s understand it better with an example.</p>
 <h2 id="syntax">Syntax</h2>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#F8F8F2">    $project: {</span></span>
 <span class="line"><span style="color:#F8F8F2">        field1: </span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">        field2: </span><span style="color:#BD93F9">0</span></span>
@@ -12,7 +12,7 @@
 <p>Here, we’re specifying that the fields <code>field1</code> and <code>field2</code> should be excluded from the result.</p>
 <h2 id="example">Example</h2>
 <p>Suppose we have a collection called <code>students</code> with the following documents:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#E9F284">    "</span><span style="color:#F1FA8C">_id</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#E9F284">    "</span><span style="color:#F1FA8C">name</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">John Doe</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#E9F284">    "</span><span style="color:#F1FA8C">age</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#BD93F9">20</span><span style="color:#F8F8F2">,</span></span>
@@ -31,7 +31,7 @@
 <span class="line"><span style="color:#E9F284">    "</span><span style="color:#F1FA8C">course</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">Information Technology</span><span style="color:#E9F284">"</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <p>Now, let’s say we want to fetch all the students but exclude the <code>age</code> field from the result. We can achieve this using the following command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">db.students.</span><span style="color:#50FA7B">aggregate</span><span style="color:#F8F8F2">([</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.students.</span><span style="color:#50FA7B">aggregate</span><span style="color:#F8F8F2">([</span></span>
 <span class="line"><span style="color:#F8F8F2">  {</span></span>
 <span class="line"><span style="color:#F8F8F2">    $project</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#F8F8F2">      age</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">,</span></span>
@@ -39,7 +39,7 @@
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
 <span class="line"><span style="color:#F8F8F2">]);</span></span></code></pre>
 <p>This command will return the following result:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#E9F284">    "</span><span style="color:#F1FA8C">_id</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#E9F284">    "</span><span style="color:#F1FA8C">name</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">John Doe</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#E9F284">    "</span><span style="color:#F1FA8C">course</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">Software Engineering</span><span style="color:#E9F284">"</span></span>

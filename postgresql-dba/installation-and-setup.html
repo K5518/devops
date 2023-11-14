@@ -24,7 +24,7 @@
 <p>Configure the <code>postgresql.conf</code> file:</p>
 <ul>
 <li>Open the <code>postgresql.conf</code> with your file editor. You can typically find it in the following locations:
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>Windows: C:\Program Files\PostgreSQL\&#x3C;version>\data\postgresql.conf</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Windows: C:\Program Files\PostgreSQL\&#x3C;version>\data\postgresql.conf</span></span>
 <span class="line"><span>Linux: /etc/postgresql/&#x3C;version>/main/postgresql.conf</span></span>
 <span class="line"><span>macOS: /Library/PostgreSQL/&#x3C;version>/data/postgresql.conf</span></span></code></pre>
 </li>
@@ -45,19 +45,19 @@
 <ul>
 <li>
 <p>Open a terminal or command prompt and run the <code>psql</code> command to connect to the PostgreSQL server as the default <code>postgres</code> user.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>psql -U postgres</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>psql -U postgres</span></span></code></pre>
 </li>
 <li>
 <p>Create a new database using the <code>CREATE DATABASE</code> SQL statement. Replace <code>&#x3C;database_name></code> with the name of your desired database.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>CREATE DATABASE &#x3C;database_name>;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>CREATE DATABASE &#x3C;database_name>;</span></span></code></pre>
 </li>
 <li>
 <p>Create a new user using the <code>CREATE USER</code> SQL statement. Replace <code>&#x3C;username></code> and <code>&#x3C;password></code> with appropriate values.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>CREATE USER &#x3C;username> WITH PASSWORD '&#x3C;password>';</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>CREATE USER &#x3C;username> WITH PASSWORD '&#x3C;password>';</span></span></code></pre>
 </li>
 <li>
 <p>Grant the necessary privileges to the new user for your database:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>GRANT ALL PRIVILEGES ON DATABASE &#x3C;database_name> TO &#x3C;username>;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>GRANT ALL PRIVILEGES ON DATABASE &#x3C;database_name> TO &#x3C;username>;</span></span></code></pre>
 </li>
 <li>
 <p>Exit the <code>psql</code> shell with <code>\q</code>.</p>

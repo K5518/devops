@@ -34,7 +34,7 @@
 <p><strong>Configure Prometheus</strong>: Update <code>prometheus.yml</code> file with the target PostgreSQL Exporter URL, setting up the scrape configuration. For example:</p>
 </li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="yaml"><code><span class="line"><span style="color:#8BE9FD">scrape_configs</span><span style="color:#FF79C6">:</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">scrape_configs</span><span style="color:#FF79C6">:</span></span>
 <span class="line"><span style="color:#FF79C6">  -</span><span style="color:#8BE9FD"> job_name</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">postgresql</span><span style="color:#E9F284">'</span></span>
 <span class="line"><span style="color:#8BE9FD">    static_configs</span><span style="color:#FF79C6">:</span></span>
 <span class="line"><span style="color:#FF79C6">      -</span><span style="color:#8BE9FD"> targets</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> [</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">localhost:9187</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">]</span></span></code></pre>

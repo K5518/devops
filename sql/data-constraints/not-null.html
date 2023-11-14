@@ -3,7 +3,7 @@
 <p>For instance, if you’re designing a table for employee data, you might want to ensure that the employee’s <code>id</code> and <code>name</code> are always provided. In this case, you’d use the <code>NOT NULL</code> constraint.</p>
 <h2 id="creating-a-table-with-not-null">Creating a table with NOT NULL</h2>
 <p>Here’s an example of how you would define a <code>NOT NULL</code> constraint when creating a table:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#FF79C6">    Name</span><span style="color:#FF79C6"> varchar</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">255</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    Age </span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2">,</span></span>
@@ -13,7 +13,7 @@
 <h2 id="adding-not-null-to-an-existing-table">Adding NOT NULL to an existing table</h2>
 <p>You can also add a <code>NOT NULL</code> constraint to an existing table using the <code>ALTER TABLE</code> statement. However, make sure there are no NULL values in the column before adding the <code>NOT NULL</code> constraint.</p>
 <p>Here’s an example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> Employees</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> Employees</span></span>
 <span class="line"><span style="color:#FF79C6">MODIFY</span><span style="color:#FF79C6"> Address</span><span style="color:#FF79C6"> varchar</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">255</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">NOT NULL</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <p>This command will modify the table <code>Employees</code> and set the <code>Address</code> column to be <code>NOT NULL</code>.</p>
 <p><strong>Note:</strong> In some SQL systems like PostgreSQL, you use the <code>ALTER TABLE</code> command followed by <code>SET NOT NULL</code>.</p>

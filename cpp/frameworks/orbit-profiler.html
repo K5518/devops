@@ -11,17 +11,17 @@
 <ul>
 <li>
 <p><strong>Include OrbitProfiler.h</strong>: First, you need to include the <code>OrbitProfiler.h</code> header file in your project:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">OrbitProfiler.h</span><span style="color:#E9F284">"</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">OrbitProfiler.h</span><span style="color:#E9F284">"</span></span></code></pre>
 </li>
 <li>
 <p><strong>Starting and Stopping the profiler</strong>: Use <code>ORBET_START</code> and <code>ORBIT_STOP</code> to start and stop the profiler.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#50FA7B">ORBIT_START</span><span style="color:#F8F8F2">();</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">ORBIT_START</span><span style="color:#F8F8F2">();</span></span>
 <span class="line"><span style="color:#6272A4">// Your application code here</span></span>
 <span class="line"><span style="color:#50FA7B">ORBIT_STOP</span><span style="color:#F8F8F2">();</span></span></code></pre>
 </li>
 <li>
 <p><strong>Instrumenting scopes</strong>: Use the <code>ORBET_SCOPE</code> macro to annotate the scope of the function you want to measure:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">void</span><span style="color:#50FA7B"> ExampleFunction</span><span style="color:#F8F8F2">() {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">void</span><span style="color:#50FA7B"> ExampleFunction</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#50FA7B">  ORBIT_SCOPE</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">Example Function</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"><span style="color:#6272A4">  // Function content here</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
@@ -32,7 +32,7 @@
 </ul>
 <h2 id="example">Example</h2>
 <p>For demonstration purposes, consider the following example of a simple C++ application:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">OrbitProfiler.h</span><span style="color:#E9F284">"</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">OrbitProfiler.h</span><span style="color:#E9F284">"</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">void</span><span style="color:#50FA7B"> FunctionA</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#50FA7B">  ORBIT_SCOPE</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">Function A</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span>

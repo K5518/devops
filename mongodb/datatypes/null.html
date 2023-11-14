@@ -4,7 +4,7 @@
 <p>MongoDB uses BSON (Binary JSON) as its data model for storage. In BSON, the <code>null</code> data type is represented by the type number <code>0x0A</code>.</p>
 <h2 id="using-null-values-in-mongodb">Using Null Values in MongoDB</h2>
 <p>Here’s an example to illustrate how to use the <code>null</code> data type in MongoDB:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">db.users.</span><span style="color:#50FA7B">insertOne</span><span style="color:#F8F8F2">({</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.users.</span><span style="color:#50FA7B">insertOne</span><span style="color:#F8F8F2">({</span></span>
 <span class="line"><span style="color:#F8F8F2">  name</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Alice</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  email</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">alice@example.com</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  phone</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> null</span><span style="color:#F8F8F2">,</span></span>

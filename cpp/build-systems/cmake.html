@@ -2,7 +2,7 @@
 <p>CMake is a powerful cross-platform build system that generates build files, Makefiles, or workspaces for various platforms and compilers. Unlike the others build systems, CMake does not actually build the project, it only generates the files needed by build tools. CMake is widely used, particularly in C++ projects, for its ease of use and flexibility.</p>
 <h2 id="cmakeliststxt">CMakeLists.txt</h2>
 <p>CMake uses a file called <code>CMakeLists.txt</code> to define settings, source files, libraries, and other configurations. A typical <code>CMakeLists.txt</code> for a simple project would look like:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cmake"><code><span class="line"><span style="color:#FF79C6">cmake_minimum_required</span><span style="color:#F8F8F2">(VERSION 3.0)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">cmake_minimum_required</span><span style="color:#F8F8F2">(VERSION 3.0)</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">project</span><span style="color:#F8F8F2">(MyProject)</span></span>
 <span class="line"></span>
@@ -23,17 +23,17 @@
 <ul>
 <li>Create a new directory for the build.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">mkdir</span><span style="color:#F1FA8C"> build</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">mkdir</span><span style="color:#F1FA8C"> build</span></span>
 <span class="line"><span style="color:#8BE9FD">cd</span><span style="color:#F1FA8C"> build</span></span></code></pre>
 <ul>
 <li>Generate build files using CMake.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">cmake</span><span style="color:#F1FA8C"> ..</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">cmake</span><span style="color:#F1FA8C"> ..</span></span></code></pre>
 <p>In this example, <code>..</code> indicates the parent directory where <code>CMakeLists.txt</code> is located. The build files will be generated in the <code>build</code> directory.</p>
 <ul>
 <li>Build the project using the generated build files.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">make</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">make</span></span></code></pre>
 <p>Or, on Windows with Visual Studio, you may use:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">msbuild</span><span style="color:#F1FA8C"> MyProject.sln</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">msbuild</span><span style="color:#F1FA8C"> MyProject.sln</span></span></code></pre>
 <p>CMake makes it easy to manage large projects, define custom build configurations, and work with many different compilers and operating systems. Making it a widely chosen tool for managing build systems in C++ projects.</p>

@@ -12,11 +12,11 @@
 <ul>
 <li>
 <p><strong>Stop the old PostgreSQL cluster:</strong> Shutdown the old cluster using <code>pg_ctl</code> command, like:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>pg_ctl -D /path/to/old/data/directory stop</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>pg_ctl -D /path/to/old/data/directory stop</span></span></code></pre>
 </li>
 <li>
 <p><strong>Run the pg_upgrade command:</strong> Execute the <code>pg_upgrade</code> command with appropriate options. A basic example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>pg_upgrade -b /path/to/old/bin -B /path/to/new/bin \</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>pg_upgrade -b /path/to/old/bin -B /path/to/new/bin \</span></span>
 <span class="line"><span>           -d /path/to/old/data -D /path/to/new/data \</span></span>
 <span class="line"><span>           --check</span></span></code></pre>
 <p>Here,
@@ -29,7 +29,7 @@
 </li>
 <li>
 <p><strong>Run the actual pg_upgrade:</strong> Execute the <code>pg_upgrade</code> command without the <code>--check</code> option to perform the actual upgrade:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>pg_upgrade -b /path/to/old/bin -B /path/to/new/bin \</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>pg_upgrade -b /path/to/old/bin -B /path/to/new/bin \</span></span>
 <span class="line"><span>           -d /path/to/old/data -D /path/to/new/data</span></span></code></pre>
 </li>
 <li>
@@ -37,7 +37,7 @@
 </li>
 <li>
 <p><strong>Start the new PostgreSQL cluster:</strong> Use the <code>pg_ctl</code> command to start the new cluster:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>pg_ctl -D /path/to/new/data/directory start</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>pg_ctl -D /path/to/new/data/directory start</span></span></code></pre>
 </li>
 <li>
 <p><strong>Perform a cleanup:</strong> Once you are satisfied with the new cluster’s performance, clean up the old cluster’s data and configuration files by running the generated <code>delete_old_cluster.sh</code> script.</p>

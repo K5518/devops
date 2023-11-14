@@ -1,7 +1,7 @@
 <h1 id="copy-write-idiom">Copy-Write Idiom</h1>
 <p>The Copy-Write idiom, sometimes called the Copy-on-Write (CoW) or “lazy copying” idiom, is a technique used in programming to minimize the overhead of copying large objects. It helps in reducing the number of actual copy operations by using shared references to objects and only copying the data when it’s required for modification.</p>
 <p>Let’s understand this with a simple example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
 <span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">memory</span><span style="color:#E9F284">></span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> MyString</span><span style="color:#F8F8F2"> {</span></span>

@@ -2,7 +2,7 @@
 <p>The <code>$group</code> operator in MongoDB is used to aggregate and perform operations on the grouped data. The operator allows you to categorize documents in a collection based on specific fields and perform various operations on each group. These operations range from counting the number of documents in a group, to summing up the values of a particular field, to calculating average values, and many more.</p>
 <h4 id="basic-usage">Basic Usage</h4>
 <p>The basic syntax for the <code>$group</code> operator is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#F8F8F2">  $group: {</span></span>
 <span class="line"><span style="color:#F8F8F2">    _id: &#x3C;</span><span style="color:#FF79C6">expression</span><span style="color:#F8F8F2">>,</span></span>
 <span class="line"><span style="color:#F8F8F2">    &#x3C;</span><span style="color:#FF79C6">field1</span><span style="color:#F8F8F2">>: </span><span style="color:#FF79C6">{</span><span style="color:#F8F8F2"> &#x3C;</span><span style="color:#FF79C6">accumulator1</span><span style="color:#F8F8F2">> : &#x3C;</span><span style="color:#FF79C6">expression1</span><span style="color:#F8F8F2">> },</span></span>
@@ -17,7 +17,7 @@
 <li><code>&#x3C;expression1></code>: This is the field or expression that the <code>$group</code> operator applies to the specific accumulator.</li>
 </ul>
 <p>Suppose we have a collection called <code>orders</code>, which contains documents representing sales data.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">[</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">[</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">, customer_id</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">C1</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, amount</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 110</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 2</span><span style="color:#F8F8F2">, customer_id</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">C2</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, amount</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 150</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2">, customer_id</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">C1</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, amount</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 90</span><span style="color:#F8F8F2"> },</span></span>
@@ -25,7 +25,7 @@
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 5</span><span style="color:#F8F8F2">, customer_id</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">C2</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, amount</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 50</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">];</span></span></code></pre>
 <p>Now, let’s group the data by <code>customer_id</code> and calculate each customer’s total spent amount.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">db.orders.</span><span style="color:#50FA7B">aggregate</span><span style="color:#F8F8F2">([</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.orders.</span><span style="color:#50FA7B">aggregate</span><span style="color:#F8F8F2">([</span></span>
 <span class="line"><span style="color:#F8F8F2">  {</span></span>
 <span class="line"><span style="color:#F8F8F2">    $group</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#F8F8F2">      _id</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">$customer_id</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>
@@ -34,7 +34,7 @@
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
 <span class="line"><span style="color:#F8F8F2">]);</span></span></code></pre>
 <p>This query would result in the following:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">[</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">[</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">C1</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, total_spent</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 200</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">C2</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, total_spent</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 200</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">C3</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, total_spent</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 200</span><span style="color:#F8F8F2"> },</span></span>

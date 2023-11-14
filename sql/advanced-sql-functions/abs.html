@@ -1,7 +1,7 @@
 <h1 id="abs">ABS</h1>
 <p>The <code>ABS</code> function in SQL is used to return the absolute value of a number, i.e., the numeric value without its sign. The function takes a single argument which must be a number (integer, float, etc.) and returns the absolute, non-negative equivalent.</p>
 <p>The general syntax for the ABS function is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#8BE9FD">ABS</span><span style="color:#F8F8F2">(expression)</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">ABS</span><span style="color:#F8F8F2">(expression)</span></span></code></pre>
 <p>In the syntax above, the <code>expression</code> is required and can either be a literal number, a column name, the result of another function, or any valid SQL expression that resolves to a numeric value.</p>
 <h2 id="examples">Examples</h2>
 <p>Consider a database table <code>Orders</code>:</p>
@@ -32,7 +32,7 @@
 
 <table><thead><tr><th>OrderID</th><th>Product</th><th>Quantity</th></tr></thead><tbody><tr><td>1</td><td>Apple</td><td>-5</td></tr><tr><td>2</td><td>Banana</td><td>10</td></tr><tr><td>3</td><td>Cherry</td><td>-15</td></tr></tbody></table>
 <p>If you want to get the absolute value of the ‘Quantity’ column, you could use the <code>ABS</code>function like this:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> OrderID, Product, </span><span style="color:#8BE9FD">ABS</span><span style="color:#F8F8F2">(Quantity) </span><span style="color:#FF79C6">as</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Absolute Quantity</span><span style="color:#E9F284">'</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> OrderID, Product, </span><span style="color:#8BE9FD">ABS</span><span style="color:#F8F8F2">(Quantity) </span><span style="color:#FF79C6">as</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Absolute Quantity</span><span style="color:#E9F284">'</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Orders;</span></span></code></pre>
 <p>The output will be:</p>
 

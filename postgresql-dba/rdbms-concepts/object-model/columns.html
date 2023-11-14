@@ -2,12 +2,12 @@
 <p>Columns are a fundamental component of PostgreSQL’s object model. They are used to store the actual data within a table and define their attributes such as data type, constraints, and other properties.</p>
 <h2 id="defining-columns">Defining Columns</h2>
 <p>When creating a table, you specify the columns along with their data types and additional properties, if applicable. The general syntax for defining columns is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>CREATE TABLE table_name (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>CREATE TABLE table_name (</span></span>
 <span class="line"><span>  column_name data_type [additional_properties],</span></span>
 <span class="line"><span>  ...,</span></span>
 <span class="line"><span>);</span></span></code></pre>
 <p>For example, to create a table called “employees” with columns “id”, “name”, and “salary”, you would execute the following SQL command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>CREATE TABLE employees (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>CREATE TABLE employees (</span></span>
 <span class="line"><span>  id SERIAL PRIMARY KEY,</span></span>
 <span class="line"><span>  name VARCHAR(100) NOT NULL,</span></span>
 <span class="line"><span>  salary NUMERIC(10, 2) NOT NULL</span></span>
@@ -34,7 +34,7 @@
 <li><code>CHECK</code>: The column value must meet a specific condition.</li>
 </ul>
 <p>For example, to create a table “orders” where “customer_id” is a foreign key, you can use the following SQL command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>CREATE TABLE orders (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>CREATE TABLE orders (</span></span>
 <span class="line"><span>  id SERIAL PRIMARY KEY,</span></span>
 <span class="line"><span>  customer_id INTEGER NOT NULL,</span></span>
 <span class="line"><span>  order_date DATE NOT NULL,</span></span>

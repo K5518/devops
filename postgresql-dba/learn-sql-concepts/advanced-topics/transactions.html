@@ -15,12 +15,12 @@
 <li><code>ROLLBACK</code>: Ends the current transaction, discarding all changes made.</li>
 </ul>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#F8F8F2">;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#6272A4">-- Perform multiple SQL statements here</span></span>
 <span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <h2 id="savepoints">Savepoints</h2>
 <p>Savepoints allow you to create intermediate points within a transaction, to which you can rollback without discarding the entire transaction. They are useful when you need to undo part of a transaction without affecting other parts of the transaction.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#6272A4">-- Start a transaction</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">-- Start a transaction</span></span>
 <span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">-- Perform some SQL statements</span></span>
@@ -44,11 +44,11 @@
 <li><code>SERIALIZABLE</code>: Enforces serial execution order of transactions, providing the highest level of isolation.</li>
 </ul>
 <p>You can set the transaction isolation level using the following command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SET</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#FF79C6"> ISOLATION</span><span style="color:#FF79C6"> LEVEL</span><span style="color:#F8F8F2"> level_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SET</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#FF79C6"> ISOLATION</span><span style="color:#FF79C6"> LEVEL</span><span style="color:#F8F8F2"> level_name;</span></span></code></pre>
 <h2 id="locking">Locking</h2>
 <p>Locks prevent multiple transactions from conflicting with each other when accessing shared resources. PostgreSQL provides various lock modes, such as <code>FOR UPDATE</code>, <code>FOR NO KEY UPDATE</code>, <code>FOR SHARE</code>, and <code>FOR KEY SHARE</code>.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#F8F8F2">;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> my_table </span><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> id </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 1</span><span style="color:#FF79C6"> FOR</span><span style="color:#FF79C6"> UPDATE</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#6272A4">-- Perform updates or deletions here</span></span>
 <span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span></code></pre>

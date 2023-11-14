@@ -2,19 +2,19 @@
 <p>Indexes can drastically speed up data retrieval in SQL databases by allowing the database to immediately locate the data needed without having to scan the entire database. However, these additional data structures also consume storage, and maintaining them can slow down any create, update, or delete operations, hence the need to manage them appropriately.</p>
 <h2 id="creating-indexes">Creating Indexes</h2>
 <p>To create an index, you use the <code>CREATE INDEX</code> command followed by the index name, the table name, and the columns you want to use in the index.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> INDEX</span><span style="color:#50FA7B"> index_name</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> INDEX</span><span style="color:#50FA7B"> index_name</span></span>
 <span class="line"><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> table_name(column_name);</span></span></code></pre>
 <h2 id="removing-indexes">Removing Indexes</h2>
 <p>If an index is no longer required or if it’s causing performance issues due to too much storage consumption, it can be dropped using the <code>DROP INDEX</code> command.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#FF79C6"> INDEX</span><span style="color:#F8F8F2"> index_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#FF79C6"> INDEX</span><span style="color:#F8F8F2"> index_name;</span></span></code></pre>
 <h2 id="listing-indexes">Listing Indexes</h2>
 <p>You can get a list of all the indexes on a table using the <code>SHOW INDEXES</code> command.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#F8F8F2">SHOW INDEXES </span><span style="color:#FF79C6">IN</span><span style="color:#F8F8F2"> table_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">SHOW INDEXES </span><span style="color:#FF79C6">IN</span><span style="color:#F8F8F2"> table_name;</span></span></code></pre>
 <p>Remember that most SQL databases automatically create indexes for primary keys, and they do not need to be managed manually.</p>
 <h2 id="modifying-indexes">Modifying Indexes</h2>
 <p>Modifying an existing index often means dropping the old index and creating a new one. PostgreSQL, MySQL, and MS SQL Server provide a way to reindex without dropping and recreating them manually.</p>
 <p>For example, in PostgreSQL:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#F8F8F2">REINDEX </span><span style="color:#FF79C6">INDEX</span><span style="color:#F8F8F2"> index_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">REINDEX </span><span style="color:#FF79C6">INDEX</span><span style="color:#F8F8F2"> index_name;</span></span></code></pre>
 <h2 id="indexes-and-performance">Indexes and Performance</h2>
 <p>While indexes can improve read speed, they also slow down write operations because each write must also update the index. That’s why it’s essential to find a balance between the number of indexes and database performance. Too many indexes can negatively impact performance.</p>
 <p>Therefore, you should only create indexes when they are likely to be needed and when they will have a significant impact on improving query performance. You can use the SQL Server Profiler, MySQL’s slow query log, or other database-specific tools to identify the queries that are running slow, and then create indexes to optimize those queries. Regularly monitor your database performance to make sure that the indexes are still needed and that they are providing the expected improvements.</p>

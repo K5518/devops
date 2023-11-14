@@ -15,7 +15,7 @@
 </ul>
 <h2 id="creating-functions-in-plpgsql">Creating Functions in PL/pgSQL</h2>
 <p>To create a new function, you use the <code>CREATE FUNCTION</code> statement. Here’s a simple example of a PL/pgSQL function:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> FUNCTION</span><span style="color:#50FA7B"> add_numbers</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">integer</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">integer</span><span style="color:#F8F8F2">)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> FUNCTION</span><span style="color:#50FA7B"> add_numbers</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">integer</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">integer</span><span style="color:#F8F8F2">)</span></span>
 <span class="line"><span style="color:#FF79C6">RETURNS</span><span style="color:#FF79C6"> integer</span><span style="color:#FF79C6"> AS</span><span style="color:#F8F8F2"> $$</span></span>
 <span class="line"><span style="color:#FF79C6">DECLARE</span></span>
 <span class="line"><span style="color:#F8F8F2">  sum </span><span style="color:#FF79C6">integer</span><span style="color:#F8F8F2">;</span></span>
@@ -27,11 +27,11 @@
 <p>This function takes two integers as input parameters and returns their sum.</p>
 <h2 id="using-functions-inqueries">Using Functions inQueries</h2>
 <p>You can use functions within queries like any other PostgreSQL function:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> add_numbers(</span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">10</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> add_numbers(</span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">10</span><span style="color:#F8F8F2">);</span></span></code></pre>
 <p>This query would return <code>15</code>.</p>
 <h2 id="error-handling-and-exception-catches">Error Handling and Exception Catches</h2>
 <p>PL/pgSQL supports error handling through the use of <code>EXCEPTION</code> blocks. Here’s an example of a function that handles division by zero:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> FUNCTION</span><span style="color:#50FA7B"> safe_divide</span><span style="color:#F8F8F2">(numerator </span><span style="color:#FF79C6">integer</span><span style="color:#F8F8F2">, denominator </span><span style="color:#FF79C6">integer</span><span style="color:#F8F8F2">)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> FUNCTION</span><span style="color:#50FA7B"> safe_divide</span><span style="color:#F8F8F2">(numerator </span><span style="color:#FF79C6">integer</span><span style="color:#F8F8F2">, denominator </span><span style="color:#FF79C6">integer</span><span style="color:#F8F8F2">)</span></span>
 <span class="line"><span style="color:#FF79C6">RETURNS</span><span style="color:#FF79C6"> integer</span><span style="color:#FF79C6"> AS</span><span style="color:#F8F8F2"> $$</span></span>
 <span class="line"><span style="color:#FF79C6">DECLARE</span></span>
 <span class="line"><span style="color:#F8F8F2">  result </span><span style="color:#FF79C6">integer</span><span style="color:#F8F8F2">;</span></span>
@@ -46,7 +46,7 @@
 <h2 id="triggers-and-plpgsql">Triggers and PL/pgSQL</h2>
 <p>You can also create triggers using PL/pgSQL. Triggers are user-defined functions that are invoked automatically when an event such as insert, update or delete occurs.</p>
 <p>Here’s an example of a trigger function that logs the change of user’s email address:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> FUNCTION</span><span style="color:#50FA7B"> log_email_change</span><span style="color:#F8F8F2">()</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> FUNCTION</span><span style="color:#50FA7B"> log_email_change</span><span style="color:#F8F8F2">()</span></span>
 <span class="line"><span style="color:#FF79C6">RETURNS</span><span style="color:#F8F8F2"> trigger </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> $$</span></span>
 <span class="line"><span style="color:#FF79C6">BEGIN</span></span>
 <span class="line"><span style="color:#FF79C6">  IF</span><span style="color:#BD93F9"> NEW</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">email</span><span style="color:#FF79C6"> &#x3C;></span><span style="color:#BD93F9"> OLD</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">email</span><span style="color:#FF79C6"> THEN</span></span>

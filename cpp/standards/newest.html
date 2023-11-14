@@ -4,7 +4,7 @@
 <li>
 <p><strong>Concepts</strong>: Concepts provide a way to specify constraints on template parameters, ensuring that they meet a specific set of requirements. This allows for better compile-time error messages and code readability.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>template&#x3C;typename T></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>template&#x3C;typename T></span></span>
 <span class="line"><span>concept Printable = requires(T x) {</span></span>
 <span class="line"><span>    {std::cout &#x3C;&#x3C; x};</span></span>
 <span class="line"><span>};</span></span>
@@ -17,7 +17,7 @@
 <li>
 <p><strong>Ranges</strong>: Ranges build on the iterator concept and provide a more usable and composable framework for dealing with sequences of values. They simplify the way algorithms can be applied to collections of data.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>#include &#x3C;iostream></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>#include &#x3C;iostream></span></span>
 <span class="line"><span>#include &#x3C;vector></span></span>
 <span class="line"><span>#include &#x3C;ranges></span></span>
 <span class="line"><span></span></span>
@@ -33,7 +33,7 @@
 <li>
 <p><strong>Coroutines</strong>: Coroutines offer a way to split complex, long-running functions into smaller, more manageable chunks, allowing them to be suspended and resumed at specific points.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>#include &#x3C;iostream></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>#include &#x3C;iostream></span></span>
 <span class="line"><span>#include &#x3C;coroutine></span></span>
 <span class="line"><span></span></span>
 <span class="line"><span>std::generator&#x3C;int> generator() {</span></span>
@@ -49,7 +49,7 @@
 <li>
 <p><strong>Lambdas with template parameters</strong>: C++20 enables using <code>auto</code> as a lambda parameter, allowing for generic lambdas with templated parameters.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>auto sum = [](auto a, auto b) {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>auto sum = [](auto a, auto b) {</span></span>
 <span class="line"><span>    return a + b;</span></span>
 <span class="line"><span>};</span></span>
 <span class="line"><span></span></span>
@@ -59,7 +59,7 @@
 <li>
 <p><strong>Constexpr enhancements</strong>: <code>constexpr</code> support is extended with additional features, such as <code>constexpr</code> dynamic allocations, <code>constexpr</code> try-catch blocks, and <code>constexpr</code> lambdas.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>struct Point {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>struct Point {</span></span>
 <span class="line"><span>    constexpr Point(int x, int y): x_{x}, y_{y} {}</span></span>
 <span class="line"><span>    int x_, y_;</span></span>
 <span class="line"><span>};</span></span>

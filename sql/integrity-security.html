@@ -3,7 +3,7 @@
 <p><strong>1. Entity Integrity</strong></p>
 <p>Entity integrity ensures that there are no duplicate rows in a table. This is often managed with the help of the primary key.</p>
 <p>For example, consider the following SQL command to create a table. Primary Key on the EmployeeID column will ensure that every entry in this column is unique.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employee</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employee</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">  EmployeeID </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  LastName </span><span style="color:#FF79C6">varchar</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">255</span><span style="color:#F8F8F2">),</span></span>
 <span class="line"><span style="color:#F8F8F2">  FirstName </span><span style="color:#FF79C6">varchar</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">255</span><span style="color:#F8F8F2">),</span></span>
@@ -13,7 +13,7 @@
 <p><strong>2. Domain Integrity</strong></p>
 <p>Domain Integrity enforces valid entries for a given column by restricting the type, the format, or the range of possible values.</p>
 <p>For example, setting a specific data type and size for a column.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employee</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employee</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">  EmployeeID </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  LastName </span><span style="color:#FF79C6">varchar</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">50</span><span style="color:#F8F8F2">),</span></span>
 <span class="line"><span style="color:#F8F8F2">  FirstName </span><span style="color:#FF79C6">varchar</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">50</span><span style="color:#F8F8F2">),</span></span>
@@ -21,7 +21,7 @@
 <span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
 <p><strong>3. Referential Integrity</strong></p>
 <p>Referential integrity ensures that relationships between tables remain consistent. More specifically, that a foreign key in one table must always refer to the primary key in another table.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Orders</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Orders</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">  OrderID </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  OrderNumber </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  EmployeeID </span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2">,</span></span>

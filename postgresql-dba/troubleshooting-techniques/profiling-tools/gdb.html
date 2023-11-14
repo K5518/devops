@@ -11,15 +11,15 @@
 <ul>
 <li>
 <p>Install GDB on your system, typically using the package manager for your operating system.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> apt-get</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> gdb</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> apt-get</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> gdb</span></span></code></pre>
 </li>
 <li>
 <p>Attach GDB to a running PostgreSQL process using the process ID of the desired PostgreSQL backend.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">gdb</span><span style="color:#BD93F9"> -p</span><span style="color:#F8F8F2"> [process_id]</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">gdb</span><span style="color:#BD93F9"> -p</span><span style="color:#F8F8F2"> [process_id]</span></span></code></pre>
 </li>
 <li>
 <p>Set breakpoints based on function names or source code file names and line numbers.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>break function_name</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>break function_name</span></span>
 <span class="line"><span>break filename:linenumber</span></span></code></pre>
 </li>
 <li>
@@ -30,7 +30,7 @@
 </li>
 <li>
 <p>Debug core dumps when PostgreSQL crashes by running the following command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">gdb</span><span style="color:#F1FA8C"> /path/to/postgres-binary</span><span style="color:#F1FA8C"> /path/to/core-dump</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">gdb</span><span style="color:#F1FA8C"> /path/to/postgres-binary</span><span style="color:#F1FA8C"> /path/to/core-dump</span></span></code></pre>
 </li>
 </ul>
 <p>Keep in mind that using GDB with a production PostgreSQL environment is not recommended due to the potential risk of freezing or crashing the server. Always use GDB on a test or development environment.</p>

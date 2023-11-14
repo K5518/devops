@@ -4,36 +4,36 @@
 <p>Before you can start using <code>psql</code>, you need to ensure that it is installed on your computer. It gets installed automatically alongside the PostgreSQL server, but if you need to install it separately, follow the steps from the “Installation and Setup” section of this guide.</p>
 <h2 id="accessing-psql">Accessing <code>psql</code></h2>
 <p>To connect to a PostgreSQL database using <code>psql</code>, open your terminal (on Linux or macOS) or Command Prompt (on Windows), and run the following command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">psql</span><span style="color:#BD93F9"> -h</span><span style="color:#F1FA8C"> localhost</span><span style="color:#BD93F9"> -U</span><span style="color:#F1FA8C"> myuser</span><span style="color:#F1FA8C"> mydb</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">psql</span><span style="color:#BD93F9"> -h</span><span style="color:#F1FA8C"> localhost</span><span style="color:#BD93F9"> -U</span><span style="color:#F1FA8C"> myuser</span><span style="color:#F1FA8C"> mydb</span></span></code></pre>
 <p>Replace “localhost” with the address of the PostgreSQL server, “myuser” with your PostgreSQL username, and “mydb” with the name of the database you want to connect to.</p>
 <p>You’ll be prompted to enter your password. Enter it, and you should see the <code>psql</code> prompt:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#BD93F9">mydb</span><span style="color:#FF79C6">=></span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#BD93F9">mydb</span><span style="color:#FF79C6">=></span></span></code></pre>
 <h2 id="basic-psql-commands">Basic <code>psql</code> commands</h2>
 <p>Here are some basic commands to help you interact with your PostgreSQL database using <code>psql</code>:</p>
 <ul>
 <li>
 <p>To execute an SQL query, simply type it at the prompt followed by a semicolon (<code>;</code>), and hit enter. For example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#F8F8F2">mydb</span><span style="color:#FF79C6">=></span><span style="color:#FF79C6"> SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> mytable;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">mydb</span><span style="color:#FF79C6">=></span><span style="color:#FF79C6"> SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> mytable;</span></span></code></pre>
 </li>
 <li>
 <p>To quit <code>psql</code>, type <code>\q</code> and hit enter:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#BD93F9">mydb</span><span style="color:#FF79C6">=></span><span style="color:#50FA7B"> \q</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#BD93F9">mydb</span><span style="color:#FF79C6">=></span><span style="color:#50FA7B"> \q</span></span></code></pre>
 </li>
 <li>
 <p>To list all databases in your PostgreSQL server, use the <code>\l</code> command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#BD93F9">mydb</span><span style="color:#FF79C6">=></span><span style="color:#50FA7B"> \l</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#BD93F9">mydb</span><span style="color:#FF79C6">=></span><span style="color:#50FA7B"> \l</span></span></code></pre>
 </li>
 <li>
 <p>To switch to another database, use the <code>\c</code> command followed by the database name:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#BD93F9">mydb</span><span style="color:#FF79C6">=></span><span style="color:#50FA7B"> \c</span><span style="color:#F1FA8C"> anotherdb</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#BD93F9">mydb</span><span style="color:#FF79C6">=></span><span style="color:#50FA7B"> \c</span><span style="color:#F1FA8C"> anotherdb</span></span></code></pre>
 </li>
 <li>
 <p>To list all tables in the current database, use the <code>\dt</code> command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#BD93F9">mydb</span><span style="color:#FF79C6">=></span><span style="color:#50FA7B"> \dt</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#BD93F9">mydb</span><span style="color:#FF79C6">=></span><span style="color:#50FA7B"> \dt</span></span></code></pre>
 </li>
 <li>
 <p>To get information about a specific table, use the <code>\d</code> command followed by the table name:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#BD93F9">mydb</span><span style="color:#FF79C6">=></span><span style="color:#50FA7B"> \d</span><span style="color:#F1FA8C"> mytable</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#BD93F9">mydb</span><span style="color:#FF79C6">=></span><span style="color:#50FA7B"> \d</span><span style="color:#F1FA8C"> mytable</span></span></code></pre>
 </li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>

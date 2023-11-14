@@ -1,7 +1,7 @@
 <h1 id="running-containers-with-docker-run">Running Containers with <code>docker run</code></h1>
 <p>In this section, we’ll discuss the <code>docker run</code> command, which enables you to run Docker containers. The <code>docker run</code> command creates a new container from the specified image and starts it.</p>
 <p>The basic syntax for the <code>docker run</code> command is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#F8F8F2"> [OPTIONS] IMAGE [COMMAND] [ARG...]</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#F8F8F2"> [OPTIONS] IMAGE [COMMAND] [ARG...]</span></span></code></pre>
 <ul>
 <li><code>OPTIONS</code>: These are command-line flags that can be used to adjust the container’s settings, like memory constraints, ports, environment variables, etc.</li>
 <li><code>IMAGE</code>: The Docker image that the container will run. This can be an image from Docker Hub or your own image that is stored locally.</li>
@@ -22,16 +22,16 @@
 <ul>
 <li>Run an interactive session of an Ubuntu container:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -it</span><span style="color:#BD93F9"> --name=my-ubuntu</span><span style="color:#F1FA8C"> ubuntu</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -it</span><span style="color:#BD93F9"> --name=my-ubuntu</span><span style="color:#F1FA8C"> ubuntu</span></span></code></pre>
 <ul>
 <li>Run an Nginx web server and publish the port 80 on the host:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> --name=my-nginx</span><span style="color:#BD93F9"> -p</span><span style="color:#BD93F9"> 80</span><span style="color:#F1FA8C">:80</span><span style="color:#F1FA8C"> nginx</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> --name=my-nginx</span><span style="color:#BD93F9"> -p</span><span style="color:#BD93F9"> 80</span><span style="color:#F1FA8C">:80</span><span style="color:#F1FA8C"> nginx</span></span></code></pre>
 <ul>
 <li>Run a MySQL container with custom environment variables for configuring the database:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> --name=my-mysql</span><span style="color:#BD93F9"> -e</span><span style="color:#F1FA8C"> MYSQL_ROOT_PASSWORD=secret</span><span style="color:#BD93F9"> -e</span><span style="color:#F1FA8C"> MYSQL_DATABASE=mydb</span><span style="color:#BD93F9"> -p</span><span style="color:#BD93F9"> 3306</span><span style="color:#F1FA8C">:3306</span><span style="color:#F1FA8C"> mysql</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> --name=my-mysql</span><span style="color:#BD93F9"> -e</span><span style="color:#F1FA8C"> MYSQL_ROOT_PASSWORD=secret</span><span style="color:#BD93F9"> -e</span><span style="color:#F1FA8C"> MYSQL_DATABASE=mydb</span><span style="color:#BD93F9"> -p</span><span style="color:#BD93F9"> 3306</span><span style="color:#F1FA8C">:3306</span><span style="color:#F1FA8C"> mysql</span></span></code></pre>
 <ul>
 <li>Run a container with a bind-mounted volume:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> --name=my-data</span><span style="color:#BD93F9"> -v</span><span style="color:#F1FA8C"> /path/on/host:/path/in/container</span><span style="color:#F1FA8C"> some-image</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> --name=my-data</span><span style="color:#BD93F9"> -v</span><span style="color:#F1FA8C"> /path/on/host:/path/in/container</span><span style="color:#F1FA8C"> some-image</span></span></code></pre>

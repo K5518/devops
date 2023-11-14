@@ -10,7 +10,7 @@
 <li><code>COUNT</code>: Counts the number of rows (or non-null values) in the column</li>
 </ul>
 <p>Aggregate functions are commonly used with the <code>GROUP BY</code> clause to group rows by one or more columns. Here’s an example that calculates the total sales per product:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> product_id, </span><span style="color:#8BE9FD">SUM</span><span style="color:#F8F8F2">(sales) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> total_sales</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> product_id, </span><span style="color:#8BE9FD">SUM</span><span style="color:#F8F8F2">(sales) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> total_sales</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> sales_data</span></span>
 <span class="line"><span style="color:#FF79C6">GROUP BY</span><span style="color:#F8F8F2"> product_id;</span></span></code></pre>
 <h2 id="window-functions">Window Functions</h2>
@@ -23,7 +23,7 @@
 <li>Value functions (e.g., <code>FIRST_VALUE</code>, <code>LAST_VALUE</code>, <code>LAG</code>, <code>LEAD</code>)</li>
 </ul>
 <p>Here’s an example that calculates the cumulative sum of sales per product, ordered by sale date:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> product_id, sale_date, sales,</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> product_id, sale_date, sales,</span></span>
 <span class="line"><span style="color:#8BE9FD">       SUM</span><span style="color:#F8F8F2">(sales) </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">PARTITION</span><span style="color:#FF79C6"> BY</span><span style="color:#F8F8F2"> product_id </span><span style="color:#FF79C6">ORDER BY</span><span style="color:#F8F8F2"> sale_date) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> cumulative_sales</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> sales_data;</span></span></code></pre>
 <p>In this example, the <code>SUM(sales)</code> aggregate function is used with the <code>OVER()</code> clause to create a window for each row, partitioned by <code>product_id</code> and ordered by <code>sale_date</code>. This allows you to calculate the cumulative sum of sales for each product up to the current row.</p>

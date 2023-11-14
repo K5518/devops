@@ -2,7 +2,7 @@
 <p>In this section, we’ll discuss the basic structure of a C++ program, walk you through your first program (the “Hello, World!” example), and provide additional explanations of its syntax.</p>
 <h2 id="hello-world">Hello, World!</h2>
 <p>The first program that most people learn to write in any programming language is often a simple one that displays the message “Hello, World!” on the screen. Here’s the classic “Hello, World!” program in C++:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">int</span><span style="color:#50FA7B"> main</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#F8F8F2">  std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Hello, World!</span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
@@ -11,15 +11,15 @@
 <p>Let’s break down the different components of this program:</p>
 <h2 id="header-files--preprocessor-directives">Header Files &#x26; Preprocessor Directives</h2>
 <p>The first line of the program <code>#include &#x3C;iostream></code> is a <a href="https://en.cppreference.com/w/cpp/preprocessor" rel="noopener noreferrer nofollow" target="_blank">preprocessor directive</a> that tells the compiler to include the header file <code>iostream</code>. Header files provide function and class declarations that we can use in our C++ programs.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span></code></pre>
 <h2 id="main-function"><code>main()</code> Function</h2>
 <p>In C++, the <code>main()</code> function serves as the entry point of your program. The operating system runs your program by calling this <code>main()</code> function. It should be defined only once in your program and must return an integer.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#50FA7B"> main</span><span style="color:#F8F8F2">() {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#50FA7B"> main</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#6272A4">  // Your code goes here.</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <h2 id="output-to-the-console">Output to the Console</h2>
 <p>To output text to the console, we use the <code>std::cout</code> object and the insertion operator <code>&#x3C;&#x3C;</code>. In the “Hello, World!” example, we used the following line to print “Hello, World!” to the console:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Hello, World!</span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Hello, World!</span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span></code></pre>
 <ul>
 <li><code>std::cout</code>: The standard “character output” stream that writes to the console</li>
 <li><code>"Hello, World!"</code>: The string literal to print</li>
@@ -27,5 +27,5 @@
 </ul>
 <h2 id="return-statement">Return Statement</h2>
 <p>Lastly, the <code>return 0;</code> statement informs the operating system that the program executed successfully. Returning any other integer value indicates that an error occurred:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <p>Now that you understand the basic components of a C++ program, you can write your first program, compile it, and run it to see the “Hello, World!” message displayed on the screen.</p>

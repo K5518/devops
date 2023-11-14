@@ -2,7 +2,7 @@
 <p>CTEs or Common Table Expressions are a type of temporary result set that are defined within the execution scope of a single SQL statement. They act like a temporary view for a single query, and they are typically used to simplify subqueries and improve readability.</p>
 <h2 id="syntax">Syntax</h2>
 <p>Here is the basic syntax of how to use a CTE in SQL:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#F8F8F2"> CTE_Name </span><span style="color:#FF79C6">AS</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#F8F8F2"> CTE_Name </span><span style="color:#FF79C6">AS</span></span>
 <span class="line"><span style="color:#F8F8F2">(</span></span>
 <span class="line"><span style="color:#FF79C6">    SQL</span><span style="color:#F8F8F2"> Query</span></span>
 <span class="line"><span style="color:#F8F8F2">)</span></span>
@@ -10,7 +10,7 @@
 <p>In this syntax, the “WITH” keyword is used to create a CTE. The SQL query inside the parentheses is the query that creates the CTE. The final SELECT statement is used to query the data from the CTE.</p>
 <h2 id="basic-usage">Basic Usage</h2>
 <p>An example of how to use a CTE is demonstrated below:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#F8F8F2"> Sales_CTE (SalesPersonID, NumberOfOrders)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#F8F8F2"> Sales_CTE (SalesPersonID, NumberOfOrders)</span></span>
 <span class="line"><span style="color:#FF79C6">AS</span></span>
 <span class="line"><span style="color:#F8F8F2">(</span></span>
 <span class="line"><span style="color:#FF79C6">  SELECT</span><span style="color:#F8F8F2"> SalesPersonID, </span><span style="color:#8BE9FD">COUNT</span><span style="color:#F8F8F2">(OrderID)</span></span>
@@ -25,7 +25,7 @@
 <p>In this example, the CTE groups sales data by <code>SalesPersonID</code> and then joins this with the <code>Employee</code> table based on the <code>EmployeeID</code> to get the corresponding employee details.</p>
 <h2 id="recursive-ctes">Recursive CTEs</h2>
 <p>SQL also supports recursive CTEs, which are CTEs that reference themselves. Recursive CTEs are generally used to solve problems that require iteration, such as traversing hierarchies. Here’s an example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#F8F8F2"> Recursive_CTE </span><span style="color:#FF79C6">AS</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#F8F8F2"> Recursive_CTE </span><span style="color:#FF79C6">AS</span></span>
 <span class="line"><span style="color:#F8F8F2">(</span></span>
 <span class="line"><span style="color:#FF79C6">  SELECT</span><span style="color:#F8F8F2"> EmployeeID, ManagerID, FirstName</span></span>
 <span class="line"><span style="color:#FF79C6">  FROM</span><span style="color:#F8F8F2"> Employee</span></span>

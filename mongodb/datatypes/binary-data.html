@@ -10,7 +10,7 @@
 <h2 id="working-with-binary-data-in-mongodb">Working with Binary Data in MongoDB</h2>
 <p>To work with binary data in MongoDB, you will need to utilize the <code>Binary</code> class provided by your MongoDB driver. This class offers methods to create, encode, and decode binary data objects.</p>
 <p>Here’s an example of creating a binary data object using the <code>Binary</code> class in Python:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="python"><code><span class="line"><span style="color:#FF79C6">from</span><span style="color:#F8F8F2"> bson.binary </span><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> Binary</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">from</span><span style="color:#F8F8F2"> bson.binary </span><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> Binary</span></span>
 <span class="line"><span style="color:#FF79C6">from</span><span style="color:#F8F8F2"> bson </span><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> ObjectId</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4"># Create a binary data object</span></span>
@@ -26,7 +26,7 @@
 <span class="line"><span style="color:#F8F8F2">stored_data </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> data_collection.insert_one(document)</span></span></code></pre>
 <p>When it comes to retrieving binary data from the database, you can use your MongoDB driver’s <code>find</code> method to query the required document and access the binary field.</p>
 <p>For example, in Python:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="python"><code><span class="line"><span style="color:#6272A4"># Retrieve binary data from the database</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4"># Retrieve binary data from the database</span></span>
 <span class="line"><span style="color:#F8F8F2">document </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> data_collection.find_one({</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">name</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">Sample Image</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">})</span></span>
 <span class="line"><span style="color:#F8F8F2">retrieved_image_data </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> document[</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">image_data</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">]</span></span>
 <span class="line"></span>

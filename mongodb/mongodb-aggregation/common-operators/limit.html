@@ -1,11 +1,11 @@
 <h1 id="limit">$limit</h1>
 <p>The $limit operator limits the number of documents passed to the next stage in the pipeline. The $limit operator is useful for debugging and testing pipelines. It is also useful for limiting the number of documents that are returned by a pipeline.</p>
 <p>Here’s the syntax for the $limit operator:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">{ $limit: &#x3C;</span><span style="color:#FF79C6">number</span><span style="color:#F8F8F2">> }</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{ $limit: &#x3C;</span><span style="color:#FF79C6">number</span><span style="color:#F8F8F2">> }</span></span></code></pre>
 <p>Here, <code>&#x3C;number></code> is the number of documents you want to limit the pipeline to.</p>
 <h2 id="example">Example</h2>
 <p>Let’s say we have a collection named <code>employees</code> and we want to limit the number of documents to 5. We can do this using the <code>$limit</code> operator:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">db.employees.</span><span style="color:#50FA7B">aggregate</span><span style="color:#F8F8F2">([</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.employees.</span><span style="color:#50FA7B">aggregate</span><span style="color:#F8F8F2">([</span></span>
 <span class="line"><span style="color:#F8F8F2">  {</span></span>
 <span class="line"><span style="color:#F8F8F2">    $limit</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 5</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  },</span></span>

@@ -10,7 +10,7 @@
 <li>Copying data between devices or files quickly and reliably.</li>
 </ul>
 <h2 id="general-syntax">General Syntax:</h2>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>dd if=&#x3C;input-file> of=&#x3C;output-file> bs=&#x3C;block-size> count=&#x3C;number-of-blocks> skip=&#x3C;blocks-to-skip> seek=&#x3C;blocks-to-seek></span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>dd if=&#x3C;input-file> of=&#x3C;output-file> bs=&#x3C;block-size> count=&#x3C;number-of-blocks> skip=&#x3C;blocks-to-skip> seek=&#x3C;blocks-to-seek></span></span></code></pre>
 <ul>
 <li><code>if</code>: The input file or device to read from.</li>
 <li><code>of</code>: The output file or device to write to.</li>
@@ -22,7 +22,7 @@
 <p>You can simply skip the <code>count</code>, <code>skip</code>, and <code>seek</code> option for default behaviour.</p>
 <h2 id="example">Example:</h2>
 <p>Let’s say you need to create a forensically sound image of a suspect’s USB drive for analysis. You would typically use a command like this:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">dd</span><span style="color:#F1FA8C"> if=/dev/sdb1</span><span style="color:#F1FA8C"> of=~/usb_drive_image.img</span><span style="color:#F1FA8C"> bs=</span><span style="color:#BD93F9">4096</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">dd</span><span style="color:#F1FA8C"> if=/dev/sdb1</span><span style="color:#F1FA8C"> of=~/usb_drive_image.img</span><span style="color:#F1FA8C"> bs=</span><span style="color:#BD93F9">4096</span></span></code></pre>
 <p>In this example, <code>dd</code> creates an exact image of the USB drive (<code>/dev/sdb1</code>) and writes it to a new file in your home directory called <code>usb_drive_image.img</code>.</p>
 <p>Be cautious while using <code>dd</code> as it can overwrite and destroy data if used incorrectly. Always verify the input and output files and make sure to have backups of important data.</p>
 <p>By mastering the <code>dd</code> utility, you’ll have a powerful forensic imaging tool at your disposal which will undoubtedly enhance your cybersecurity incident response and discovery capabilities.</p>

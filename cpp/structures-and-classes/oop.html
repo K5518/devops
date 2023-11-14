@@ -2,7 +2,7 @@
 <p>Object-oriented programming (OOP) is a programming paradigm that uses objects, which are instances of classes, to perform operations and interact with each other. In C++, you can achieve OOP through the use of classes and objects.</p>
 <h2 id="classes">Classes</h2>
 <p>A class is a blueprint for creating objects. It defines the structure (data members) and behavior (member functions) for a type of object. Here’s an example of a simple class:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Dog</span><span style="color:#F8F8F2"> {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Dog</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#FF79C6">public:</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">string name;</span></span>
 <span class="line"><span style="color:#FF79C6">    int</span><span style="color:#F8F8F2"> age;</span></span>
@@ -12,13 +12,13 @@
 <span class="line"><span style="color:#F8F8F2">    }</span></span>
 <span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
 <p>This <code>Dog</code> class has two data members: <code>name</code> and <code>age</code>, and one member function <code>bark</code>. You can create an object of this class and access its members like this:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#F8F8F2">Dog myDog;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">Dog myDog;</span></span>
 <span class="line"><span style="color:#F8F8F2">myDog.name </span><span style="color:#FF79C6">=</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Fido</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#F8F8F2">myDog.age </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#F8F8F2">myDog.</span><span style="color:#50FA7B">bark</span><span style="color:#F8F8F2">();</span><span style="color:#6272A4"> // Output: Fido barks!</span></span></code></pre>
 <h2 id="encapsulation">Encapsulation</h2>
 <p>Encapsulation is the concept of bundling data and functions that operate on that data within a single unit, such as a class. It helps to hide the internal implementation details of a class and expose only the necessary information and functionalities. In C++, you can use access specifiers like <code>public</code>, <code>private</code>, and <code>protected</code> to control the visibility and accessibility of class members. For example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Dog</span><span style="color:#F8F8F2"> {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Dog</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#FF79C6">private:</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">string name;</span></span>
 <span class="line"><span style="color:#FF79C6">    int</span><span style="color:#F8F8F2"> age;</span></span>
@@ -39,7 +39,7 @@
 <p>In this example, we’ve made the <code>name</code> and <code>age</code> data members <code>private</code> and added public member functions <code>setName</code> and <code>setAge</code> to modify them. This way, the internal data of the <code>Dog</code> class is protected and only accessible through the provided functions.</p>
 <h2 id="inheritance">Inheritance</h2>
 <p>Inheritance is the concept of deriving new classes from existing ones, which enables code reusability and organization. In C++, inheritance is achieved by using a colon <code>:</code> followed by the base class’ access specifier and the base class name. For example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Animal</span><span style="color:#F8F8F2"> {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Animal</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#FF79C6">public:</span></span>
 <span class="line"><span style="color:#FF79C6">    void</span><span style="color:#50FA7B"> breathe</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#F8F8F2">        std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">I can breathe</span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
@@ -53,12 +53,12 @@
 <span class="line"><span style="color:#F8F8F2">    }</span></span>
 <span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
 <p>In this example, the <code>Dog</code> class inherits from the <code>Animal</code> class, so the <code>Dog</code> class can access the <code>breathe</code> function from the <code>Animal</code> class. When you create a <code>Dog</code> object, you can use both <code>breathe</code> and <code>bark</code> functions.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#F8F8F2">Dog myDog;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">Dog myDog;</span></span>
 <span class="line"><span style="color:#F8F8F2">myDog.</span><span style="color:#50FA7B">breathe</span><span style="color:#F8F8F2">();</span><span style="color:#6272A4"> // Output: I can breathe</span></span>
 <span class="line"><span style="color:#F8F8F2">myDog.</span><span style="color:#50FA7B">bark</span><span style="color:#F8F8F2">();</span><span style="color:#6272A4"> // Output: Dog barks!</span></span></code></pre>
 <h2 id="polymorphism">Polymorphism</h2>
 <p>Polymorphism allows you to use a single interface to represent different types. In C++, it’s mainly achieved using function overloading, virtual functions, and overriding. For example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Animal</span><span style="color:#F8F8F2"> {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Animal</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#FF79C6">public:</span></span>
 <span class="line"><span style="color:#FF79C6">    virtual</span><span style="color:#FF79C6"> void</span><span style="color:#50FA7B"> makeSound</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#F8F8F2">        std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">The Animal makes a sound</span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
@@ -79,7 +79,7 @@
 <span class="line"><span style="color:#F8F8F2">    }</span></span>
 <span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
 <p>In this example, we have an <code>Animal</code> base class with a virtual <code>makeSound</code> function. We then derive two classes, <code>Dog</code> and <code>Cat</code>, which override the <code>makeSound</code> function. This enables polymorphic behavior, where an <code>Animal</code> pointer or reference can be used to access the correct <code>makeSound</code> function depending on the derived class type.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#F8F8F2">Animal </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2">animals[</span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">] </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> {</span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#F8F8F2"> Dog, </span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#F8F8F2"> Cat};</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">Animal </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2">animals[</span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">] </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> {</span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#F8F8F2"> Dog, </span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#F8F8F2"> Cat};</span></span>
 <span class="line"><span style="color:#F8F8F2">animals[</span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">]</span><span style="color:#FF79C6">-></span><span style="color:#50FA7B">makeSound</span><span style="color:#F8F8F2">();</span><span style="color:#6272A4"> // Output: Dog barks!</span></span>
 <span class="line"><span style="color:#F8F8F2">animals[</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">]</span><span style="color:#FF79C6">-></span><span style="color:#50FA7B">makeSound</span><span style="color:#F8F8F2">();</span><span style="color:#6272A4"> // Output: Cat meows!</span></span></code></pre>
 <p>That’s a brief overview of object-oriented programming concepts in C++.</p>

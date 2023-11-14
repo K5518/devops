@@ -1,7 +1,7 @@
 <h1 id="lag">lag</h1>
 <p><code>LAG</code> is a window function provided by SQL that allows us to fetch data from a previous row in the same result set without using a self-join. This function is commonly used in data analysis, for instance, comparing sales in a certain period with sales in a previous period.</p>
 <p>The general syntax for using the <code>LAG</code> function is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#8BE9FD">LAG</span><span style="color:#F8F8F2"> (expression [, offset [, default]])</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">LAG</span><span style="color:#F8F8F2"> (expression [, offset [, default]])</span></span>
 <span class="line"><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    [PARTITION BY partition_expression, ... ]</span></span>
 <span class="line"><span style="color:#FF79C6">    ORDER BY</span><span style="color:#F8F8F2"> sort_expression [ASC | DESC], ...</span></span>
@@ -41,7 +41,7 @@
 
 <table><thead><tr><th>Year</th><th>Sales</th></tr></thead><tbody><tr><td>2017</td><td>200</td></tr><tr><td>2018</td><td>250</td></tr><tr><td>2019</td><td>300</td></tr><tr><td>2020</td><td>350</td></tr></tbody></table>
 <p>You’d like to compare the sales of each year to the sales of the previous year. Here’s how you can do it using the <code>LAG</code> function:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> Year</span><span style="color:#F8F8F2">,</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> Year</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">       Sales,</span></span>
 <span class="line"><span style="color:#8BE9FD">       LAG</span><span style="color:#F8F8F2">(Sales) </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">ORDER BY</span><span style="color:#FF79C6"> Year</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> PrevYearSales</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> sales;</span></span></code></pre>

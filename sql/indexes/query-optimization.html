@@ -4,11 +4,11 @@
 <h2 id="rewriting-queries">Rewriting Queries</h2>
 <p>This means changing the original SQL query to an equivalent one which requires fewer system resources. It’s usually done automatically by the database system.</p>
 <p>For instance, let’s say we have a query as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Customers </span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#FF79C6"> state</span><span style="color:#FF79C6"> =</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">New York</span><span style="color:#E9F284">'</span><span style="color:#FF79C6"> AND</span><span style="color:#F8F8F2"> city </span><span style="color:#FF79C6">=</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">New York</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <p>The above query can be rewritten using a subquery for better optimization:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Customers </span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#FF79C6"> state</span><span style="color:#FF79C6"> =</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">New York</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">AND</span><span style="color:#F8F8F2"> city </span><span style="color:#FF79C6">IN</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> city </span></span>
@@ -17,7 +17,7 @@
 <h2 id="choosing-the-right-index">Choosing the right index</h2>
 <p>Indexes are used to find rows with specific column values quickly. Without an index, SQL has to begin with the first row and then read through the entire table to find the appropriate rows. The larger the table, the more costly the operation. Choosing a right and efficient index greatly influence on query performance.</p>
 <p>For example,</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> INDEX</span><span style="color:#50FA7B"> index_name</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> INDEX</span><span style="color:#50FA7B"> index_name</span></span>
 <span class="line"><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> table_name (column1, column2, ...);</span></span></code></pre>
 <h2 id="fine-tuning-database-design">Fine-tuning Database Design</h2>
 <p>Improper database schema designs could result in poor query performances. While not strictly a part of query optimization, tuning the database design can speed up the query execution time drastically.</p>
@@ -25,7 +25,7 @@
 <h2 id="use-of-sql-clauses-wisely">Use of SQL Clauses wisely</h2>
 <p>The usage of certain SQL clauses can help in query optimization like LIMIT, BETWEEN etc.</p>
 <p>Example,</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition</span></span>
 <span class="line"><span style="color:#FF79C6">LIMIT</span><span style="color:#BD93F9"> 10</span><span style="color:#F8F8F2">;</span></span></code></pre>

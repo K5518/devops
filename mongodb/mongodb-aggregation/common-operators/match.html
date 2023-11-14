@@ -1,12 +1,12 @@
 <h1 id="match">$match</h1>
 <p>The <code>$match</code> operator is used to filter documents within the pipeline in the MongoDB aggregation framework. It helps in excluding documents that do not fulfill the specified condition(s). The <code>$match</code> operator filters documents and passes only those that match the specified conditions to the next stage of the pipeline.</p>
 <p>The basic syntax for the <code>$match</code> operator is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="python"><code><span class="line"><span style="color:#F8F8F2">{ </span><span style="color:#FF5555;font-style:italic;text-decoration:underline">$</span><span style="color:#F8F8F2">match: { </span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2">query</span><span style="color:#FF79C6">></span><span style="color:#F8F8F2"> } }</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{ </span><span style="color:#FF5555;font-style:italic;text-decoration:underline">$</span><span style="color:#F8F8F2">match: { </span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2">query</span><span style="color:#FF79C6">></span><span style="color:#F8F8F2"> } }</span></span></code></pre>
 <p>Where <code>&#x3C;query></code> contains the conditions and the fields which the documents should match.</p>
 <h3 id="examples">Examples</h3>
 <p>Let’s take a look at some examples to understand the usage of the <code>$match</code> operator.</p>
 <p>Suppose you have a collection named <code>employees</code> with the following document structure:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="json"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#8BE9FE">  "</span><span style="color:#8BE9FD">_id</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#FF5555;font-style:italic;text-decoration:underline"> ObjectId(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">123</span><span style="color:#E9F284">"</span><span style="color:#FF5555;font-style:italic;text-decoration:underline">)</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#8BE9FE">  "</span><span style="color:#8BE9FD">firstName</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">John</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#8BE9FE">  "</span><span style="color:#8BE9FD">lastName</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Doe</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
@@ -14,13 +14,13 @@
 <span class="line"><span style="color:#8BE9FE">  "</span><span style="color:#8BE9FD">department</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">HR</span><span style="color:#E9F284">"</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <p>You are asked to find employees aged above 30. To do this, you can use the <code>$match</code> operator as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="python"><code><span class="line"><span style="color:#F8F8F2">db.employees.aggregate([</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.employees.aggregate([</span></span>
 <span class="line"><span style="color:#F8F8F2">  { </span><span style="color:#FF5555;font-style:italic;text-decoration:underline">$</span><span style="color:#F8F8F2">match: { age: { </span><span style="color:#FF5555;font-style:italic;text-decoration:underline">$</span><span style="color:#F8F8F2">gt: </span><span style="color:#BD93F9">30</span><span style="color:#F8F8F2"> } } }</span></span>
 <span class="line"><span style="color:#F8F8F2">])</span></span></code></pre>
 <p>This returns all employees with age greater than 30.</p>
 <p><strong>Example 2:</strong></p>
 <p>Now, let’s say you also want to filter employees working in the “HR” department. You can chain conditions to the <code>$match</code> operator like this:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="python"><code><span class="line"><span style="color:#F8F8F2">db.employees.aggregate([</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.employees.aggregate([</span></span>
 <span class="line"><span style="color:#F8F8F2">  { </span><span style="color:#FF5555;font-style:italic;text-decoration:underline">$</span><span style="color:#F8F8F2">match: { age: { </span><span style="color:#FF5555;font-style:italic;text-decoration:underline">$</span><span style="color:#F8F8F2">gt: </span><span style="color:#BD93F9">30</span><span style="color:#F8F8F2"> }, department: </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">HR</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2"> } }</span></span>
 <span class="line"><span style="color:#F8F8F2">])</span></span></code></pre>
 <p>This returns employees who are aged above 30 and working in the “HR” department.</p>

@@ -10,16 +10,16 @@
 <li>Angle brackets <code>&#x3C;></code>: Used for including standard library headers, like <code>iostream</code>, <code>vector</code>, or <code>algorithm</code>.</li>
 </ul>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
 <span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">vector</span><span style="color:#E9F284">></span></span></code></pre>
 <ul>
 <li>Double quotes <code>""</code>: Used for including user-defined headers or headers provided by third-party libraries.</li>
 </ul>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">myHeader.h</span><span style="color:#E9F284">"</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">myHeader.h</span><span style="color:#E9F284">"</span></span>
 <span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">thirdPartyLibrary.h</span><span style="color:#E9F284">"</span></span></code></pre>
 <h3 id="source-inclusion">Source Inclusion</h3>
 <p>Source inclusion refers to including the content of a source file directly in another source file. This approach is generally not recommended as it can lead to multiple definitions and increased compile times but it can occasionally be useful for certain tasks (e.g., templates or simple small programs). To include a source file, you can use the <code>#include</code> directive with double quotes, just like with header files:</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">mySourceFile.cpp</span><span style="color:#E9F284">"</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">mySourceFile.cpp</span><span style="color:#E9F284">"</span></span></code></pre>
 <p>Remember, using source inclusion for large projects or in situations where it’s not necessary can lead to unexpected issues and should be avoided.</p>

@@ -7,7 +7,7 @@
 <li>If you want to revert the unwanted changes.</li>
 </ol>
 <p>Here is a basic example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#F8F8F2">;  </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#F8F8F2">;  </span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">-- This would delete all rows from the table.</span></span>
 <span class="line"><span style="color:#FF79C6">DELETE</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> Employee;</span></span>
@@ -17,7 +17,7 @@
 <p>In this example, the <code>ROLLBACK</code> command would restore all deleted data into the <code>Employee</code> table.</p>
 <p>SQL also allows the usage of <code>SAVEPOINT</code>s along with the <code>ROLLBACK</code> command, which allows rolling back to a specific point in a transaction, instead of rolling back the entire transaction.</p>
 <p>Here is an example of using <code>SAVEPOINT</code>s:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#F8F8F2">;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">-- Adding new employee.</span></span>
 <span class="line"><span style="color:#FF79C6">INSERT INTO</span><span style="color:#F8F8F2"> Employee(ID, </span><span style="color:#FF79C6">Name</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">VALUES</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">John</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>

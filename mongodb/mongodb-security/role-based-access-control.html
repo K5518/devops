@@ -17,7 +17,7 @@
 <h2 id="custom-roles">Custom Roles</h2>
 <p>In addition to the built-in roles, you can create custom roles to cater to specific requirements of your application. Custom roles can have any combination of built-in roles’ privileges and user-defined actions.</p>
 <p>To create a custom role, you can use the <code>db.createRole()</code> method. Here’s an example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">db.</span><span style="color:#50FA7B">createRole</span><span style="color:#F8F8F2">({</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.</span><span style="color:#50FA7B">createRole</span><span style="color:#F8F8F2">({</span></span>
 <span class="line"><span style="color:#F8F8F2">  role</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">customRole</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  privileges</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> [</span></span>
 <span class="line"><span style="color:#F8F8F2">    {</span></span>
@@ -30,7 +30,7 @@
 <p>In the example above, we created a custom role <code>customRole</code> with privileges that allow users with this role to perform <code>find</code>, <code>insert</code>, <code>update</code>, and <code>remove</code> operations on all collections within the <code>exampleDB</code> database.</p>
 <h2 id="assigning-roles-to-users">Assigning Roles to Users</h2>
 <p>To ensure that users have the appropriate level of access and permissions, you assign specific roles to them. When creating a new user, you can assign roles using the <code>db.createUser()</code> method. Here’s an example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">db.</span><span style="color:#50FA7B">createUser</span><span style="color:#F8F8F2">({</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.</span><span style="color:#50FA7B">createUser</span><span style="color:#F8F8F2">({</span></span>
 <span class="line"><span style="color:#F8F8F2">  user</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">exampleUser</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  pwd</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">examplePassword</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  roles</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> [</span></span>

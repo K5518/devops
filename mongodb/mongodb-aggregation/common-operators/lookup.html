@@ -3,7 +3,7 @@
 <p>Here’s a brief summary of <code>$lookup</code> operator:</p>
 <h2 id="syntax">Syntax</h2>
 <p>The <code>$lookup</code> operator uses the following syntax:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="json"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#8BE9FE">  "</span><span style="color:#8BE9FD">$lookup</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#8BE9FE">    "</span><span style="color:#8BE9FD">from</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">&#x3C;collection_name></span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#8BE9FE">    "</span><span style="color:#8BE9FD">localField</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">&#x3C;field_from_input_documents></span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
@@ -21,7 +21,7 @@
 <h2 id="example">Example</h2>
 <p>Suppose you have two collections, <code>orders</code> and <code>products</code>. The <code>orders</code> collection contains documents with following fields: <code>orderId</code>, <code>productId</code>, and <code>quantity</code>. The <code>products</code> collection contains documents with fields: <code>productId</code>, <code>productName</code>, and <code>price</code>.</p>
 <p>To calculate the total amount of each order, you can use the <code>$lookup</code> operator along with other aggregation stages:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">db.orders.</span><span style="color:#50FA7B">aggregate</span><span style="color:#F8F8F2">([</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.orders.</span><span style="color:#50FA7B">aggregate</span><span style="color:#F8F8F2">([</span></span>
 <span class="line"><span style="color:#F8F8F2">  {</span></span>
 <span class="line"><span style="color:#F8F8F2">    $lookup</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#F8F8F2">      from</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">products</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>

@@ -2,13 +2,13 @@
 <h2 id="pivot">PIVOT</h2>
 <p>The PIVOT operator is used in SQL to rotate the table data from rows to columns, essentially transforming the data into a matrix format. This operator allows you to create a crosstab view of the data, with selected columns as rows and others as columns, providing a summary view.</p>
 <p>Here is a general example of the syntax:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> ...</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> ...</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> ...</span></span>
 <span class="line"><span style="color:#F8F8F2">PIVOT (aggregate_function(column_to_aggregate)</span></span>
 <span class="line"><span style="color:#FF79C6">    FOR</span><span style="color:#F8F8F2"> column_to_pivot </span></span>
 <span class="line"><span style="color:#FF79C6">    IN</span><span style="color:#F8F8F2"> (list_of_values))</span></span></code></pre>
 <p><strong>Example</strong>: Let’s assume we have a ‘Sales’ table with ‘Year’, ‘Quarter’ and ‘Amount’ columns. If we want to turn ‘Quarter’ values into columns, we might use:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#F8F8F2">(</span></span>
 <span class="line"><span style="color:#FF79C6">  SELECT</span><span style="color:#FF79C6"> Year</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">Quarter</span><span style="color:#F8F8F2">, Amount</span></span>
 <span class="line"><span style="color:#FF79C6">  FROM</span><span style="color:#F8F8F2"> Sales</span></span>
@@ -22,12 +22,12 @@
 <h2 id="unpivot">UNPIVOT</h2>
 <p>The UNPIVOT operator performs the reverse operation to PIVOT, rotating columns into rows. If the columns you’re converting have a certain relationship, this can be factored into a single column instead.</p>
 <p>Here is a general example of the syntax:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> ...</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> ...</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> ...</span></span>
 <span class="line"><span style="color:#F8F8F2">UNPIVOT (column_for_values </span></span>
 <span class="line"><span style="color:#FF79C6">    FOR</span><span style="color:#F8F8F2"> column_for_names </span><span style="color:#FF79C6">IN</span><span style="color:#F8F8F2"> (list_of_columns))</span></span></code></pre>
 <p><strong>Example</strong>: Conversely, if we want to transform the quarter columns back into rows from the previous ‘Sales’ pivot table, we would use:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#F8F8F2">(</span></span>
 <span class="line"><span style="color:#FF79C6">  SELECT</span><span style="color:#FF79C6"> Year</span><span style="color:#F8F8F2">, Q1, Q2, Q3, Q4</span></span>
 <span class="line"><span style="color:#FF79C6">  FROM</span><span style="color:#F8F8F2"> Sales</span></span>

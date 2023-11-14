@@ -4,27 +4,27 @@
 <ol>
 <li>
 <p><strong>CHAR(n)</strong> - It is a fixed-length character string that holds <code>n</code> characters. The size can be 1 to 255. For example,</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employee</span><span style="color:#F8F8F2">(ID </span><span style="color:#FF79C6">CHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">25</span><span style="color:#F8F8F2">));</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employee</span><span style="color:#F8F8F2">(ID </span><span style="color:#FF79C6">CHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">25</span><span style="color:#F8F8F2">));</span></span></code></pre>
 </li>
 <li>
 <p><strong>VARCHAR(n)</strong> - A variable-length character string up to <code>n</code> characters where <code>n</code> can be from 1 to 255. For example,</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employee</span><span style="color:#F8F8F2">(ID </span><span style="color:#FF79C6">VARCHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">100</span><span style="color:#F8F8F2">));</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employee</span><span style="color:#F8F8F2">(ID </span><span style="color:#FF79C6">VARCHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">100</span><span style="color:#F8F8F2">));</span></span></code></pre>
 </li>
 <li>
 <p><strong>INT</strong> - This type is used for integers. For example,</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Customers</span><span style="color:#F8F8F2">(Age </span><span style="color:#FF79C6">INT</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Customers</span><span style="color:#F8F8F2">(Age </span><span style="color:#FF79C6">INT</span><span style="color:#F8F8F2">);</span></span></code></pre>
 </li>
 <li>
 <p><strong>DECIMAL(p,s)</strong> - This is a decimal type used for precision and scale. <code>p</code> represents the total number of digits and <code>s</code> for numbers after the decimal. For example,</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Products</span><span style="color:#F8F8F2">(Price </span><span style="color:#FF79C6">DECIMAL</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">,</span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">));</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Products</span><span style="color:#F8F8F2">(Price </span><span style="color:#FF79C6">DECIMAL</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">,</span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">));</span></span></code></pre>
 </li>
 <li>
 <p><strong>DATE</strong> - This type is used for date format ‘YYYY-MM-DD’. For example,</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Orders</span><span style="color:#F8F8F2">(OrderedDate </span><span style="color:#FF79C6">DATE</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Orders</span><span style="color:#F8F8F2">(OrderedDate </span><span style="color:#FF79C6">DATE</span><span style="color:#F8F8F2">);</span></span></code></pre>
 </li>
 <li>
 <p><strong>BOOL</strong> - It stores Boolean data types. It can only take <code>True</code> or <code>False</code> values. For example,</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Users</span><span style="color:#F8F8F2">(IsActive BOOL);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Users</span><span style="color:#F8F8F2">(IsActive BOOL);</span></span></code></pre>
 </li>
 </ol>
 <p>In SQL, the column type helps in interpreting what kind of data to store in which column, whether it’s number, text, date, or logical data. Remember, a table contains multiple columns and each column should have its unique name.</p>

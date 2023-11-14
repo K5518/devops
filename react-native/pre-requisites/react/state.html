@@ -1,7 +1,7 @@
 <h1 id="state">State</h1>
 <p>State is an object that holds data managed within a React component. It allows components to become dynamic and interactive by keeping track of its data changes. When the state of a component changes, React re-renders the component and updates the DOM accordingly.</p>
 <p>In a functional component, utilize the <code>useState</code> hook to initialize state:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> React, { useState } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> React, { useState } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">function</span><span style="color:#50FA7B"> App</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#FF79C6">  const</span><span style="color:#F8F8F2"> [text, setText] </span><span style="color:#FF79C6">=</span><span style="color:#50FA7B"> useState</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Hello, World!</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
@@ -9,13 +9,13 @@
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <h2 id="accessing-state">Accessing State</h2>
 <p>In functional components, access the state by utilizing the first variable from the <code>useState</code> hook:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#FF79C6">function</span><span style="color:#50FA7B"> App</span><span style="color:#F8F8F2">() {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">function</span><span style="color:#50FA7B"> App</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#FF79C6">  const</span><span style="color:#F8F8F2"> [text, setText] </span><span style="color:#FF79C6">=</span><span style="color:#50FA7B"> useState</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Hello, World!</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"><span style="color:#FF79C6">  return</span><span style="color:#F8F8F2"> &#x3C;</span><span style="color:#FF79C6">div</span><span style="color:#F8F8F2">></span><span style="color:#FF79C6">{</span><span style="color:#F8F8F2">text</span><span style="color:#FF79C6">}</span><span style="color:#F8F8F2">&#x3C;/</span><span style="color:#FF79C6">div</span><span style="color:#F8F8F2">>;</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <h2 id="updating-state">Updating State</h2>
 <p>Utilize the second variable returned from the <code>useState</code> hook (which is a function) to update the state:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#FF79C6">function</span><span style="color:#50FA7B"> App</span><span style="color:#F8F8F2">() {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">function</span><span style="color:#50FA7B"> App</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#FF79C6">  const</span><span style="color:#F8F8F2"> [text, setText] </span><span style="color:#FF79C6">=</span><span style="color:#50FA7B"> useState</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Hello, World!</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">  function</span><span style="color:#50FA7B"> handleClick</span><span style="color:#F8F8F2">() {</span></span>

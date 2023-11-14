@@ -2,11 +2,11 @@
 <p>Full template specialization allows you to provide a specific implementation, or behavior, for a template when used with a certain set of type parameters. It is useful when you want to handle special cases or optimize your code for specific types.</p>
 <h2 id="syntax">Syntax</h2>
 <p>To create a full specialization of a template, you need to define the specific type for which the specialization should happen. The syntax looks as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">template</span><span style="color:#F8F8F2"> &#x3C;></span><span style="color:#6272A4"> //Indicates that this is a specialization</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">template</span><span style="color:#F8F8F2"> &#x3C;></span><span style="color:#6272A4"> //Indicates that this is a specialization</span></span>
 <span class="line"><span style="color:#F8F8F2">className</span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2">specificType</span><span style="color:#FF79C6">></span><span style="color:#6272A4"> //The specialized class for the specific type</span></span></code></pre>
 <h2 id="example">Example</h2>
 <p>Consider the following example to demonstrate full template specialization:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#6272A4">// Generic template</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">// Generic template</span></span>
 <span class="line"><span style="color:#FF79C6">template</span><span style="color:#F8F8F2"> &#x3C;</span><span style="color:#FF79C6">typename</span><span style="color:#8BE9FD;font-style:italic"> T</span><span style="color:#F8F8F2">></span></span>
 <span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> MyContainer</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#FF79C6">public:</span></span>

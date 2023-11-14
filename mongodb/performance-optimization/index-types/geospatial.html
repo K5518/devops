@@ -4,7 +4,7 @@
 <h2 id="2dsphere-index">2dsphere Index</h2>
 <p>The <code>2dsphere</code> index supports queries on the surface of a sphere or a round object, like Earth. It uses the GeoJSON format for storing the geospatial data such as <code>Point</code>, <code>LineString</code>, and <code>Polygon</code>.</p>
 <p>To create a 2dsphere index, you can use the <code>createIndex</code> method:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">createIndex</span><span style="color:#F8F8F2">({ location</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">2dsphere</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">createIndex</span><span style="color:#F8F8F2">({ location</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">2dsphere</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> });</span></span></code></pre>
 <p>In this example, the <code>location</code> field contains the GeoJSON representation of the geospatial data.</p>
 <p>Some common queries using the 2dsphere index include:</p>
 <ul>
@@ -15,7 +15,7 @@
 <h2 id="2d-index">2d Index</h2>
 <p>The <code>2d</code> index supports queries on a flat Cartesian plane, which can be useful for simpler cases when dealing with small scale data. It stores geospatial data as legacy coordinate pairs.</p>
 <p>To create a 2d index, you can use the <code>createIndex</code> method:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">createIndex</span><span style="color:#F8F8F2">({ location</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">2d</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">createIndex</span><span style="color:#F8F8F2">({ location</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">2d</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> });</span></span></code></pre>
 <p>In this example, the <code>location</code> field contains a coordinate pair [x, y].</p>
 <p>Some common queries using the 2d index include:</p>
 <ul>

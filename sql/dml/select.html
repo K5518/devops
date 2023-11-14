@@ -2,35 +2,35 @@
 <p>The <code>SELECT</code> statement in SQL is majorly used for fetching data from the database. It is one of the most essential elements of SQL.</p>
 <h2 id="syntax">Syntax</h2>
 <p>Here’s how your <code>SELECT</code> command will look like:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name;</span></span></code></pre>
 <p>If you want to select all the columns of a table, you can use <code>*</code> like this:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> table_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> table_name;</span></span></code></pre>
 <h2 id="example">Example</h2>
 <p>For instance, consider we have a table <code>EMPLOYEES</code> with columns <code>name</code>, <code>designation</code>, and <code>salary</code>. We can use <code>SELECT</code> in the following way:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> name</span><span style="color:#F8F8F2">, designation </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> EMPLOYEES;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> name</span><span style="color:#F8F8F2">, designation </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> EMPLOYEES;</span></span></code></pre>
 <p>This will retrieve all the names and designations of all employees from the table <code>EMPLOYEES</code>.</p>
 <h2 id="select-distinct">SELECT DISTINCT</h2>
 <p>The <code>SELECT DISTINCT</code> statement is used to return only distinct (different) values. The DISTINCT keyword eliminates duplicate records from the results.</p>
 <p>Here’s how you can use it:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT DISTINCT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT DISTINCT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name;</span></span></code></pre>
 <p>For example, if we want to select all unique designations from the <code>EMPLOYEES</code> table, the query will look like this:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT DISTINCT</span><span style="color:#F8F8F2"> designation </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> EMPLOYEES;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT DISTINCT</span><span style="color:#F8F8F2"> designation </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> EMPLOYEES;</span></span></code></pre>
 <h2 id="select-where">SELECT WHERE</h2>
 <p><code>SELECT</code> statement combined with <code>WHERE</code> gives us the ability to filter records based on a condition.</p>
 <p>Syntax:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span></code></pre>
 <p>For example, to select employees with salary more than 50000, you can use this query:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> EMPLOYEES </span><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 50000</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> EMPLOYEES </span><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 50000</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <h2 id="select-order-by">SELECT ORDER BY</h2>
 <p>Using <code>SELECT</code> statement in conjunction with <code>ORDER BY</code>, we can sort the result-set in ascending or descending order.</p>
 <p>Syntax:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name</span></span>
 <span class="line"><span style="color:#FF79C6">ORDER BY</span><span style="color:#F8F8F2"> column </span><span style="color:#FF79C6">ASC</span><span style="color:#F8F8F2">|</span><span style="color:#FF79C6">DESC</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <p>For example, to select all employees and order them by their name in ascending fashion:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> EMPLOYEES </span><span style="color:#FF79C6">ORDER BY</span><span style="color:#FF79C6"> name</span><span style="color:#FF79C6"> ASC</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> EMPLOYEES </span><span style="color:#FF79C6">ORDER BY</span><span style="color:#FF79C6"> name</span><span style="color:#FF79C6"> ASC</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <p>Remember that the default sort order is ascending if the ASC|DESC parameter is not defined.</p>

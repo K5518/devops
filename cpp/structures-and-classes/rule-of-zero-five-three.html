@@ -4,7 +4,7 @@
 <p><strong>Rule of Zero</strong></p>
 <p>The Rule of Zero states that if a class or structure does not explicitly manage resources, it should not define any of the special member functions, i.e., destructor, copy constructor, copy assignment operator, move constructor, and move assignment operator. The compiler will automatically generate these functions, and the behavior will be correct for managing resources like memory and file handles.</p>
 <p><em>Example:</em></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">struct</span><span style="color:#8BE9FD;font-style:italic"> MyResource</span><span style="color:#F8F8F2"> {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">struct</span><span style="color:#8BE9FD;font-style:italic"> MyResource</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">string name;</span></span>
 <span class="line"><span style="color:#FF79C6">    int</span><span style="color:#F8F8F2"> value;</span></span>
 <span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
@@ -18,7 +18,7 @@
 </ul>
 <p>These functions are necessary for proper resource management, such as releasing memory or correctly handling deep copies.</p>
 <p><em>Example:</em></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> MyResource</span><span style="color:#F8F8F2"> {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> MyResource</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#FF79C6">public:</span></span>
 <span class="line"><span style="color:#6272A4">    // Constructor and destructor</span></span>
 <span class="line"><span style="color:#50FA7B">    MyResource</span><span style="color:#F8F8F2">() : </span><span style="color:#50FA7B">data</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#FF79C6"> int</span><span style="color:#F8F8F2">[</span><span style="color:#BD93F9">100</span><span style="color:#F8F8F2">]) {} </span></span>
@@ -48,7 +48,7 @@
 </ul>
 <p>Modern C++ introduces move semantics, which allows for more efficient handling of resources by transferring ownership without necessarily copying all the data.</p>
 <p><em>Example:</em></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> MyResource</span><span style="color:#F8F8F2"> {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> MyResource</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#FF79C6">public:</span></span>
 <span class="line"><span style="color:#6272A4">    // Constructors and destructor</span></span>
 <span class="line"><span style="color:#50FA7B">    MyResource</span><span style="color:#F8F8F2">() : </span><span style="color:#50FA7B">data</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#FF79C6"> int</span><span style="color:#F8F8F2">[</span><span style="color:#BD93F9">100</span><span style="color:#F8F8F2">]) {}</span></span>

@@ -3,38 +3,38 @@
 <h2 id="common-aggregate-functions">Common Aggregate Functions</h2>
 <p><strong>1. COUNT()</strong></p>
 <p>Counts the number of rows.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> COUNT</span><span style="color:#F8F8F2">(column_name) </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> COUNT</span><span style="color:#F8F8F2">(column_name) </span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name </span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span></code></pre>
 <p><strong>2. SUM()</strong></p>
 <p>Returns the sum of a numeric column.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> SUM</span><span style="color:#F8F8F2">(column_name) </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> SUM</span><span style="color:#F8F8F2">(column_name) </span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name </span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span></code></pre>
 <p><strong>3. AVG()</strong></p>
 <p>Returns the average value of a numeric column.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> AVG</span><span style="color:#F8F8F2">(column_name) </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> AVG</span><span style="color:#F8F8F2">(column_name) </span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name </span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span></code></pre>
 <p><strong>4. MIN()</strong></p>
 <p>Returns the smallest value of the selected column.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> MIN</span><span style="color:#F8F8F2">(column_name) </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> MIN</span><span style="color:#F8F8F2">(column_name) </span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name </span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span></code></pre>
 <p><strong>5. MAX()</strong></p>
 <p>Returns the largest value of the selected column.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> MAX</span><span style="color:#F8F8F2">(column_name) </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> MAX</span><span style="color:#F8F8F2">(column_name) </span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name </span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span></code></pre>
 <p>These functions ignore NULL values.</p>
 <h2 id="group-by-and-having-clauses">GROUP BY and HAVING Clauses</h2>
 <p>To separate the results into groups of accumulated data, you can use the GROUP BY clause.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, aggregate_function(column2)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, aggregate_function(column2)</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#FF79C6"> table</span></span>
 <span class="line"><span style="color:#FF79C6">GROUP BY</span><span style="color:#F8F8F2"> column1;</span></span></code></pre>
 <p>“A group” is represented by ROW(s) that have the same value in the specific column(s). The GROUP BY clause can be used in a SELECT statement to collect data across multiple records and group by some columns.</p>
 <p>The HAVING clause is used with the GROUP BY clause, it applies to summarized group records, unlike the ‘where’ clause. It was added to SQL because the WHERE keyword could not be used with aggregate functions.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, aggregate_function(column2)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, aggregate_function(column2)</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#FF79C6"> table</span></span>
 <span class="line"><span style="color:#FF79C6">GROUP BY</span><span style="color:#F8F8F2"> column1</span></span>
 <span class="line"><span style="color:#FF79C6">HAVING</span><span style="color:#F8F8F2"> conditions;</span></span></code></pre>

@@ -10,17 +10,17 @@
 <ul>
 <li>
 <p><strong>ulimit</strong> - Set the core file size limit to “unlimited” for the PostgreSQL process by updating the <code>ulimit</code> configuration:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>ulimit -c unlimited</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>ulimit -c unlimited</span></span></code></pre>
 </li>
 <li>
 <p><strong>sysctl</strong> - Enable core dumps for setuid (user ID change on execution) programs. Edit <code>/etc/sysctl.conf</code> file (or create it if it doesn’t exist) and add the following line:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>fs.suid_dumpable=2</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>fs.suid_dumpable=2</span></span></code></pre>
 <p>Apply changes by running:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>sysctl -p</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>sysctl -p</span></span></code></pre>
 </li>
 <li>
 <p><strong>PostgreSQL configuration</strong> - Set the <code>debug_assertions</code> configuration parameter to “on” in <code>postgresql.conf</code>:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>debug_assertions = on</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>debug_assertions = on</span></span></code></pre>
 <p>Restart PostgreSQL for the changes to take effect.</p>
 </li>
 </ul>
@@ -30,14 +30,14 @@
 <ul>
 <li>
 <p>Install <code>gdb</code> if it’s not already installed on your system:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>sudo apt-get install gdb</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>sudo apt-get install gdb</span></span></code></pre>
 </li>
 <li>
 <p>Locate the core dump file (usually named <code>core</code> or <code>core.&#x3C;pid></code>).</p>
 </li>
 <li>
 <p>Run <code>gdb</code> with the PostgreSQL binary and the core dump file as arguments:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>gdb /path/to/postgres-binary /path/to/core-dump</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>gdb /path/to/postgres-binary /path/to/core-dump</span></span></code></pre>
 </li>
 <li>
 <p>Once <code>gdb</code> starts, you can issue commands to examine the state of the program:</p>

@@ -8,7 +8,7 @@
 <h2 id="typeid-operator">typeid operator</h2>
 <p><code>typeid</code> is an operator that returns a reference to an object of type <code>std::type_info</code>, which contains information about the type of the object. The header file <code>&#x3C;typeinfo></code> should be included to use <code>typeid</code>.</p>
 <p>Here is an example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
 <span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">typeinfo</span><span style="color:#E9F284">></span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Base</span><span style="color:#F8F8F2"> { </span><span style="color:#FF79C6">virtual</span><span style="color:#FF79C6"> void</span><span style="color:#50FA7B"> dummy</span><span style="color:#F8F8F2">() {} };</span></span>
@@ -26,7 +26,7 @@
 <h2 id="dynamic_cast-operator">dynamic_cast operator</h2>
 <p><code>dynamic_cast</code> is a type-casting operator that performs a runtime type check and safely downcasts a base pointer or reference to a derived pointer or reference. It returns null or throws a bad_cast exception (if casting references) when the casting fails.</p>
 <p>Here is an example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Base</span><span style="color:#F8F8F2"> { </span><span style="color:#FF79C6">virtual</span><span style="color:#FF79C6"> void</span><span style="color:#50FA7B"> dummy</span><span style="color:#F8F8F2">() {} };</span></span>
 <span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Derived1</span><span style="color:#F8F8F2"> : </span><span style="color:#FF79C6">public</span><span style="color:#8BE9FD;font-style:italic"> Base</span><span style="color:#F8F8F2"> {</span><span style="color:#6272A4"> /* ... */</span><span style="color:#F8F8F2"> };</span></span>

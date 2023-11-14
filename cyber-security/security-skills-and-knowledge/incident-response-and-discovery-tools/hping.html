@@ -20,19 +20,19 @@
 <ul>
 <li>
 <p>Perform a traditional ping:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>hping3 -1 &#x3C;target_IP></span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>hping3 -1 &#x3C;target_IP></span></span></code></pre>
 </li>
 <li>
 <p>Perform a SYN flood attack:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>hping3 --flood -S -p &#x3C;target_port> &#x3C;target_IP></span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>hping3 --flood -S -p &#x3C;target_port> &#x3C;target_IP></span></span></code></pre>
 </li>
 <li>
 <p>Perform a traceroute using ICMP packets:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>hping3 --traceroute -V -1 &#x3C;target_IP></span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>hping3 --traceroute -V -1 &#x3C;target_IP></span></span></code></pre>
 </li>
 <li>
 <p>Perform a UDP scan of the first 100 ports:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>hping3 --udp -p 1-100 &#x3C;target_IP></span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>hping3 --udp -p 1-100 &#x3C;target_IP></span></span></code></pre>
 </li>
 </ul>
 <h2 id="summary">Summary</h2>

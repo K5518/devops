@@ -3,7 +3,7 @@
 <p><code>tail</code> is a command-line utility that allows you to display the last part of files. It is a highly versatile tool, commonly used in system administration and cybersecurity to monitor log files, trace errors, and observe real-time system activities. This utility is available by default on most Unix-based operating systems, such as Linux and macOS.</p>
 <h2 id="usage">Usage</h2>
 <p>The basic syntax for the <code>tail</code> command is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">tail</span><span style="color:#F8F8F2"> [options] [file_name]</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tail</span><span style="color:#F8F8F2"> [options] [file_name]</span></span></code></pre>
 <ul>
 <li><code>options</code>: Flags that modify the behavior of the command.</li>
 <li><code>file_name</code>: The name of the file you want to display.</li>
@@ -20,31 +20,31 @@
 <ul>
 <li>Display the last 10 lines of a file:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">tail</span><span style="color:#F1FA8C"> file_name</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tail</span><span style="color:#F1FA8C"> file_name</span></span></code></pre>
 <ul>
 <li>Display the last 50 lines of a file:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">tail</span><span style="color:#BD93F9"> -n</span><span style="color:#BD93F9"> 50</span><span style="color:#F1FA8C"> file_name</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tail</span><span style="color:#BD93F9"> -n</span><span style="color:#BD93F9"> 50</span><span style="color:#F1FA8C"> file_name</span></span></code></pre>
 <ul>
 <li>Monitor a log file in real time:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">tail</span><span style="color:#BD93F9"> -f</span><span style="color:#F1FA8C"> log_file</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tail</span><span style="color:#BD93F9"> -f</span><span style="color:#F1FA8C"> log_file</span></span></code></pre>
 <ul>
 <li>Monitor multiple log files in real time:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">tail</span><span style="color:#BD93F9"> -f</span><span style="color:#F1FA8C"> log_file1</span><span style="color:#F1FA8C"> log_file2</span><span style="color:#F1FA8C"> log_file3</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tail</span><span style="color:#BD93F9"> -f</span><span style="color:#F1FA8C"> log_file1</span><span style="color:#F1FA8C"> log_file2</span><span style="color:#F1FA8C"> log_file3</span></span></code></pre>
 <h2 id="use-cases-in-cyber-security">Use Cases in Cyber Security</h2>
 <p><code>tail</code> is often used by cybersecurity professionals to analyze log files, trace errors, and monitor system activities. Some common use cases include:</p>
 <ul>
 <li>Identifying unauthorized access attempts by monitoring the contents of the <code>/var/log/auth.log</code> file in real time:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">tail</span><span style="color:#BD93F9"> -f</span><span style="color:#F1FA8C"> /var/log/auth.log</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tail</span><span style="color:#BD93F9"> -f</span><span style="color:#F1FA8C"> /var/log/auth.log</span></span></code></pre>
 <ul>
 <li>Analyzing the most recent entries in a web server log file to identify unusual requests or suspicious activities:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">tail</span><span style="color:#BD93F9"> -n</span><span style="color:#BD93F9"> 50</span><span style="color:#F1FA8C"> /var/log/apache2/access.log</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tail</span><span style="color:#BD93F9"> -n</span><span style="color:#BD93F9"> 50</span><span style="color:#F1FA8C"> /var/log/apache2/access.log</span></span></code></pre>
 <ul>
 <li>Monitoring system log files to quickly identify and respond to security incidents or anomalies:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">tail</span><span style="color:#BD93F9"> -f</span><span style="color:#F1FA8C"> /var/log/syslog</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tail</span><span style="color:#BD93F9"> -f</span><span style="color:#F1FA8C"> /var/log/syslog</span></span></code></pre>
 <p>In summary, <code>tail</code> is a powerful and versatile command-line utility that proves to be an invaluable resource for system administrators and cybersecurity professionals, providing real-time monitoring and analysis of log files and system activities.</p>

@@ -3,7 +3,7 @@
 <p>Unlike the <code>RANK</code> function, <code>DENSE_RANK</code> does not skip any rank (positions in the order). If you have, for example, 1st, 2nd, and 2nd, the next rank listed would be 3rd when using <code>DENSE_RANK</code>, whereas it would be 4th using the <code>RANK</code> function.</p>
 <p>The <code>DENSE_RANK</code> function operates on a set of rows, called a window, and in that window, values are compared to each other.</p>
 <p>Here is a general syntax of <code>DENSE_RANK</code> function in SQL:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#8BE9FD">DENSE_RANK</span><span style="color:#F8F8F2"> ( ) </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">DENSE_RANK</span><span style="color:#F8F8F2"> ( ) </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    [ &#x3C; partition_by_clause > ] </span></span>
 <span class="line"><span style="color:#F8F8F2">    [ &#x3C; order_by_clause > ]</span></span>
 <span class="line"><span style="color:#F8F8F2">    )</span></span></code></pre>
@@ -44,7 +44,7 @@
 
 <table><thead><tr><th>ID</th><th>Name</th><th>Salary</th></tr></thead><tbody><tr><td>1</td><td>John</td><td>50000</td></tr><tr><td>2</td><td>Mike</td><td>60000</td></tr><tr><td>3</td><td>Mary</td><td>60000</td></tr><tr><td>4</td><td>Alice</td><td>55000</td></tr></tbody></table>
 <p>Our task can be to rank these employees based on their salaries. The SQL query will be:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> Name</span><span style="color:#F8F8F2">, Salary,</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> Name</span><span style="color:#F8F8F2">, Salary,</span></span>
 <span class="line"><span style="color:#8BE9FD">DENSE_RANK</span><span style="color:#F8F8F2"> () </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">ORDER BY</span><span style="color:#F8F8F2"> Salary </span><span style="color:#FF79C6">Desc</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> Rank</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Employees</span></span></code></pre>
 <p>When this query is run, the <code>DENSE_RANK</code> function will assign a rank to every row, with the highest salary being ranked as 1:</p>

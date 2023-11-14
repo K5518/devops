@@ -3,7 +3,7 @@
 <p>Here are some of the key features introduced in C++20:</p>
 <h2 id="concepts">Concepts</h2>
 <p>Concepts are a way to enforce specific requirements on template parameters, allowing you to write more expressive and understandable code. They improve the error messages when using templates and ensure that the template parameters fulfill specific criteria.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">template</span><span style="color:#F8F8F2"> &#x3C;</span><span style="color:#FF79C6">typename</span><span style="color:#8BE9FD;font-style:italic"> T</span><span style="color:#F8F8F2">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">template</span><span style="color:#F8F8F2"> &#x3C;</span><span style="color:#FF79C6">typename</span><span style="color:#8BE9FD;font-style:italic"> T</span><span style="color:#F8F8F2">></span></span>
 <span class="line"><span style="color:#FF79C6">concept</span><span style="color:#F8F8F2"> Addable </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> requires</span><span style="color:#F8F8F2"> (T a, T b) {</span></span>
 <span class="line"><span style="color:#F8F8F2">    { a </span><span style="color:#FF79C6">+</span><span style="color:#F8F8F2"> b } </span><span style="color:#FF79C6">-></span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">same_as</span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2">T</span><span style="color:#FF79C6">></span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#F8F8F2">};</span></span>
@@ -14,7 +14,7 @@
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <h2 id="ranges">Ranges</h2>
 <p>Ranges provide a new way to work with sequences of values, enhancing the power and expressiveness of the Standard Library algorithms. The range-based algorithms make it easier and more convenient to work with sequences.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">algorithm</span><span style="color:#E9F284">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">algorithm</span><span style="color:#E9F284">></span></span>
 <span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
 <span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">ranges</span><span style="color:#E9F284">></span></span>
 <span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">vector</span><span style="color:#E9F284">></span></span>
@@ -30,7 +30,7 @@
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <h2 id="coroutines">Coroutines</h2>
 <p>Coroutines are a new way to write asynchronous and concurrent code with improved readability. They allow functions to be suspended and resumed, enabling you to write more efficient, non-blocking code.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">coroutine</span><span style="color:#E9F284">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">coroutine</span><span style="color:#E9F284">></span></span>
 <span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
 <span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">future</span><span style="color:#E9F284">></span></span>
 <span class="line"></span>
@@ -45,7 +45,7 @@
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <h2 id="the-constexpr-and-consteval-keywords">The <code>constexpr</code> and <code>consteval</code> Keywords</h2>
 <p>Both <code>constexpr</code> and <code>consteval</code> are related to compile-time evaluation. Functions marked with <code>constexpr</code> can be executed at compile-time or runtime, while functions marked with <code>consteval</code> can only be executed at compile-time.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">constexpr</span><span style="color:#FF79C6"> int</span><span style="color:#50FA7B"> add</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> a</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> b</span><span style="color:#F8F8F2">) {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">constexpr</span><span style="color:#FF79C6"> int</span><span style="color:#50FA7B"> add</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> a</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> b</span><span style="color:#F8F8F2">) {</span></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#F8F8F2"> a </span><span style="color:#FF79C6">+</span><span style="color:#F8F8F2"> b;</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span>
 <span class="line"></span>

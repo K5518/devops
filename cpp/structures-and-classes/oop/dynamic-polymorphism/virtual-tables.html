@@ -3,7 +3,7 @@
 <p>When a class contains a virtual function, the compiler creates a virtual table for that class. This table contains function pointers to the virtual functions defined in the class. Each object of that class has a pointer to its virtual table (<em>vptr</em>, virtual pointer), which is automatically initialized by the compiler during object construction.</p>
 <h2 id="example">Example</h2>
 <p>Let’s consider the following example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Base</span><span style="color:#F8F8F2"> {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Base</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#FF79C6">public:</span></span>
 <span class="line"><span style="color:#FF79C6">    virtual</span><span style="color:#FF79C6"> void</span><span style="color:#50FA7B"> function1</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#F8F8F2">        std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Base::function1</span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>

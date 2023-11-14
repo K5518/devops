@@ -4,7 +4,7 @@
 <ol>
 <li><strong>Simple CASE expression</strong> - It compares an expression to a set of simple expressions to return a result.</li>
 </ol>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, </span></span>
 <span class="line"><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">CASE</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">    WHEN</span><span style="color:#F8F8F2"> condition1 </span><span style="color:#FF79C6">THEN</span><span style="color:#F8F8F2"> result1</span></span>
 <span class="line"><span style="color:#FF79C6">    WHEN</span><span style="color:#F8F8F2"> condition2 </span><span style="color:#FF79C6">THEN</span><span style="color:#F8F8F2"> result2</span></span>
@@ -15,7 +15,7 @@
 <ol start="2">
 <li><strong>Searched CASE expression</strong> - It evaluates a set of Boolean expressions to return a result.</li>
 </ol>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2,</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2,</span></span>
 <span class="line"><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">CASE</span></span>
 <span class="line"><span style="color:#FF79C6">    WHEN</span><span style="color:#F8F8F2"> condition1 </span><span style="color:#FF79C6">THEN</span><span style="color:#F8F8F2"> result1</span></span>
 <span class="line"><span style="color:#FF79C6">    WHEN</span><span style="color:#F8F8F2"> condition2 </span><span style="color:#FF79C6">THEN</span><span style="color:#F8F8F2"> result2</span></span>
@@ -25,7 +25,7 @@
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name;</span></span></code></pre>
 <p>In both forms, <code>CASE</code> returns a result_1, result_2, …, if condition_1, condition_2, … is true. If no conditions are true, it returns the value in the <code>ELSE</code> clause. If the <code>ELSE</code> clause is omitted and no conditions are true, it returns NULL.</p>
 <p>Here’s a concrete example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> OrderID, Quantity,</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> OrderID, Quantity,</span></span>
 <span class="line"><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">CASE</span></span>
 <span class="line"><span style="color:#FF79C6">     WHEN</span><span style="color:#F8F8F2"> Quantity </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 30</span><span style="color:#FF79C6"> THEN</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Over 30</span><span style="color:#E9F284">'</span></span>
 <span class="line"><span style="color:#FF79C6">     WHEN</span><span style="color:#F8F8F2"> Quantity </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 30</span><span style="color:#FF79C6"> THEN</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Equals 30</span><span style="color:#E9F284">'</span></span>

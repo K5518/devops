@@ -1,7 +1,7 @@
 <h1 id="gt">$gt</h1>
 <p>The <code>$gt</code> operator in MongoDB is used to filter documents based on the values of a particular field being <em>greater than</em> the specified value. This operator is handy when you want to retrieve documents that fulfill a condition where a field’s value is more than a given value.</p>
 <p>The general syntax for querying using the <code>$gt</code> operator is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#F8F8F2">  field: {</span></span>
 <span class="line"><span style="color:#F8F8F2">    $gt: value;</span></span>
 <span class="line"><span style="color:#F8F8F2">  }</span></span>
@@ -10,6 +10,6 @@
 <h2 id="example">Example</h2>
 <p>Consider a <code>students</code> collection where each document contains information about a student, including their <code>first_name</code>, <code>last_name</code>, and <code>age</code>.</p>
 <p>If you want to find all the students whose ages are greater than 21, you would use a query with the <code>$gt</code> operator as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">db.students.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ age</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $gt</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 21</span><span style="color:#F8F8F2"> } });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.students.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ age</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $gt</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 21</span><span style="color:#F8F8F2"> } });</span></span></code></pre>
 <p>This query will return all the documents in the <code>students</code> collection where the <code>age</code> field has a value greater than 21.</p>
 <p>Keep in mind that the <code>$gt</code> operator can also be used with non-numeric data types, such as date values. The comparison will be made based on their natural order.</p>

@@ -3,7 +3,7 @@
 <h2 id="1-set-windowsize">1. Set <code>windowSize</code></h2>
 <p><code>windowSize</code> is a prop that determines the number of pages rendered above and below the current window. By default, this value is 21. You can decrease it based on your needs to reduce the number of off-screen rendered components.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#8BE9FD;font-style:italic">FlatList</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#8BE9FD;font-style:italic">FlatList</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  data</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">data</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  renderItem</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">renderItem</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  keyExtractor</span><span style="color:#FF79C6">={</span><span style="color:#FFB86C;font-style:italic">item</span><span style="color:#FF79C6"> =></span><span style="color:#F8F8F2"> item.id</span><span style="color:#FF79C6">}</span></span>
@@ -12,7 +12,7 @@
 <h2 id="2-set-removeclippedsubviews">2. Set <code>removeClippedSubviews</code></h2>
 <p>Enable the <code>removeClippedSubviews</code> prop to unmount components that are off the screen.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#8BE9FD;font-style:italic">FlatList</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#8BE9FD;font-style:italic">FlatList</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  data</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">data</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  renderItem</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">renderItem</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  keyExtractor</span><span style="color:#FF79C6">={</span><span style="color:#FFB86C;font-style:italic">item</span><span style="color:#FF79C6"> =></span><span style="color:#F8F8F2"> item.id</span><span style="color:#FF79C6">}</span></span>
@@ -21,7 +21,7 @@
 <h2 id="3-set-maxtorenderperbatch">3. Set <code>maxToRenderPerBatch</code></h2>
 <p><code>maxToRenderPerBatch</code> prop helps to control the number of items to be rendered per batch. By default, this is set to 10. Optimize this value according to your list’s requirements.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#8BE9FD;font-style:italic">FlatList</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#8BE9FD;font-style:italic">FlatList</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  data</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">data</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  renderItem</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">renderItem</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  keyExtractor</span><span style="color:#FF79C6">={</span><span style="color:#FFB86C;font-style:italic">item</span><span style="color:#FF79C6"> =></span><span style="color:#F8F8F2"> item.id</span><span style="color:#FF79C6">}</span></span>
@@ -30,7 +30,7 @@
 <h2 id="4-set-initialnumtorender">4. Set <code>initialNumToRender</code></h2>
 <p><code>initialNumToRender</code> is used to set the number of items to be rendered initially. Setting this value to a reasonable number can help in avoiding blank screens on load.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#8BE9FD;font-style:italic">FlatList</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#8BE9FD;font-style:italic">FlatList</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  data</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">data</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  renderItem</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">renderItem</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  keyExtractor</span><span style="color:#FF79C6">={</span><span style="color:#FFB86C;font-style:italic">item</span><span style="color:#FF79C6"> =></span><span style="color:#F8F8F2"> item.id</span><span style="color:#FF79C6">}</span></span>
@@ -39,7 +39,7 @@
 <h2 id="5-set-getitemlayout">5. Set <code>getItemLayout</code></h2>
 <p>Using the <code>getItemLayout</code> prop allows you to specify the exact dimensions of each item. This prevents the need for measuring them dynamically, resulting in improved performance.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#8BE9FD;font-style:italic">FlatList</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#8BE9FD;font-style:italic">FlatList</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  data</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">data</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  renderItem</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">renderItem</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  keyExtractor</span><span style="color:#FF79C6">={</span><span style="color:#FFB86C;font-style:italic">item</span><span style="color:#FF79C6"> =></span><span style="color:#F8F8F2"> item.id</span><span style="color:#FF79C6">}</span></span>

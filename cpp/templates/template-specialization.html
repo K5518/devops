@@ -12,7 +12,7 @@
 <h2 id="full-template-specialization">Full Template Specialization</h2>
 <p>Full specialization is used when you want to create a separate implementation of a template for a specific type. To do this, you need to use keyword <code>template&#x3C;></code> followed by the function template with the desired specialized type.</p>
 <p>Here is an example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">template</span><span style="color:#F8F8F2"> &#x3C;</span><span style="color:#FF79C6">typename</span><span style="color:#8BE9FD;font-style:italic"> T</span><span style="color:#F8F8F2">></span></span>
 <span class="line"><span style="color:#FF79C6">void</span><span style="color:#50FA7B"> printData</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">const</span><span style="color:#8BE9FD;font-style:italic"> T</span><span style="color:#FF79C6">&#x26;</span><span style="color:#FFB86C;font-style:italic"> data</span><span style="color:#F8F8F2">) {</span></span>
@@ -33,7 +33,7 @@
 <h2 id="partial-template-specialization">Partial Template Specialization</h2>
 <p>Partial specialization is used when you want to create a separate implementation of a template for a subset of types that match a certain pattern or condition.</p>
 <p>Here is an example of how you can partially specialize a template class:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">template</span><span style="color:#F8F8F2"> &#x3C;</span><span style="color:#FF79C6">typename</span><span style="color:#8BE9FD;font-style:italic"> K</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">typename</span><span style="color:#8BE9FD;font-style:italic"> V</span><span style="color:#F8F8F2">></span></span>
 <span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> MyPair</span><span style="color:#F8F8F2"> {</span></span>

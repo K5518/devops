@@ -19,7 +19,7 @@
 <h2 id="usage">Usage</h2>
 <p>To begin a transaction in MongoDB, you’ll need to obtain a session and then start the transaction using the <code>startTransaction()</code> method. After performing the necessary operations, you may <code>commit</code> the transaction to apply the changes to the database, or <code>abort</code> to discard the changes.</p>
 <p>Here’s an example to illustrate transactions:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#6272A4">// Start a session</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">// Start a session</span></span>
 <span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> session </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> client.</span><span style="color:#50FA7B">startSession</span><span style="color:#F8F8F2">();</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">// Start a transaction within the session</span></span>

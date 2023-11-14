@@ -3,7 +3,7 @@
 <p>It’s similar to a <code>WHERE</code> clause, but operates on the results of a grouping. The <code>WHERE</code> clause places conditions on the selected columns, whereas the <code>HAVING</code> clause places conditions on groups created by the <code>GROUP BY</code> clause.</p>
 <h2 id="syntax">Syntax</h2>
 <p>The basic syntax is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column_name, </span><span style="color:#FF79C6">function</span><span style="color:#F8F8F2">(column_name)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column_name, </span><span style="color:#FF79C6">function</span><span style="color:#F8F8F2">(column_name)</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition</span></span>
 <span class="line"><span style="color:#FF79C6">GROUP BY</span><span style="color:#F8F8F2"> column_name</span></span>
@@ -52,7 +52,7 @@
 
 <table><thead><tr><th>SaleID</th><th>Product</th><th>Quantity</th></tr></thead><tbody><tr><td>1</td><td>A</td><td>30</td></tr><tr><td>2</td><td>B</td><td>20</td></tr><tr><td>3</td><td>A</td><td>100</td></tr><tr><td>4</td><td>B</td><td>50</td></tr><tr><td>5</td><td>C</td><td>60</td></tr><tr><td>6</td><td>A</td><td>70</td></tr></tbody></table>
 <p>And we want to find products which have total quantity sold more than 100. We can use the <code>HAVING</code> clause as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> Product, </span><span style="color:#8BE9FD">SUM</span><span style="color:#F8F8F2">(Quantity) </span><span style="color:#FF79C6">as</span><span style="color:#F8F8F2"> TotalQuantity</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> Product, </span><span style="color:#8BE9FD">SUM</span><span style="color:#F8F8F2">(Quantity) </span><span style="color:#FF79C6">as</span><span style="color:#F8F8F2"> TotalQuantity</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Sales</span></span>
 <span class="line"><span style="color:#FF79C6">GROUP BY</span><span style="color:#F8F8F2"> Product</span></span>
 <span class="line"><span style="color:#FF79C6">HAVING</span><span style="color:#F8F8F2"> TotalQuantity </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 100</span><span style="color:#F8F8F2">;</span></span></code></pre>

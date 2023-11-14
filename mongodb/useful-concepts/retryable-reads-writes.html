@@ -9,7 +9,7 @@
 <li><code>distinct()</code></li>
 </ul>
 <p>To enable retryable reads, use the following option in your client settings:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#F8F8F2">  retryReads: </span><span style="color:#BD93F9">true</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <p>By default, newer versions of MongoDB (since v3.6) have retryable reads enabled.</p>
@@ -23,7 +23,7 @@
 <li><code>findOneAndUpdate()</code></li>
 </ul>
 <p>To enable retryable writes, use the following option in your client settings:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#F8F8F2">  retryWrites: </span><span style="color:#BD93F9">true</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <p>By default, MongoDB has retryable writes enabled for replica sets and sharded clusters (since v4.0).</p>

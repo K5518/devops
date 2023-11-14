@@ -3,10 +3,10 @@
 <p>A Savepoint might be used in instances where if a particular operation fails, you would like to revert the database to the state it was in before the operation was attempted, but you do not want to give up on the entire transaction.</p>
 <h2 id="savepoint-syntax">Savepoint Syntax</h2>
 <p>The general syntax for <code>SAVEPOINT</code>:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#F8F8F2">SAVEPOINT savepoint_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">SAVEPOINT savepoint_name;</span></span></code></pre>
 <h2 id="use-of-savepoint">Use of Savepoint</h2>
 <p>Here is the basic usage of savepoint:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">START TRANSACTION</span><span style="color:#F8F8F2">;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">START TRANSACTION</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">INSERT INTO</span><span style="color:#F8F8F2"> Table1 (Column1) </span><span style="color:#FF79C6">VALUES</span><span style="color:#F8F8F2"> (</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Value1</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#F8F8F2">SAVEPOINT SP1;</span></span>
@@ -20,12 +20,12 @@
 <h2 id="release-savepoint">Release Savepoint</h2>
 <p>The <code>RELEASE SAVEPOINT</code> deletes a savepoint within a transaction.</p>
 <p>Here’s the syntax:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#F8F8F2">RELEASE SAVEPOINT savepoint_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">RELEASE SAVEPOINT savepoint_name;</span></span></code></pre>
 <p>The action of releasing a savepoint removes the named savepoint from the set of savepoints of the current transaction. No changes are undone.</p>
 <h2 id="remove-savepoint">Remove Savepoint</h2>
 <p>The <code>ROLLBACK TO SAVEPOINT</code> removes a savepoint within a transaction.</p>
 <p>Here’s the syntax:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">ROLLBACK</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#FF79C6"> TO</span><span style="color:#F8F8F2"> savepoint_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ROLLBACK</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#FF79C6"> TO</span><span style="color:#F8F8F2"> savepoint_name;</span></span></code></pre>
 <p>This statement rolls back a transaction to the named savepoint without terminating the transaction.</p>
 <p>Please note, savepoint names are not case sensitive and must obey the syntax rules of the server.</p>
 <p>If you found this information useful and want to learn more about topics like transactions, SQL commands, normalisation and more, consider subscribing to our mailing list. You’ll receive regular updates and exclusive content to help you become a better SQL developer. Please contact me if you have any further queries.</p>

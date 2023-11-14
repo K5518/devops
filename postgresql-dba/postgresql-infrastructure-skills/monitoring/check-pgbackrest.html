@@ -5,7 +5,7 @@
 <p>Monitoring <code>pgBackRest</code> helps ensure that your PostgreSQL backups are consistent, up-to-date, and free from any potential issues. By regularly checking your backups, you’ll be able to maintain a reliable and efficient backup-restore process for your PostgreSQL database.</p>
 <h3 id="how-to-check-pgbackrest">How to check pgBackRest?</h3>
 <p><code>pgBackRest</code> provides a built-in command called <code>check</code> which performs various checks to validate your repository and configuration settings. The command is executed as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sh"><code><span class="line"><span style="color:#50FA7B">pgbackrest</span><span style="color:#BD93F9"> --stanza=</span><span style="color:#FF79C6">&#x3C;</span><span style="color:#BD93F9">stanza_name</span><span style="color:#FF79C6">></span><span style="color:#F1FA8C"> check</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pgbackrest</span><span style="color:#BD93F9"> --stanza=</span><span style="color:#FF79C6">&#x3C;</span><span style="color:#BD93F9">stanza_name</span><span style="color:#FF79C6">></span><span style="color:#F1FA8C"> check</span></span></code></pre>
 <p><code>&#x3C;stanza_name></code> should be replaced with the name of the stanza for which you want to verify the repository and configuration settings.</p>
 <h3 id="what-does-the-check-command-do">What does the check command do?</h3>
 <p>When you run <code>check pgBackRest</code>, it performs the following tasks:</p>

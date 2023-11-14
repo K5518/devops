@@ -4,7 +4,7 @@
 <li>
 <p><strong>GNU Make</strong>: It is a popular build system that uses <code>Makefile</code> to define the build process. It checks the dependencies and timestamps of source files to determine which files need to be compiled and linked.</p>
 <p>Code example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span># Makefile</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span># Makefile</span></span>
 <span class="line"><span>CXX = g++</span></span>
 <span class="line"><span>CPPFLAGS = -Wall -std=c++11</span></span>
 <span class="line"><span>TARGET = HelloWorld</span></span>
@@ -20,7 +20,7 @@
 <li>
 <p><strong>CMake</strong>: It is a cross-platform build system that focuses on defining project dependencies and managing build environments. CMake generates build files (like Makefiles) for different platforms and allows developers to write source code once and then compile it for different target platforms.</p>
 <p>Code example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span># CMakeLists.txt</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span># CMakeLists.txt</span></span>
 <span class="line"><span>cmake_minimum_required(VERSION 3.10)</span></span>
 <span class="line"><span>project(HelloWorld)</span></span>
 <span class="line"><span></span></span>
@@ -30,7 +30,7 @@
 </li>
 <li>
 <p><strong>Autotools</strong>: Also known as GNU Build System, consists of the GNU Autoconf, Automake, and Libtool tools that enable developers to create portable software across different Unix-based systems. For a C++ project, you will need to create <code>configure.ac</code>, <code>Makefile.am</code> files with specific rules, and then run the following commands in the terminal to build the project:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>autoreconf --install</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>autoreconf --install</span></span>
 <span class="line"><span>./configure</span></span>
 <span class="line"><span>make</span></span>
 <span class="line"><span>make install</span></span></code></pre>
@@ -38,14 +38,14 @@
 <li>
 <p><strong>SCons</strong>: This build system uses Python for build scripts, making it more expressive than GNU Make. It can also build for multiple platforms and configurations simultaneously.</p>
 <p>Code example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span># SConstruct</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span># SConstruct</span></span>
 <span class="line"><span>env = Environment()</span></span>
 <span class="line"><span>env.Program(target="HelloWorld", source=["main.cpp"])</span></span></code></pre>
 </li>
 <li>
 <p><strong>Ninja</strong>: A small and focused build system that takes a list of build targets specified in a human-readable text file and builds them as fast as possible.</p>
 <p>Code example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span># build.ninja</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span># build.ninja</span></span>
 <span class="line"><span>rule cc</span></span>
 <span class="line"><span>  command = g++ -c $in -o $out</span></span>
 <span class="line"><span></span></span>

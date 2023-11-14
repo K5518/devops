@@ -5,7 +5,7 @@
 <h2 id="1-not-null">1. NOT NULL</h2>
 <p>The <code>NOT NULL</code> constraint enforces a field to always contain a value. This means that you cannot insert a new record or update a record without adding a value to this field.</p>
 <p><strong>Example:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#FF79C6">    Name</span><span style="color:#FF79C6"> varchar</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">255</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    Age </span><span style="color:#FF79C6">int</span></span>
@@ -13,7 +13,7 @@
 <h2 id="2-unique">2. UNIQUE</h2>
 <p>The <code>UNIQUE</code> constraint ensures that all values in a column are different, thus, prevents duplicate values in a column.</p>
 <p><strong>Example:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#FF79C6"> UNIQUE</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#FF79C6">    Name</span><span style="color:#FF79C6"> varchar</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">255</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    Age </span><span style="color:#FF79C6">int</span></span>
@@ -21,7 +21,7 @@
 <h2 id="3-primary-key">3. PRIMARY KEY</h2>
 <p>The <code>PRIMARY KEY</code> constraint uniquely identifies each record in a database table. This constraint provides uniqueness for the column or set of columns, and not null.</p>
 <p><strong>Example:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#FF79C6">    Name</span><span style="color:#FF79C6"> varchar</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">255</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    Age </span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2">,</span></span>
@@ -30,7 +30,7 @@
 <h2 id="4-foreign-key">4. FOREIGN KEY</h2>
 <p>The <code>FOREIGN KEY</code> constraint prevents actions that would destroy links between tables. It maintains referential integrity by requiring that a value inserted into a foreign key column exists in the referenced primary key.</p>
 <p><strong>Example:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Orders</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Orders</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    OrderID </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    OrderNumber </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    EmployeeID </span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2">,</span></span>
@@ -40,7 +40,7 @@
 <h2 id="5-check">5. CHECK</h2>
 <p>The <code>CHECK</code> constraint ensures that all values in a field satisfy a condition. It enables a condition to check the value being entered into a record.</p>
 <p><strong>Example:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#FF79C6">    Name</span><span style="color:#FF79C6"> varchar</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">255</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    Age </span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2">,</span></span>

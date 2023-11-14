@@ -2,7 +2,7 @@
 <p>Structuring codebase is an essential part of software development that deals with organizing and modularizing your code to make it more maintainable, efficient, and easier to understand. A well-structured codebase enhances collaboration, simplifies adding new features, and makes debugging faster. In C++, there are various techniques to help you structure your codebase effectively.</p>
 <h2 id="namespaces">Namespaces</h2>
 <p>Namespaces are one of the tools in C++ to organize your code by providing a named scope for different identifiers you create, like functions, classes, and variables. They help avoid name clashes and make your code more modular.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">namespace</span><span style="color:#F8F8F2"> MyNamespace {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">namespace</span><span style="color:#F8F8F2"> MyNamespace {</span></span>
 <span class="line"><span style="color:#FF79C6">    int</span><span style="color:#50FA7B"> aFunction</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#6272A4">        // function implementation</span></span>
 <span class="line"><span style="color:#F8F8F2">    }</span></span>
@@ -11,7 +11,7 @@
 <span class="line"><span style="color:#F8F8F2">MyNamespace</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">aFunction</span><span style="color:#F8F8F2">();</span></span></code></pre>
 <h2 id="include-guards">Include Guards</h2>
 <p>Include guards are a tool for preventing multiple inclusions of a header file in your project. They consist of preprocessor directives that conditionally include the header file only once, even if it’s included in multiple places.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#ifndef</span><span style="color:#50FA7B"> MY_HEADER_FILE_H</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#ifndef</span><span style="color:#50FA7B"> MY_HEADER_FILE_H</span></span>
 <span class="line"><span style="color:#FF79C6">#define</span><span style="color:#50FA7B"> MY_HEADER_FILE_H</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">// Your code here</span></span>
@@ -20,7 +20,7 @@
 <h2 id="header-and-source-files">Header and Source Files</h2>
 <p>Separating your implementation and declarations into header (<em>.h) and source (</em>.cpp) files is a key aspect of structuring your codebase in C++. Header files usually contain class and function declarations, while source files contain their definitions.</p>
 <p>// MyClass.h</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#ifndef</span><span style="color:#50FA7B"> MY_CLASS_H</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#ifndef</span><span style="color:#50FA7B"> MY_CLASS_H</span></span>
 <span class="line"><span style="color:#FF79C6">#define</span><span style="color:#50FA7B"> MY_CLASS_H</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> MyClass</span></span>
@@ -32,7 +32,7 @@
 <span class="line"><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">#endif</span><span style="color:#6272A4"> // MY_CLASS_H</span></span></code></pre>
 <p>// MyClass.cpp</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">MyClass.h</span><span style="color:#E9F284">"</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">MyClass.h</span><span style="color:#E9F284">"</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#F8F8F2">MyClass</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">MyClass</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#6272A4">    // constructor implementation</span></span>

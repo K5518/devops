@@ -1,7 +1,7 @@
 <h1 id="correlated-subqueries">Correlated Subqueries</h1>
 <p>In SQL, a correlated subquery is a subquery that uses values from the outer query in its WHERE clause. The correlated subquery is evaluated once for each row processed by the outer query. It exists because it depends on the outer query and it cannot execute independently of the outer query because the subquery is correlated with the outer query as it uses its column in its WHERE clause.</p>
 <h2 id="syntax">Syntax:</h2>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column_name [, column_name...]</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column_name [, column_name...]</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2">   table1 [, table2...]</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2">  column_name OPERATOR</span></span>
 <span class="line"><span style="color:#F8F8F2">  (</span><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column_name [, column_name...]</span></span>
@@ -9,7 +9,7 @@
 <span class="line"><span style="color:#FF79C6">   WHERE</span><span style="color:#F8F8F2"> condition [table1.column_name = table2.column_name...]);</span></span></code></pre>
 <h2 id="code-example">Code Example</h2>
 <p>For instance, if you want to get the employees whose salaries are above their department’s average salaries, it can be queried with a correlated subquery as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#BD93F9"> e1</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">employee_name</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">e1</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">salary</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#BD93F9"> e1</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">employee_name</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">e1</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">salary</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> employee e1</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">></span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#F8F8F2">   (</span><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> AVG</span><span style="color:#F8F8F2">(salary)</span></span>

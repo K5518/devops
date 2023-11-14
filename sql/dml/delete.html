@@ -2,7 +2,7 @@
 <p>The DELETE statement is used to delete existing records in a table. This is a straightforward process, but care must be taken because the DELETE statement is destructive and cannot be undone by default.</p>
 <h2 id="syntax">Syntax</h2>
 <p>The basic syntax of a DELETE query with WHERE clause in SQL is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">DELETE</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> table_name [WHERE condition]</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DELETE</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> table_name [WHERE condition]</span></span></code></pre>
 <ul>
 <li><code>table_name</code>: Specifies the table where you want to delete data.</li>
 <li><code>WHERE condition</code>: It is optional. You can use the WHERE clause with a DELETE query to delete the selected rows, otherwise all the records would be deleted.</li>
@@ -12,12 +12,12 @@
 <li><strong>DELETE ALL Rows</strong></li>
 </ol>
 <p>Deletes all rows from a table named ‘students’.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">DELETE</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> students;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DELETE</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> students;</span></span></code></pre>
 <ol start="2">
 <li><strong>DELETE Specified Rows</strong></li>
 </ol>
 <p>Deletes the student whose student_id is ‘1001’ from the ‘students’ table.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">DELETE</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> students </span><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> student_id </span><span style="color:#FF79C6">=</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">1001</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DELETE</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> students </span><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> student_id </span><span style="color:#FF79C6">=</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">1001</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <p><strong>Caution:</strong> Be very careful when using the DELETE statement. If you omit the WHERE clause, all records will be deleted!</p>
 <h2 id="multi-table-deletions">Multi-table deletions</h2>
 <p>Some database systems allow for deleting from multiple tables in a single DELETE statement. This is database-specific and beyond the scope of the basic SQL DELETE command.</p>

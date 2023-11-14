@@ -3,7 +3,7 @@
 <h2 id="implementation">Implementation</h2>
 <p>Here is a simple example illustrating the Pimpl idiom:</p>
 <p><strong>my_class.h</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> MyClass_Impl</span><span style="color:#F8F8F2">;</span><span style="color:#6272A4"> // forward declaration</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> MyClass_Impl</span><span style="color:#F8F8F2">;</span><span style="color:#6272A4"> // forward declaration</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> MyClass</span></span>
 <span class="line"><span style="color:#F8F8F2">{</span></span>
@@ -16,7 +16,7 @@
 <span class="line"><span style="color:#F8F8F2">    MyClass_Impl </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2">pimpl;</span><span style="color:#6272A4"> // pointer to the implementation</span></span>
 <span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
 <p><strong>my_class.cpp</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">my_class.h</span><span style="color:#E9F284">"</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">my_class.h</span><span style="color:#E9F284">"</span></span>
 <span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> MyClass_Impl</span><span style="color:#6272A4"> // the actual implementation</span></span>

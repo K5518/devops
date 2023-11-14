@@ -6,14 +6,14 @@
 <p><strong>CASE</strong> expression</p>
 <p>The <code>CASE</code> expression is a flow-control statement that allows you to add if-else logic to a query. It comes in two forms: simple and searched.</p>
 <p>Here is an example of a simple <code>CASE</code> expression:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> OrderID, Quantity,</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> OrderID, Quantity,</span></span>
 <span class="line"><span style="color:#FF79C6">    CASE</span></span>
 <span class="line"><span style="color:#FF79C6">        WHEN</span><span style="color:#F8F8F2"> Quantity </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 30</span><span style="color:#FF79C6"> THEN</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Over 30</span><span style="color:#E9F284">'</span></span>
 <span class="line"><span style="color:#FF79C6">        ELSE</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Under 30</span><span style="color:#E9F284">'</span></span>
 <span class="line"><span style="color:#FF79C6">    END</span><span style="color:#FF79C6"> AS</span><span style="color:#F8F8F2"> QuantityText</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> OrderDetails;</span></span></code></pre>
 <p>A searched <code>CASE</code> statement:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> FirstName, City,</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> FirstName, City,</span></span>
 <span class="line"><span style="color:#FF79C6">    CASE</span></span>
 <span class="line"><span style="color:#FF79C6">        WHEN</span><span style="color:#F8F8F2"> City </span><span style="color:#FF79C6">=</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Berlin</span><span style="color:#E9F284">'</span><span style="color:#FF79C6"> THEN</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Germany</span><span style="color:#E9F284">'</span></span>
 <span class="line"><span style="color:#FF79C6">        WHEN</span><span style="color:#F8F8F2"> City </span><span style="color:#FF79C6">=</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Madrid</span><span style="color:#E9F284">'</span><span style="color:#FF79C6"> THEN</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Spain</span><span style="color:#E9F284">'</span></span>
@@ -25,7 +25,7 @@
 <p><strong>COALESCE</strong> expression</p>
 <p>The <code>COALESCE</code> function returns the first non-null value in a list. It takes a comma-separated list of values and returns the first value that is not null.</p>
 <p>An example of a <code>COALESCE</code> statement:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> ProductName,</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> ProductName,</span></span>
 <span class="line"><span style="color:#8BE9FD">    COALESCE</span><span style="color:#F8F8F2">(UnitsOnOrder, </span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">As</span><span style="color:#F8F8F2"> UnitsOnOrder,</span></span>
 <span class="line"><span style="color:#8BE9FD">    COALESCE</span><span style="color:#F8F8F2">(UnitsInStock, </span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">As</span><span style="color:#F8F8F2"> UnitsInStock,</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Products;</span></span></code></pre>
@@ -34,14 +34,14 @@
 <p><strong>NULLIF</strong> expression</p>
 <p><code>NULLIF</code> returns null if the two given expressions are equal.</p>
 <p>Example of using <code>NULLIF</code>:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> NULLIF</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">,</span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> Same,</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> NULLIF</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">,</span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> Same,</span></span>
 <span class="line"><span style="color:#8BE9FD">       NULLIF</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">,</span><span style="color:#BD93F9">7</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> Different;</span></span></code></pre>
 </li>
 <li>
 <p><strong>IIF</strong> expression</p>
 <p><code>IIF</code> function returns value_true if the condition is TRUE, or value_false if the condition is FALSE.</p>
 <p>Example of using <code>IIF</code>:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> IIF</span><span style="color:#F8F8F2"> (</span><span style="color:#BD93F9">1</span><span style="color:#FF79C6">></span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">One is greater than zero</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">One is not greater than zero</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> IIF</span><span style="color:#F8F8F2"> (</span><span style="color:#BD93F9">1</span><span style="color:#FF79C6">></span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">One is greater than zero</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">One is not greater than zero</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span></code></pre>
 </li>
 </ol>
 <p>These are essential constructs that can greatly increase the flexibility and functionality of your SQL code, particularly when dealing with elaborate conditions and specific data selections.</p>

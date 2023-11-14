@@ -3,7 +3,7 @@
 <ol>
 <li>
 <p><code>CREATE</code>: This command is used to create the database or its objects (like table, index, function, views, store procedure, and triggers).</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> table_name</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> table_name</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">column1 data_type(</span><span style="color:#FF79C6">size</span><span style="color:#F8F8F2">),</span></span>
 <span class="line"><span style="color:#F8F8F2">column2 data_type(</span><span style="color:#FF79C6">size</span><span style="color:#F8F8F2">),</span></span>
 <span class="line"><span style="color:#F8F8F2">...</span></span>
@@ -11,21 +11,21 @@
 </li>
 <li>
 <p><code>DROP</code>: This command is used to delete an existing database or table.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> table_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> table_name;</span></span></code></pre>
 </li>
 <li>
 <p><code>ALTER</code>: This is used to alter the structure of the database. It is used to add, delete/drop or modify columns in an existing table.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> table_name </span><span style="color:#FF79C6">ADD</span><span style="color:#F8F8F2"> column_name datatype;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> table_name </span><span style="color:#FF79C6">ADD</span><span style="color:#F8F8F2"> column_name datatype;</span></span>
 <span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> table_name </span><span style="color:#FF79C6">DROP</span><span style="color:#F8F8F2"> COLUMN column_name;</span></span>
 <span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> table_name </span><span style="color:#FF79C6">MODIFY</span><span style="color:#F8F8F2"> COLUMN column_name datatype(</span><span style="color:#FF79C6">size</span><span style="color:#F8F8F2">);</span></span></code></pre>
 </li>
 <li>
 <p><code>TRUNCATE</code>: This is used to remove all records from a table, including all spaces allocated for the records which are removed.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">TRUNCATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> table_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">TRUNCATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> table_name;</span></span></code></pre>
 </li>
 <li>
 <p><code>RENAME</code>: This is used to rename an object in the database.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#F8F8F2">RENAME </span><span style="color:#FF79C6">TABLE</span><span style="color:#F8F8F2"> old_table_name </span><span style="color:#FF79C6">TO</span><span style="color:#F8F8F2"> new_table_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">RENAME </span><span style="color:#FF79C6">TABLE</span><span style="color:#F8F8F2"> old_table_name </span><span style="color:#FF79C6">TO</span><span style="color:#F8F8F2"> new_table_name;</span></span></code></pre>
 </li>
 </ol>
 <p>Remember: In DDL operations, <code>COMMIT</code> and <code>ROLLBACK</code> statement cannot be performed because the MySQL engine automatically commits the changes.</p>

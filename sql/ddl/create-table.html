@@ -2,7 +2,7 @@
 <p>The <code>CREATE TABLE</code> statement in SQL is a Data Definition Language (DDL) command used to create a new table in the database.</p>
 <h2 id="sql-create-table-syntax">SQL CREATE TABLE Syntax</h2>
 <p>The syntax for SQL <code>CREATE TABLE</code> is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> table_name</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> table_name</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    column1 datatype,</span></span>
 <span class="line"><span style="color:#F8F8F2">    column2 datatype,</span></span>
 <span class="line"><span style="color:#F8F8F2">    column3 datatype,</span></span>
@@ -15,7 +15,7 @@
 </ul>
 <h2 id="sql-create-table-example">SQL CREATE TABLE Example</h2>
 <p>Here is an example of the <code>CREATE TABLE</code> statement:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#FF79C6">    Name</span><span style="color:#FF79C6"> varchar</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">255</span><span style="color:#F8F8F2">),</span></span>
 <span class="line"><span style="color:#F8F8F2">    Salary </span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2">,</span></span>
@@ -25,7 +25,7 @@
 <p>This SQL command creates a new table named <code>Employees</code> with five columns, named ‘ID’, ‘Name’, ‘Salary’, ‘Department’, and ‘Position’. The data types are int for the ‘ID’ and ‘Salary’, and varchar(255) for the others.</p>
 <h2 id="sql-create-table-with-not-null">SQL CREATE TABLE with NOT NULL</h2>
 <p>The <code>NOT NULL</code> constraint enforces a column to not accept null values. When creating a new table, you can add this constraint. Here is a practical example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#FF79C6">    Name</span><span style="color:#FF79C6"> varchar</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">255</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    Salary </span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2">,</span></span>

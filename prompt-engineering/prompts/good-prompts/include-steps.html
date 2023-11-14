@@ -1,11 +1,11 @@
 <h1 id="include-steps">Include Steps</h1>
 <p>There are times when asking the model for something directly might not result in the best output. In that case, you may want to try breaking down the steps in the same manner that you will perform the action yourself.</p>
 <p>For example, let’s say that you have a large story written in english and you want to get the names and the number of names appeared in the story. But you want the names to be written in french. Now, there are two ways to write this prompt i.e. either asking directly for this e.g.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>Give me a JSON object with following keys: `nouns_count` number of nouns appeared in story and `nouns_french` which is an array of nouns in french. The story is delimited by """.</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Give me a JSON object with following keys: `nouns_count` number of nouns appeared in story and `nouns_french` which is an array of nouns in french. The story is delimited by """.</span></span>
 <span class="line"><span></span></span>
 <span class="line"><span>"""In a charming village, siblings Jack and Jill set out on a quest to fetch water from a hilltop well. As they climbed, singing joyfully, misfortune struck—Jack tripped on a stone and tumbled down the hill, with Jill following suit. Though slightly battered, the pair returned home to comforting embraces. Despite the mishap, their adventurous spirits remained undimmed, and they continued exploring with delight."""</span></span></code></pre>
 <p>The output from this prompt is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>{</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>{</span></span>
 <span class="line"><span>  "nouns_count": 10,</span></span>
 <span class="line"><span>  "nouns_french": [</span></span>
 <span class="line"><span>    "village",</span></span>
@@ -21,7 +21,7 @@
 <span class="line"><span>  ]</span></span>
 <span class="line"><span>}</span></span></code></pre>
 <p>As you can see the nouns are not in french. However, if we rewrite our prompt as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>Perform the following steps on the story delimited by """".</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Perform the following steps on the story delimited by """".</span></span>
 <span class="line"><span></span></span>
 <span class="line"><span>Step 1. Translate it to French</span></span>
 <span class="line"><span>Step 2. List each noun in the translation.</span></span>
@@ -31,7 +31,7 @@
 <span class="line"><span></span></span>
 <span class="line"><span>"""In a charming village, siblings Jack and Jill set out on a quest to fetch water from a hilltop well. As they climbed, singing joyfully, misfortune struck—Jack tripped on a stone and tumbled down the hill, with Jill following suit. Though slightly battered, the pair returned home to comforting embraces. Despite the mishap, their adventurous spirits remained undimmed, and they continued exploring with delight."""</span></span></code></pre>
 <p>It will correctly output the following:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>{</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>{</span></span>
 <span class="line"><span>  "nouns_count": 10,</span></span>
 <span class="line"><span>  "nouns_french": [</span></span>
 <span class="line"><span>    "village",</span></span>

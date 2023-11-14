@@ -3,7 +3,7 @@
 <h2 id="platform-module">Platform module</h2>
 <p>React Native provides a <code>Platform</code> module that can be used to detect which platform your code is running on (iOS or Android). This can be helpful when you have minor platform differences in your code execution, component styles, or API calls.</p>
 <p><strong>Example:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { Platform, StyleSheet } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react-native</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { Platform, StyleSheet } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react-native</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> styles </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> StyleSheet.</span><span style="color:#50FA7B">create</span><span style="color:#F8F8F2">({</span></span>
 <span class="line"><span style="color:#F8F8F2">  container</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> {</span></span>
@@ -21,5 +21,5 @@
 <p>Another way to handle platform-specific logic is by using file extensions like <code>.ios.js</code> and <code>.android.js</code>. By naming your files with these extensions, React Native will automatically pick up the appropriate file based on the platform the app is running on.</p>
 <p><strong>Example:</strong></p>
 <p>Let’s say you have two files in your project, <code>Header.ios.js</code> and <code>Header.android.js</code>. When you import the <code>Header</code> component in your code, React Native will automatically import the correct file for the platform.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#6272A4">// App.js</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">// App.js</span></span>
 <span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> Header </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">./Header</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span></code></pre>

@@ -11,7 +11,7 @@
 </ul>
 <h2 id="sql-update-syntax">SQL UPDATE Syntax</h2>
 <p>Here is a basic syntax of SQL UPDATE command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">UPDATE</span><span style="color:#F8F8F2"> table_name</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">UPDATE</span><span style="color:#F8F8F2"> table_name</span></span>
 <span class="line"><span style="color:#FF79C6">SET</span><span style="color:#F8F8F2"> column1 </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> value1, column2 </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> value2...., columnN </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> valueN</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> [condition];</span></span></code></pre>
 <p>In this syntax:</p>
@@ -55,7 +55,7 @@
 
 <table><thead><tr><th>StudentID</th><th>FirstName</th><th>LastName</th><th>Age</th></tr></thead><tbody><tr><td>1</td><td>John</td><td>Doe</td><td>20</td></tr><tr><td>2</td><td>Jane</td><td>Smith</td><td>22</td></tr><tr><td>3</td><td>Bob</td><td>Johnson</td><td>23</td></tr></tbody></table>
 <p>And we want to update the <code>Age</code> of the student with <code>StudentID</code> as 2. We can use the <code>UPDATE</code> command as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">UPDATE</span><span style="color:#F8F8F2"> Students</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">UPDATE</span><span style="color:#F8F8F2"> Students</span></span>
 <span class="line"><span style="color:#FF79C6">SET</span><span style="color:#F8F8F2"> Age </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 23</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> StudentID </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 2</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <p>After executing the above SQL command, the <code>Age</code> of the student with <code>StudentID</code> 2 will be updated to 23.</p>

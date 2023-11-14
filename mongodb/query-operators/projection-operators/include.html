@@ -1,14 +1,14 @@
 <h1 id="include">$include</h1>
 <p>The <code>$include</code> projection operator is used in queries to specify the fields that should be returned in the result documents. By using <code>$include</code>, you can choose to retrieve only fields of interest, making your query more efficient by minimizing the amount of data returned.</p>
 <p>The syntax for <code>$include</code> is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#F8F8F2">  field: </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <p>Here, <code>field</code> is the name of the field to include, and <code>1</code> indicates that you want the field included in the result documents. You can include multiple fields by specifying them in a comma-separated list:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">{ field1: </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, field2: </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, field3: </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2"> }</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{ field1: </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, field2: </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, field3: </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2"> }</span></span></code></pre>
 <h2 id="example">Example</h2>
 <p>Suppose we have a collection called <code>books</code> with the following documents:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">[</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">[</span></span>
 <span class="line"><span style="color:#F8F8F2">  {</span></span>
 <span class="line"><span style="color:#F8F8F2">    title</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">The Catcher in the Rye</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    author</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">J.D. Salinger</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>
@@ -29,9 +29,9 @@
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
 <span class="line"><span style="color:#F8F8F2">];</span></span></code></pre>
 <p>If you want to retrieve only the <code>title</code> and <code>author</code> fields from the documents in the <code>books</code> collection, you can use the <code>$include</code> projection operator as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">db.books.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({}, { title</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">, author</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">, _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2"> });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.books.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({}, { title</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">, author</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">, _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2"> });</span></span></code></pre>
 <p>The result will be:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">[</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">[</span></span>
 <span class="line"><span style="color:#F8F8F2">  {</span></span>
 <span class="line"><span style="color:#F8F8F2">    title</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">The Catcher in the Rye</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    author</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">J.D. Salinger</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>

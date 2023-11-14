@@ -26,7 +26,7 @@
 <li><code>pg_description</code>: Stores descriptions (or comments) on database objects.</li>
 <li><code>information_schema</code>: A standard PostgreSQL schema that provides ANSI SQL-compliant views on the system catalog tables.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>-- List all the tables in the current database</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>-- List all the tables in the current database</span></span>
 <span class="line"><span>SELECT tablename FROM pg_tables WHERE schemaname = 'public';</span></span>
 <span class="line"><span></span></span>
 <span class="line"><span>-- List all the indices and their details in the current database</span></span>

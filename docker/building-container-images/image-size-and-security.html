@@ -4,23 +4,23 @@
 <ul>
 <li>
 <p><strong>Use an appropriate base image:</strong> Choose a smaller, more lightweight base image that includes only the necessary components for your application. For example, consider using the <code>alpine</code> variant of an official image, if available, as it’s typically much smaller in size.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="dockerfile"><code><span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> node:14-alpine</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> node:14-alpine</span></span></code></pre>
 </li>
 <li>
 <p><strong>Run multiple commands in a single <code>RUN</code> statement:</strong> Each <code>RUN</code> statement creates a new layer in the image, which contributes to the image size. Combine multiple commands into a single <code>RUN</code> statement using <code>&#x26;&#x26;</code> to minimize the number of layers and reduce the final image size.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="dockerfile"><code><span class="line"><span style="color:#FF79C6">RUN</span><span style="color:#F8F8F2"> apt-get update &#x26;&#x26; \</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">RUN</span><span style="color:#F8F8F2"> apt-get update &#x26;&#x26; \</span></span>
 <span class="line"><span style="color:#F8F8F2">    apt-get install -y some-required-package</span></span></code></pre>
 </li>
 <li>
 <p><strong>Remove unnecessary files in the same layer:</strong> When you install packages or add files during the image build process, remove temporary or unused files in the same layer to reduce the final image size.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="dockerfile"><code><span class="line"><span style="color:#FF79C6">RUN</span><span style="color:#F8F8F2"> apt-get update &#x26;&#x26; \</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">RUN</span><span style="color:#F8F8F2"> apt-get update &#x26;&#x26; \</span></span>
 <span class="line"><span style="color:#F8F8F2">    apt-get install -y some-required-package &#x26;&#x26; \</span></span>
 <span class="line"><span style="color:#F8F8F2">    apt-get clean &#x26;&#x26; \</span></span>
 <span class="line"><span style="color:#F8F8F2">    rm -rf /var/lib/apt/lists/*</span></span></code></pre>
 </li>
 <li>
 <p><strong>Use multi-stage builds:</strong> Use multi-stage builds to create smaller images. Multi-stage builds allow you to use multiple <code>FROM</code> statements in your Dockerfile. Each <code>FROM</code> statement creates a new stage in the build process. You can copy files from one stage to another using the <code>COPY --from</code> statement.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="dockerfile"><code><span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> node:14-alpine </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> build</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> node:14-alpine </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> build</span></span>
 <span class="line"><span style="color:#FF79C6">WORKDIR</span><span style="color:#F8F8F2"> /app</span></span>
 <span class="line"><span style="color:#FF79C6">COPY</span><span style="color:#F8F8F2"> package*.json ./</span></span>
 <span class="line"><span style="color:#FF79C6">RUN</span><span style="color:#F8F8F2"> npm install</span></span>
@@ -36,7 +36,7 @@
 </li>
 <li>
 <p><strong>Use <code>.dockerignore</code> file:</strong> Use a <code>.dockerignore</code> file to exclude unnecessary files from the build context that might cause cache invalidation and increase the final image size.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>node_modules</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>node_modules</span></span>
 <span class="line"><span>npm-debug.log</span></span></code></pre>
 </li>
 </ul>
@@ -47,13 +47,13 @@
 </li>
 <li>
 <p><strong>Avoid running containers as root:</strong> Always use a non-root user when running your containers to minimize potential risks. Create a user and switch to it before running your application.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="dockerfile"><code><span class="line"><span style="color:#FF79C6">RUN</span><span style="color:#F8F8F2"> addgroup -g 1000 appuser &#x26;&#x26; \</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">RUN</span><span style="color:#F8F8F2"> addgroup -g 1000 appuser &#x26;&#x26; \</span></span>
 <span class="line"><span style="color:#F8F8F2">    adduser -u 1000 -G appuser -D appuser</span></span>
 <span class="line"><span style="color:#FF79C6">USER</span><span style="color:#F8F8F2"> appuser</span></span></code></pre>
 </li>
 <li>
 <p><strong>Limit the scope of <code>COPY</code> or <code>ADD</code> instructions:</strong> Be specific about the files or directories you’re copying into the container image. Avoid using <code>COPY . .</code> as it may unintentionally include sensitive files.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="dockerfile"><code><span class="line"><span style="color:#FF79C6">COPY</span><span style="color:#F8F8F2"> package*.json ./</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">COPY</span><span style="color:#F8F8F2"> package*.json ./</span></span>
 <span class="line"><span style="color:#FF79C6">COPY</span><span style="color:#F8F8F2"> src/ src/</span></span></code></pre>
 </li>
 <li>

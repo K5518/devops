@@ -5,7 +5,7 @@
 </ol>
 <p>An example would be a scenario where you have two tables <code>Orders</code> and <code>Customers</code>, and you want to find orders made by a specific customer:</p>
 <p>Subquery could be:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> OrderNumber </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> OrderNumber </span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Orders </span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> CustomerID </span><span style="color:#FF79C6">IN</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#FF79C6">  SELECT</span><span style="color:#F8F8F2"> CustomerID </span></span>
@@ -13,7 +13,7 @@
 <span class="line"><span style="color:#FF79C6">  WHERE</span><span style="color:#F8F8F2"> CustomerName </span><span style="color:#FF79C6">=</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">John Doe</span><span style="color:#E9F284">'</span></span>
 <span class="line"><span style="color:#F8F8F2">  );</span></span></code></pre>
 <p>Equivalent JOIN:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#BD93F9"> o</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">OrderNumber</span><span style="color:#F8F8F2"> </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#BD93F9"> o</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">OrderNumber</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Orders o </span></span>
 <span class="line"><span style="color:#FF79C6">JOIN</span><span style="color:#F8F8F2"> Customers c </span><span style="color:#FF79C6">ON</span><span style="color:#BD93F9"> o</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerID</span><span style="color:#FF79C6"> =</span><span style="color:#BD93F9"> c</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerID</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#BD93F9"> c</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerName</span><span style="color:#FF79C6"> =</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">John Doe</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span></code></pre>
@@ -22,14 +22,14 @@
 </ol>
 <p>Consider you want to find all customers who have placed at least one order:</p>
 <p>Subquery might be:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> </span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Customers </span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> CustomerID </span><span style="color:#FF79C6">IN</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#FF79C6">  SELECT</span><span style="color:#F8F8F2"> CustomerID </span></span>
 <span class="line"><span style="color:#FF79C6">  FROM</span><span style="color:#F8F8F2"> Orders</span></span>
 <span class="line"><span style="color:#F8F8F2">  );</span></span></code></pre>
 <p>Equivalent EXISTS use case:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Customers c</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#FF79C6"> EXISTS</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#FF79C6">  SELECT</span><span style="color:#BD93F9"> 1</span></span>

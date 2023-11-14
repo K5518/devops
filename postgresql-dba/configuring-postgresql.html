@@ -18,7 +18,7 @@
 </ul>
 <h2 id="pg_hbaconf">pg_hba.conf</h2>
 <p>The <code>pg_hba.conf</code> file is responsible for managing client authentication. Administrate the settings in this file to ensure that only authorized users can connect to the database. This file consists of records in the following format:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>TYPE  DATABASE  USER  ADDRESS  METHOD</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>TYPE  DATABASE  USER  ADDRESS  METHOD</span></span></code></pre>
 <ul>
 <li><strong>TYPE:</strong> Defines the type of connection, either <code>local</code> (Unix-domain socket) or <code>host</code> (TCP/IP).</li>
 <li><strong>DATABASE:</strong> Specifies the target database. You can use <code>all</code> to target all databases or list specific ones.</li>

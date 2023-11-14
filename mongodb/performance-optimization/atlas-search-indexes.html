@@ -20,7 +20,7 @@
 <ul>
 <li><strong>Index Definitions</strong>: Index Definitions specify which fields in your collection to index and the analyzer to use for processing text. They ensure that your search queries are fast and efficient.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="json"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#8BE9FE">  "</span><span style="color:#8BE9FD">mappings</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#8BE9FE">    "</span><span style="color:#8BE9FD">dynamic</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> false</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#8BE9FE">    "</span><span style="color:#8BE9FD">fields</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> {</span></span>
@@ -58,7 +58,7 @@
 <h2 id="usage">Usage</h2>
 <p>To use Atlas Search Indexes in your queries, you will need to create an index definition for the required fields and use <code>$search</code> operator along with other search operators depending on your requirements.</p>
 <p>Here’s an example of an Atlas Search Index query:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({</span></span>
 <span class="line"><span style="color:#F8F8F2">  $search</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#F8F8F2">    text</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#F8F8F2">      query</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">mongodb atlas search</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>

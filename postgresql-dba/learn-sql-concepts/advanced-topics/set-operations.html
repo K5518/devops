@@ -2,21 +2,21 @@
 <p>In this section, we will discuss set operations that are available in PostgreSQL. These operations are useful when you need to perform actions on whole sets of data, such as merging or comparing them. Set operations include UNION, INTERSECT, and EXCEPT, and they can be vital tools in querying complex datasets.</p>
 <h2 id="union">UNION</h2>
 <p>The <code>UNION</code> operation is used to combine the result-set of two or more SELECT statements. It returns all unique rows from the combined result-set, removing duplicate records. The basic syntax for a UNION operation is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table1</span></span>
 <span class="line"><span style="color:#FF79C6">UNION</span></span>
 <span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table2;</span></span></code></pre>
 <p><em>Note: The number and order of the columns in both SELECT statements must be the same, and their data types must be compatible.</em></p>
 <p>To include duplicate records in the result-set, use the <code>UNION ALL</code> operation instead:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table1 </span></span>
 <span class="line"><span style="color:#FF79C6">UNION ALL</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table2;</span></span></code></pre>
 <h2 id="intersect">INTERSECT</h2>
 <p>The <code>INTERSECT</code> operation is used to return the common rows of two or more SELECT statements, i.e., the rows that appear in both result-sets. It has a syntax similar to that of UNION:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table1</span></span>
 <span class="line"><span style="color:#FF79C6">INTERSECT</span></span>
 <span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
@@ -24,7 +24,7 @@
 <p><em>Note: As with UNION, the number and order of the columns, as well as their data types, must be compatible between both SELECT statements.</em></p>
 <h2 id="except">EXCEPT</h2>
 <p>The <code>EXCEPT</code> operation is used to return the rows from the first SELECT statement that do not appear in the second SELECT statement. This operation is useful for finding the difference between two datasets. The syntax for EXCEPT is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table1</span></span>
 <span class="line"><span style="color:#FF79C6">EXCEPT</span></span>
 <span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>

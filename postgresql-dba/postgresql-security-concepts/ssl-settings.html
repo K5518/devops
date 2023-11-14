@@ -7,26 +7,26 @@
 <ul>
 <li>
 <p><strong>Enable SSL</strong>: You must first enable SSL on your PostgreSQL server. To do so, open the <code>postgresql.conf</code> file and look for the <code>ssl</code> parameter. Set its value to <code>on</code> as shown below:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>ssl = on</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>ssl = on</span></span></code></pre>
 </li>
 <li>
 <p><strong>Generate Certificates</strong>: Next, you need to generate an SSL certificate and a private key for your server. This can be done using OpenSSL. Execute the following command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>openssl req -new -x509 -days 365 -nodes -text -out server.crt -keyout server.key</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>openssl req -new -x509 -days 365 -nodes -text -out server.crt -keyout server.key</span></span></code></pre>
 <p>This command generates a self-signed SSL certificate (<code>server.crt</code>) and a private key (<code>server.key</code>).</p>
 </li>
 <li>
 <p><strong>Configure Certificates</strong>: Now, copy the generated <code>server.crt</code> and <code>server.key</code> files to the PostgreSQL data directory, usually located at <code>/var/lib/pgsql/data/</code> or <code>/usr/local/pgsql/data/</code>. Make sure to set the proper permissions for these files:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>chmod 0600 server.key</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>chmod 0600 server.key</span></span></code></pre>
 <p>This ensures that only the file owner can read and write to the file.</p>
 </li>
 <li>
 <p><strong>Configure Client Authentication</strong>: Finally, control how clients connect to your PostgreSQL server by editing the <code>pg_hba.conf</code> file. Add the following entry to allow SSL connections from clients:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>hostssl  all  all  0.0.0.0/0  md5</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>hostssl  all  all  0.0.0.0/0  md5</span></span></code></pre>
 </li>
 </ul>
 <h2 id="verifying-ssl-connection">Verifying SSL Connection</h2>
 <p>Once SSL is configured and enabled for your PostgreSQL server, you can verify that it is working by connecting to it via SSL using a PostgreSQL client, such as <code>psql</code>. Use the following command to connect via SSL:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">psql</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">sslmode=require dbname=mydb user=myuser host=myserver</span><span style="color:#E9F284">"</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">psql</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">sslmode=require dbname=mydb user=myuser host=myserver</span><span style="color:#E9F284">"</span></span></code></pre>
 <p>If SSL is properly set up, you should be able to connect securely to your PostgreSQL server.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>In this section, we discussed the importance of SSL settings in PostgreSQL and how to configure them to establish secure connections with clients. By enabling and configuring SSL, you add an extra layer of security to your PostgreSQL database, ensuring the data transferred between the client and server is encrypted and protected.</p>

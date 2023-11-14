@@ -5,7 +5,7 @@
 <h2 id="enabling-mongodb-auditing">Enabling MongoDB Auditing</h2>
 <p>To enable auditing in MongoDB, you must use MongoDB Enterprise Advanced or an equivalent Atlas tier. Once you have the required version, you can enable auditing by modifying your <code>mongod</code> or <code>mongos</code> configuration file to include the <code>auditLog</code> option, specifying the format, destination, and filter criteria for the audit events.</p>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="yaml"><code><span class="line"><span style="color:#8BE9FD">auditLog</span><span style="color:#FF79C6">:</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">auditLog</span><span style="color:#FF79C6">:</span></span>
 <span class="line"><span style="color:#8BE9FD">  destination</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> file</span></span>
 <span class="line"><span style="color:#8BE9FD">  format</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> JSON</span></span>
 <span class="line"><span style="color:#8BE9FD">  path</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">/path/to/audit/log/file.json</span><span style="color:#E9F284">'</span></span>
@@ -23,7 +23,7 @@
 <h2 id="filtering-audit-events">Filtering Audit Events</h2>
 <p>To specify which events should be audited, you can provide a filter expression to the <code>auditLog.filter</code> configuration parameter.
 Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="yaml"><code><span class="line"><span style="color:#8BE9FD">auditLog</span><span style="color:#FF79C6">:</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">auditLog</span><span style="color:#FF79C6">:</span></span>
 <span class="line"><span style="color:#8BE9FD">  filter</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">{ atype: { $in: ['authCheck', 'createUser', 'dropUser', 'revokeRolesFromUser'] }}</span><span style="color:#E9F284">"</span></span></code></pre>
 <p>You can customize the filter criteria to suit your security requirements and avoid capturing unnecessary events.</p>
 <h2 id="analyzing-and-monitoring-audit-logs">Analyzing and Monitoring Audit Logs</h2>

@@ -24,7 +24,7 @@
 </li>
 </ul>
 <p>Example playbook for installing PostgreSQL on Ubuntu:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="yaml"><code><span class="line"><span style="color:#F8F8F2">---</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">---</span></span>
 <span class="line"><span style="color:#FF79C6">-</span><span style="color:#8BE9FD"> name</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> Install PostgreSQL</span></span>
 <span class="line"><span style="color:#8BE9FD">  hosts</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> all</span></span>
 <span class="line"><span style="color:#8BE9FD">  become</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> yes</span></span>
@@ -56,9 +56,9 @@
 <h2 id="pglift-for-ansible">pgLift for Ansible</h2>
 <p>pgLift is a PostgreSQL automation tool that helps you manage your PostgreSQL servers and databases. It includes a set of Ansible modules that can be used to automate common tasks, such as creating databases, users, and extensions, or managing replication and backups.</p>
 <p>pgLift modules are available on <a href="https://galaxy.ansible.com/pglift" rel="noopener noreferrer nofollow" target="_blank">Ansible Galaxy</a>, and can be installed using the <code>ansible-galaxy</code> command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">ansible-galaxy</span><span style="color:#F1FA8C"> collection</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> pglift.pglift</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">ansible-galaxy</span><span style="color:#F1FA8C"> collection</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> pglift.pglift</span></span></code></pre>
 <p>Once installed, you can use the modules in your playbooks:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="yaml"><code><span class="line"><span style="color:#F8F8F2">---</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">---</span></span>
 <span class="line"><span style="color:#FF79C6">-</span><span style="color:#8BE9FD"> name</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> Create a database</span></span>
 <span class="line"><span style="color:#8BE9FD">  hosts</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> all</span></span>
 <span class="line"><span style="color:#8BE9FD">  become</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> yes</span></span>

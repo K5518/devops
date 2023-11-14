@@ -24,7 +24,7 @@
 <li>
 <p><strong>Storage Class</strong>:
 Create a YAML file for the <code>StorageClass</code> resource (e.g., <code>postgres-storage-class.yaml</code>):</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="yaml"><code><span class="line"><span style="color:#8BE9FD">apiVersion</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> storage.k8s.io/v1</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">apiVersion</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> storage.k8s.io/v1</span></span>
 <span class="line"><span style="color:#8BE9FD">kind</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> StorageClass</span></span>
 <span class="line"><span style="color:#8BE9FD">metadata</span><span style="color:#FF79C6">:</span></span>
 <span class="line"><span style="color:#8BE9FD">  name</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> postgres-storage</span></span>
@@ -36,7 +36,7 @@ Create a YAML file for the <code>StorageClass</code> resource (e.g., <code>postg
 <li>
 <p><strong>Persistent Volume Claim</strong>:
 Create a YAML file for the <code>PersistentVolumeClaim</code> resource (e.g., <code>postgres-pvc.yaml</code>):</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="yaml"><code><span class="line"><span style="color:#8BE9FD">apiVersion</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> v1</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">apiVersion</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> v1</span></span>
 <span class="line"><span style="color:#8BE9FD">kind</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> PersistentVolumeClaim</span></span>
 <span class="line"><span style="color:#8BE9FD">metadata</span><span style="color:#FF79C6">:</span></span>
 <span class="line"><span style="color:#8BE9FD">  name</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> postgres-pvc</span></span>
@@ -52,7 +52,7 @@ Create a YAML file for the <code>PersistentVolumeClaim</code> resource (e.g., <c
 <li>
 <p><strong>ConfigMap</strong>:
 Create a YAML file for the <code>ConfigMap</code> resource (e.g., <code>postgres-configmap.yaml</code>):</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="yaml"><code><span class="line"><span style="color:#8BE9FD">apiVersion</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> v1</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">apiVersion</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> v1</span></span>
 <span class="line"><span style="color:#8BE9FD">kind</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> ConfigMap</span></span>
 <span class="line"><span style="color:#8BE9FD">metadata</span><span style="color:#FF79C6">:</span></span>
 <span class="line"><span style="color:#8BE9FD">  name</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> postgres-config</span></span>
@@ -64,7 +64,7 @@ Create a YAML file for the <code>ConfigMap</code> resource (e.g., <code>postgres
 <li>
 <p><strong>Secret</strong>:
 Create a YAML file for the <code>Secret</code> resource (e.g., <code>postgres-secret.yaml</code>):</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="yaml"><code><span class="line"><span style="color:#8BE9FD">apiVersion</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> v1</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">apiVersion</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> v1</span></span>
 <span class="line"><span style="color:#8BE9FD">kind</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> Secret</span></span>
 <span class="line"><span style="color:#8BE9FD">metadata</span><span style="color:#FF79C6">:</span></span>
 <span class="line"><span style="color:#8BE9FD">  name</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> postgres-secret</span></span>
@@ -76,7 +76,7 @@ Create a YAML file for the <code>Secret</code> resource (e.g., <code>postgres-se
 <li>
 <p><strong>StatefulSet</strong>:
 Create a YAML file for the <code>StatefulSet</code> resource (e.g., <code>postgres-statefulset.yaml</code>):</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="yaml"><code><span class="line"><span style="color:#8BE9FD">apiVersion</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> apps/v1</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">apiVersion</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> apps/v1</span></span>
 <span class="line"><span style="color:#8BE9FD">kind</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> StatefulSet</span></span>
 <span class="line"><span style="color:#8BE9FD">metadata</span><span style="color:#FF79C6">:</span></span>
 <span class="line"><span style="color:#8BE9FD">  name</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> postgres</span></span>

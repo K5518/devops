@@ -4,7 +4,7 @@
 <p>Min Key is a unique data type in MongoDB that is used to represent the smallest value possible when performing sorting operations. It is often used in queries or schema design when you need to ensure that a specific field has the lowest possible value compared to other BSON types.</p>
 <h2 id="how-to-use-min-key">How to use Min Key</h2>
 <p>To use Min Key in MongoDB, you can utilize the <code>MinKey()</code> function. Here’s an example demonstrating how to insert a document with Min Key data type:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#6272A4">// Import the MinKey class from the BSON module</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">// Import the MinKey class from the BSON module</span></span>
 <span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> { MinKey } </span><span style="color:#FF79C6">=</span><span style="color:#50FA7B"> require</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">bson</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">// Create an instance of the MinKey class</span></span>
@@ -17,7 +17,7 @@
 <ul>
 <li>As a default value on a field when you want to ensure that it will always have the lowest possible value for sorting purposes.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#6272A4">// Example schema with a field default set to MinKey</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">// Example schema with a field default set to MinKey</span></span>
 <span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> mySchema </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6;font-weight:bold"> new</span><span style="color:#50FA7B"> Schema</span><span style="color:#F8F8F2">({</span></span>
 <span class="line"><span style="color:#F8F8F2">  name</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> String,</span></span>
 <span class="line"><span style="color:#F8F8F2">  priority</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { type</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> Schema.Types.MinKey, default</span><span style="color:#FF79C6">:</span><span style="color:#FF79C6;font-weight:bold"> new</span><span style="color:#50FA7B"> MinKey</span><span style="color:#F8F8F2">() },</span></span>
@@ -25,7 +25,7 @@
 <ul>
 <li>When you need to find a document with the minimum value for a specific field.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#6272A4">// Find the document with the lowest priority</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">// Find the document with the lowest priority</span></span>
 <span class="line"><span style="color:#F8F8F2">db.myCollection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">().</span><span style="color:#50FA7B">sort</span><span style="color:#F8F8F2">({ priority</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2"> }).</span><span style="color:#50FA7B">limit</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">);</span></span></code></pre>
 <h2 id="conclusion">Conclusion</h2>
 <p>In this section, we’ve learned about the “Min Key” data type in MongoDB. We discussed how it is used to represent the smallest value in the BSON data types and its various use cases in sorting and querying the data.</p>

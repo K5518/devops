@@ -14,7 +14,7 @@
 </ul>
 <h2 id="creating-a-docker-compose-file">Creating a Docker Compose File:</h2>
 <p>To create a <code>docker-compose.yml</code> file, start by specifying the version of Docker Compose you want to use, followed by the services you want to define. Here’s an example of a basic <code>docker-compose.yml</code> file:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="yaml"><code><span class="line"><span style="color:#8BE9FD">version</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">3.9</span><span style="color:#E9F284">"</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">version</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">3.9</span><span style="color:#E9F284">"</span></span>
 <span class="line"><span style="color:#8BE9FD">services</span><span style="color:#FF79C6">:</span></span>
 <span class="line"><span style="color:#8BE9FD">  web</span><span style="color:#FF79C6">:</span></span>
 <span class="line"><span style="color:#8BE9FD">    image</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> nginx:latest</span></span>
@@ -27,7 +27,7 @@
 <p>In this example, we have specified two services: a web server (<code>web</code>) running the latest version of the nginx image, and a database server (<code>db</code>) running MySQL. The web server exposes its port 80 to the host machine, and the database server has an environment variable set for the root password.</p>
 <h2 id="running-docker-compose">Running Docker Compose:</h2>
 <p>To run your Docker Compose application, simply navigate to the directory containing your <code>docker-compose.yml</code> file and run the following command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">docker-compose</span><span style="color:#F1FA8C"> up</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker-compose</span><span style="color:#F1FA8C"> up</span></span></code></pre>
 <p>Docker Compose will read the file and start the defined services in the specified order.</p>
 <h2 id="other-useful-commands">Other Useful Commands:</h2>
 <ul>

@@ -2,7 +2,7 @@
 <p>In SQL, a subquery is a query that is nested inside a main query. If a subquery is nested inside another subquery, it is called a nested subquery. They can be used in SELECT, INSERT, UPDATE, or DELETE statements or inside another subquery.</p>
 <p>Nested subqueries can get complicated quickly, but they are essential for performing complex database tasks.</p>
 <h2 id="basic-syntax">Basic Syntax:</h2>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column_name [, column_name ]</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column_name [, column_name ]</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2">   table1 [, table2 ]</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2">  column_name OPERATOR</span></span>
 <span class="line"><span style="color:#F8F8F2">   (</span><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column_name [, column_name ]</span></span>
@@ -12,7 +12,7 @@
 <p>In a nested subquery, the inner subquery will run first and its result will be used to run the outer query.</p>
 <h2 id="example">Example:</h2>
 <p>Here’s an example where we want to find the customer names who made orders above the average order amount.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> CustomerName,Country</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> CustomerName,Country</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Customers</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> CustomerID </span><span style="color:#FF79C6">IN</span></span>
 <span class="line"><span style="color:#F8F8F2">    (</span><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> CustomerID </span></span>

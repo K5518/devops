@@ -2,7 +2,7 @@
 <p>RAII is a popular idiom in C++ that focuses on using the object’s life cycle to manage resources. It encourages binding the resource lifetime to the scope of a corresponding object so that it’s automatically acquired when an object is created and released when the object is destroyed. This helps in simplifying the code, avoiding leaks and managing resources efficiently.</p>
 <h2 id="code-examples">Code Examples</h2>
 <p>Here’s an example of using RAII to manage resources, specifically a dynamically allocated array:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> ManagedArray</span><span style="color:#F8F8F2"> {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> ManagedArray</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#FF79C6">public:</span></span>
 <span class="line"><span style="color:#50FA7B">    ManagedArray</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">size_t</span><span style="color:#FFB86C;font-style:italic"> size</span><span style="color:#F8F8F2">) : </span><span style="color:#50FA7B">size_</span><span style="color:#F8F8F2">(size), </span><span style="color:#50FA7B">data_</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#FF79C6"> int</span><span style="color:#F8F8F2">[size]) {</span></span>
 <span class="line"><span style="color:#F8F8F2">    }</span></span>
@@ -21,14 +21,14 @@
 <span class="line"><span style="color:#FF79C6">    int*</span><span style="color:#F8F8F2"> data_;</span></span>
 <span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
 <p>Usages:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#F8F8F2">    ManagedArray </span><span style="color:#50FA7B">arr</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">10</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"><span style="color:#F8F8F2">    arr[</span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">] </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 42</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">    // No need to explicitly free memory, it will be automatically released when arr goes out of scope.</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <p>Another common use case is managing a mutex lock:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Lock</span><span style="color:#F8F8F2"> {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Lock</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#FF79C6">public:</span></span>
 <span class="line"><span style="color:#50FA7B">    Lock</span><span style="color:#F8F8F2">(std</span><span style="color:#FF79C6">::</span><span style="color:#8BE9FD;font-style:italic">mutex</span><span style="color:#FF79C6">&#x26;</span><span style="color:#FFB86C;font-style:italic"> mtx</span><span style="color:#F8F8F2">) : </span><span style="color:#50FA7B">mutex_</span><span style="color:#F8F8F2">(mtx) {</span></span>
 <span class="line"><span style="color:#F8F8F2">        mutex_.</span><span style="color:#50FA7B">lock</span><span style="color:#F8F8F2">();</span></span>
@@ -42,7 +42,7 @@
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">mutex</span><span style="color:#FF79C6">&#x26;</span><span style="color:#F8F8F2"> mutex_;</span></span>
 <span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
 <p>Usages:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">mutex some_mutex;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">mutex some_mutex;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">void</span><span style="color:#50FA7B"> protected_function</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#F8F8F2">    Lock </span><span style="color:#50FA7B">lock</span><span style="color:#F8F8F2">(some_mutex);</span></span>

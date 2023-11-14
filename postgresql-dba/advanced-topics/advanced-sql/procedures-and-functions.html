@@ -3,14 +3,14 @@
 <h3 id="functions">Functions</h3>
 <p>A function is a named, reusable piece of code that can be called with input parameters and returns a single value or a table. Functions can be written in various languages like PL/pgSQL, PL/Tcl, and others.</p>
 <p>To create a function, you use the <code>CREATE FUNCTION</code> statement:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> FUNCTION</span><span style="color:#50FA7B"> function_name</span><span style="color:#F8F8F2">(parameter_list)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> FUNCTION</span><span style="color:#50FA7B"> function_name</span><span style="color:#F8F8F2">(parameter_list)</span></span>
 <span class="line"><span style="color:#FF79C6">RETURNS</span><span style="color:#F8F8F2"> data_type</span></span>
 <span class="line"><span style="color:#FF79C6">LANGUAGE</span><span style="color:#F8F8F2"> language_name</span></span>
 <span class="line"><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> $$</span></span>
 <span class="line"><span style="color:#6272A4">-- function code</span></span>
 <span class="line"><span style="color:#F8F8F2">$$;</span></span></code></pre>
 <p>For example, a simple function that takes two integers as arguments and returns their sum:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> FUNCTION</span><span style="color:#50FA7B"> add</span><span style="color:#F8F8F2">(a </span><span style="color:#FF79C6">INTEGER</span><span style="color:#F8F8F2">, b </span><span style="color:#FF79C6">INTEGER</span><span style="color:#F8F8F2">)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> FUNCTION</span><span style="color:#50FA7B"> add</span><span style="color:#F8F8F2">(a </span><span style="color:#FF79C6">INTEGER</span><span style="color:#F8F8F2">, b </span><span style="color:#FF79C6">INTEGER</span><span style="color:#F8F8F2">)</span></span>
 <span class="line"><span style="color:#FF79C6">RETURNS</span><span style="color:#FF79C6"> INTEGER</span></span>
 <span class="line"><span style="color:#FF79C6">LANGUAGE</span><span style="color:#F8F8F2"> PL</span><span style="color:#FF79C6">/</span><span style="color:#F8F8F2">pgSQL</span></span>
 <span class="line"><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> $$</span></span>
@@ -19,16 +19,16 @@
 <span class="line"><span style="color:#FF79C6">END</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#F8F8F2">$$;</span></span></code></pre>
 <p>To call a function, you use the <code>SELECT</code> statement:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> add</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">);  </span><span style="color:#6272A4">-- returns 3</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> add</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">);  </span><span style="color:#6272A4">-- returns 3</span></span></code></pre>
 <h3 id="procedures">Procedures</h3>
 <p>A procedure is similar to a function, but it doesn’t return a value. Instead, it is used to perform actions such as modifying data in the database. In PostgreSQL, you use the <code>CREATE PROCEDURE</code> statement to create a procedure:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> PROCEDURE</span><span style="color:#FF79C6"> procedure_name</span><span style="color:#F8F8F2">(parameter_list)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> PROCEDURE</span><span style="color:#FF79C6"> procedure_name</span><span style="color:#F8F8F2">(parameter_list)</span></span>
 <span class="line"><span style="color:#FF79C6">LANGUAGE</span><span style="color:#F8F8F2"> language_name</span></span>
 <span class="line"><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> $$</span></span>
 <span class="line"><span style="color:#6272A4">-- procedure code</span></span>
 <span class="line"><span style="color:#F8F8F2">$$;</span></span></code></pre>
 <p>For example, a simple procedure to insert data into a table:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> PROCEDURE</span><span style="color:#F8F8F2"> insert_data(first_name </span><span style="color:#FF79C6">VARCHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">50</span><span style="color:#F8F8F2">), last_name </span><span style="color:#FF79C6">VARCHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">50</span><span style="color:#F8F8F2">))</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> PROCEDURE</span><span style="color:#F8F8F2"> insert_data(first_name </span><span style="color:#FF79C6">VARCHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">50</span><span style="color:#F8F8F2">), last_name </span><span style="color:#FF79C6">VARCHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">50</span><span style="color:#F8F8F2">))</span></span>
 <span class="line"><span style="color:#FF79C6">LANGUAGE</span><span style="color:#F8F8F2"> PL</span><span style="color:#FF79C6">/</span><span style="color:#F8F8F2">pgSQL</span></span>
 <span class="line"><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> $$</span></span>
 <span class="line"><span style="color:#FF79C6">BEGIN</span></span>
@@ -36,7 +36,7 @@
 <span class="line"><span style="color:#FF79C6">END</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#F8F8F2">$$;</span></span></code></pre>
 <p>To call a procedure, you use the <code>CALL</code> statement:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">CALL</span><span style="color:#F8F8F2"> insert_data(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">John</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Doe</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CALL</span><span style="color:#F8F8F2"> insert_data(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">John</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Doe</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span></code></pre>
 <h3 id="managing-routines">Managing Routines</h3>
 <p>You can manage your routines using the following statements:</p>
 <ul>
@@ -44,7 +44,7 @@
 <li><code>DROP FUNCTION/PROCEDURE</code>: Remove a function or procedure from the database</li>
 </ul>
 <p>For example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> FUNCTION</span><span style="color:#FF79C6"> add</span><span style="color:#F8F8F2">(a </span><span style="color:#FF79C6">INTEGER</span><span style="color:#F8F8F2">, b </span><span style="color:#FF79C6">INTEGER</span><span style="color:#F8F8F2">)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> FUNCTION</span><span style="color:#FF79C6"> add</span><span style="color:#F8F8F2">(a </span><span style="color:#FF79C6">INTEGER</span><span style="color:#F8F8F2">, b </span><span style="color:#FF79C6">INTEGER</span><span style="color:#F8F8F2">)</span></span>
 <span class="line"><span style="color:#F8F8F2">    RENAME </span><span style="color:#FF79C6">TO</span><span style="color:#F8F8F2"> add_numbers;</span></span>
 <span class="line"><span style="color:#F8F8F2">    </span></span>
 <span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#FF79C6"> FUNCTION</span><span style="color:#F8F8F2"> add_numbers(a </span><span style="color:#FF79C6">INTEGER</span><span style="color:#F8F8F2">, b </span><span style="color:#FF79C6">INTEGER</span><span style="color:#F8F8F2">);</span></span></code></pre>

@@ -3,7 +3,7 @@
 <h2 id="structures">Structures</h2>
 <p>A structure is defined using the <code>struct</code> keyword, followed by the structure’s name and a set of curly braces <code>{}</code> enclosing the members (variables and/or functions) of the structure. The members can be of different data types. To create an object of the structure’s type, use the structure name followed by the object name.</p>
 <p>Here’s an example of defining a structure and creating an object:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">struct</span><span style="color:#8BE9FD;font-style:italic"> Employee</span><span style="color:#F8F8F2"> {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">struct</span><span style="color:#8BE9FD;font-style:italic"> Employee</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#FF79C6">    int</span><span style="color:#F8F8F2"> id;</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">string name;</span></span>
 <span class="line"><span style="color:#FF79C6">    float</span><span style="color:#F8F8F2"> salary;</span></span>
@@ -11,13 +11,13 @@
 <span class="line"></span>
 <span class="line"><span style="color:#F8F8F2">Employee e1;</span><span style="color:#6272A4"> // create an object of the 'Employee' structure</span></span></code></pre>
 <p>You can access the members of a structure using the dot operator <code>.</code>:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#F8F8F2">e1.id </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">;</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">e1.id </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#F8F8F2">e1.name </span><span style="color:#FF79C6">=</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">John Doe</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#F8F8F2">e1.salary </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 40000</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <h2 id="classes">Classes</h2>
 <p>A class is defined using the <code>class</code> keyword, followed by the class’s name and a set of curly braces <code>{}</code> enclosing the members (variables and/or functions) of the class. Like structures, class members can be of different data types. You can create objects of a class using the class name followed by the object name.</p>
 <p>Here’s an example of a class definition and object creation:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Student</span><span style="color:#F8F8F2"> {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Student</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#FF79C6">    int</span><span style="color:#F8F8F2"> roll_no;</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">string name;</span></span>
 <span class="line"><span style="color:#FF79C6">    float</span><span style="color:#F8F8F2"> marks;</span></span>
@@ -38,6 +38,6 @@
 <span class="line"></span>
 <span class="line"><span style="color:#F8F8F2">Student s1;</span><span style="color:#6272A4"> // create an object of the 'Student' class</span></span></code></pre>
 <p>Since the data members of a class are private by default, we cannot access them directly using the dot operator from outside the class. Instead, we use public member functions to set or get their values:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#F8F8F2">s1.</span><span style="color:#50FA7B">set_data</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">Alice</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">95.0</span><span style="color:#F8F8F2">);</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">s1.</span><span style="color:#50FA7B">set_data</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">Alice</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">95.0</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"><span style="color:#F8F8F2">s1.</span><span style="color:#50FA7B">display</span><span style="color:#F8F8F2">();</span></span></code></pre>
 <p>That’s a brief summary of structures and classes in C++. Remember that while they may seem similar, classes provide more control over data encapsulation and can be used to implement more advanced features like inheritance and polymorphism.</p>

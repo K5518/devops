@@ -1,7 +1,7 @@
 <h1 id="global-augmentation">Global Augmentation</h1>
 <p>In TypeScript, global augmentation is a way to add declarations to the global scope. This is useful when you want to add new functionality to existing libraries or to augment the built-in types in TypeScript.</p>
 <p>Here’s an example of how you can use global augmentation in TypeScript:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="typescript"><code><span class="line"><span style="color:#6272A4">// myModule.d.ts</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">// myModule.d.ts</span></span>
 <span class="line"><span style="color:#FF79C6">declare</span><span style="color:#FF79C6"> namespace</span><span style="color:#8BE9FD;font-style:italic"> NodeJS</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#FF79C6">  interface</span><span style="color:#8BE9FD;font-style:italic"> Global</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#50FA7B">    myGlobalFunction</span><span style="color:#F8F8F2">()</span><span style="color:#FF79C6">:</span><span style="color:#8BE9FD;font-style:italic"> void</span><span style="color:#F8F8F2">;</span></span>

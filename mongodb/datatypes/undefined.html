@@ -5,7 +5,7 @@
 <h2 id="why-should-it-not-be-used">Why should it not be used?</h2>
 <p>In the newer versions of MongoDB, it is recommended to use the <code>null</code> value for representing missing or undefined values in the database. Although the <code>undefined</code> datatype is still supported for backward compatibility, it is advised to avoid the use of it, as the <code>null</code> value is more widely accepted and understood.</p>
 <p>Here is an example to show the difference between <code>null</code> and <code>undefined</code>:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="javascript"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#E9F284">  "</span><span style="color:#F1FA8C">field1</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#BD93F9">null</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#E9F284">  "</span><span style="color:#F1FA8C">field2</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#BD93F9">undefined</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>

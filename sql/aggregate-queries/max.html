@@ -2,7 +2,7 @@
 <p>The <code>MAX()</code> function in SQL is used to return the maximum value of an expression in a SELECT statement.</p>
 <p>It can be used for numeric, character, and datetime column data types. If there are null values, then they are not considered for comparison.</p>
 <h2 id="syntax">Syntax</h2>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> MAX</span><span style="color:#F8F8F2">(column_name)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> MAX</span><span style="color:#F8F8F2">(column_name)</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span></code></pre>
 <p>In this syntax, the <code>column_name</code> argument is the column in the <code>table_name</code> that you wish to find the maximum value of.</p>
@@ -40,7 +40,7 @@
 
 <table><thead><tr><th>ID</th><th>NAME</th><th>SALARY</th></tr></thead><tbody><tr><td>1</td><td>John</td><td>1000</td></tr><tr><td>2</td><td>Robert</td><td>2000</td></tr><tr><td>3</td><td>Jim</td><td>3000</td></tr><tr><td>4</td><td>Jessica</td><td>2500</td></tr></tbody></table>
 <p>To find the highest salary amongst all the employees, you would use the <code>MAX()</code> function as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> MAX</span><span style="color:#F8F8F2">(SALARY) </span><span style="color:#FF79C6">AS</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Highest Salary</span><span style="color:#E9F284">"</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> MAX</span><span style="color:#F8F8F2">(SALARY) </span><span style="color:#FF79C6">AS</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Highest Salary</span><span style="color:#E9F284">"</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Employee;</span></span></code></pre>
 <p>The above SQL returns <code>3000</code> as it’s the highest salary in the Employee table.</p>
 <p>Warning: SQL <code>MAX()</code> function will only return a single row as a result. If multiple rows hold the highest value and if you want to get all these rows, you should not use <code>MAX()</code>. A better option would be sorting the column and then <code>LIMIT</code> the result just to the first row.</p>

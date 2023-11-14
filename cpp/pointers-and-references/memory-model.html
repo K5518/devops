@@ -2,12 +2,12 @@
 <p>The memory model in C++ defines how the program stores and accesses data in computer memory. It consists of different segments, such as the Stack, Heap, Data and Code segments. Each of these segments is used to store different types of data and has specific characteristics.</p>
 <h2 id="stack-memory">Stack Memory</h2>
 <p>Stack memory is used for automatic storage duration variables, such as local variables and function call data. Stack memory is managed by the compiler, and it’s allocation and deallocation are done automatically. The stack memory is also a LIFO (Last In First Out) data structure, meaning that the most recent data allocated is the first to be deallocated.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">void</span><span style="color:#50FA7B"> functionExample</span><span style="color:#F8F8F2">() {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">void</span><span style="color:#50FA7B"> functionExample</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#FF79C6">    int</span><span style="color:#F8F8F2"> x </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 10</span><span style="color:#F8F8F2">;</span><span style="color:#6272A4"> // x is stored in the stack memory</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <h2 id="heap-memory">Heap Memory</h2>
 <p>Heap memory is used for dynamic storage duration variables, such as objects created using the <code>new</code> keyword. The programmer has control over the allocation and deallocation of heap memory using <code>new</code> and <code>delete</code> operators. Heap memory is a larger pool of memory than the stack, but has a slower access time.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">void</span><span style="color:#50FA7B"> functionExample</span><span style="color:#F8F8F2">() {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">void</span><span style="color:#50FA7B"> functionExample</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#FF79C6">    int*</span><span style="color:#F8F8F2"> p </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6;font-weight:bold"> new</span><span style="color:#FF79C6"> int</span><span style="color:#F8F8F2">;</span><span style="color:#6272A4"> // dynamically allocated int in heap memory</span></span>
 <span class="line"><span style="color:#FF79C6">    *</span><span style="color:#F8F8F2">p </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 10</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#6272A4">    // more code</span></span>
@@ -15,7 +15,7 @@
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <h2 id="data-segment">Data Segment</h2>
 <p>The Data segment is composed of two parts: the initialized data segment and the uninitialized data segment. The initialized data segment stores global, static, and constant variables with initial values, whereas the uninitialized segment stores uninitialized global and static variables.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#6272A4">// Initialized data segment</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">// Initialized data segment</span></span>
 <span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> globalVar </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 10</span><span style="color:#F8F8F2">;</span><span style="color:#6272A4"> // global variables</span></span>
 <span class="line"><span style="color:#FF79C6">static</span><span style="color:#FF79C6"> int</span><span style="color:#F8F8F2"> staticVar </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 10</span><span style="color:#F8F8F2">;</span><span style="color:#6272A4"> // static local variables</span></span>
 <span class="line"><span style="color:#FF79C6">const</span><span style="color:#FF79C6"> int</span><span style="color:#F8F8F2"> constVar </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 10</span><span style="color:#F8F8F2">;</span><span style="color:#6272A4"> // constant variables with value</span></span>
@@ -24,7 +24,7 @@
 <span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> globalVar;</span><span style="color:#6272A4"> // uninitialized global variables</span></span></code></pre>
 <h2 id="code-segment">Code Segment</h2>
 <p>The Code segment (also known as the Text segment) stores the executable code (machine code) of the program. It’s usually located in a read-only area of memory to prevent accidental modification.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">void</span><span style="color:#50FA7B"> functionExample</span><span style="color:#F8F8F2">() {</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">void</span><span style="color:#50FA7B"> functionExample</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#6272A4">    // The machine code for this function is stored in the code segment.</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <p>In summary, understanding the memory model in C++ helps to optimize the usage of memory resources and improves overall program performance.</p>

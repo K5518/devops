@@ -9,7 +9,7 @@
 </ul>
 <p>Here’s a simple example using OpenCV in C++ to read and display an image:</p>
 <p><strong>Prerequisite</strong>: Install OpenCV for C++ on your system (e.g., by following the <a href="https://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html" rel="noopener noreferrer nofollow" target="_blank">official installation guide</a>).</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="cpp"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">opencv2/opencv.hpp</span><span style="color:#E9F284">></span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">opencv2/opencv.hpp</span><span style="color:#E9F284">></span></span>
 <span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">opencv2/highgui/highgui.hpp</span><span style="color:#E9F284">></span></span>
 <span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
 <span class="line"></span>
@@ -35,7 +35,7 @@
 <span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
 <p>This example reads an image from the given input path (<code>argv[1]</code>) and displays it in a window. The <code>cv::imread()</code> function is used to read the image, and the <code>cv::imshow()</code> function displays it in the created window.</p>
 <p>Remember to compile the code, linking the necessary libraries:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>g++ -o display_image display_image.cpp `pkg-config --cflags --libs opencv4`</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>g++ -o display_image display_image.cpp `pkg-config --cflags --libs opencv4`</span></span></code></pre>
 <p>And run the executable with an image path as an argument:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>./display_image path/to/image.jpg</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>./display_image path/to/image.jpg</span></span></code></pre>
 <p>For more advanced examples and detailed documentation on how to use OpenCV, please visit the <a href="https://docs.opencv.org/master/" rel="noopener noreferrer nofollow" target="_blank">official OpenCV documentation</a>.</p>

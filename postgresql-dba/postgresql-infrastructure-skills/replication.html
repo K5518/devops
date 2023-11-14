@@ -28,7 +28,7 @@
 <ul>
 <li>
 <p><strong>Primary Server Configuration</strong>: Set the following parameters in the <code>postgresql.conf</code> on the primary server.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>wal_level = 'replica'</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>wal_level = 'replica'</span></span>
 <span class="line"><span>max_wal_senders = 3</span></span>
 <span class="line"><span>max_replication_slots = 3</span></span>
 <span class="line"><span>wal_keep_segments = 64</span></span>
@@ -36,23 +36,23 @@
 </li>
 <li>
 <p><strong>Replica Server Configuration</strong>: Set the following parameters in the <code>postgresql.conf</code> on the replica server.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>hot_standby = on</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>hot_standby = on</span></span></code></pre>
 </li>
 <li>
 <p><strong>Authentication</strong>: Add an entry in the <code>pg_hba.conf</code> file on the primary server to allow the replica to connect.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>host replication &#x3C;replica_user> &#x3C;replica_ip>/32 md5</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>host replication &#x3C;replica_user> &#x3C;replica_ip>/32 md5</span></span></code></pre>
 </li>
 <li>
 <p><strong>Create Replication User</strong>: Create a replication user on the primary server with the REPLICATION attribute.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>CREATE USER &#x3C;replica_user> WITH REPLICATION ENCRYPTED PASSWORD '&#x3C;password>';</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>CREATE USER &#x3C;replica_user> WITH REPLICATION ENCRYPTED PASSWORD '&#x3C;password>';</span></span></code></pre>
 </li>
 <li>
 <p><strong>Create Base Backup</strong>: Create a base backup of the primary server using <code>pg_basebackup</code> tool, specifying the destination directory (<code>&#x3C;destination></code>) on the replica server.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>pg_basebackup -h &#x3C;primary_ip> -D &#x3C;destination> -U &#x3C;replica_user> -vP --wal-method=fetch</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>pg_basebackup -h &#x3C;primary_ip> -D &#x3C;destination> -U &#x3C;replica_user> -vP --wal-method=fetch</span></span></code></pre>
 </li>
 <li>
 <p><strong>Configure Recovery</strong>: On the replica server, create a <code>recovery.conf</code> file in the data directory to configure it to connect to the primary server for streaming replication.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>standby_mode = 'on'</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>standby_mode = 'on'</span></span>
 <span class="line"><span>primary_conninfo = 'host=&#x3C;primary_ip> port=5432 user=&#x3C;replica_user> password=&#x3C;password>'</span></span>
 <span class="line"><span>trigger_file = '/tmp/replica_trigger' # This can be any custom path of your choice</span></span></code></pre>
 </li>

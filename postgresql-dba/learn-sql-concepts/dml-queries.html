@@ -2,39 +2,39 @@
 <p>In this section, we will be discussing Data Manipulation Language (DML) queries in PostgreSQL. DML queries are used to manage and modify data in tables. As an integral part of SQL, they allow us to perform various operations such as inserting, updating, and retrieving data. The main DML queries are as follows:</p>
 <h2 id="insert">INSERT</h2>
 <p>The <code>INSERT</code> statement is used to add new rows to a table. The basic syntax for the <code>INSERT</code> command is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>INSERT INTO table_name (column1, column2,...)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>INSERT INTO table_name (column1, column2,...)</span></span>
 <span class="line"><span>VALUES (value1, value2,...);</span></span></code></pre>
 <p>For example, to insert a new row into a table named <code>employees</code> with columns <code>employee_id</code>, <code>first_name</code>, and <code>last_name</code>, we would use:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>INSERT INTO employees (employee_id, first_name, last_name)</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>INSERT INTO employees (employee_id, first_name, last_name)</span></span>
 <span class="line"><span>VALUES (1, 'John', 'Doe');</span></span></code></pre>
 <h2 id="update">UPDATE</h2>
 <p>The <code>UPDATE</code> statement is used to modify existing data in a table. The basic syntax for the <code>UPDATE</code> command is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>UPDATE table_name</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>UPDATE table_name</span></span>
 <span class="line"><span>SET column1 = value1, column2 = value2,...</span></span>
 <span class="line"><span>WHERE condition;</span></span></code></pre>
 <p>For example, to update the <code>first_name</code> of an employee with an <code>employee_id</code> of 1, we would use:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>UPDATE employees</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>UPDATE employees</span></span>
 <span class="line"><span>SET first_name = 'Jane'</span></span>
 <span class="line"><span>WHERE employee_id = 1;</span></span></code></pre>
 <p>Be cautious with <code>UPDATE</code> statements, as not specifying a <code>WHERE</code> condition might result in updating all rows in the table.</p>
 <h2 id="delete">DELETE</h2>
 <p>The <code>DELETE</code> statement removes one or more rows from a table. The basic syntax for the <code>DELETE</code> command is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>DELETE FROM table_name</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>DELETE FROM table_name</span></span>
 <span class="line"><span>WHERE condition;</span></span></code></pre>
 <p>For example, to remove an employee row with an <code>employee_id</code> of 1, we would use:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>DELETE FROM employees</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>DELETE FROM employees</span></span>
 <span class="line"><span>WHERE employee_id = 1;</span></span></code></pre>
 <p>Similar to the <code>UPDATE</code> statement, not specifying a <code>WHERE</code> condition in <code>DELETE</code> might result in removing all rows from the table.</p>
 <h2 id="select">SELECT</h2>
 <p>The <code>SELECT</code> statement is used to retrieve data from one or more tables. The basic syntax for the <code>SELECT</code> command is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>SELECT column1, column2,...</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>SELECT column1, column2,...</span></span>
 <span class="line"><span>FROM table_name</span></span>
 <span class="line"><span>WHERE condition;</span></span></code></pre>
 <p>For example, to retrieve the first name and last name of all employees, we would use:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>SELECT first_name, last_name</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>SELECT first_name, last_name</span></span>
 <span class="line"><span>FROM employees;</span></span></code></pre>
 <p>To retrieve the first name and last name of employees with an <code>employee_id</code> greater than 10, we would use:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="plaintext"><code><span class="line"><span>SELECT first_name, last_name</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>SELECT first_name, last_name</span></span>
 <span class="line"><span>FROM employees</span></span>
 <span class="line"><span>WHERE employee_id > 10;</span></span></code></pre>
 <p>You can also use various clauses such as <code>GROUP BY</code>, <code>HAVING</code>, <code>ORDER BY</code>, and <code>LIMIT</code> to further refine your <code>SELECT</code> queries.</p>

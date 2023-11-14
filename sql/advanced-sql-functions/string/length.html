@@ -1,7 +1,7 @@
 <h1 id="length">LENGTH</h1>
 <p>In SQL, <code>LENGTH</code> is a built-in function that allows you to find the number of characters in a string or the length of a string.</p>
 <p>Syntax:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">LENGTH</span><span style="color:#F8F8F2"> ( string )</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">LENGTH</span><span style="color:#F8F8F2"> ( string )</span></span></code></pre>
 <p>Here, <code>string</code> can be any string literal, column or expression resulting in a string.</p>
 <h2 id="examples">Examples</h2>
 <p>Consider an “employees” table:</p>
@@ -32,7 +32,7 @@
 
 <table><thead><tr><th>id</th><th>first_name</th><th>last_name</th></tr></thead><tbody><tr><td>1</td><td>John</td><td>Doe</td></tr><tr><td>2</td><td>Jane</td><td>Smith</td></tr><tr><td>3</td><td>Alice</td><td>Murphy</td></tr></tbody></table>
 <p>To compute the length of the first_name field for all records, use the following SQL statement:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> first_name, </span><span style="color:#FF79C6">LENGTH</span><span style="color:#F8F8F2">(first_name) </span><span style="color:#FF79C6">as</span><span style="color:#F8F8F2"> length_of_first_name</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> first_name, </span><span style="color:#FF79C6">LENGTH</span><span style="color:#F8F8F2">(first_name) </span><span style="color:#FF79C6">as</span><span style="color:#F8F8F2"> length_of_first_name</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> employees;</span></span></code></pre>
 <p>Output:</p>
 
@@ -59,11 +59,11 @@
 <table><thead><tr><th>first_name</th><th>length_of_first_name</th></tr></thead><tbody><tr><td>John</td><td>4</td></tr><tr><td>Jane</td><td>4</td></tr><tr><td>Alice</td><td>5</td></tr></tbody></table>
 <h2 id="usage-with-distinct">Usage with DISTINCT</h2>
 <p><code>LENGTH</code> can also be used in conjunction with <code>DISTINCT</code> to find the number of distinct lengths of a specific field.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT DISTINCT</span><span style="color:#FF79C6"> LENGTH</span><span style="color:#F8F8F2">(first_name) </span><span style="color:#FF79C6">as</span><span style="color:#F8F8F2"> distinct_length_of_first_name</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT DISTINCT</span><span style="color:#FF79C6"> LENGTH</span><span style="color:#F8F8F2">(first_name) </span><span style="color:#FF79C6">as</span><span style="color:#F8F8F2"> distinct_length_of_first_name</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> employees;</span></span></code></pre>
 <h2 id="usage-with-where-clause">Usage with WHERE Clause</h2>
 <p>It can work in the WHERE clause to return only those records where the length of a specific field meets a certain condition.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="sql"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> employees</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#FF79C6"> LENGTH</span><span style="color:#F8F8F2">(first_name) </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 4</span><span style="color:#F8F8F2">;</span></span></code></pre>
 <p>Do note that the <code>LENGTH</code> function may return different results in different SQL systems due to character set and collation differences. In some systems, <code>LENGTH()</code> returns length in characters while in others it could return length in bytes.</p>

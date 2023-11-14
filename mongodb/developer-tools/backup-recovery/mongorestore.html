@@ -9,7 +9,7 @@
 </ul>
 <h2 id="usage">Usage</h2>
 <p>Here’s a basic usage of <code>mongorestore</code>:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">mongorestore</span><span style="color:#F1FA8C"> /path/to/your/dump/folder</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">mongorestore</span><span style="color:#F1FA8C"> /path/to/your/dump/folder</span></span></code></pre>
 <p>This command will restore the dump in the specified folder.</p>
 <h2 id="common-options">Common Options</h2>
 <ul>
@@ -27,11 +27,11 @@
 </ul>
 <h2 id="examples">Examples</h2>
 <p>Restore only a specific database:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">mongorestore</span><span style="color:#BD93F9"> --db=mydatabase</span><span style="color:#F1FA8C"> /path/to/your/dump/folder</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">mongorestore</span><span style="color:#BD93F9"> --db=mydatabase</span><span style="color:#F1FA8C"> /path/to/your/dump/folder</span></span></code></pre>
 <p>Restore using gzip format:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">mongorestore</span><span style="color:#BD93F9"> --gzip</span><span style="color:#F1FA8C"> /path/to/your/compressed/dump/folder</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">mongorestore</span><span style="color:#BD93F9"> --gzip</span><span style="color:#F1FA8C"> /path/to/your/compressed/dump/folder</span></span></code></pre>
 <p>Restore with authentication:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">mongorestore</span><span style="color:#BD93F9"> --username=myUser</span><span style="color:#BD93F9"> --password=myPassword</span><span style="color:#F1FA8C"> /path/to/your/dump/folder</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">mongorestore</span><span style="color:#BD93F9"> --username=myUser</span><span style="color:#BD93F9"> --password=myPassword</span><span style="color:#F1FA8C"> /path/to/your/dump/folder</span></span></code></pre>
 <p>Restore to a remote MongoDB instance:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="bash"><code><span class="line"><span style="color:#50FA7B">mongorestore</span><span style="color:#BD93F9"> --host=remoteHost</span><span style="color:#BD93F9"> --port=27017</span><span style="color:#F1FA8C"> /path/to/your/dump/folder</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">mongorestore</span><span style="color:#BD93F9"> --host=remoteHost</span><span style="color:#BD93F9"> --port=27017</span><span style="color:#F1FA8C"> /path/to/your/dump/folder</span></span></code></pre>
 <p><strong>Important</strong>: Ensure you have proper backups of your data, and test the restore process periodically to validate your backup strategy.</p>

@@ -3,7 +3,7 @@
 <h2 id="how-docker-layer-caching-works">How Docker Layer Caching Works</h2>
 <p>Docker creates a new layer for each instruction (e.g., <code>RUN</code>, <code>COPY</code>, <code>ADD</code>, etc.) in the Dockerfile. If the instruction hasn’t changed since the last build, Docker will reuse the existing layer.</p>
 <p>For example, consider the following Dockerfile:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" lang="dockerfile"><code><span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> node:14</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> node:14</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">WORKDIR</span><span style="color:#F8F8F2"> /app</span></span>
 <span class="line"></span>
