@@ -1,4 +1,4 @@
-<h1 id="efficient-layer-caching">Efficient Layer Caching</h1>
+<div data-github-url="https://github.com/kamranahmedse/developer-roadmap/tree/master/src/data/roadmaps/docker/content/106-building-container-images/101-efficient-layer-caching.md"></div> <h1 id="efficient-layer-caching">Efficient Layer Caching</h1>
 <p>When building container images, Docker caches the newly created layers. These layers can then be used later on when building other images, reducing the build time and minimizing bandwidth usage. However, to make the most of this caching mechanism, you should be aware of how to efficiently use layer caching.</p>
 <h2 id="how-docker-layer-caching-works">How Docker Layer Caching Works</h2>
 <p>Docker creates a new layer for each instruction (e.g., <code>RUN</code>, <code>COPY</code>, <code>ADD</code>, etc.) in the Dockerfile. If the instruction hasn’t changed since the last build, Docker will reuse the existing layer.</p>

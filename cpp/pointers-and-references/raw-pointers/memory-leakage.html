@@ -1,4 +1,4 @@
-<h1 id="memory-leakage">Memory Leakage</h1>
+<div data-github-url="https://github.com/kamranahmedse/developer-roadmap/tree/master/src/data/roadmaps/cpp/content/105-pointers-and-references/raw-pointers/101-memory-leakage.md"></div> <h1 id="memory-leakage">Memory Leakage</h1>
 <p>Memory leakage occurs when a program allocates memory in the heap but does not release the memory back to the operating system when it is no longer needed. Over time, this leads to exhaustion of available memory, resulting in low system performance or crashes.</p>
 <p>In C++, when you use raw pointers, you need to manage the memory allocation and deallocation manually. In many cases, you will use the <code>new</code> keyword to allocate memory for an object in the heap and use <code>delete</code> keyword to deallocate that memory when it’s no longer needed. Forgetting to do this can cause memory leaks.</p>
 <p>Here’s an example:</p>

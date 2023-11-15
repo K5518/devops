@@ -1,4 +1,4 @@
-<h1 id="expiring">Expiring</h1>
+<div data-github-url="https://github.com/kamranahmedse/developer-roadmap/tree/master/src/data/roadmaps/mongodb/content/105-performance-optimization/index-types/100-expiring.md"></div> <h1 id="expiring">Expiring</h1>
 <p>Expiring indexes are a specific index type in MongoDB that allows you to automatically remove documents from a collection after a certain time period or at a specific expiration date. These indexes are particularly useful for managing time-sensitive data, such as session data, cached data, or logs, where the information becomes irrelevant or less valuable after a certain period of time.</p>
 <p>To create an expiring index, you can use the <code>createIndex()</code> method along with the <code>expireAfterSeconds</code> option. This option takes a number of seconds as its value, which represents the duration after which the document should be removed automatically.</p>
 <p>Here’s an example of creating an expiring index on a <code>createdAt</code> field with a time-to-live (TTL) of 3600 seconds (1 hour):</p>

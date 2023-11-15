@@ -1,4 +1,4 @@
-<h1 id="hash-indexes">Hash Indexes</h1>
+<div data-github-url="https://github.com/kamranahmedse/developer-roadmap/tree/master/src/data/roadmaps/postgresql-dba/content/112-sql-optimization-techniques/100-indexes-usecases/101-hash.md"></div> <h1 id="hash-indexes">Hash Indexes</h1>
 <p>Hash Indexes are a type of database index that uses a hash function to map each row’s key value into a fixed-length hashed key. The purpose of using a hash index is to enable quicker search operations by converting the key values into a more compact and easily searchable format. Let’s discuss some important aspects and use cases of hash indexes in PostgreSQL.</p>
 <h2 id="how-hash-indexes-work">How Hash Indexes Work</h2>
 <p>In a hash index, the key values are passed through a hash function (e.g., MD5 or FNV-1a). This function generates a short, fixed-length hash value which can be easily compared during search operations. The rows with the same hash values are stored in “buckets”, allowing for fast search and retrieval operations when looking for a specific key.</p>

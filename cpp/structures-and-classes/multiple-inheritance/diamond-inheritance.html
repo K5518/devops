@@ -1,4 +1,4 @@
-<h1 id="diamond-inheritance">Diamond Inheritance</h1>
+<div data-github-url="https://github.com/kamranahmedse/developer-roadmap/tree/master/src/data/roadmaps/cpp/content/107-structures-and-classes/102-multiple-inheritance/100-diamond-inheritance.md"></div> <h1 id="diamond-inheritance">Diamond Inheritance</h1>
 <p>Diamond inheritance is a specific scenario in multiple inheritance where a class is derived from two or more classes, which in turn, are derived from a common base class. It creates an ambiguity that arises from duplicating the common base class, which leads to an ambiguous behavior while calling the duplicate members.</p>
 <p>To resolve this ambiguity, you can use virtual inheritance. A virtual base class is a class that is shared by multiple classes using <code>virtual</code> keyword in C++. This ensures that only one copy of the base class is inherited in the final derived class, and thus, resolves the diamond inheritance problem.</p>
 <p><em>Example:</em></p>
