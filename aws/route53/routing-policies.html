@@ -1,1 +1,25 @@
-<div data-github-url="https://github.com/kamranahmedse/developer-roadmap/tree/master/src/data/roadmaps/aws/content/107-route53/101-routing-policies.md"></div> <h1 id="routing-policies">Routing policies</h1>
+<div data-github-url="https://github.com/kamranahmedse/developer-roadmap/tree/master/src/data/roadmaps/aws/content/107-route53/101-routing-policies.md"></div> <h1 id="routing-policies">Routing Policies</h1>
+<p>AWS Route 53 provides different routing policies to fit various needs:</p>
+<ol>
+<li>
+<p><strong>Simple Routing Policy</strong>: Used for a single resource that performs a specific function.</p>
+</li>
+<li>
+<p><strong>Weighted Routing Policy</strong>: Useful if you have multiple resources and you want to direct a certain percentage of traffic to each.</p>
+</li>
+<li>
+<p><strong>Latency Routing Policy</strong>: Allows to route traffic based on the lowest network latency for your user (i.e., which region will give them the fastest response time).</p>
+</li>
+<li>
+<p><strong>Failover Routing Policy</strong>: Used when you want to create an active/passive setup. For instance, you might want your primary resource to serve all your traffic, but if it fails, you can reroute traffic to a backup resource.</p>
+</li>
+<li>
+<p><strong>Geolocation Routing Policy</strong>: Routes traffic based on the geographic location of your users.</p>
+</li>
+<li>
+<p><strong>Geoproximity Routing Policy (Traffic Flow Only)</strong>: Route traffic based on the geographic location of your resources and, optionally, shift traffic from resources in one location to resources in another.</p>
+</li>
+<li>
+<p><strong>Multivalue Answer Routing Policy</strong>: Used when you want Route 53 to respond to DNS queries with up to eight healthy records selected at random.</p>
+</li>
+</ol>
