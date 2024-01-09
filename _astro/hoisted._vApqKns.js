@@ -1,0 +1,1 @@
+import"./hoisted.kwzLl1K-.js";import"./navigation.pQB08nQA.js";import"./jwt.E7BTUPpl.js";const t=document.getElementById("settings-menu"),e=document.getElementById("settings-menu-dropdown");t?.addEventListener("click",()=>{e?.classList.toggle("hidden")});document.addEventListener("click",n=>{t?.contains(n.target)||e?.classList.add("hidden")});
