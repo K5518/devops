@@ -35,7 +35,7 @@
 </li>
 <li>
 <p>On the subscriber side, create a subscription by specifying the connection information and the publication to subscribe to:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#F8F8F2"> SUBSCRIPTION my_subscription CONNECTION </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">host=ip_address dbname=db_name user=replicator password=password</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> PUBLICATION my_publication;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#F8F8F2"> SUBSCRIPTION my_subscription </span><span style="color:#FF79C6">CONNECTION</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">host=ip_address dbname=db_name user=replicator password=password</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> PUBLICATION my_publication;</span></span></code></pre>
 </li>
 </ul>
 <p>After setting up the subscription, the data from the publisher will automatically synchronize to the subscriber.</p>
