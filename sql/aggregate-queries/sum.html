@@ -5,16 +5,16 @@
 <p>Where <code>column_name</code> is the name of the column you want to calculate the sum of, and <code>table_name</code> is the name of the table where the column is.</p>
 <p>For example, consider the following <code>ORDER</code> table:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>|   OrderID  | Company | Quantity |</span></span>
-<span class="line"><span>|-------------|-----------|----------|</span></span>
-<span class="line"><span>|     1           |     A     |    30     |</span></span>
-<span class="line"><span>|     2           |     B     |    15     |</span></span>
-<span class="line"><span>|     3           |     A     |    20     |</span></span></code></pre>
+<span class="line"><span>|------------|---------|----------|</span></span>
+<span class="line"><span>|     1      |     A   |    30    |</span></span>
+<span class="line"><span>|     2      |     B   |    15    |</span></span>
+<span class="line"><span>|     3      |     A   |    20    |</span></span></code></pre>
 <p>If you want to find the total quantity, you can use <code>SUM()</code>:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> SUM</span><span style="color:#F8F8F2">(Quantity) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> TotalQuantity </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Order;</span></span></code></pre>
 <p>Output will be:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>| TotalQuantity |</span></span>
-<span class="line"><span>|----------------|</span></span>
-<span class="line"><span>|           65     |</span></span></code></pre>
+<span class="line"><span>|---------------|</span></span>
+<span class="line"><span>|       65      |</span></span></code></pre>
 <p><strong>Note:</strong> The <code>SUM()</code> function skips NULL values.</p>
 <p>One of the common use cases of <code>SUM()</code> function is in conjunction with <code>GROUP BY</code> to get the sum for each group of rows.</p>
 <p>Example:</p>
