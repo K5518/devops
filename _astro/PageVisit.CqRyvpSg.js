@@ -1,0 +1,1 @@
+import{r as s}from"./index.SSXOyoI7.js";import{i as e}from"./jwt.M546E6_Y.js";import{h as i}from"./http.B-35sOsF.js";function n(t){const{resourceId:o,resourceType:r}=t;return s.useEffect(()=>{e()&&i("https://api.roadmap.sh/v1-visit",{...r&&{resourceType:r,resourceId:o}}).finally(()=>{})},[]),null}export{n as PageVisit};
