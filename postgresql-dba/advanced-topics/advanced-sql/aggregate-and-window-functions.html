@@ -12,7 +12,8 @@
 <p>Aggregate functions are commonly used with the <code>GROUP BY</code> clause to group rows by one or more columns. Here’s an example that calculates the total sales per product:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> product_id, </span><span style="color:#8BE9FD">SUM</span><span style="color:#F8F8F2">(sales) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> total_sales</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> sales_data</span></span>
-<span class="line"><span style="color:#FF79C6">GROUP BY</span><span style="color:#F8F8F2"> product_id;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">GROUP BY</span><span style="color:#F8F8F2"> product_id;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="window-functions">Window Functions</h2>
 <p>Window functions are similar to aggregate functions in that they operate on a group of rows. However, instead of returning a single result for each group, window functions return a result for each row, based on its “window” of related rows.</p>
 <p>Window functions are usually used with the <code>OVER()</code> clause to define the window for each row. The window can be defined by <code>PARTITION BY</code> and <code>ORDER BY</code> clauses within the <code>OVER()</code> clause.</p>
@@ -25,7 +26,8 @@
 <p>Here’s an example that calculates the cumulative sum of sales per product, ordered by sale date:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> product_id, sale_date, sales,</span></span>
 <span class="line"><span style="color:#8BE9FD">       SUM</span><span style="color:#F8F8F2">(sales) </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">PARTITION</span><span style="color:#FF79C6"> BY</span><span style="color:#F8F8F2"> product_id </span><span style="color:#FF79C6">ORDER BY</span><span style="color:#F8F8F2"> sale_date) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> cumulative_sales</span></span>
-<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> sales_data;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> sales_data;</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, the <code>SUM(sales)</code> aggregate function is used with the <code>OVER()</code> clause to create a window for each row, partitioned by <code>product_id</code> and ordered by <code>sale_date</code>. This allows you to calculate the cumulative sum of sales for each product up to the current row.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>Understanding and using aggregate and window functions is essential to perform advanced data analysis with SQL. By mastering the use of these functions, you can create complex SQL queries to efficiently analyze your data and make better-informed decisions. So, keep practicing and exploring different combinations of functions and window definitions to sharpen your skills!</p>

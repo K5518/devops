@@ -4,42 +4,53 @@
 <ol>
 <li><strong>ABS() Function:</strong> This function returns the absolute (positive) value of a number.</li>
 </ol>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> ABS</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">-</span><span style="color:#BD93F9">243</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> ABS</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">-</span><span style="color:#BD93F9">243</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>Output:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>243</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>243</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>2. <strong>Avg() Function:</strong> This function returns the average value of a column.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> AVG</span><span style="color:#F8F8F2">(price) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> products;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> AVG</span><span style="color:#F8F8F2">(price) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> products;</span></span>
+<span class="line"></span></code></pre>
 <ol start="3">
 <li><strong>COUNT() Function:</strong> This function returns the number of rows that matches a specified criterion.</li>
 </ol>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> COUNT</span><span style="color:#F8F8F2">(productID) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> products;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> COUNT</span><span style="color:#F8F8F2">(productID) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> products;</span></span>
+<span class="line"></span></code></pre>
 <ol start="4">
 <li><strong>SUM() Function:</strong> This function returns the total sum of a numeric column.</li>
 </ol>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> SUM</span><span style="color:#F8F8F2">(price) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> products;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> SUM</span><span style="color:#F8F8F2">(price) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> products;</span></span>
+<span class="line"></span></code></pre>
 <ol start="5">
 <li><strong>MIN() &#x26; MAX() Functions:</strong> MIN() function returns the smallest value of the selected column, and MAX() function returns the largest value of the selected column.</li>
 </ol>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> MIN</span><span style="color:#F8F8F2">(price) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> products;</span></span>
-<span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> MAX</span><span style="color:#F8F8F2">(price) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> products;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> MAX</span><span style="color:#F8F8F2">(price) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> products;</span></span>
+<span class="line"></span></code></pre>
 <ol start="6">
 <li><strong>ROUND() Function:</strong> This function is used to round a numeric field to the nearest integer, you can, however, specify the number of decimals to be returned.</li>
 </ol>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> ROUND</span><span style="color:#F8F8F2">(price, </span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> products;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> ROUND</span><span style="color:#F8F8F2">(price, </span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> products;</span></span>
+<span class="line"></span></code></pre>
 <ol start="7">
 <li><strong>CEILING() Function:</strong> This function returns the smallest integer which is greater than, or equal to, the specified numeric expression.</li>
 </ol>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> CEILING</span><span style="color:#F8F8F2">(price) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> products;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> CEILING</span><span style="color:#F8F8F2">(price) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> products;</span></span>
+<span class="line"></span></code></pre>
 <ol start="8">
 <li><strong>FLOOR() Function:</strong> This function returns the largest integer which is less than, or equal to, the specified numeric expression.</li>
 </ol>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> FLOOR</span><span style="color:#F8F8F2">(price) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> products;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> FLOOR</span><span style="color:#F8F8F2">(price) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> products;</span></span>
+<span class="line"></span></code></pre>
 <ol start="9">
 <li><strong>SQRT() Function:</strong> This function returns the square root of a number.</li>
 </ol>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> SQRT</span><span style="color:#F8F8F2">(price) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> products;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> SQRT</span><span style="color:#F8F8F2">(price) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> products;</span></span>
+<span class="line"></span></code></pre>
 <ol start="10">
 <li><strong>PI() Function:</strong> This function returns the constant Pi.</li>
 </ol>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> PI</span><span style="color:#F8F8F2">();</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> PI</span><span style="color:#F8F8F2">();</span></span>
+<span class="line"></span></code></pre>
 <p>These are just a few examples, SQL supports many more mathematical functions such as SIN, COS, TAN, COT, POWER, etc. Understanding and using these SQL numeric functions allows you to perform complex operations on the numeric data in your SQL tables.</p>

@@ -3,12 +3,14 @@
 <h3 id="busybox">BusyBox</h3>
 <p>BusyBox is a small (1-2 Mb) and simple command line application that provides a large number of the commonly used Unix utilities, such as <code>awk</code>, <code>grep</code>, <code>vi</code>, etc. To run BusyBox inside a Docker container, you simply need to pull the image and run it with Docker:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> pull</span><span style="color:#F1FA8C"> busybox</span></span>
-<span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -it</span><span style="color:#F1FA8C"> busybox</span><span style="color:#F1FA8C"> /bin/sh</span></span></code></pre>
+<span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -it</span><span style="color:#F1FA8C"> busybox</span><span style="color:#F1FA8C"> /bin/sh</span></span>
+<span class="line"></span></code></pre>
 <p>Once inside the container, you can start running various BusyBox utilities just like you would on a regular command line.</p>
 <h3 id="curl">cURL</h3>
 <p>cURL is a well-known command line tool that can be used to transfer data using various network protocols. It is often used for testing APIs or downloading files from the internet. To use cURL inside a Docker container, you can use the official cURL image available on Docker Hub:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> pull</span><span style="color:#F1FA8C"> curlimages/curl</span></span>
-<span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> --rm</span><span style="color:#F1FA8C"> curlimages/curl</span><span style="color:#F1FA8C"> https://example.com</span></span></code></pre>
+<span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> --rm</span><span style="color:#F1FA8C"> curlimages/curl</span><span style="color:#F1FA8C"> https://example.com</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, the <code>--rm</code> flag is used to remove the container after the command has finished running. This is useful when you only need to run a single command and then clean up the container afterwards.</p>
 <h3 id="other-command-line-utilities">Other Command Line Utilities</h3>
 <p>There are numerous command line utilities available in Docker images, including but not limited to:</p>

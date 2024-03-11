@@ -4,9 +4,11 @@
 <p><code>pg_dumpall</code> exports global objects, such as roles and tablespace, as well as all databases within the cluster. It essentially performs <code>pg_dump</code> on each database, and concatenates the resulting SQL scripts into a single output file. It’s important to note that running <code>pg_dumpall</code> does not lock the databases—regular database operations can continue during the backup process.</p>
 <h2 id="using-pg_dumpall">Using pg_dumpall</h2>
 <p>The basic syntax for the <code>pg_dumpall</code> command is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pg_dumpall</span><span style="color:#F8F8F2"> [options] </span><span style="color:#FF79C6">></span><span style="color:#F8F8F2"> outputfile</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pg_dumpall</span><span style="color:#F8F8F2"> [options] </span><span style="color:#FF79C6">></span><span style="color:#F8F8F2"> outputfile</span></span>
+<span class="line"></span></code></pre>
 <p>For example, to back up an entire PostgreSQL cluster to a plain text file, you would run:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pg_dumpall</span><span style="color:#BD93F9"> -U</span><span style="color:#F1FA8C"> postgres</span><span style="color:#BD93F9"> -W</span><span style="color:#BD93F9"> -h</span><span style="color:#F1FA8C"> localhost</span><span style="color:#BD93F9"> -p</span><span style="color:#BD93F9"> 5432</span><span style="color:#FF79C6"> ></span><span style="color:#F1FA8C"> backup.sql</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pg_dumpall</span><span style="color:#BD93F9"> -U</span><span style="color:#F1FA8C"> postgres</span><span style="color:#BD93F9"> -W</span><span style="color:#BD93F9"> -h</span><span style="color:#F1FA8C"> localhost</span><span style="color:#BD93F9"> -p</span><span style="color:#BD93F9"> 5432</span><span style="color:#FF79C6"> ></span><span style="color:#F1FA8C"> backup.sql</span></span>
+<span class="line"></span></code></pre>
 <p>Some common options include:</p>
 <ul>
 <li><code>-U</code>: Specifies the user running the command.</li>
@@ -19,7 +21,8 @@
 </ul>
 <h2 id="restoring-the-backup">Restoring the Backup</h2>
 <p>To restore the PostgreSQL cluster from the backup created by <code>pg_dumpall</code>, use the <code>psql</code> command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">psql</span><span style="color:#BD93F9"> -U</span><span style="color:#F1FA8C"> postgres</span><span style="color:#BD93F9"> -f</span><span style="color:#F1FA8C"> backup.sql</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">psql</span><span style="color:#BD93F9"> -U</span><span style="color:#F1FA8C"> postgres</span><span style="color:#BD93F9"> -f</span><span style="color:#F1FA8C"> backup.sql</span></span>
+<span class="line"></span></code></pre>
 <h2 id="limitations">Limitations</h2>
 <p>While <code>pg_dumpall</code> is an excellent tool for backing up entire PostgreSQL clusters, it does have some limitations:</p>
 <ul>

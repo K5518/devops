@@ -9,7 +9,8 @@
 <span class="line"><span style="color:#F8F8F2">    includeArrayIndex: &#x3C;</span><span style="color:#FF79C6">string</span><span style="color:#F8F8F2">>, // Optional</span></span>
 <span class="line"><span style="color:#F8F8F2">    preserveNullAndEmptyArrays: &#x3C;</span><span style="color:#FF79C6">boolean</span><span style="color:#F8F8F2">> // Optional</span></span>
 <span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="parameters">Parameters</h2>
 <ul>
 <li><code>path</code>: A string representing the field path of the array you want to unwind. It must be prefixed with a <code>$</code> to indicate referencing a field in the input document.</li>
@@ -26,14 +27,17 @@
 <span class="line"><span style="color:#F8F8F2">    { quantity</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2">, unitPrice</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 20</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">    { quantity</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">, unitPrice</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 15</span><span style="color:#F8F8F2"> }</span></span>
 <span class="line"><span style="color:#F8F8F2">  ]</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>If you want to calculate the total revenue for each individual order, you can use the <code>$unwind</code> operator to deconstruct the <code>orders</code> array:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.sales.</span><span style="color:#50FA7B">aggregate</span><span style="color:#F8F8F2">([{ $unwind</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { path</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">$orders</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> } }]);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.sales.</span><span style="color:#50FA7B">aggregate</span><span style="color:#F8F8F2">([{ $unwind</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { path</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">$orders</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> } }]);</span></span>
+<span class="line"></span></code></pre>
 <p>The output will be:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">[</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">, item</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">itemA</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, orders</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { quantity</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 2</span><span style="color:#F8F8F2">, unitPrice</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 10</span><span style="color:#F8F8F2"> } },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">, item</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">itemA</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, orders</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { quantity</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2">, unitPrice</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 20</span><span style="color:#F8F8F2"> } },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">, item</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">itemA</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, orders</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { quantity</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">, unitPrice</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 15</span><span style="color:#F8F8F2"> } },</span></span>
-<span class="line"><span style="color:#F8F8F2">];</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">];</span></span>
+<span class="line"></span></code></pre>
 <p>Now each document represents a single order, and you can easily perform further operations like calculating the revenue for each document.</p>
 <p>Remember, the <code>$unwind</code> operator is a crucial tool for handling and analyzing array data in MongoDB, enabling you to efficiently work with complex data structures.</p>

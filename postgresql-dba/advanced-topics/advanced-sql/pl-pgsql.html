@@ -23,11 +23,13 @@
 <span class="line"><span style="color:#F8F8F2">  sum :</span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> $</span><span style="color:#BD93F9">1</span><span style="color:#FF79C6"> +</span><span style="color:#F8F8F2"> $</span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">  RETURN</span><span style="color:#F8F8F2"> sum;</span></span>
 <span class="line"><span style="color:#FF79C6">END</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">$$ </span><span style="color:#FF79C6">LANGUAGE</span><span style="color:#F8F8F2"> plpgsql;</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">$$ </span><span style="color:#FF79C6">LANGUAGE</span><span style="color:#F8F8F2"> plpgsql;</span></span>
+<span class="line"></span></code></pre>
 <p>This function takes two integers as input parameters and returns their sum.</p>
 <h2 id="using-functions-inqueries">Using Functions inQueries</h2>
 <p>You can use functions within queries like any other PostgreSQL function:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> add_numbers(</span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">10</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> add_numbers(</span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">10</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>This query would return <code>15</code>.</p>
 <h2 id="error-handling-and-exception-catches">Error Handling and Exception Catches</h2>
 <p>PL/pgSQL supports error handling through the use of <code>EXCEPTION</code> blocks. Here’s an example of a function that handles division by zero:</p>
@@ -42,7 +44,8 @@
 <span class="line"><span style="color:#F8F8F2">  RAISE WARNING </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Division by zero occurred. Returning NULL</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">  RETURN</span><span style="color:#FF79C6"> NULL</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">END</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">$$ </span><span style="color:#FF79C6">LANGUAGE</span><span style="color:#F8F8F2"> plpgsql;</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">$$ </span><span style="color:#FF79C6">LANGUAGE</span><span style="color:#F8F8F2"> plpgsql;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="triggers-and-plpgsql">Triggers and PL/pgSQL</h2>
 <p>You can also create triggers using PL/pgSQL. Triggers are user-defined functions that are invoked automatically when an event such as insert, update or delete occurs.</p>
 <p>Here’s an example of a trigger function that logs the change of user’s email address:</p>
@@ -55,6 +58,7 @@
 <span class="line"><span style="color:#FF79C6">  END</span><span style="color:#FF79C6"> IF</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">  RETURN</span><span style="color:#F8F8F2"> NEW;</span></span>
 <span class="line"><span style="color:#FF79C6">END</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">$$ </span><span style="color:#FF79C6">LANGUAGE</span><span style="color:#F8F8F2"> plpgsql;</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">$$ </span><span style="color:#FF79C6">LANGUAGE</span><span style="color:#F8F8F2"> plpgsql;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="conclusion">Conclusion</h2>
 <p>PL/pgSQL is a powerful and versatile procedural language that brings traditional programming constructs to the PostgreSQL database. It enables you to perform complex operations on the server-side and is particularly useful for creating stored procedures, functions, and triggers.</p>

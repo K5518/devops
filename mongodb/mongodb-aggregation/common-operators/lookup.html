@@ -10,7 +10,8 @@
 <span class="line"><span style="color:#8BE9FE">    "</span><span style="color:#8BE9FD">foreignField</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">&#x3C;field_from_documents_of_the_from_collection></span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#8BE9FE">    "</span><span style="color:#8BE9FD">as</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">&#x3C;output_array_field></span><span style="color:#E9F284">"</span></span>
 <span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="parameters">Parameters</h2>
 <ul>
 <li><code>from</code>: The target collection to perform the join operation with.</li>
@@ -41,6 +42,7 @@
 <span class="line"><span style="color:#F8F8F2">      },</span></span>
 <span class="line"><span style="color:#F8F8F2">    },</span></span>
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
-<span class="line"><span style="color:#F8F8F2">]);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">]);</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, <code>$lookup</code> will join the <code>orders</code> and <code>products</code> collections based on <code>productId</code>. The joined data will be stored in the new <code>productDetails</code> array field. Additional aggregation stages (<code>$unwind</code> and <code>$project</code>) are used to calculate and display the total amount of each order.</p>
 <p>So, the <code>$lookup</code> operator becomes an essential tool when you need to work with data from multiple collections and perform complex data processing tasks in MongoDB.</p>

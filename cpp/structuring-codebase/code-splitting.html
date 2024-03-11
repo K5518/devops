@@ -12,7 +12,8 @@
 <span class="line"><span style="color:#FF79C6">    void</span><span style="color:#50FA7B"> printMessage</span><span style="color:#F8F8F2">();</span></span>
 <span class="line"><span style="color:#F8F8F2">};</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#FF79C6">#endif</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">#endif</span></span>
+<span class="line"></span></code></pre>
 <h3 id="source-files-cpp">Source Files (.cpp)</h3>
 <p>Source files, with the <code>.cpp</code> extension, are responsible for implementing the actual functionality defined in the corresponding header files. They include the header files as needed and provide the function and class method definitions.</p>
 <p>Example of a source file:</p>
@@ -22,7 +23,8 @@
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">void</span><span style="color:#F8F8F2"> Example</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">printMessage</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Hello, code splitting!</span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h3 id="separate-compilation">Separate Compilation</h3>
 <p>C++ allows for separate compilation, which means that each source file can be compiled independently into an object file. These object files can then be linked together to form the final executable. This provides faster build times when making changes to a single source file since only that file needs to be recompiled, and the other object files can be reused.</p>
 <p>Example of separate compilation and linking:</p>
@@ -31,5 +33,6 @@
 <span class="line"><span style="color:#50FA7B">g++</span><span style="color:#BD93F9"> -c</span><span style="color:#F1FA8C"> example.cpp</span><span style="color:#BD93F9"> -o</span><span style="color:#F1FA8C"> example.o</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4"># Link object files together to create the executable</span></span>
-<span class="line"><span style="color:#50FA7B">g++</span><span style="color:#F1FA8C"> main.o</span><span style="color:#F1FA8C"> example.o</span><span style="color:#BD93F9"> -o</span><span style="color:#F1FA8C"> my_program</span></span></code></pre>
+<span class="line"><span style="color:#50FA7B">g++</span><span style="color:#F1FA8C"> main.o</span><span style="color:#F1FA8C"> example.o</span><span style="color:#BD93F9"> -o</span><span style="color:#F1FA8C"> my_program</span></span>
+<span class="line"></span></code></pre>
 <p>By following the code splitting technique, you can better organize your C++ codebase, making it more manageable and maintainable.</p>

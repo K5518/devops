@@ -12,7 +12,8 @@
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">COPY</span><span style="color:#F8F8F2"> . /app/</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#FF79C6">CMD</span><span style="color:#F8F8F2"> [</span><span style="color:#F1FA8C">"npm"</span><span style="color:#F8F8F2">, </span><span style="color:#F1FA8C">"start"</span><span style="color:#F8F8F2">]</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">CMD</span><span style="color:#F8F8F2"> [</span><span style="color:#F1FA8C">"npm"</span><span style="color:#F8F8F2">, </span><span style="color:#F1FA8C">"start"</span><span style="color:#F8F8F2">]</span></span>
+<span class="line"></span></code></pre>
 <p>When you build the image for the first time, Docker will execute each instruction and create a new layer for each of them. If you make some changes to the application and build the image again, Docker will check if the changed instructions affect any of the layers. If none of the layers is affected by the changes, Docker will reuse the cached layers.</p>
 <h2 id="tips-for-efficient-layer-caching">Tips for Efficient Layer Caching</h2>
 <ul>

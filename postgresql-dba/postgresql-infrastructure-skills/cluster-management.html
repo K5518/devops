@@ -4,13 +4,15 @@
 <ul>
 <li>
 <p><strong>Creating a Cluster</strong>: PostgreSQL clusters can be created using the <code>initdb</code> command or using the <code>pg_createcluster</code> utility (Debian-based distributions). It is important to properly define settings like cluster data directory, port number, and locale during creation.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>initdb -D /path/to/your/data/directory</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>initdb -D /path/to/your/data/directory</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 <li>
 <p><strong>Configuring a Cluster</strong>: The main configuration file in a PostgreSQL cluster is the <code>postgresql.conf</code>, where various parameters like listen address, port, authentication, and performance tuning can be defined. Remember to restart PostgreSQL after making changes.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>listen_addresses = 'localhost'  # or '*' for all interfaces</span></span>
 <span class="line"><span>port = 5432</span></span>
-<span class="line"><span>max_connections = 100</span></span></code></pre>
+<span class="line"><span>max_connections = 100</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 </ul>
 <h2 id="monitoring-and-maintaining-high-availability">Monitoring and Maintaining High Availability</h2>
@@ -34,12 +36,14 @@
 <ul>
 <li>
 <p><strong>Backup</strong>: Perform regular backups of your PostgreSQL cluster, including full database dumps using <code>pg_dump</code> or <code>pg_dumpall</code>, and continuous archiving with Write Ahead Logs (WAL).</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>pg_dump dbname > backup.sql</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>pg_dump dbname > backup.sql</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 <li>
 <p><strong>Point-in-Time Recovery (PITR)</strong>: Configure your system for PITR, allowing you to recover your database to a specific time or transaction using WAL archives.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>recovery_target_time = '2021-08-02 14:30:00'</span></span>
-<span class="line"><span>restore_command = 'cp /path/to/archive/%f %p'</span></span></code></pre>
+<span class="line"><span>restore_command = 'cp /path/to/archive/%f %p'</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 <li>
 <p><strong>Geo-Redundancy</strong>: Deploy read replicas in separate geographic locations or cloud regions to protect against data loss due to regional disasters.</p>

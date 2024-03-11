@@ -4,31 +4,37 @@
 <p>A clustered index determines the physical order of data inside a table. It sorts and stores the data rows in the table based on their key values. There can be only one clustered index per table.</p>
 <p>Creating a clustered index:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> CLUSTERED</span><span style="color:#FF79C6"> INDEX</span><span style="color:#F8F8F2"> index_name</span></span>
-<span class="line"><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> table_name (column_name);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> table_name (column_name);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="non-clustered-index">Non-Clustered Index</h2>
 <p>A non-clustered index doesn’t sort the physical data inside the table. Instead, it creates a separate object within a table which points back to the original table rows after creating. You can create numerous non-clustered indexes per table.</p>
 <p>Creating a non-clustered index:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> NONCLUSTERED</span><span style="color:#FF79C6"> INDEX</span><span style="color:#F8F8F2"> index_name</span></span>
-<span class="line"><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> table_name (column_name);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> table_name (column_name);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="indexes-on-multiple-columns">Indexes on Multiple Columns</h2>
 <p>An index can be built on more than one column of a table, which results in index entries having values of multiple columns. This is known as a composite index.</p>
 <p>Creating a composite index:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> INDEX</span><span style="color:#50FA7B"> index_name</span><span style="color:#F8F8F2"> </span></span>
-<span class="line"><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> table_name (column1, column2);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> table_name (column1, column2);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="unique-indexes">Unique Indexes</h2>
 <p>A unique index doesn’t allow any field to have duplicate values if the field is unique indexed. If a primary key is defined, a unique index can be applied automatically.</p>
 <p>Creating a unique index:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> UNIQUE INDEX</span><span style="color:#50FA7B"> index_name</span></span>
-<span class="line"><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> table_name (column_name);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> table_name (column_name);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="explicit-vs-implicit-indexes">Explicit vs Implicit Indexes</h2>
 <p>Indexes explicitly created by users are known as explicit indexes, while indexes automatically created by SQL Server when a primary key or unique constraint is defined are known as implicit indexes.</p>
 <p>Creating an explicit index:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> INDEX</span><span style="color:#50FA7B"> index_name</span></span>
-<span class="line"><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> table_name (column_name);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> table_name (column_name);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="full-text-indexes">Full-Text Indexes</h2>
 <p>If you’re dealing with text searching within a large string of text, full-text indexes are especially helpful. These indexes do not work using a standard comparison search but instead use word-breakers, filters, and noise-words (stop words).</p>
 <p>Creating a full-text index:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> FULLTEXT</span><span style="color:#FF79C6"> INDEX</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> table_name</span></span>
 <span class="line"><span style="color:#F8F8F2">(column_name)</span></span>
-<span class="line"><span style="color:#FF79C6">KEY</span><span style="color:#FF79C6"> INDEX</span><span style="color:#F8F8F2"> index_name;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">KEY</span><span style="color:#FF79C6"> INDEX</span><span style="color:#F8F8F2"> index_name;</span></span>
+<span class="line"></span></code></pre>
 <p>Please note that the creation and maintenance of indexes involve a trade-off between query speed and update costs. Indexes speed up retrieval at the expense of slower updates and increased storage space.</p>

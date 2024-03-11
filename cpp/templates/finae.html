@@ -31,6 +31,7 @@
 <span class="line"></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">string s </span><span style="color:#FF79C6">=</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">example</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#50FA7B">    foo</span><span style="color:#F8F8F2">(s);</span><span style="color:#6272A4"> // output: Called when T is not arithmetic</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, we define two <code>foo_impl</code> functions are specialized based on the boolean value of <code>std::is_arithmetic&#x3C;T></code>. The first one is enabled when <code>T</code> is an arithmetic type, while the second one is enabled when <code>T</code> is not an arithmetic type. The <code>foo</code> function then calls the appropriate <code>foo_impl</code> specialization based on the result of the type trait.</p>
 <p>When calling <code>foo(a)</code> with an integer, the first specialization is selected, and when calling <code>foo(s)</code> with a string, the second specialization is selected. If there is no valid specialization, the code would fail to compile.</p>

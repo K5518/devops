@@ -7,13 +7,16 @@
 <p><strong>Sequence Containers</strong>: These are linear data structures that store elements in a sequential manner. Examples include:</p>
 <ul>
 <li><code>std::vector</code>: A dynamic array that grows and shrinks at runtime.
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">vector</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> my_vector;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">vector</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> my_vector;</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li><code>std::list</code>: A doubly linked list.
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">list</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> my_list;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">list</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> my_list;</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li><code>std::deque</code>: A double-ended queue allowing insertion and deletion at both ends.
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">deque</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> my_deque;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">deque</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> my_deque;</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 </li>
@@ -21,10 +24,12 @@
 <p><strong>Associative Containers</strong>: These containers store data in a sorted manner with unique keys. Examples include:</p>
 <ul>
 <li><code>std::set</code>: A collection of unique elements sorted by keys.
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">set</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> my_set;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">set</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> my_set;</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li><code>std::map</code>: A collection of key-value pairs sorted by keys.
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">map</span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">string, </span><span style="color:#FF79C6">int></span><span style="color:#F8F8F2"> my_map;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">map</span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">string, </span><span style="color:#FF79C6">int></span><span style="color:#F8F8F2"> my_map;</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 </li>
@@ -32,10 +37,12 @@
 <p><strong>Unordered Associative Containers</strong>: These containers store data in an unordered manner using hash tables. Examples include:</p>
 <ul>
 <li><code>std::unordered_set</code>: A collection of unique elements in no specific order.
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">unordered_set</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> my_unordered_set;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">unordered_set</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> my_unordered_set;</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li><code>std::unordered_map</code>: A collection of key-value pairs in no specific order.
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">unordered_map</span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">string, </span><span style="color:#FF79C6">int></span><span style="color:#F8F8F2"> my_unordered_map;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">unordered_map</span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">string, </span><span style="color:#FF79C6">int></span><span style="color:#F8F8F2"> my_unordered_map;</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 </li>
@@ -43,13 +50,16 @@
 <p><strong>Container Adaptors</strong>: These are containers based on other existing containers. Examples include:</p>
 <ul>
 <li><code>std::stack</code>: A LIFO data structure based on deque or list.
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">stack</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> my_stack;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">stack</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> my_stack;</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li><code>std::queue</code>: A FIFO data structure based on deque or list.
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">queue</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> my_queue;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">queue</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> my_queue;</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li><code>std::priority_queue</code>: A sorted queue based on vector or deque.
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">priority_queue</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> my_priority_queue;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">priority_queue</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> my_priority_queue;</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 </li>
@@ -59,7 +69,8 @@
 <p>Some examples include <code>std::find</code>, <code>std::replace</code>, <code>std::sort</code>, and <code>std::binary_search</code>.</p>
 <p>For example, to sort a vector, you can use the following code:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">vector</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> my_vec </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> {</span><span style="color:#BD93F9">4</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3</span><span style="color:#F8F8F2">};</span></span>
-<span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">sort</span><span style="color:#F8F8F2">(my_vec.</span><span style="color:#50FA7B">begin</span><span style="color:#F8F8F2">(), my_vec.</span><span style="color:#50FA7B">end</span><span style="color:#F8F8F2">());</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">sort</span><span style="color:#F8F8F2">(my_vec.</span><span style="color:#50FA7B">begin</span><span style="color:#F8F8F2">(), my_vec.</span><span style="color:#50FA7B">end</span><span style="color:#F8F8F2">());</span></span>
+<span class="line"></span></code></pre>
 <h2 id="iterators">Iterators</h2>
 <p>Iterators are a fundamental concept in the STL, as they provide a unified way to access elements in containers. Iterators can be thought of as an advanced form of pointers.</p>
 <p>Each container has its own iterator type, which can be used to traverse elements and modify values. The most common iterator operations are <code>begin()</code> and <code>end()</code> for getting iterators pointing to the first and one past the last element of a container, respectively.</p>
@@ -67,5 +78,6 @@
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">vector</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> my_vec </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> {</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">};</span></span>
 <span class="line"><span style="color:#FF79C6">for</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">auto</span><span style="color:#F8F8F2"> it </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> my_vec.</span><span style="color:#50FA7B">begin</span><span style="color:#F8F8F2">(); it </span><span style="color:#FF79C6">!=</span><span style="color:#F8F8F2"> my_vec.</span><span style="color:#50FA7B">end</span><span style="color:#F8F8F2">(); </span><span style="color:#FF79C6">++</span><span style="color:#F8F8F2">it) {</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2">it </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#E9F284"> "</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>This is just a brief overview of the C++ Standard Template Library. There are many other features and functions available in the STL, and familiarizing yourself with them is crucial for efficient C++ programming.</p>

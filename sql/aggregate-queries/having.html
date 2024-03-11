@@ -8,7 +8,8 @@
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition</span></span>
 <span class="line"><span style="color:#FF79C6">GROUP BY</span><span style="color:#F8F8F2"> column_name(s)</span></span>
 <span class="line"><span style="color:#FF79C6">HAVING</span><span style="color:#F8F8F2"> condition</span></span>
-<span class="line"><span style="color:#FF79C6">ORDER BY</span><span style="color:#F8F8F2"> column_name(s);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">ORDER BY</span><span style="color:#F8F8F2"> column_name(s);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="example">Example</h2>
 <p>Consider this “Orders” table:</p>
 
@@ -66,7 +67,8 @@
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> Customer, </span><span style="color:#8BE9FD">SUM</span><span style="color:#F8F8F2">(Amount)</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Orders</span></span>
 <span class="line"><span style="color:#FF79C6">GROUP BY</span><span style="color:#F8F8F2"> Customer</span></span>
-<span class="line"><span style="color:#FF79C6">HAVING</span><span style="color:#8BE9FD"> SUM</span><span style="color:#F8F8F2">(Amount) </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 3000</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">HAVING</span><span style="color:#8BE9FD"> SUM</span><span style="color:#F8F8F2">(Amount) </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 3000</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>As a result, the query returns:</p>
 
 

@@ -15,7 +15,8 @@
 <span class="line"><span style="color:#FF79C6">  FROM</span><span style="color:#F8F8F2"> employees e</span></span>
 <span class="line"><span style="color:#FF79C6">  INNER JOIN</span><span style="color:#F8F8F2"> ancestors a </span><span style="color:#FF79C6">ON</span><span style="color:#BD93F9"> a</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">employee_id</span><span style="color:#FF79C6"> =</span><span style="color:#BD93F9"> e</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">manager_id</span></span>
 <span class="line"><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> ancestors;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> ancestors;</span></span>
+<span class="line"></span></code></pre>
 <p>In this code snippet, the first query is the anchor member that fetches the employees with no manager. The second part is the recursive member, continuously fetching managers until none are left.</p>
 <h2 id="syntax-of-recursive-cte">Syntax of Recursive CTE</h2>
 <p>Here’s the general structure of a recursive CTE:</p>
@@ -33,6 +34,7 @@
 <span class="line"><span style="color:#FF79C6">  FROM</span><span style="color:#F8F8F2"> table_name</span></span>
 <span class="line"><span style="color:#FF79C6">  INNER JOIN</span><span style="color:#F8F8F2"> cte_name </span><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> condition</span></span>
 <span class="line"><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> cte_name;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> cte_name;</span></span>
+<span class="line"></span></code></pre>
 <p>Note: some database systems such as MySQL, PostgreSQL, and SQLite use <code>WITH RECURSIVE</code> for recursive CTEs. Others like SQL Server, Oracle, and DB2 use just <code>WITH</code>.</p>
 <p>Remember to be careful when setting the conditions for your recursive query to avoid infinite loops.</p>

@@ -36,7 +36,8 @@
 <span class="line"><span style="color:#F8F8F2">    }</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, we create a <code>shared_ptr</code> named <code>shared</code> that manages a <code>MyClass</code> object. By assigning it to a <code>weak_ptr</code> named <code>weak</code>, we store a non-owning reference to the object. Inside the inner scope, we create a new <code>shared_ptr</code> named <code>sharedFromWeak</code> using <code>weak.lock()</code> to safely use the object. After the inner scope, the <code>MyClass</code> object is destroyed since <code>shared</code> goes out of scope, and any further attempt to create a <code>shared_ptr</code> from <code>weak</code> will fail as the object is already destroyed.</p>
 <ul>
 <li><a href="https://en.cppreference.com/w/cpp/memory/weak_ptr" rel="noopener noreferrer nofollow" target="_blank">CPP Reference</a></li>

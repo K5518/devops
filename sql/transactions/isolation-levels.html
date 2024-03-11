@@ -7,7 +7,8 @@ This is the lowest level of isolation. One transaction may read not yet committe
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SET</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#FF79C6"> ISOLATION</span><span style="color:#FF79C6"> LEVEL</span><span style="color:#FF79C6"> READ</span><span style="color:#FF79C6"> UNCOMMITTED</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#6272A4">-- Execute your SQL commands here</span></span>
-<span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>READ COMMITTED</strong>
@@ -15,7 +16,8 @@ A transaction only sees data changes committed before it started, averting “Di
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SET</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#FF79C6"> ISOLATION</span><span style="color:#FF79C6"> LEVEL</span><span style="color:#FF79C6"> READ</span><span style="color:#FF79C6"> COMMITTED</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#6272A4">-- Execute your SQL commands here</span></span>
-<span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>REPEATABLE READ</strong>
@@ -23,7 +25,8 @@ Here, once a transaction reads a row, any other transaction’s writes (changes)
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SET</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#FF79C6"> ISOLATION</span><span style="color:#FF79C6"> LEVEL</span><span style="color:#FF79C6"> REPEATABLE</span><span style="color:#FF79C6"> READ</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#6272A4">-- Execute your SQL commands here</span></span>
-<span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>SERIALIZABLE</strong>
@@ -31,7 +34,8 @@ This is the highest level of isolation. It avoids “Dirty Reads”, “Non-repe
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SET</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#FF79C6"> ISOLATION</span><span style="color:#FF79C6"> LEVEL</span><span style="color:#FF79C6"> SERIALIZABLE</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#6272A4">-- Execute your SQL commands here</span></span>
-<span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ol>
 <p>Remember, higher levels of isolation usually provide more consistency but can potentially decrease performance due to increased waiting times for locks.</p>

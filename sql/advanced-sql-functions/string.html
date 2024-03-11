@@ -2,38 +2,48 @@
 <p>In SQL, you can perform various operations on strings, including extracting a string, combining two or more strings, and converting a case of a string.</p>
 <h2 id="concat-function">CONCAT Function</h2>
 <p>The CONCAT function combines two or more strings into one string. The following is the syntax:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">CONCAT</span><span style="color:#F8F8F2">(string1, string2, ...., string_n)</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">CONCAT</span><span style="color:#F8F8F2">(string1, string2, ...., string_n)</span></span>
+<span class="line"></span></code></pre>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> CONCAT</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Hello </span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">World</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> CONCAT</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Hello </span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">World</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>The output of the above SQL statement will be ‘Hello World’.</p>
 <h2 id="substring-function">SUBSTRING Function</h2>
 <p>The SUBSTRING function extracts a string from a given string. The syntax looks as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">SUBSTRING</span><span style="color:#F8F8F2">(string, </span><span style="color:#FF79C6">start</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">length</span><span style="color:#F8F8F2">)</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">SUBSTRING</span><span style="color:#F8F8F2">(string, </span><span style="color:#FF79C6">start</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">length</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"></span></code></pre>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> SUBSTRING</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">SQL Tutorial</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> SUBSTRING</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">SQL Tutorial</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>The output of the above query will be ‘SQL’.</p>
 <h2 id="length-function">LENGTH Function</h2>
 <p>The LENGTH function returns the length of a string. The syntax is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">LENGTH</span><span style="color:#F8F8F2">(string)</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">LENGTH</span><span style="color:#F8F8F2">(string)</span></span>
+<span class="line"></span></code></pre>
 <p>Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> LENGTH</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Hello World</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> LENGTH</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Hello World</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>The output of the above SQL statement will be 11.</p>
 <h2 id="upper-and-lower-function">UPPER and LOWER Function</h2>
 <p>The UPPER function converts all the letters in a string to uppercase, whereas the LOWER function to lowercase.</p>
 <p>Syntax:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">UPPER</span><span style="color:#F8F8F2">(string)</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#8BE9FD">LOWER</span><span style="color:#F8F8F2">(string)</span></span></code></pre>
+<span class="line"><span style="color:#8BE9FD">LOWER</span><span style="color:#F8F8F2">(string)</span></span>
+<span class="line"></span></code></pre>
 <p>Examples:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> UPPER</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Hello World</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> LOWER</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Hello World</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> LOWER</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Hello World</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>The output of the above SQL statements will be ‘HELLO WORLD’ and ‘hello world’ respectively.</p>
 <h2 id="trim-function">TRIM Function</h2>
 <p>The TRIM function removes leading and trailing spaces of a string. You can also remove other specified characters.</p>
 <p>Syntax:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">TRIM</span><span style="color:#F8F8F2">([LEADING|TRAILING|BOTH] [removal_string] </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> original_string)</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">TRIM</span><span style="color:#F8F8F2">([LEADING|TRAILING|BOTH] [removal_string] </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> original_string)</span></span>
+<span class="line"></span></code></pre>
 <p>Example:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> TRIM</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">   Hello World   </span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> TRIM</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">h</span><span style="color:#E9F284">'</span><span style="color:#FF79C6"> FROM</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">hello</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> TRIM</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">h</span><span style="color:#E9F284">'</span><span style="color:#FF79C6"> FROM</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">hello</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>The output of the first query will be ‘Hello World’ and that of the second query will be ‘ello’.</p>

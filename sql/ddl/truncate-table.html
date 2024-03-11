@@ -3,11 +3,13 @@
 <p>It effectively eliminates all records in a table, but not the table itself. Unlike the <code>DELETE</code> statement, <code>TRUNCATE TABLE</code> does not generate individual row delete statements, so the usual overhead for logging or locking does not apply.</p>
 <h2 id="syntax">Syntax</h2>
 <p>In SQL, the <code>TRUNCATE TABLE</code> statement is quite simple:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">TRUNCATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> table_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">TRUNCATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> table_name;</span></span>
+<span class="line"></span></code></pre>
 <p>In this command, “table_name” refers to the name of the table you wish to clear.</p>
 <h2 id="example">Example</h2>
 <p>If you have a table named <code>Orders</code> and you want to delete all its records, you would use:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">TRUNCATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> Orders;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">TRUNCATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> Orders;</span></span>
+<span class="line"></span></code></pre>
 <p>After executing this statement, the <code>Orders</code> table would still exist, but it would be empty.</p>
 <p>Remember, while <code>TRUNCATE TABLE</code> is faster and uses fewer system and transaction log resources than <code>DELETE</code>, it does not invoke triggers and cannot be rolled back, so use with caution.</p>
 <h2 id="limitations">Limitations</h2>

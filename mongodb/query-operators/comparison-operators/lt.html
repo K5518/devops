@@ -6,7 +6,8 @@
 <span class="line"><span style="color:#F8F8F2">  field: {</span></span>
 <span class="line"><span style="color:#F8F8F2">    $lt: value;</span></span>
 <span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="usage">Usage</h2>
 <p>For instance, let’s assume you have a collection named <code>products</code> with the following documents:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">[</span></span>
@@ -14,12 +15,15 @@
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 2</span><span style="color:#F8F8F2">, name</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Smartphone</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 600</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2">, name</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Tablet</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 300</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 4</span><span style="color:#F8F8F2">, name</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Smartwatch</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 200</span><span style="color:#F8F8F2"> },</span></span>
-<span class="line"><span style="color:#F8F8F2">];</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">];</span></span>
+<span class="line"></span></code></pre>
 <p>To find all products with a price less than 500, you can use the following query:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.products.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ price</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $lt</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 500</span><span style="color:#F8F8F2"> } });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.products.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ price</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $lt</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 500</span><span style="color:#F8F8F2"> } });</span></span>
+<span class="line"></span></code></pre>
 <p>This query will return the following documents:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">[</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2">, name</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Tablet</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 300</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 4</span><span style="color:#F8F8F2">, name</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Smartwatch</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 200</span><span style="color:#F8F8F2"> },</span></span>
-<span class="line"><span style="color:#F8F8F2">];</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">];</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, the query checks for documents where the <code>price</code> field has a value less than 500 and returns the matching documents from the <code>products</code> collection.</p>

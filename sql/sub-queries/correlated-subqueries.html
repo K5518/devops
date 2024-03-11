@@ -6,7 +6,8 @@
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2">  column_name OPERATOR</span></span>
 <span class="line"><span style="color:#F8F8F2">  (</span><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column_name [, column_name...]</span></span>
 <span class="line"><span style="color:#FF79C6">   FROM</span><span style="color:#F8F8F2"> table_name</span></span>
-<span class="line"><span style="color:#FF79C6">   WHERE</span><span style="color:#F8F8F2"> condition [table1.column_name = table2.column_name...]);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">   WHERE</span><span style="color:#F8F8F2"> condition [table1.column_name = table2.column_name...]);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="code-example">Code Example</h2>
 <p>For instance, if you want to get the employees whose salaries are above their department’s average salaries, it can be queried with a correlated subquery as follows:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#BD93F9"> e1</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">employee_name</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">e1</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">salary</span></span>
@@ -14,7 +15,8 @@
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">></span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#F8F8F2">   (</span><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> AVG</span><span style="color:#F8F8F2">(salary)</span></span>
 <span class="line"><span style="color:#FF79C6">   FROM</span><span style="color:#F8F8F2"> employee e2</span></span>
-<span class="line"><span style="color:#FF79C6">   WHERE</span><span style="color:#BD93F9"> e1</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">department</span><span style="color:#FF79C6"> =</span><span style="color:#BD93F9"> e2</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">department</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">   WHERE</span><span style="color:#BD93F9"> e1</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">department</span><span style="color:#FF79C6"> =</span><span style="color:#BD93F9"> e2</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">department</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>In the example above, the correlated subquery (the inner query) calculates the average salary for each department. The outer query then compares the salary of each employee to the average salary of their respective department. It returns the employees whose salaries are above their department’s average. The correlated subquery is executed once for each row selected by the outer query.</p>
 <p>Also note that <code>e1</code> and <code>e2</code> are the aliases of the <code>employee</code> table so that we can use it in both the inner query and outer query. Here, <code>e2.department</code> in the inner query comes from the outer query’s <code>e1.department</code>.</p>
 <p>Thus, a correlated subquery is a subquery that depends on the outer SQL query for its values. This means that the subquery is run once for every Row in the outer query, often resulting in quite a bit of processing, and thus slower results.</p>

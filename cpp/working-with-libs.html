@@ -4,17 +4,21 @@
 <p>Static libraries are incorporated into your program during compile time. They are linked with your code, creating a larger executable file, but it does not require any external files during runtime.</p>
 <p>To create a static library, you’ll need to compile your source files into object files, then bundle them into an archive. You can use the following commands:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>g++ -c sourcefile.cpp -o objectfile.o</span></span>
-<span class="line"><span>ar rcs libmystaticlibrary.a objectfile.o</span></span></code></pre>
+<span class="line"><span>ar rcs libmystaticlibrary.a objectfile.o</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>To use a static library, you need to include the header files in your source code and then link the library during the compilation process:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>g++ main.cpp -o myprogram -L/path/to/your/library/ -lmystaticlibrary</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>g++ main.cpp -o myprogram -L/path/to/your/library/ -lmystaticlibrary</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>Replace <code>/path/to/your/library/</code> with the path where your <code>libmystaticlibrary.a</code> file is located.</p>
 <p><strong>2. Dynamic Libraries</strong></p>
 <p>Dynamic libraries are loaded during runtime, which means that your executable file only contains references to these libraries. The libraries need to be available on the system where your program is running.</p>
 <p>To create a dynamic library, you’ll need to compile your source files into object files, then create a shared library:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>g++ -c -fPIC sourcefile.cpp -o objectfile.o</span></span>
-<span class="line"><span>g++ -shared -o libmydynamiclibrary.so objectfile.o</span></span></code></pre>
+<span class="line"><span>g++ -shared -o libmydynamiclibrary.so objectfile.o</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>To use a dynamic library, include the library’s header files in your source code and then link the library during the compilation process:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>g++ main.cpp -o myprogram -L/path/to/your/library/ -lmydynamiclibrary</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>g++ main.cpp -o myprogram -L/path/to/your/library/ -lmydynamiclibrary</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>Replace <code>/path/to/your/library/</code> with the path where your <code>libmydynamiclibrary.so</code> file is located.</p>
 <p><strong>NOTE:</strong> When using dynamic libraries, make sure the library is in the system’s search path for shared libraries. You may need to update the <code>LD_LIBRARY_PATH</code> environment variable on Unix/Linux systems or the <code>PATH</code> variable on Windows.</p>
 <p>In conclusion, using libraries in C++ involves creating or obtaining a library (static or dynamic), including the library’s header files in your source code, and linking the library during the compilation process. Be aware of the differences between static and dynamic libraries, and choose the right approach to suit your needs.</p>

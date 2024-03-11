@@ -26,7 +26,8 @@
 <span class="line"><span style="color:#F8F8F2">    },</span></span>
 <span class="line"><span style="color:#F8F8F2">  ],</span></span>
 <span class="line"><span style="color:#F8F8F2">  roles</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> [],</span></span>
-<span class="line"><span style="color:#F8F8F2">});</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">});</span></span>
+<span class="line"></span></code></pre>
 <p>In the example above, we created a custom role <code>customRole</code> with privileges that allow users with this role to perform <code>find</code>, <code>insert</code>, <code>update</code>, and <code>remove</code> operations on all collections within the <code>exampleDB</code> database.</p>
 <h2 id="assigning-roles-to-users">Assigning Roles to Users</h2>
 <p>To ensure that users have the appropriate level of access and permissions, you assign specific roles to them. When creating a new user, you can assign roles using the <code>db.createUser()</code> method. Here’s an example:</p>
@@ -37,6 +38,7 @@
 <span class="line"><span style="color:#F8F8F2">    { role</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">read</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, db</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">exampleDB</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">    { role</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">customRole</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, db</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">exampleDB</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  ],</span></span>
-<span class="line"><span style="color:#F8F8F2">});</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">});</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, we created a new user <code>exampleUser</code> and assigned the built-in <code>read</code> role and a custom <code>customRole</code> role.</p>
 <p>By effectively using role-based access control, you can strengthen the security of your MongoDB database and protect sensitive data from unauthorized access.</p>

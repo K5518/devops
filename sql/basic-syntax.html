@@ -1,22 +1,27 @@
 <div data-github-url="https://github.com/kamranahmedse/developer-roadmap/tree/master/src/data/roadmaps/sql/content/101-basic-syntax/index.md"></div> <h1 id="basic-sql-syntax">Basic SQL Syntax</h1>
 <p>SQL, or Structured Query Language, uses a specific set of commands to interact with a database. It includes the use of keyword-like statements to accomplish several tasks such as creating, deleting, or modifying tables, retrieving, inserting, or modifying data.</p>
 <p>The <code>SELECT</code> statement is used to retrieve data from a database. The data returned is stored in a result table, called the result-set.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2 </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2 </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name;</span></span>
+<span class="line"></span></code></pre>
 <p>The <code>INSERT INTO</code> statement is used to insert new rows of data in a table.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">INSERT INTO</span><span style="color:#F8F8F2"> table_name (column1, column2, column3)</span></span>
-<span class="line"><span style="color:#FF79C6">VALUES</span><span style="color:#F8F8F2"> (value1, value2, value3);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">VALUES</span><span style="color:#F8F8F2"> (value1, value2, value3);</span></span>
+<span class="line"></span></code></pre>
 <p>The <code>UPDATE</code> statement is used to modify existing records in a table.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">UPDATE</span><span style="color:#F8F8F2"> table_name</span></span>
 <span class="line"><span style="color:#FF79C6">SET</span><span style="color:#F8F8F2"> column1 </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> value1, column2 </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> value2</span></span>
-<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span>
+<span class="line"></span></code></pre>
 <p>The <code>DELETE</code> statement is used to remove rows from a table.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DELETE</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> table_name </span><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DELETE</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> table_name </span><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span>
+<span class="line"></span></code></pre>
 <p>The <code>CREATE TABLE</code> statement is used to create a new table in a database.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> table_name</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    column1 datatype constraints,</span></span>
 <span class="line"><span style="color:#F8F8F2">    column2 datatype constraints,</span></span>
 <span class="line"><span style="color:#F8F8F2">    column3 datatype constraints</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>The <code>ALTER TABLE </code> statement is used to add, delete/drop or modify columns in the existing table. It is also used to add and drop constraints on the existing table.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">-- To add a column</span></span>
 <span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> table_name</span></span>
@@ -28,9 +33,11 @@
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">-- To modify existing column</span></span>
 <span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> table_name</span></span>
-<span class="line"><span style="color:#FF79C6">MODIFY</span><span style="color:#F8F8F2"> COLUMN column_name datatype;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">MODIFY</span><span style="color:#F8F8F2"> COLUMN column_name datatype;</span></span>
+<span class="line"></span></code></pre>
 <p>The <code>DROP TABLE</code> statement is used to drop an existing table in a database.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> table_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> table_name;</span></span>
+<span class="line"></span></code></pre>
 <p>Learn more about SQL from the following resources:</p>
 <ul>
 <li><a href="https://mode.com/sql-tutorial/" rel="noopener noreferrer nofollow" target="_blank">SQL Tutorial - Mode</a></li>

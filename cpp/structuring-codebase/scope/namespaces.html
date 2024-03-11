@@ -4,7 +4,8 @@
 <p>Here’s the syntax for declaring a namespace:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">namespace</span><span style="color:#F8F8F2"> identifier {</span></span>
 <span class="line"><span style="color:#6272A4">    // code elements</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="using-namespaces">Using Namespaces</h2>
 <p>To access elements within a namespace, you can use the scope resolution operator <code>::</code>. Here are some examples:</p>
 <h3 id="declaring-and-accessing-a-namespace">Declaring and accessing a namespace</h3>
@@ -20,7 +21,8 @@
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Cat's name: </span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> animals</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cat </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h3 id="nesting-namespaces">Nesting namespaces</h3>
 <p>Namespaces can be nested within other namespaces:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
@@ -38,7 +40,8 @@
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Inner y: </span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> outer</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">inner</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">y </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="using-keyword"><code>using</code> Keyword</h2>
 <p>You can use the <code>using</code> keyword to import namespaced elements into the current scope. However, this might lead to name conflicts if multiple namespaces have elements with the same name.</p>
 <h3 id="using-a-single-element-from-a-namespace">Using a single element from a namespace</h3>
@@ -55,7 +58,8 @@
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Dog's name: </span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> dog </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h3 id="using-the-entire-namespace">Using the entire namespace</h3>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
 <span class="line"></span>
@@ -71,5 +75,6 @@
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Cat's name: </span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> cat </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>In conclusion, namespaces are a useful mechanism in C++ to organize code, avoid naming conflicts, and manage the visibility of code elements.</p>

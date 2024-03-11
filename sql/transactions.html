@@ -8,14 +8,17 @@
 </ul>
 <h2 id="begin-transaction">BEGIN TRANSACTION</h2>
 <p>This command is used to start a new transaction.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#F8F8F2">; </span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#F8F8F2">; </span></span>
+<span class="line"></span></code></pre>
 <h2 id="commit">COMMIT</h2>
 <p>The <code>COMMIT</code> command is the transactional command used to save changes invoked by a transaction to the database.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>When you commit the transaction, the changes are permanently saved in the database.</p>
 <h2 id="rollback">ROLLBACK</h2>
 <p>The <code>ROLLBACK</code> command is the transactional command used to undo transactions that have not already been saved to the database.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ROLLBACK</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ROLLBACK</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>When you roll back a transaction, all changes made since the last commit in the database are undone, and the database is rolled back to the state it was in at the last commit.</p>
 <h2 id="transaction-example">Transaction Example</h2>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#F8F8F2">;</span></span>
@@ -26,6 +29,7 @@
 <span class="line"><span style="color:#FF79C6">IF</span><span style="color:#F8F8F2"> @@ERROR </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 0</span></span>
 <span class="line"><span style="color:#FF79C6">   COMMIT</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">ELSE</span></span>
-<span class="line"><span style="color:#FF79C6">   ROLLBACK</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">   ROLLBACK</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, we are transferring 100 units from account 1 to account 2 inside a transaction. If any errors occurred during any of the update statements (captured by <code>@@ERROR</code>), the transaction is rolled back, otherwise, it is committed.</p>
 <p>Remember that for the transaction to be successful, all commands must execute successfully. If any command fails, the transaction fails, the database state is left unchanged and an error is returned.</p>

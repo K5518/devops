@@ -25,17 +25,20 @@
 <p><strong>Monitoring active queries:</strong> To get a list of currently running queries, you can use the following query:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>SELECT pid, query, state, query_start</span></span>
 <span class="line"><span>FROM pg_stat_activity</span></span>
-<span class="line"><span>WHERE state = 'active';</span></span></code></pre>
+<span class="line"><span>WHERE state = 'active';</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 <li>
 <p><strong>Identifying idle transactions:</strong> To detect idle transactions, which can cause performance issues, use this query:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>SELECT pid, query, state, xact_start</span></span>
 <span class="line"><span>FROM pg_stat_activity</span></span>
-<span class="line"><span>WHERE state = 'idle in transaction';</span></span></code></pre>
+<span class="line"><span>WHERE state = 'idle in transaction';</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 <li>
 <p><strong>Terminating long-running queries:</strong> To terminate specific long-running queries or backends, you can use the <code>pg_terminate_backend()</code> function. For example, to terminate a backend with the process ID <code>12345</code>:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>SELECT pg_terminate_backend(12345);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>SELECT pg_terminate_backend(12345);</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>

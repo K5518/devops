@@ -14,12 +14,14 @@
 <span class="line"></span>
 <span class="line"><span style="color:#50FA7B">PYBIND11_MODULE</span><span style="color:#F8F8F2">(example, m) {</span></span>
 <span class="line"><span style="color:#F8F8F2">    m.</span><span style="color:#50FA7B">def</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">add</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">&#x26;</span><span style="color:#F8F8F2">add, </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">A function that adds two numbers</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>Running the above example will create a Python module named <code>example</code>, containing a single function <code>add</code>. You can use this new function in Python as follows:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> example</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#F8F8F2">result </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> example.add(</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#8BE9FD">print</span><span style="color:#F8F8F2">(result)  </span><span style="color:#6272A4"># Output: 3</span></span></code></pre>
+<span class="line"><span style="color:#8BE9FD">print</span><span style="color:#F8F8F2">(result)  </span><span style="color:#6272A4"># Output: 3</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Exposing a C++ class to Python:</li>
 </ul>
@@ -43,7 +45,8 @@
 <span class="line"><span style="color:#F8F8F2">        .</span><span style="color:#50FA7B">def</span><span style="color:#F8F8F2">(py</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">init</span><span style="color:#F8F8F2">&#x3C;</span><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#8BE9FD;font-style:italic">string</span><span style="color:#FF79C6"> &#x26;</span><span style="color:#F8F8F2">>())</span></span>
 <span class="line"><span style="color:#F8F8F2">        .</span><span style="color:#50FA7B">def</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">name</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">&#x26;</span><span style="color:#F8F8F2">MyTestClass</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">name)</span></span>
 <span class="line"><span style="color:#F8F8F2">        .</span><span style="color:#50FA7B">def</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">setName</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">&#x26;</span><span style="color:#F8F8F2">MyTestClass</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">setName);</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>After compiling the code and importing it into Python, you can create <code>MyTestClass</code> instances and call their <code>name()</code> and <code>setName(string)</code> methods:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> example</span></span>
 <span class="line"></span>
@@ -51,4 +54,5 @@
 <span class="line"><span style="color:#8BE9FD">print</span><span style="color:#F8F8F2">(obj.name())  </span><span style="color:#6272A4"># Output: some_name</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#F8F8F2">obj.setName(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">new_name</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#8BE9FD">print</span><span style="color:#F8F8F2">(obj.name())  </span><span style="color:#6272A4"># Output: new_name</span></span></code></pre>
+<span class="line"><span style="color:#8BE9FD">print</span><span style="color:#F8F8F2">(obj.name())  </span><span style="color:#6272A4"># Output: new_name</span></span>
+<span class="line"></span></code></pre>

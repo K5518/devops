@@ -15,7 +15,8 @@
 <span class="line"><span>|   |-- header.h</span></span>
 <span class="line"><span>|-- src/</span></span>
 <span class="line"><span>|   |-- main.cpp</span></span>
-<span class="line"><span>|-- Makefile</span></span></code></pre>
+<span class="line"><span>|-- Makefile</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>A simple Makefile for this project could be as follows:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4"># Variables</span></span>
 <span class="line"><span style="color:#F8F8F2">CXX </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> g++</span></span>
@@ -34,7 +35,8 @@
 <span class="line"><span style="color:#6272A4"># Phony targets</span></span>
 <span class="line"><span style="color:#8BE9FD">.PHONY</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> clean</span></span>
 <span class="line"><span style="color:#8BE9FD">clean</span><span style="color:#FF79C6">:</span></span>
-<span class="line"><span style="color:#F8F8F2">	rm -f </span><span style="color:#FF79C6">$(</span><span style="color:#F8F8F2">OBJ</span><span style="color:#FF79C6">)</span><span style="color:#FF79C6"> $(</span><span style="color:#F8F8F2">EXE</span><span style="color:#FF79C6">)</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">	rm -f </span><span style="color:#FF79C6">$(</span><span style="color:#F8F8F2">OBJ</span><span style="color:#FF79C6">)</span><span style="color:#FF79C6"> $(</span><span style="color:#F8F8F2">EXE</span><span style="color:#FF79C6">)</span></span>
+<span class="line"></span></code></pre>
 <p>With this Makefile, you can simply run <code>make</code> in the terminal to build the project, and <code>make clean</code> to remove the output files. The Makefile specifies the dependencies between the source code, object files, and the final executable, as well as the commands to compile and link them.</p>
 <h2 id="summary">Summary</h2>
 <p>Makefiles provide a powerful way to automate building C++ projects using the <code>make</code> utility. They describe the dependencies and commands required to generate output files from source code, saving time and ensuring consistency in the build process.</p>

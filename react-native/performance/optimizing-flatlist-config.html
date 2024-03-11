@@ -8,7 +8,8 @@
 <span class="line"><span style="color:#50FA7B;font-style:italic">  renderItem</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">renderItem</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  keyExtractor</span><span style="color:#FF79C6">={</span><span style="color:#FFB86C;font-style:italic">item</span><span style="color:#FF79C6"> =></span><span style="color:#F8F8F2"> item.id</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  windowSize</span><span style="color:#FF79C6">={</span><span style="color:#BD93F9">10</span><span style="color:#FF79C6">}</span></span>
-<span class="line"><span style="color:#F8F8F2">/></span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">/></span></span>
+<span class="line"></span></code></pre>
 <h2 id="2-set-removeclippedsubviews">2. Set <code>removeClippedSubviews</code></h2>
 <p>Enable the <code>removeClippedSubviews</code> prop to unmount components that are off the screen.</p>
 <p>Example:</p>
@@ -17,7 +18,8 @@
 <span class="line"><span style="color:#50FA7B;font-style:italic">  renderItem</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">renderItem</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  keyExtractor</span><span style="color:#FF79C6">={</span><span style="color:#FFB86C;font-style:italic">item</span><span style="color:#FF79C6"> =></span><span style="color:#F8F8F2"> item.id</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  removeClippedSubviews</span><span style="color:#FF79C6">={</span><span style="color:#BD93F9">true</span><span style="color:#FF79C6">}</span></span>
-<span class="line"><span style="color:#F8F8F2">/></span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">/></span></span>
+<span class="line"></span></code></pre>
 <h2 id="3-set-maxtorenderperbatch">3. Set <code>maxToRenderPerBatch</code></h2>
 <p><code>maxToRenderPerBatch</code> prop helps to control the number of items to be rendered per batch. By default, this is set to 10. Optimize this value according to your list’s requirements.</p>
 <p>Example:</p>
@@ -26,7 +28,8 @@
 <span class="line"><span style="color:#50FA7B;font-style:italic">  renderItem</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">renderItem</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  keyExtractor</span><span style="color:#FF79C6">={</span><span style="color:#FFB86C;font-style:italic">item</span><span style="color:#FF79C6"> =></span><span style="color:#F8F8F2"> item.id</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  maxToRenderPerBatch</span><span style="color:#FF79C6">={</span><span style="color:#BD93F9">5</span><span style="color:#FF79C6">}</span></span>
-<span class="line"><span style="color:#F8F8F2">/></span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">/></span></span>
+<span class="line"></span></code></pre>
 <h2 id="4-set-initialnumtorender">4. Set <code>initialNumToRender</code></h2>
 <p><code>initialNumToRender</code> is used to set the number of items to be rendered initially. Setting this value to a reasonable number can help in avoiding blank screens on load.</p>
 <p>Example:</p>
@@ -35,7 +38,8 @@
 <span class="line"><span style="color:#50FA7B;font-style:italic">  renderItem</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">renderItem</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  keyExtractor</span><span style="color:#FF79C6">={</span><span style="color:#FFB86C;font-style:italic">item</span><span style="color:#FF79C6"> =></span><span style="color:#F8F8F2"> item.id</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  initialNumToRender</span><span style="color:#FF79C6">={</span><span style="color:#BD93F9">10</span><span style="color:#FF79C6">}</span></span>
-<span class="line"><span style="color:#F8F8F2">/></span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">/></span></span>
+<span class="line"></span></code></pre>
 <h2 id="5-set-getitemlayout">5. Set <code>getItemLayout</code></h2>
 <p>Using the <code>getItemLayout</code> prop allows you to specify the exact dimensions of each item. This prevents the need for measuring them dynamically, resulting in improved performance.</p>
 <p>Example:</p>
@@ -46,7 +50,8 @@
 <span class="line"><span style="color:#50FA7B;font-style:italic">  getItemLayout</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">(</span><span style="color:#FFB86C;font-style:italic">data</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">index</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    {length: </span><span style="color:#FFB86C;font-style:italic">ITEM_HEIGHT</span><span style="color:#F8F8F2">, offset: </span><span style="color:#FFB86C;font-style:italic">ITEM_HEIGHT</span><span style="color:#F8F8F2"> * </span><span style="color:#FFB86C;font-style:italic">index</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">index</span><span style="color:#F8F8F2">}</span></span>
 <span class="line"><span style="color:#F8F8F2">  )</span><span style="color:#FF79C6">}</span></span>
-<span class="line"><span style="color:#F8F8F2">/></span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">/></span></span>
+<span class="line"></span></code></pre>
 <p>Implementing these optimizations in your FlatList config will help improve the performance of large lists in your React Native application.</p>
 <ul>
 <li><a href="https://reactnative.dev/docs/optimizing-flatlist-configuration" rel="noopener noreferrer nofollow" target="_blank">Optimizing Flatlist Configuration</a></li>

@@ -9,22 +9,26 @@
 <span class="line"><span style="color:#F8F8F2">};</span></span>
 <span class="line"><span style="color:#FF79C6">void</span><span style="color:#50FA7B"> myFunction</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#FF79C6">  static</span><span style="color:#FF79C6"> int</span><span style="color:#F8F8F2"> local_var;</span><span style="color:#6272A4">    // Static storage duration</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Thread Storage Duration</strong>: Objects with thread storage duration exist for the lifetime of the thread they belong to. They are created when a thread starts and destroyed when the thread exits. Thread storage duration can be specified using the <code>thread_local</code> keyword.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">thread_local</span><span style="color:#FF79C6"> int</span><span style="color:#F8F8F2"> my_var;</span><span style="color:#6272A4">   // Thread storage duration</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">thread_local</span><span style="color:#FF79C6"> int</span><span style="color:#F8F8F2"> my_var;</span><span style="color:#6272A4">   // Thread storage duration</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Automatic Storage Duration</strong>: Objects with automatic storage duration are created at the point of definition and destroyed when the scope in which they are declared is exited. These objects are also known as “local” or “stack” objects. Function parameters and local non-static variables fall into this category.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">void</span><span style="color:#50FA7B"> myFunction</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#FF79C6">  int</span><span style="color:#F8F8F2"> local_var;</span><span style="color:#6272A4">           // Automatic storage duration</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Dynamic Storage Duration</strong>: Objects with dynamic storage duration are created at runtime, using memory allocation functions such as <code>new</code> or <code>malloc</code>. The lifetime of these objects must be managed manually, as they are not automatically deallocated when the scope is exited. Instead, it is the programmer’s responsibility to destroy the objects using the <code>delete</code> or <code>free</code> functions when they are no longer needed, to avoid memory leaks.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int*</span><span style="color:#F8F8F2"> ptr </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6;font-weight:bold"> new</span><span style="color:#FF79C6"> int</span><span style="color:#F8F8F2">;</span><span style="color:#6272A4">        // Dynamic storage duration</span></span>
-<span class="line"><span style="color:#FF79C6">delete</span><span style="color:#F8F8F2"> ptr;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">delete</span><span style="color:#F8F8F2"> ptr;</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 <p>Understanding object lifetimes is essential for managing memory efficiently in C++ programs and avoiding common issues like memory leaks and undefined behavior.</p>

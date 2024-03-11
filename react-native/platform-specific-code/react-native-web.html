@@ -14,7 +14,8 @@
 <span class="line"><span style="color:#F8F8F2">    fontSize</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 16</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    color</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">blue</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
-<span class="line"><span style="color:#F8F8F2">});</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">});</span></span>
+<span class="line"></span></code></pre>
 <p>Now, let’s say you want to apply some platform-specific styling. You can create separate stylesheets for each platform, like <code>styles.native.js</code> and <code>styles.web.js</code>. The contents of <code>styles.native.js</code> would look like this:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { StyleSheet } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react-native</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
@@ -25,7 +26,8 @@
 <span class="line"><span style="color:#F8F8F2">  text</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#6272A4">    // Your platform-specific styles</span></span>
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
-<span class="line"><span style="color:#F8F8F2">});</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">});</span></span>
+<span class="line"></span></code></pre>
 <p>And the contents of <code>styles.web.js</code> would look like this:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { StyleSheet } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react-native</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
@@ -36,11 +38,13 @@
 <span class="line"><span style="color:#F8F8F2">  text</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#6272A4">    // Your platform-specific styles</span></span>
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
-<span class="line"><span style="color:#F8F8F2">});</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">});</span></span>
+<span class="line"></span></code></pre>
 <p>Then, in your main component file, you can import the appropriate styles for each platform automatically:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> styles </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">./styles</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#6272A4">// Now, your styles are platform-specific!</span></span></code></pre>
+<span class="line"><span style="color:#6272A4">// Now, your styles are platform-specific!</span></span>
+<span class="line"></span></code></pre>
 <p>This way, you can cater your styles to the specific platform your app is running on, without having to clutter your main component code with conditional styling.</p>
 <p>React Native Web also provides a utility called <code>Platform</code> that you can use to determine the current platform and apply platform-specific code directly:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { Platform, StyleSheet } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react-native</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
@@ -66,5 +70,6 @@
 <span class="line"><span style="color:#F8F8F2">      },</span></span>
 <span class="line"><span style="color:#F8F8F2">    }),</span></span>
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
-<span class="line"><span style="color:#F8F8F2">});</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">});</span></span>
+<span class="line"></span></code></pre>
 <p>With these techniques, you’ll be able to create tailored experiences across different platforms while maintaining a consistent development experience.</p>

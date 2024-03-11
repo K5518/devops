@@ -8,7 +8,8 @@
 <span class="line"><span style="color:#F8F8F2">    &#x3C;</span><span style="color:#FF79C6">field1</span><span style="color:#F8F8F2">>: </span><span style="color:#FF79C6">{</span><span style="color:#F8F8F2"> &#x3C;</span><span style="color:#FF79C6">accumulator1</span><span style="color:#F8F8F2">> : &#x3C;</span><span style="color:#FF79C6">expression1</span><span style="color:#F8F8F2">> },</span></span>
 <span class="line"><span style="color:#F8F8F2">    ...</span></span>
 <span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>Here’s a quick breakdown of the components:</p>
 <ul>
 <li><code>_id</code>: This field represents the criteria for grouping the documents. It can be a single field name or an expression that returns a value.</li>
@@ -23,7 +24,8 @@
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2">, customer_id</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">C1</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, amount</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 90</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 4</span><span style="color:#F8F8F2">, customer_id</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">C3</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, amount</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 200</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 5</span><span style="color:#F8F8F2">, customer_id</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">C2</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, amount</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 50</span><span style="color:#F8F8F2"> },</span></span>
-<span class="line"><span style="color:#F8F8F2">];</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">];</span></span>
+<span class="line"></span></code></pre>
 <p>Now, let’s group the data by <code>customer_id</code> and calculate each customer’s total spent amount.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.orders.</span><span style="color:#50FA7B">aggregate</span><span style="color:#F8F8F2">([</span></span>
 <span class="line"><span style="color:#F8F8F2">  {</span></span>
@@ -32,11 +34,13 @@
 <span class="line"><span style="color:#F8F8F2">      total_spent</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $sum</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">$amount</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">    },</span></span>
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
-<span class="line"><span style="color:#F8F8F2">]);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">]);</span></span>
+<span class="line"></span></code></pre>
 <p>This query would result in the following:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">[</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">C1</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, total_spent</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 200</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">C2</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, total_spent</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 200</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">C3</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, total_spent</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 200</span><span style="color:#F8F8F2"> },</span></span>
-<span class="line"><span style="color:#F8F8F2">];</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">];</span></span>
+<span class="line"></span></code></pre>
 <p>Using the <code>$group</code> operator, documents in the <code>orders</code> collection were grouped by <code>customer_id</code>, and the total spent amount for each customer was calculated using the <code>$sum</code> accumulator.</p>

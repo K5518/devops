@@ -12,8 +12,10 @@
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>The movie was fantastic! - Positive</span></span>
 <span class="line"><span>I didn't enjoy the food at all. - Negative</span></span>
 <span class="line"><span>Amazing vacation, I had a great time! - Positive</span></span>
-<span class="line"><span>She looks upset and angry. - Negative</span></span></code></pre>
+<span class="line"><span>She looks upset and angry. - Negative</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>After providing these examples, introduce the query you want the model to analyze:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>The book was hard to put down. - {sentiment_label}</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>The book was hard to put down. - {sentiment_label}</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>This prompt structure assists the model in grasping the sentiment analysis task and increases the likelihood of getting the correct output (i.e., “Positive”).</p>
 <p>Remember to experiment with the number of examples and their content to find the optimal balance for your specific task. Additionally, you can use inline instructions to guide the model further, such as asking it to classify the sentiment of a given sentence.</p>

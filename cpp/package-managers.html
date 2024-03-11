@@ -9,11 +9,13 @@
 <h2 id="conan">Conan</h2>
 <p><a href="https://conan.io/" rel="noopener noreferrer nofollow" target="_blank">Conan</a> is an open-source, decentralized, cross-platform package manager for C and C++ developers. It simplifies managing dependencies and reusing code, which benefits multi-platform development projects.</p>
 <p>For example, installing a library using Conan:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">conan</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> poco/1.9.4@</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">conan</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> poco/1.9.4@</span></span>
+<span class="line"></span></code></pre>
 <h2 id="vcpkg">vcpkg</h2>
 <p><a href="https://github.com/microsoft/vcpkg" rel="noopener noreferrer nofollow" target="_blank">vcpkg</a> is a cross-platform package manager created by Microsoft. It is an open-source library management system for C++ developers to build and manage their projects.</p>
 <p>For example, installing a package using vcpkg:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">./vcpkg</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> boost:x64-windows</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">./vcpkg</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> boost:x64-windows</span></span>
+<span class="line"></span></code></pre>
 <h2 id="c-archive-network-cppan">C++ Archive Network (cppan)</h2>
 <p><a href="https://cppan.org/" rel="noopener noreferrer nofollow" target="_blank">cppan</a> is a package manager and software repository for C++ developers, simplifying the process of managing and distributing C++ libraries and tools. It’s now part of <a href="https://build2.org/" rel="noopener noreferrer nofollow" target="_blank">build2</a>, a build toolchain that provides a package manager.</p>
 <p>An example of a <code>cppan.yml</code> file:</p>
@@ -26,5 +28,6 @@
 <span class="line"></span>
 <span class="line"><span style="color:#8BE9FD">  depend</span><span style="color:#FF79C6">:</span></span>
 <span class="line"><span style="color:#FF79C6">    -</span><span style="color:#F1FA8C"> pvt.cppan.demo.sqlite3</span></span>
-<span class="line"><span style="color:#FF79C6">    -</span><span style="color:#F1FA8C"> pvt.cppan.demo.xz_utils.lzma</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">    -</span><span style="color:#F1FA8C"> pvt.cppan.demo.xz_utils.lzma</span></span>
+<span class="line"></span></code></pre>
 <p>With these package managers, you can streamline your development process and easily manage dependencies in your C++ projects. In addition, you can easily reuse the code in your projects to improve code quality and accelerate development.</p>

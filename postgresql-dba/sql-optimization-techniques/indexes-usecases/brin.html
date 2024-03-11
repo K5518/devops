@@ -14,6 +14,7 @@
 </ul>
 <h2 id="usage">Usage</h2>
 <p>To create a BRIN index, you can use the following SQL command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> INDEX</span><span style="color:#50FA7B"> index_name</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> table_name </span><span style="color:#FF79C6">USING</span><span style="color:#F8F8F2"> brin (column_name);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> INDEX</span><span style="color:#50FA7B"> index_name</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> table_name </span><span style="color:#FF79C6">USING</span><span style="color:#F8F8F2"> brin (column_name);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="summary">Summary</h2>
 <p>BRIN indexes offer a space-efficient and fast solution for indexing large, sorted datasets. While not suitable for all tables and queries, they can significantly improve performance when used appropriately. Consider using a BRIN index when working with large tables with sorted or naturally ordered data.</p>

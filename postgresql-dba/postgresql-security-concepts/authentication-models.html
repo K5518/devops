@@ -3,7 +3,8 @@
 <h2 id="trust-authentication">Trust Authentication</h2>
 <p>In trust authentication, the PostgreSQL server trusts any connection attempt from specified hosts, without requiring a password. Although it is simple to configure, it could pose security risks, especially when used for remote connections. This method is only recommended for local development and testing environments.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span># Sample trust authentication configuration in "pg_hba.conf"</span></span>
-<span class="line"><span>local   all             all                                     trust</span></span></code></pre>
+<span class="line"><span>local   all             all                                     trust</span></span>
+<span class="line"><span></span></span></code></pre>
 <h2 id="password-authentication">Password Authentication</h2>
 <p>There are three different password-based authentication models in PostgreSQL:</p>
 <ul>
@@ -18,20 +19,24 @@
 </li>
 </ul>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span># Sample password authentication configuration in "pg_hba.conf"</span></span>
-<span class="line"><span>host    all             all             0.0.0.0/0               md5</span></span></code></pre>
+<span class="line"><span>host    all             all             0.0.0.0/0               md5</span></span>
+<span class="line"><span></span></span></code></pre>
 <h2 id="peer-and-ident-authentication">Peer and Ident Authentication</h2>
 <p>Both <code>peer</code> and <code>ident</code> methods map the operating system user to a PostgreSQL user with the same name. The <code>peer</code> method is used for local connections, while <code>ident</code> is used for TCP/IP connections.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span># Sample peer authentication configuration in "pg_hba.conf"</span></span>
 <span class="line"><span>local   all             all                                     peer</span></span>
 <span class="line"><span></span></span>
 <span class="line"><span># Sample ident authentication configuration in "pg_hba.conf"</span></span>
-<span class="line"><span>host    all             all             0.0.0.0/0               ident map=my_ident_map</span></span></code></pre>
+<span class="line"><span>host    all             all             0.0.0.0/0               ident map=my_ident_map</span></span>
+<span class="line"><span></span></span></code></pre>
 <h2 id="certificate-based-authentication-ssl">Certificate-based Authentication (SSL)</h2>
 <p>This method uses SSL/TLS certificates to establish a secure connection between the client and the server. It enhances security by verifying client certificates against a Certificate Authority (CA).</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span># Sample SSL authentication configuration in "pg_hba.conf"</span></span>
-<span class="line"><span>hostssl all             all             0.0.0.0/0               cert clientcert=1</span></span></code></pre>
+<span class="line"><span>hostssl all             all             0.0.0.0/0               cert clientcert=1</span></span>
+<span class="line"><span></span></span></code></pre>
 <h2 id="ldap-authentication">LDAP Authentication</h2>
 <p>LDAP (Lightweight Directory Access Protocol) is commonly used for managing users and groups in an organization. PostgreSQL can authenticate users against an LDAP server. The LDAP server is responsible for verifying the PostgreSQL user’s credentials.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span># Sample LDAP authentication configuration in "pg_hba.conf"</span></span>
-<span class="line"><span>host    all             all             0.0.0.0/0               ldap ldapserver=ldap.example.com ldapprefix="uid=" ldapsuffix=",ou=people,dc=example,dc=com"</span></span></code></pre>
+<span class="line"><span>host    all             all             0.0.0.0/0               ldap ldapserver=ldap.example.com ldapprefix="uid=" ldapsuffix=",ou=people,dc=example,dc=com"</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>In conclusion, PostgreSQL provides various authentication models to suit different requirements. It is important to choose an appropriate method according to the security needs of your environment.</p>

@@ -7,7 +7,8 @@
 <li>Optimize image size and resolution before bundling them in the application.</li>
 <li>Use <code>resizeMode</code> prop on the <code>Image</code> component to cache images for better rendering.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#8BE9FD;font-style:italic">Image</span><span style="color:#50FA7B;font-style:italic"> source</span><span style="color:#FF79C6">={</span><span style="color:#50FA7B">require</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">./my-image.png</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">)</span><span style="color:#FF79C6">}</span><span style="color:#50FA7B;font-style:italic"> resizeMode</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">cover</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2"> /></span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#8BE9FD;font-style:italic">Image</span><span style="color:#50FA7B;font-style:italic"> source</span><span style="color:#FF79C6">={</span><span style="color:#50FA7B">require</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">./my-image.png</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">)</span><span style="color:#FF79C6">}</span><span style="color:#50FA7B;font-style:italic"> resizeMode</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">cover</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2"> /></span></span>
+<span class="line"></span></code></pre>
 <h2 id="3-inline-functions-and-styles">3. Inline Functions and Styles</h2>
 <p>Using inline functions and styles within components can lead to unnecessary re-rendering and performance issues. Instead, define functions and styles outside of the component render method.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">// Bad</span></span>
@@ -37,7 +38,8 @@
 <span class="line"><span style="color:#F8F8F2">      &#x3C;</span><span style="color:#8BE9FD;font-style:italic">Text</span><span style="color:#50FA7B;font-style:italic"> style</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">styles.buttonText</span><span style="color:#FF79C6">}</span><span style="color:#F8F8F2">>Click me&#x3C;/</span><span style="color:#8BE9FD;font-style:italic">Text</span><span style="color:#F8F8F2">></span></span>
 <span class="line"><span style="color:#F8F8F2">    &#x3C;/</span><span style="color:#8BE9FD;font-style:italic">TouchableOpacity</span><span style="color:#F8F8F2">></span></span>
 <span class="line"><span style="color:#F8F8F2">  );</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="4-purecomponent-and-reactmemo">4. PureComponent and React.memo</h2>
 <p>Components that extend <code>React.PureComponent</code> or are wrapped in <code>React.memo()</code> can lead to performance issues in case they’re updating frequently and causing unnecessary re-renders. Make sure to only use them when appropriate to avoid performance bottlenecks.</p>
 <h2 id="5-listview-and-flatlist">5. ListView and FlatList</h2>
@@ -47,7 +49,8 @@
 <span class="line"><span style="color:#50FA7B;font-style:italic">  data</span><span style="color:#FF79C6">={</span><span style="color:#BD93F9;font-style:italic">this</span><span style="color:#F8F8F2">.state.data</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  renderItem</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">({</span><span style="color:#FFB86C;font-style:italic">item</span><span style="color:#F8F8F2">}) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> &#x3C;</span><span style="color:#8BE9FD;font-style:italic">MyListItemComponent</span><span style="color:#50FA7B;font-style:italic"> item</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">item</span><span style="color:#FF79C6">}</span><span style="color:#F8F8F2"> /></span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  keyExtractor</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">(</span><span style="color:#FFB86C;font-style:italic">item</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> item.id</span><span style="color:#FF79C6">}</span></span>
-<span class="line"><span style="color:#F8F8F2">/></span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">/></span></span>
+<span class="line"></span></code></pre>
 <h2 id="6-javascript-thread-blockage">6. JavaScript Thread Blockage</h2>
 <p>Blocking the JavaScript thread with expensive synchronous computations can lead to poor performance. Make sure to handle heavy computations asynchronously or offload them to native modules.</p>
 <p>Read more in the <a href="https://reactnative.dev/docs/performance#common-sources-of-performance-problems" rel="noopener noreferrer nofollow" target="_blank">Official React Native documentation</a>.</p>

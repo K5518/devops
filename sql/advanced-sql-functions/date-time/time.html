@@ -4,27 +4,34 @@
 <p>Here is the basic syntax to create a field with TIME data type in SQL:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> table_name</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    column_name </span><span style="color:#FF79C6">TIME</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>You can store data using the following syntax:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">INSERT INTO</span><span style="color:#F8F8F2"> table_name (column_name) </span><span style="color:#FF79C6">values</span><span style="color:#F8F8F2"> (</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">17:34:20</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">INSERT INTO</span><span style="color:#F8F8F2"> table_name (column_name) </span><span style="color:#FF79C6">values</span><span style="color:#F8F8F2"> (</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">17:34:20</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="range">Range</h2>
 <p>The time range in SQL is ‘00:00:00’ to ‘23:59:59’.</p>
 <h2 id="fetching-data">Fetching Data</h2>
 <p>To fetch the data you can use the SELECT statement. For example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column_name </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column_name </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name;</span></span>
+<span class="line"></span></code></pre>
 <p>It will return the time values from the table.</p>
 <h2 id="functions">Functions</h2>
 <p>SQL provides several functions to work with the TIME data type. Some of them include:</p>
 <h2 id="curtime">CURTIME()</h2>
 <p>Return the current time.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> CURTIME();</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> CURTIME();</span></span>
+<span class="line"></span></code></pre>
 <h2 id="addtime">ADDTIME()</h2>
 <p>Add time values.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> ADDTIME(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">2007-12-31 23:59:59</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">1 1:1:1</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> ADDTIME(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">2007-12-31 23:59:59</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">1 1:1:1</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="timediff">TIMEDIFF()</h2>
 <p>Subtract time values.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> TIMEDIFF(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">2000:01:01 00:00:00</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">2000:01:01 00:01:01</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> TIMEDIFF(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">2000:01:01 00:00:00</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">2000:01:01 00:01:01</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="conversion">Conversion</h2>
 <p>Conversion of TIME data type is also possible in SQL. It can be converted into other data types, like INT, and vice versa. Here is a conversion example of TIME to INT:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> TIME_TO_SEC(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">22:23:00</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> TIME_TO_SEC(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">22:23:00</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>This was a brief summary about “TIME” in SQL.</p>

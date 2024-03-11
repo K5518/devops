@@ -23,7 +23,8 @@
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">string value: </span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">static_cast&#x3C;</span><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">string</span><span style="color:#FF79C6">*></span><span style="color:#F8F8F2">(void_ptr)) </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="stdany-c17"><code>std::any</code> (C++17)</h2>
 <p>C++17 introduced the <code>std::any</code> class which represents a generalized type-safe container for single values of any type.</p>
 <p>Example:</p>
@@ -43,5 +44,6 @@
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">string value: </span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">any_cast</span><span style="color:#F8F8F2">&#x3C;std</span><span style="color:#FF79C6">::</span><span style="color:#8BE9FD;font-style:italic">string</span><span style="color:#F8F8F2">>(any_value) </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>Keep in mind that both <code>void*</code> pointers and <code>std::any</code> have performance implications due to the additional type checking and casting that take place during runtime. They should be used carefully and only when absolutely necessary.</p>

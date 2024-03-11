@@ -7,16 +7,19 @@
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">if</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">auto</span><span style="color:#F8F8F2"> it </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> map.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">(key); it </span><span style="color:#FF79C6">!=</span><span style="color:#F8F8F2"> map.</span><span style="color:#50FA7B">end</span><span style="color:#F8F8F2">())</span></span>
 <span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#6272A4">    // Use it</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Structured Binding Declarations: Simplify the process of unpacking a tuple, pair, or other aggregate types.</li>
 </ul>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">map</span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2">string, </span><span style="color:#FF79C6">int></span><span style="color:#F8F8F2"> data;</span></span>
-<span class="line"><span style="color:#FF79C6">auto</span><span style="color:#F8F8F2"> [iter, success] </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> data.</span><span style="color:#50FA7B">emplace</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">example</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">42</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">auto</span><span style="color:#F8F8F2"> [iter, success] </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> data.</span><span style="color:#50FA7B">emplace</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">example</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">42</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Inline variables: Enables <code>inline</code> keyword for variables and allows single definition of global and class static variables in header files.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">inline</span><span style="color:#FF79C6"> int</span><span style="color:#F8F8F2"> globalVar </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">inline</span><span style="color:#FF79C6"> int</span><span style="color:#F8F8F2"> globalVar </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Folds expressions: Introduce fold expressions for variadic templates.</li>
 </ul>
@@ -24,7 +27,8 @@
 <span class="line"><span style="color:#FF79C6">auto</span><span style="color:#50FA7B"> sum</span><span style="color:#F8F8F2">(</span><span style="color:#8BE9FD;font-style:italic">Ts</span><span style="color:#F8F8F2">... </span><span style="color:#FFB86C;font-style:italic">ts</span><span style="color:#F8F8F2">)</span></span>
 <span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#F8F8F2"> (ts </span><span style="color:#FF79C6">+</span><span style="color:#F8F8F2"> ...);</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>constexpr if statement: Allows conditional compilation during compile time.</li>
 </ul>
@@ -39,11 +43,13 @@
 <span class="line"><span style="color:#F8F8F2">    {</span></span>
 <span class="line"><span style="color:#FF79C6">        return</span><span style="color:#F8F8F2"> t;</span></span>
 <span class="line"><span style="color:#F8F8F2">    }</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Improved lambda expression: Allows lambda to capture a single object without changing its type or constness.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">auto</span><span style="color:#F8F8F2"> func </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> [</span><span style="color:#FFB86C;font-style:italic">x</span><span style="color:#FF79C6"> =</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">move</span><span style="color:#F8F8F2">(obj)] {</span><span style="color:#6272A4"> /* use x */</span><span style="color:#F8F8F2"> };</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">auto</span><span style="color:#F8F8F2"> func </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> [</span><span style="color:#FFB86C;font-style:italic">x</span><span style="color:#FF79C6"> =</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">move</span><span style="color:#F8F8F2">(obj)] {</span><span style="color:#6272A4"> /* use x */</span><span style="color:#F8F8F2"> };</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>
 <p>Standard file system library: <code>std::filesystem</code> as a standardized way to manipulate paths, directories, and files.</p>

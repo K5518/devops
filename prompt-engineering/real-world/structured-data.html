@@ -2,10 +2,12 @@
 <p>Asking the model to generate structured data is a great way to utilize the power of LLMs.</p>
 <p>For example, you might have an e-commerce application where you want to generate the search query from the user’s natural language input. You can instruct LLM to identify the JSON version from the natural language text given by the user. Let’s say that the user searches for <code>Birthday gift for my 18 months old daughter</code>. We could have the following prompt to generate the JSON object:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Print a JSON object containing `gender` ("male", "female"), `occasion` (one of "party", "birthday", "anniversary"), `age_years` (numeric value) from the text delimited by tripple quotes.:</span></span>
-<span class="line"><span>"""Birthday gift for my 18 months old daughter"""</span></span></code></pre>
+<span class="line"><span>"""Birthday gift for my 18 months old daughter"""</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>The output from model would be:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#8BE9FE">  "</span><span style="color:#8BE9FD">gender</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">female</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#8BE9FE">  "</span><span style="color:#8BE9FD">occasion</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">birthday</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#8BE9FE">  "</span><span style="color:#8BE9FD">age_years</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1.5</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>

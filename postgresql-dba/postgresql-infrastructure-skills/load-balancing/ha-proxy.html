@@ -43,7 +43,8 @@
 <span class="line"><span>    balance roundrobin</span></span>
 <span class="line"><span>    option pgsql-check user haproxy_check</span></span>
 <span class="line"><span>    server node1 192.168.1.1:5432 check</span></span>
-<span class="line"><span>    server node2 192.168.1.2:5432 check</span></span></code></pre>
+<span class="line"><span>    server node2 192.168.1.2:5432 check</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>This example configures HAProxy to listen on port 5000, distributing incoming connections using round-robin load balancing, and performing health checks using the <code>haproxy_check</code> PostgreSQL user.</p>
 <p>Remember to replace the IP addresses and ports in the <code>backend</code> section with the actual addresses of your PostgreSQL instances.</p>
 <h2 id="conclusion">Conclusion</h2>

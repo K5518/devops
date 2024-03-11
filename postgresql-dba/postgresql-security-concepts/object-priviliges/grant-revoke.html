@@ -2,7 +2,8 @@
 <p>One of the most important aspects of database management is providing appropriate access permissions to users. In PostgreSQL, this can be achieved with the <code>GRANT</code> and <code>REVOKE</code> commands, which allow you to manage the privileges of database objects such as tables, sequences, functions, and schemas.</p>
 <h2 id="grant-privileges">Grant Privileges</h2>
 <p>The <code>GRANT</code> command is used to grant specific privileges on specific objects to specific users or groups. The command has the following syntax:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">GRANT</span><span style="color:#F8F8F2"> privilege_type </span><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> object_name </span><span style="color:#FF79C6">TO</span><span style="color:#F8F8F2"> user_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">GRANT</span><span style="color:#F8F8F2"> privilege_type </span><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> object_name </span><span style="color:#FF79C6">TO</span><span style="color:#F8F8F2"> user_name;</span></span>
+<span class="line"></span></code></pre>
 <p>Some common privilege types include:</p>
 <ul>
 <li><code>SELECT</code>: allows the user to read data from a table or view</li>
@@ -13,12 +14,15 @@
 <li><code>ALL PRIVILEGES</code>: grants all the above privileges to the user</li>
 </ul>
 <p>For example, to grant the <code>SELECT</code>, <code>INSERT</code>, and <code>UPDATE</code> privileges on a table called <code>employees</code> to a user named <code>john</code>, use the following command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">GRANT</span><span style="color:#FF79C6"> SELECT</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">INSERT</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">UPDATE</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">TO</span><span style="color:#F8F8F2"> john;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">GRANT</span><span style="color:#FF79C6"> SELECT</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">INSERT</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">UPDATE</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">TO</span><span style="color:#F8F8F2"> john;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="revoke-privileges">Revoke Privileges</h2>
 <p>The <code>REVOKE</code> command is used to revoke previously granted privileges from a user or group. The command has the following syntax:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">REVOKE</span><span style="color:#F8F8F2"> privilege_type </span><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> object_name </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> user_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">REVOKE</span><span style="color:#F8F8F2"> privilege_type </span><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> object_name </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> user_name;</span></span>
+<span class="line"></span></code></pre>
 <p>For example, to revoke the <code>UPDATE</code> privilege on the <code>employees</code> table from the user <code>john</code>, use the following command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">REVOKE</span><span style="color:#FF79C6"> UPDATE</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> john;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">REVOKE</span><span style="color:#FF79C6"> UPDATE</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> john;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="grant-and-revoke-for-groups">Grant and Revoke for Groups</h2>
 <p>In PostgreSQL, you can also manage privileges for groups of users. To grant or revoke privileges from a group, simply replace <code>user_name</code> in the <code>GRANT</code> and <code>REVOKE</code> commands with <code>GROUP group_name</code>.</p>
 <h2 id="summary">Summary</h2>

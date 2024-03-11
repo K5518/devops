@@ -25,10 +25,13 @@
 <span class="line"><span style="color:#FF79C6">    for</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">auto</span><span style="color:#F8F8F2"> it </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> myVector.</span><span style="color:#50FA7B">begin</span><span style="color:#F8F8F2">(); it </span><span style="color:#FF79C6">!=</span><span style="color:#F8F8F2"> myVector.</span><span style="color:#50FA7B">end</span><span style="color:#F8F8F2">(); </span><span style="color:#FF79C6">++</span><span style="color:#F8F8F2">it) {</span></span>
 <span class="line"><span style="color:#F8F8F2">        std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2">it </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
 <span class="line"><span style="color:#F8F8F2">    }</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>Keep in mind that <code>auto</code> deduces the type based on the initializer expression, so if you don’t provide an initial value, you will get a compile-time error:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">auto</span><span style="color:#F8F8F2"> myVar;</span><span style="color:#6272A4"> // Error: Cannot deduce the type without initializer</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">auto</span><span style="color:#F8F8F2"> myVar;</span><span style="color:#6272A4"> // Error: Cannot deduce the type without initializer</span></span>
+<span class="line"></span></code></pre>
 <p>In C++14, you can also use <code>auto</code> with function return types to let the compiler automatically deduce the return type based on the returned expression:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">auto</span><span style="color:#50FA7B"> add</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> x</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> y</span><span style="color:#F8F8F2">) {</span></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#F8F8F2"> x </span><span style="color:#FF79C6">+</span><span style="color:#F8F8F2"> y;</span><span style="color:#6272A4"> // The compiler deduces the return type as 'int'</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>

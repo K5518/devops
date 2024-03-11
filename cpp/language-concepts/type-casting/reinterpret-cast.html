@@ -17,6 +17,7 @@
 <span class="line"><span style="color:#F8F8F2">    }</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, we’re using <code>reinterpret_cast</code> to change the type of a pointer from <code>int *</code> to <code>char *</code>, effectively treating the integer as an array of characters and printing each byte.</p>
 <p>Remember that when using <code>reinterpret_cast</code>, you should be cautious about dereferencing the converted pointers. The behavior can be unpredictable, and it can lead to issues, such as accessing memory regions that are not intended to be accessed. <code>reinterpret_cast</code> should be used sparingly and only when a low-level conversion is necessary.</p>

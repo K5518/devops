@@ -2,7 +2,8 @@
 <p>You can use ChatGPT for debugging, code generation, reformatting, commenting, and more.</p>
 <h2 id="code-generation">Code Generation</h2>
 <p>Instructing ChatGPT to generate code is as simple as this:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Act as a junior python programmer. Please write the code to generate madlibs from 3 arrays of 6 items each: prepositions, verbs and nouns, with the nouns also being used as direct objects. After writing it, execute the code.</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Act as a junior python programmer. Please write the code to generate madlibs from 3 arrays of 6 items each: prepositions, verbs and nouns, with the nouns also being used as direct objects. After writing it, execute the code.</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>The output will be something like:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> random</span></span>
 <span class="line"></span>
@@ -16,7 +17,8 @@
 <span class="line"></span>
 <span class="line"><span style="color:#F8F8F2">madlib </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> f</span><span style="color:#F1FA8C">"I </span><span style="color:#BD93F9">{</span><span style="color:#F8F8F2">verb</span><span style="color:#BD93F9">}</span><span style="color:#BD93F9"> {</span><span style="color:#F8F8F2">preposition</span><span style="color:#BD93F9">}</span><span style="color:#F1FA8C"> the </span><span style="color:#BD93F9">{</span><span style="color:#F8F8F2">noun</span><span style="color:#BD93F9">}</span><span style="color:#F1FA8C">."</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#8BE9FD">print</span><span style="color:#F8F8F2">(madlib)</span></span></code></pre>
+<span class="line"><span style="color:#8BE9FD">print</span><span style="color:#F8F8F2">(madlib)</span></span>
+<span class="line"></span></code></pre>
 <h2 id="commenting-and-reformatting-code">Commenting and Reformatting Code</h2>
 <p>You can ask ChatGPT to add comments to your code, and reformat it for legibility. After your prompt instruction, add three hashmarks and then paste in the code you’d like it to clean up:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Please add line comments to this Python code and reformat it for legibility:  </span></span>
@@ -27,7 +29,8 @@
 <span class="line"><span>num_points = 50</span></span>
 <span class="line"><span>for i in range(num_points):</span></span>
 <span class="line"><span>    y = int(round(amplitude * math.sin(2 * math.pi * frequency * i / num_points)))</span></span>
-<span class="line"><span>    print(' ' * (amplitude + y) + '*')</span></span></code></pre>
+<span class="line"><span>    print(' ' * (amplitude + y) + '*')</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>The output will be something like:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4"># Import the math module</span></span>
 <span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> math</span></span>
@@ -43,7 +46,8 @@
 <span class="line"><span style="color:#F8F8F2">    y </span><span style="color:#FF79C6">=</span><span style="color:#8BE9FD;font-style:italic"> int</span><span style="color:#F8F8F2">(</span><span style="color:#8BE9FD">round</span><span style="color:#F8F8F2">(amplitude </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2"> math.sin(</span><span style="color:#BD93F9">2</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> math.pi </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2"> frequency </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2"> i </span><span style="color:#FF79C6">/</span><span style="color:#F8F8F2"> num_points)))</span></span>
 <span class="line"><span style="color:#F8F8F2">    </span></span>
 <span class="line"><span style="color:#6272A4">    # Print a space for padding, followed by an asterisk at the appropriate position on the wave</span></span>
-<span class="line"><span style="color:#8BE9FD">    print</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#E9F284"> '</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> (amplitude </span><span style="color:#FF79C6">+</span><span style="color:#F8F8F2"> y) </span><span style="color:#FF79C6">+</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">*</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">)</span></span></code></pre>
+<span class="line"><span style="color:#8BE9FD">    print</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#E9F284"> '</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> (amplitude </span><span style="color:#FF79C6">+</span><span style="color:#F8F8F2"> y) </span><span style="color:#FF79C6">+</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">*</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"></span></code></pre>
 <h2 id="debugging">Debugging</h2>
 <p>Not only can ChatGPT detect syntax errors in code, but it can also find logical errors that would crop up when code is executed. Below is an example of a Python script that eventually causes a division by zero error on line 4 due to a logical error on line 3. Try this simple prompt to find and fix the error:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Please debug this Python code:  </span></span>
@@ -53,9 +57,11 @@
 <span class="line"><span>3. while partygoers = 0:</span></span>
 <span class="line"><span>4.    cost_per_person = pizza_cost / partygoers</span></span>
 <span class="line"><span>5.    print("the cost per person is $", "{:.2f}".format(cost_per_person))</span></span>
-<span class="line"><span>6.    partygoers -= 2</span></span></code></pre>
+<span class="line"><span>6.    partygoers -= 2</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>The output will include the corrected while loop, which is changed to ensure the denominator variable stays positive:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>3. while partygoers > 0:</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>3. while partygoers > 0:</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>For more nuanced errors, you may need to add more specifics: the error message, environment variables, included libraries or variations in inputs.</p>
 <h2 id="optimizing-code">Optimizing Code</h2>
 <p>If your script is taking too long to execute, ChatGPT can optimize it. Here’s an example of optimizing an inefficient script that finds prime numbers:</p>
@@ -67,14 +73,16 @@
 <span class="line"><span>            if (num % i) == 0:</span></span>
 <span class="line"><span>                break</span></span>
 <span class="line"><span>        else:</span></span>
-<span class="line"><span>            print(num)</span></span></code></pre>
+<span class="line"><span>            print(num)</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>The output might be a script that uses the Sieve of Eratosthenes algorithm for finding prime numbers:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">numbers </span><span style="color:#FF79C6">=</span><span style="color:#8BE9FD;font-style:italic"> list</span><span style="color:#F8F8F2">(</span><span style="color:#8BE9FD">range</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">101</span><span style="color:#F8F8F2">))</span></span>
 <span class="line"><span style="color:#FF79C6">for</span><span style="color:#F8F8F2"> i </span><span style="color:#FF79C6">in</span><span style="color:#F8F8F2"> numbers:</span></span>
 <span class="line"><span style="color:#FF79C6">    for</span><span style="color:#F8F8F2"> j </span><span style="color:#FF79C6">in</span><span style="color:#8BE9FD"> range</span><span style="color:#F8F8F2">(i </span><span style="color:#FF79C6">*</span><span style="color:#BD93F9"> 2</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">101</span><span style="color:#F8F8F2">, i):</span></span>
 <span class="line"><span style="color:#FF79C6">        if</span><span style="color:#F8F8F2"> j </span><span style="color:#FF79C6">in</span><span style="color:#F8F8F2"> numbers:</span></span>
 <span class="line"><span style="color:#F8F8F2">            numbers.remove(j)</span></span>
-<span class="line"><span style="color:#8BE9FD">print</span><span style="color:#F8F8F2">(numbers)</span></span></code></pre>
+<span class="line"><span style="color:#8BE9FD">print</span><span style="color:#F8F8F2">(numbers)</span></span>
+<span class="line"></span></code></pre>
 <p>Note that we asked the bot to “act like a senior developer” to optimize the script. You can also dictate that it have a certain area of expertise (e.g., sorting algorithms) or number of years of experience. Alternatively, if you have a script that seems overly complicated, you can ask ChatGPT to write that script “as a very junior developer.”</p>
 <h2 id="translating-between-programming-languages">Translating Between Programming Languages</h2>
 <p>A very useful feature ChatGPT offers is the ability to port programs from one language to another. A typical use for this might be upgrading code in an older language to a more modern one:</p>
@@ -96,12 +104,14 @@
 <span class="line"><span>COMPUTE SS-TAX = SALARY * 0.062.</span></span>
 <span class="line"><span></span></span>
 <span class="line"><span>DISPLAY "Social Security tax is: $", SS-TAX.</span></span>
-<span class="line"><span>STOP RUN.</span></span></code></pre>
+<span class="line"><span>STOP RUN.</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>The output might be something like this:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">salary </span><span style="color:#FF79C6">=</span><span style="color:#8BE9FD;font-style:italic"> float</span><span style="color:#F8F8F2">(</span><span style="color:#8BE9FD">input</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">Enter employee's salary: </span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">))</span></span>
 <span class="line"><span style="color:#F8F8F2">ss_tax </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">*</span><span style="color:#BD93F9"> 0.062</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#8BE9FD">print</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">Social Security tax is: $</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#8BE9FD">round</span><span style="color:#F8F8F2">(ss_tax, </span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">))</span></span></code></pre>
+<span class="line"><span style="color:#8BE9FD">print</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">Social Security tax is: $</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#8BE9FD">round</span><span style="color:#F8F8F2">(ss_tax, </span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">))</span></span>
+<span class="line"></span></code></pre>
 <p>Learn more from the following resources:</p>
 <ul>
 <li><a href="https://learnprompting.org/docs/basic_applications/coding_assistance" rel="noopener noreferrer nofollow" target="_blank">LLM Coding Assistance</a></li>

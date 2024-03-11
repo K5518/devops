@@ -34,6 +34,7 @@
 <span class="line"><span style="color:#F8F8F2">    d2.</span><span style="color:#50FA7B">interface</span><span style="color:#F8F8F2">();</span><span style="color:#6272A4">  // Output: "Default implementation in Base"</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, the <code>Base</code> class is a template that takes a single type parameter. <code>Derived1</code> and <code>Derived2</code> are derived from their respective specialization of <code>Base</code>. CRTP is employed to allow custom implementations of the <code>implementation()</code> function in derived classes while providing a default behavior in the <code>Base</code> class. The <code>interface()</code> function in the <code>Base</code> class is a template for the derived class’s behavior and calls the corresponding <code>implementation()</code> function based on the static type.</p>
 <p>This pattern enables you to override certain behavior in derived classes with additional functionality, all while avoiding the overhead of virtual function calls and, in turn, achieving a higher degree of efficiency at runtime.</p>

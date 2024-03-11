@@ -10,11 +10,13 @@
 <ul>
 <li>
 <p><strong>Implicit Creation</strong>: When you insert a document without specifying an existing collection, MongoDB automatically creates the collection for you.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.</span><span style="color:#50FA7B">createCollection</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">users</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.</span><span style="color:#50FA7B">createCollection</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">users</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Explicit Creation</strong>: Use the <code>db.createCollection(name, options)</code> method to create a collection with specific options:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.</span><span style="color:#50FA7B">createCollection</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">users</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, { capped</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> true</span><span style="color:#F8F8F2">, size</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 100000</span><span style="color:#F8F8F2">, max</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 5000</span><span style="color:#F8F8F2"> });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.</span><span style="color:#50FA7B">createCollection</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">users</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, { capped</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> true</span><span style="color:#F8F8F2">, size</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 100000</span><span style="color:#F8F8F2">, max</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 5000</span><span style="color:#F8F8F2"> });</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 <h2 id="managing-collections">Managing Collections</h2>
@@ -26,27 +28,32 @@
 <span class="line"><span style="color:#F8F8F2">db.users.</span><span style="color:#50FA7B">insertMany</span><span style="color:#F8F8F2">([</span></span>
 <span class="line"><span style="color:#F8F8F2">  { name</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Jane Doe</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, age</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 28</span><span style="color:#F8F8F2">, email</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">jane@example.com</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { name</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Mary Jane</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, age</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 32</span><span style="color:#F8F8F2">, email</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">mary@example.com</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> },</span></span>
-<span class="line"><span style="color:#F8F8F2">]);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">]);</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Find Documents</strong>: Use the <code>find()</code> method to query documents in a collection.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.users.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ age</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $gt</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 30</span><span style="color:#F8F8F2"> } });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.users.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ age</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $gt</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 30</span><span style="color:#F8F8F2"> } });</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Update Documents</strong>: Use the <code>updateOne()</code>, <code>updateMany()</code>, or <code>replaceOne()</code> methods to modify documents in a collection.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.users.</span><span style="color:#50FA7B">updateOne</span><span style="color:#F8F8F2">({ name</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">John Doe</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> }, { $set</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { age</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 31</span><span style="color:#F8F8F2"> } });</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F8F8F2">db.users.</span><span style="color:#50FA7B">updateMany</span><span style="color:#F8F8F2">({ age</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $gt</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 30</span><span style="color:#F8F8F2"> } }, { $inc</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { age</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2"> } });</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">db.users.</span><span style="color:#50FA7B">updateMany</span><span style="color:#F8F8F2">({ age</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $gt</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 30</span><span style="color:#F8F8F2"> } }, { $inc</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { age</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2"> } });</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Delete Documents</strong>: Use the <code>deleteOne()</code> or <code>deleteMany()</code> methods to remove documents from a collection.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.users.</span><span style="color:#50FA7B">deleteOne</span><span style="color:#F8F8F2">({ name</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">John Doe</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> });</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F8F8F2">db.users.</span><span style="color:#50FA7B">deleteMany</span><span style="color:#F8F8F2">({ age</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $lt</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 30</span><span style="color:#F8F8F2"> } });</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">db.users.</span><span style="color:#50FA7B">deleteMany</span><span style="color:#F8F8F2">({ age</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $lt</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 30</span><span style="color:#F8F8F2"> } });</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Drop Collection</strong>: To delete the entire collection, use the <code>drop()</code> method.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.users.</span><span style="color:#50FA7B">drop</span><span style="color:#F8F8F2">();</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.users.</span><span style="color:#50FA7B">drop</span><span style="color:#F8F8F2">();</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 <p>In summary, collections are an essential part of MongoDB that enable you to efficiently manage and store documents with varying structures. Their flexible schema and dynamic nature make them perfect for handling both unstructured and semi-structured data.</p>

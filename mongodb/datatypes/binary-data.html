@@ -23,7 +23,8 @@
 <span class="line"><span style="color:#E9F284">    "</span><span style="color:#F1FA8C">name</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">Sample Image</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#E9F284">    "</span><span style="color:#F1FA8C">image_data</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: binary_image_data,</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span>
-<span class="line"><span style="color:#F8F8F2">stored_data </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> data_collection.insert_one(document)</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">stored_data </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> data_collection.insert_one(document)</span></span>
+<span class="line"></span></code></pre>
 <p>When it comes to retrieving binary data from the database, you can use your MongoDB driver’s <code>find</code> method to query the required document and access the binary field.</p>
 <p>For example, in Python:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4"># Retrieve binary data from the database</span></span>
@@ -32,5 +33,6 @@
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4"># Save the retrieved binary data to a new file</span></span>
 <span class="line"><span style="color:#FF79C6">with</span><span style="color:#8BE9FD"> open</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">retrieved_image.jpg</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">wb</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">as</span><span style="color:#F8F8F2"> f:</span></span>
-<span class="line"><span style="color:#F8F8F2">    f.write(retrieved_image_data)</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">    f.write(retrieved_image_data)</span></span>
+<span class="line"></span></code></pre>
 <p>Keep in mind that storing large binary files in a MongoDB database might result in performance issues. In such cases, consider using a separate file storage system or MongoDB’s <a href="https://docs.mongodb.com/manual/core/gridfs/" rel="noopener noreferrer nofollow" target="_blank">GridFS</a> to store and manage binary data.</p>

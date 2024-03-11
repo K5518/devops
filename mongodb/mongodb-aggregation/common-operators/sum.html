@@ -2,7 +2,8 @@
 <p>The <code>$sum</code> operator is a powerful and commonly-used operator in MongoDB, which is primarily utilized in conjunction with the <code>$group</code> stage in the aggregation pipeline. As the name suggests, it allows you to calculate the sum of the numeric values in either specified fields or by evaluating expression values for each input document.</p>
 <h2 id="syntax">Syntax</h2>
 <p>The basic syntax for using the <code>$sum</code> operator is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{ $sum: &#x3C;</span><span style="color:#FF79C6">expression</span><span style="color:#F8F8F2">> }</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{ $sum: &#x3C;</span><span style="color:#FF79C6">expression</span><span style="color:#F8F8F2">> }</span></span>
+<span class="line"></span></code></pre>
 <p>The <code>&#x3C;expression></code> can be a field, a number value, or another operator that returns a numeric value.</p>
 <h2 id="examples">Examples</h2>
 <h2 id="calculate-sum-of-field-values">Calculate Sum of Field Values</h2>
@@ -14,7 +15,8 @@
 <span class="line"><span style="color:#F8F8F2">      totalRevenue</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $sum</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">$price</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">    },</span></span>
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
-<span class="line"><span style="color:#F8F8F2">]);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">]);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="calculate-sum-with-expression">Calculate Sum with Expression</h2>
 <p>You can also use the <code>$sum</code> operator with an expression to perform more complex calculations. For example, if your <code>orders</code> collection has a <code>quantity</code> field and you want to calculate the total quantity of items sold, you can use the following aggregation:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.orders.</span><span style="color:#50FA7B">aggregate</span><span style="color:#F8F8F2">([</span></span>
@@ -24,7 +26,8 @@
 <span class="line"><span style="color:#F8F8F2">      totalQuantity</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $sum</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $multiply</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> [</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">$price</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">$quantity</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">] } },</span></span>
 <span class="line"><span style="color:#F8F8F2">    },</span></span>
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
-<span class="line"><span style="color:#F8F8F2">]);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">]);</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, the <code>$multiply</code> operator is used to calculate the total price for each order, and then <code>$sum</code> adds up those values to return the total quantity.</p>
 <h2 id="caveats">Caveats</h2>
 <p>It’s important to note that the <code>$sum</code> operator only works with numeric values. In case a non-numeric value is encountered, the <code>$sum</code> operator will return <code>null</code>. To prevent this, you can use the <code>$ifNull</code> or <code>$cond</code> operators to handle non-numeric values in your expression.</p>

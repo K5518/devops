@@ -3,7 +3,8 @@
 <p>Syntax:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> MIN</span><span style="color:#F8F8F2">(column_name)</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name</span></span>
-<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span>
+<span class="line"></span></code></pre>
 <p>In the case where <code>column_name</code> belongs to a numeric data type (Integers, Float, etc.), <code>MIN</code> returns the smallest numeric value in the column.</p>
 <p>If <code>column_name</code> belongs to datetime types (Date, Time, etc.), <code>MIN</code> returns the earliest date or time.</p>
 <p>If <code>column_name</code> belongs to string types (Char, Text, etc.), <code>MIN</code> returns the lowest value in lexicographic order (similar to alphabetic order).</p>
@@ -39,17 +40,20 @@
 <li>To find the earliest order date in the <code>Orders</code> table, the <code>MIN</code> function is used in the following way:</li>
 </ol>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> MIN</span><span style="color:#F8F8F2">(OrderDate) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> EarliestOrder</span></span>
-<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Orders;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Orders;</span></span>
+<span class="line"></span></code></pre>
 <p>The result of this query will be <code>2020-08-21</code>.</p>
 <ol start="2">
 <li>Suppose we have a Prices table with items and their prices. To find the lowest price, use:</li>
 </ol>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> MIN</span><span style="color:#F8F8F2">(price) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> LowestPrice</span></span>
-<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Prices;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Prices;</span></span>
+<span class="line"></span></code></pre>
 <p>This query will return the smallest value in the price column.</p>
 <p>One important usage is when it is used along with the <code>GROUP BY</code> clause to find the minimum value in each group.</p>
 <p>Example, to find the earliest order date for each customer:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> CustomerID, </span><span style="color:#8BE9FD">MIN</span><span style="color:#F8F8F2">(OrderDate) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> EarliestOrder</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Orders</span></span>
-<span class="line"><span style="color:#FF79C6">GROUP BY</span><span style="color:#F8F8F2"> CustomerID;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">GROUP BY</span><span style="color:#F8F8F2"> CustomerID;</span></span>
+<span class="line"></span></code></pre>
 <p>This query will return the earliest order date for each customer.</p>

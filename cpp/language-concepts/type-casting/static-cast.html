@@ -2,13 +2,15 @@
 <p><code>static_cast</code> is one of the casting operators in C++ that allows you to convert between different data types, such as integer and float, or between pointer types. This type of cast performs a compile-time check and gives an error if there is no valid conversion possible between given types. <code>static_cast</code> is generally safer than C-style casts since it does not perform an unsafe reinterpretation of data and allows for better type checking.</p>
 <h2 id="syntax">Syntax</h2>
 <p>The syntax for <code>static_cast</code> is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">static_cast&#x3C;</span><span style="color:#F8F8F2">new_type</span><span style="color:#FF79C6">></span><span style="color:#F8F8F2">(expression)</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">static_cast&#x3C;</span><span style="color:#F8F8F2">new_type</span><span style="color:#FF79C6">></span><span style="color:#F8F8F2">(expression)</span></span>
+<span class="line"></span></code></pre>
 <h2 id="examples">Examples</h2>
 <ul>
 <li>Converting between basic data types:</li>
 </ul>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> i </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 42</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#FF79C6">float</span><span style="color:#F8F8F2"> f </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> static_cast&#x3C;float></span><span style="color:#F8F8F2">(i);</span><span style="color:#6272A4"> // Converts integer i to float f</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">float</span><span style="color:#F8F8F2"> f </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> static_cast&#x3C;float></span><span style="color:#F8F8F2">(i);</span><span style="color:#6272A4"> // Converts integer i to float f</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Casting pointers of different object types in an inheritance hierarchy:</li>
 </ul>
@@ -16,11 +18,13 @@
 <span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Derived</span><span style="color:#F8F8F2"> : </span><span style="color:#FF79C6">public</span><span style="color:#8BE9FD;font-style:italic"> Base</span><span style="color:#F8F8F2"> {</span><span style="color:#6272A4"> /* ... */</span><span style="color:#F8F8F2"> };</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#F8F8F2">Base </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2">bPtr </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6;font-weight:bold"> new</span><span style="color:#F8F8F2"> Derived;</span></span>
-<span class="line"><span style="color:#F8F8F2">Derived </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2">dPtr </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> static_cast&#x3C;</span><span style="color:#F8F8F2">Derived </span><span style="color:#FF79C6">*></span><span style="color:#F8F8F2">(bPtr);</span><span style="color:#6272A4"> // Converts Base pointer bPtr to Derived pointer dPtr</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">Derived </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2">dPtr </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> static_cast&#x3C;</span><span style="color:#F8F8F2">Derived </span><span style="color:#FF79C6">*></span><span style="color:#F8F8F2">(bPtr);</span><span style="color:#6272A4"> // Converts Base pointer bPtr to Derived pointer dPtr</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Converting an integer to an enumeration:</li>
 </ul>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">enum</span><span style="color:#8BE9FD;font-style:italic"> Color</span><span style="color:#F8F8F2"> { RED, GREEN, BLUE };</span></span>
 <span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> value </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">Color color </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> static_cast&#x3C;</span><span style="color:#F8F8F2">Color</span><span style="color:#FF79C6">></span><span style="color:#F8F8F2">(value);</span><span style="color:#6272A4"> // Converts integer value to corresponding Color enumeration</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">Color color </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> static_cast&#x3C;</span><span style="color:#F8F8F2">Color</span><span style="color:#FF79C6">></span><span style="color:#F8F8F2">(value);</span><span style="color:#6272A4"> // Converts integer value to corresponding Color enumeration</span></span>
+<span class="line"></span></code></pre>
 <p>Keep in mind that <code>static_cast</code> should be used with caution when casting pointers between different object types. If the original type of the pointer does not match the target type, the result of the cast can be incorrect or cause unexpected behavior.</p>

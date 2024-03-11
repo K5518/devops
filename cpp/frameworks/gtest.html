@@ -12,14 +12,16 @@
 <ul>
 <li>
 <p><strong>Include the necessary headers</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">gtest/gtest.h</span><span style="color:#E9F284">"</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">gtest/gtest.h</span><span style="color:#E9F284">"</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Write the functions you want to test</strong></p>
 <p>Suppose we have a simple function to test:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#50FA7B"> add</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> a</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> b</span><span style="color:#F8F8F2">) {</span></span>
 <span class="line"><span style="color:#FF79C6">   return</span><span style="color:#F8F8F2"> a </span><span style="color:#FF79C6">+</span><span style="color:#F8F8F2"> b;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Write the test cases</strong></p>
@@ -33,7 +35,8 @@
 <span class="line"><span style="color:#50FA7B">TEST</span><span style="color:#F8F8F2">(AdditionTest, NegativeNumbers) {</span></span>
 <span class="line"><span style="color:#50FA7B">   EXPECT_EQ</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">-</span><span style="color:#BD93F9">3</span><span style="color:#F8F8F2">, </span><span style="color:#50FA7B">add</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">-</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">-</span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">));</span></span>
 <span class="line"><span style="color:#50FA7B">   EXPECT_EQ</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">-</span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">, </span><span style="color:#50FA7B">add</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">-</span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">-</span><span style="color:#BD93F9">3</span><span style="color:#F8F8F2">));</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Write a <code>main()</code> function</strong></p>
@@ -41,7 +44,8 @@
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#50FA7B"> main</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> argc</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">char</span><span style="color:#FF79C6"> **</span><span style="color:#FFB86C;font-style:italic">argv</span><span style="color:#F8F8F2">) {</span></span>
 <span class="line"><span style="color:#F8F8F2">   ::testing</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">InitGoogleTest</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">&#x26;</span><span style="color:#F8F8F2">argc, argv);</span></span>
 <span class="line"><span style="color:#FF79C6">   return</span><span style="color:#50FA7B"> RUN_ALL_TESTS</span><span style="color:#F8F8F2">();</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Compile and run the tests</strong></p>

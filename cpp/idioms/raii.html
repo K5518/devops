@@ -19,14 +19,16 @@
 <span class="line"><span style="color:#FF79C6">private:</span></span>
 <span class="line"><span style="color:#FF79C6">    size_t</span><span style="color:#F8F8F2"> size_;</span></span>
 <span class="line"><span style="color:#FF79C6">    int*</span><span style="color:#F8F8F2"> data_;</span></span>
-<span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">};</span></span>
+<span class="line"></span></code></pre>
 <p>Usages:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#F8F8F2">    ManagedArray </span><span style="color:#50FA7B">arr</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">10</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"><span style="color:#F8F8F2">    arr[</span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">] </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 42</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">    // No need to explicitly free memory, it will be automatically released when arr goes out of scope.</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>Another common use case is managing a mutex lock:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Lock</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#FF79C6">public:</span></span>
@@ -40,7 +42,8 @@
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">private:</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">mutex</span><span style="color:#FF79C6">&#x26;</span><span style="color:#F8F8F2"> mutex_;</span></span>
-<span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">};</span></span>
+<span class="line"></span></code></pre>
 <p>Usages:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">mutex some_mutex;</span></span>
 <span class="line"></span>
@@ -50,5 +53,6 @@
 <span class="line"><span style="color:#6272A4">    // Do some work that must be synchronized</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">    // No need to explicitly unlock the mutex, it will be automatically unlocked when lock goes out of scope.</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>In both examples, the constructor acquires the resource (memory for the array and the lock for the mutex), and the destructor takes care of releasing them. This way, the resource management is tied to the object’s lifetime, and the resource is correctly released even in case of an exception being thrown.</p>

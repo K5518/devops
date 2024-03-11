@@ -5,13 +5,15 @@
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>CREATE TABLE table_name (</span></span>
 <span class="line"><span>  column_name data_type [additional_properties],</span></span>
 <span class="line"><span>  ...,</span></span>
-<span class="line"><span>);</span></span></code></pre>
+<span class="line"><span>);</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>For example, to create a table called “employees” with columns “id”, “name”, and “salary”, you would execute the following SQL command:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>CREATE TABLE employees (</span></span>
 <span class="line"><span>  id SERIAL PRIMARY KEY,</span></span>
 <span class="line"><span>  name VARCHAR(100) NOT NULL,</span></span>
 <span class="line"><span>  salary NUMERIC(10, 2) NOT NULL</span></span>
-<span class="line"><span>);</span></span></code></pre>
+<span class="line"><span>);</span></span>
+<span class="line"><span></span></span></code></pre>
 <h2 id="data-types">Data Types</h2>
 <p>PostgreSQL supports a variety of data types that can be associated with columns. Here are some common data types:</p>
 <ul>
@@ -39,5 +41,6 @@
 <span class="line"><span>  customer_id INTEGER NOT NULL,</span></span>
 <span class="line"><span>  order_date DATE NOT NULL,</span></span>
 <span class="line"><span>  FOREIGN KEY (customer_id) REFERENCES customers(id)</span></span>
-<span class="line"><span>);</span></span></code></pre>
+<span class="line"><span>);</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>Be sure to refer to the PostgreSQL documentation for more advanced column properties as you dive deeper into PostgreSQL’s object model.</p>

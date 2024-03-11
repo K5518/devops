@@ -15,7 +15,8 @@
 <span class="line"><span style="color:#FF79C6">int</span><span style="color:#50FA7B"> main</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#F8F8F2">    fmt</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">print</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">Hello, world!</span><span style="color:#FF79C6">\n</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="formatting-with-positional-arguments">Formatting with Positional Arguments</h2>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">fmt/core.h</span><span style="color:#E9F284">></span></span>
 <span class="line"></span>
@@ -23,14 +24,16 @@
 <span class="line"><span style="color:#F8F8F2">    fmt</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">print</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">The answer is {}.</span><span style="color:#FF79C6">\n</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">42</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"><span style="color:#F8F8F2">    fmt</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">print</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">{1}, {0}!</span><span style="color:#FF79C6">\n</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">world</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">Hello</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="formatting-with-named-arguments">Formatting with Named Arguments</h2>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">fmt/core.h</span><span style="color:#E9F284">></span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">int</span><span style="color:#50FA7B"> main</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#F8F8F2">    fmt</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">print</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">Hello, {name}!</span><span style="color:#FF79C6">\n</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, fmt</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">arg</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">name</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">world</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">));</span></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="using-format-string-syntax">Using Format String Syntax</h2>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">fmt/core.h</span><span style="color:#E9F284">></span></span>
 <span class="line"></span>
@@ -45,5 +48,6 @@
 <span class="line"><span style="color:#F8F8F2">    fmt</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">print</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">{:010.2f}</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3.1415926</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>For more information, you can refer to the official <a href="https://fmt.dev/latest/index.html" rel="noopener noreferrer nofollow" target="_blank">fmt documentation</a>.</p>

@@ -7,7 +7,8 @@
 <ul>
 <li>Open your preferred text editor and enter the list of commands that you want the script to execute. The first line should be the “shebang” line, which indicates the interpreter for the script:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">#!/bin/bash</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">#!/bin/bash</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Add the commands you want to automate. For example, to back up a PostgreSQL database, you might use the following script:</li>
 </ul>
@@ -17,7 +18,8 @@
 <span class="line"><span style="color:#BD93F9">BACKUP_PATH</span><span style="color:#FF79C6">=&#x3C;</span><span style="color:#F1FA8C">your_backup_pat</span><span style="color:#F8F8F2">h</span><span style="color:#FF79C6">></span></span>
 <span class="line"><span style="color:#BD93F9">TIMESTAMP</span><span style="color:#FF79C6">=</span><span style="color:#F1FA8C">$(</span><span style="color:#50FA7B">date</span><span style="color:#F1FA8C"> +%Y%m%d_%H%M%S)</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#50FA7B">/usr/bin/pg_dump</span><span style="color:#BD93F9"> -U</span><span style="color:#BD93F9"> $PG_USER</span><span style="color:#BD93F9"> -Fp</span><span style="color:#BD93F9"> -f</span><span style="color:#E9F284"> "</span><span style="color:#BD93F9">$BACKUP_PATH</span><span style="color:#F1FA8C">/</span><span style="color:#BD93F9">$DB_NAME</span><span style="color:#F1FA8C">-</span><span style="color:#BD93F9">$TIMESTAMP</span><span style="color:#F1FA8C">.sql</span><span style="color:#E9F284">"</span><span style="color:#BD93F9"> $DB_NAME</span></span></code></pre>
+<span class="line"><span style="color:#50FA7B">/usr/bin/pg_dump</span><span style="color:#BD93F9"> -U</span><span style="color:#BD93F9"> $PG_USER</span><span style="color:#BD93F9"> -Fp</span><span style="color:#BD93F9"> -f</span><span style="color:#E9F284"> "</span><span style="color:#BD93F9">$BACKUP_PATH</span><span style="color:#F1FA8C">/</span><span style="color:#BD93F9">$DB_NAME</span><span style="color:#F1FA8C">-</span><span style="color:#BD93F9">$TIMESTAMP</span><span style="color:#F1FA8C">.sql</span><span style="color:#E9F284">"</span><span style="color:#BD93F9"> $DB_NAME</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>
 <p>Save the file with a <code>.sh</code> extension, such as <code>backup_database.sh</code>.</p>
@@ -26,13 +28,16 @@
 <p>Set the execution permissions for the script:</p>
 </li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">chmod</span><span style="color:#F1FA8C"> +x</span><span style="color:#F1FA8C"> backup_database.sh</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">chmod</span><span style="color:#F1FA8C"> +x</span><span style="color:#F1FA8C"> backup_database.sh</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Run the script by specifying its path:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">./backup_database.sh</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">./backup_database.sh</span></span>
+<span class="line"></span></code></pre>
 <h2 id="scheduling-and-automating-shell-scripts">Scheduling and Automating Shell Scripts</h2>
 <p>You can further automate shell scripts by scheduling them to run at specific intervals using tools such as <code>cron</code> on UNIX-like systems or Task Scheduler on Windows.</p>
 <p>For example, to run the <code>backup_database.sh</code> script every day at midnight using <code>cron</code>, you would add the following line to your crontab file:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">0</span><span style="color:#BD93F9"> 0</span><span style="color:#BD93F9;font-style:italic"> *</span><span style="color:#BD93F9;font-style:italic"> *</span><span style="color:#BD93F9;font-style:italic"> *</span><span style="color:#F1FA8C"> /path/to/backup_database.sh</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">0</span><span style="color:#BD93F9"> 0</span><span style="color:#BD93F9;font-style:italic"> *</span><span style="color:#BD93F9;font-style:italic"> *</span><span style="color:#BD93F9;font-style:italic"> *</span><span style="color:#F1FA8C"> /path/to/backup_database.sh</span></span>
+<span class="line"></span></code></pre>
 <p>By leveraging shell scripts with tools such as <code>cron</code>, you can efficiently automate tasks related to PostgreSQL and streamline your database administration processes.</p>

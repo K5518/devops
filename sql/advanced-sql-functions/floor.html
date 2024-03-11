@@ -3,12 +3,15 @@
 <p>One important aspect to note is that the <code>FLOOR</code> function’s argument must be a number and it always returns an integer.</p>
 <h2 id="syntax">Syntax</h2>
 <p>The syntax of using the <code>FLOOR</code> function in SQL is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">FLOOR</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">number</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">FLOOR</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">number</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="example-usage">Example Usage</h2>
 <p>Here’s a simple example of its usage:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> FLOOR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">25</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">75</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> FLOOR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">25</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">75</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>The above query will return <code>25</code> as the result, as that’s the nearest integer less than <code>25.75</code>.</p>
 <p>Suppose we have a table called <code>Orders</code> with a column <code>SalePrice</code> that includes decimal values. If we wanted to round down the <code>SalePrice</code> values to the nearest whole numbers, we could use a query like this:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> FLOOR</span><span style="color:#F8F8F2">(SalePrice) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> RoundedSalePrice</span></span>
-<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Orders;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Orders;</span></span>
+<span class="line"></span></code></pre>
 <p>This would output a new column <code>RoundedSalePrice</code> where all the sale prices have been rounded down to the nearest integers.</p>

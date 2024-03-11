@@ -11,7 +11,8 @@
 <span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> minValue </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6;font-weight:bold"> new</span><span style="color:#50FA7B"> MinKey</span><span style="color:#F8F8F2">();</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">// Insert a document with a field `priority` having the MinKey value</span></span>
-<span class="line"><span style="color:#F8F8F2">db.myCollection.</span><span style="color:#50FA7B">insertOne</span><span style="color:#F8F8F2">({ name</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">example</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, priority</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> minValue });</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">db.myCollection.</span><span style="color:#50FA7B">insertOne</span><span style="color:#F8F8F2">({ name</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">example</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, priority</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> minValue });</span></span>
+<span class="line"></span></code></pre>
 <p>This will insert a document with a <code>priority</code> field set to the Min Key value.</p>
 <h2 id="use-cases">Use cases</h2>
 <ul>
@@ -21,11 +22,13 @@
 <span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> mySchema </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6;font-weight:bold"> new</span><span style="color:#50FA7B"> Schema</span><span style="color:#F8F8F2">({</span></span>
 <span class="line"><span style="color:#F8F8F2">  name</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> String,</span></span>
 <span class="line"><span style="color:#F8F8F2">  priority</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { type</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> Schema.Types.MinKey, default</span><span style="color:#FF79C6">:</span><span style="color:#FF79C6;font-weight:bold"> new</span><span style="color:#50FA7B"> MinKey</span><span style="color:#F8F8F2">() },</span></span>
-<span class="line"><span style="color:#F8F8F2">});</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">});</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>When you need to find a document with the minimum value for a specific field.</li>
 </ul>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">// Find the document with the lowest priority</span></span>
-<span class="line"><span style="color:#F8F8F2">db.myCollection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">().</span><span style="color:#50FA7B">sort</span><span style="color:#F8F8F2">({ priority</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2"> }).</span><span style="color:#50FA7B">limit</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">db.myCollection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">().</span><span style="color:#50FA7B">sort</span><span style="color:#F8F8F2">({ priority</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2"> }).</span><span style="color:#50FA7B">limit</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="conclusion">Conclusion</h2>
 <p>In this section, we’ve learned about the “Min Key” data type in MongoDB. We discussed how it is used to represent the smallest value in the BSON data types and its various use cases in sorting and querying the data.</p>

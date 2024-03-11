@@ -4,22 +4,26 @@
 <ul>
 <li>
 <p><strong>Windows</strong>: You can create new files using the built-in text editor (Notepad) or dedicated file creation software. You can also use PowerShell commands for quicker file creation. The <code>New-Item</code> command followed by the file path creates a file.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>New-Item -Path "C:\Example\example.txt" -ItemType "file"</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>New-Item -Path "C:\Example\example.txt" -ItemType "file"</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 <li>
 <p><strong>Linux</strong>: Unlike Windows, file creation is usually done through the terminal. The <code>touch</code> command helps create a file in the desired directory.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>touch /example/example.txt</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>touch /example/example.txt</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 </ul>
 <h2 id="file-reading">File Reading</h2>
 <ul>
 <li>
 <p><strong>Windows</strong>: You can read a file using standard file readers, such as Notepad, Wordpad, etc., or you can utilize PowerShell commands. The <code>Get-Content</code> command provides the file content.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Get-Content -Path "C:\Example\example.txt"</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Get-Content -Path "C:\Example\example.txt"</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 <li>
 <p><strong>Linux</strong>: The <code>cat</code> command is the most common way to read the contents of a file in Linux.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>cat /example/example.txt</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>cat /example/example.txt</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 </ul>
 <h2 id="file-updating">File Updating</h2>
@@ -27,22 +31,26 @@
 <li>
 <p><strong>Windows</strong>: File updating can be accomplished using the previously mentioned text editors or PowerShell. The <code>Set-Content</code> or <code>Add-Content</code> commands are useful for updating a file.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Set-Content -Path "C:\Example\example.txt" -Value "Updated content"</span></span>
-<span class="line"><span>Add-Content -Path "C:\Example\example.txt" -Value "Appended content"</span></span></code></pre>
+<span class="line"><span>Add-Content -Path "C:\Example\example.txt" -Value "Appended content"</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 <li>
 <p><strong>Linux</strong>: Linux uses the built-in text editors, such as <code>nano</code> or <code>vim</code>, to update files. Alternatively, the <code>echo</code> command can append content to a file.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>echo "Appended content" >> /example/example.txt</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>echo "Appended content" >> /example/example.txt</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 </ul>
 <h2 id="file-deletion">File Deletion</h2>
 <ul>
 <li>
 <p><strong>Windows</strong>: File deletion is performed by right-clicking the file and selecting ‘Delete’ or using PowerShell commands. The <code>Remove-Item</code> command followed by the file path can delete a file.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Remove-Item -Path "C:\Example\example.txt"</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Remove-Item -Path "C:\Example\example.txt"</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 <li>
 <p><strong>Linux</strong>: The <code>rm</code> command allows you to delete a file in Linux.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>rm /example/example.txt</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>rm /example/example.txt</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 </ul>
 <p>By mastering these CRUD operations, you can enhance your cyber security knowledge and implement effective incident response and file management strategies.</p>

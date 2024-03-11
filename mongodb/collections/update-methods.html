@@ -3,7 +3,8 @@
 <ul>
 <li>
 <p><strong>updateOne()</strong>: This method updates the first document that matches the query criteria provided. The syntax for updateOne is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">updateOne</span><span style="color:#F8F8F2">(&#x3C;</span><span style="color:#FF79C6">filter</span><span style="color:#F8F8F2">>, &#x3C;</span><span style="color:#FF79C6">update</span><span style="color:#F8F8F2">>, &#x3C;</span><span style="color:#FF79C6">options</span><span style="color:#F8F8F2">>)</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">updateOne</span><span style="color:#F8F8F2">(&#x3C;</span><span style="color:#FF79C6">filter</span><span style="color:#F8F8F2">>, &#x3C;</span><span style="color:#FF79C6">update</span><span style="color:#F8F8F2">>, &#x3C;</span><span style="color:#FF79C6">options</span><span style="color:#F8F8F2">>)</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><code>&#x3C;filter></code>: Specifies the criteria for selecting the document to update.</li>
 <li><code>&#x3C;update></code>: Specifies the modifications to apply to the selected document.</li>
@@ -12,7 +13,8 @@
 </li>
 <li>
 <p><strong>updateMany()</strong>: This method updates multiple documents that match the query criteria provided. The syntax for updateMany is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">updateMany</span><span style="color:#F8F8F2">(&#x3C;</span><span style="color:#FF79C6">filter</span><span style="color:#F8F8F2">>, &#x3C;</span><span style="color:#FF79C6">update</span><span style="color:#F8F8F2">>, &#x3C;</span><span style="color:#FF79C6">options</span><span style="color:#F8F8F2">>)</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">updateMany</span><span style="color:#F8F8F2">(&#x3C;</span><span style="color:#FF79C6">filter</span><span style="color:#F8F8F2">>, &#x3C;</span><span style="color:#FF79C6">update</span><span style="color:#F8F8F2">>, &#x3C;</span><span style="color:#FF79C6">options</span><span style="color:#F8F8F2">>)</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><code>&#x3C;filter></code>: Specifies the criteria for selecting the documents to update.</li>
 <li><code>&#x3C;update></code>: Specifies the modifications to apply to the selected documents.</li>
@@ -21,7 +23,8 @@
 </li>
 <li>
 <p><strong>replaceOne()</strong>: This method replaces a document that matches the query criteria with a new document. The syntax for replaceOne is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">replaceOne</span><span style="color:#F8F8F2">(&#x3C;</span><span style="color:#FF79C6">filter</span><span style="color:#F8F8F2">>, &#x3C;</span><span style="color:#FF79C6">replacement</span><span style="color:#F8F8F2">>, &#x3C;</span><span style="color:#FF79C6">options</span><span style="color:#F8F8F2">>)</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">replaceOne</span><span style="color:#F8F8F2">(&#x3C;</span><span style="color:#FF79C6">filter</span><span style="color:#F8F8F2">>, &#x3C;</span><span style="color:#FF79C6">replacement</span><span style="color:#F8F8F2">>, &#x3C;</span><span style="color:#FF79C6">options</span><span style="color:#F8F8F2">>)</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><code>&#x3C;filter></code>: Specifies the criteria for selecting the document to replace.</li>
 <li><code>&#x3C;replacement></code>: The new document that will replace the matched document.</li>
@@ -34,15 +37,18 @@
 <ul>
 <li>
 <p>Use <code>$set</code> operator to update the value of a field:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">updateOne</span><span style="color:#F8F8F2">({ name</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">John Doe</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> }, { $set</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { age</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 30</span><span style="color:#F8F8F2"> } });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">updateOne</span><span style="color:#F8F8F2">({ name</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">John Doe</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> }, { $set</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { age</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 30</span><span style="color:#F8F8F2"> } });</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p>Use <code>$inc</code> operator to increment the value of a field:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">updateMany</span><span style="color:#F8F8F2">({ status</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">new</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> }, { $inc</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { views</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2"> } });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">updateMany</span><span style="color:#F8F8F2">({ status</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">new</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> }, { $inc</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { views</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2"> } });</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p>Use <code>$push</code> operator to add an item to an array field:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">updateOne</span><span style="color:#F8F8F2">({ name</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Jane Doe</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> }, { $push</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { tags</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">mongodb</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> } });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">updateOne</span><span style="color:#F8F8F2">({ name</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Jane Doe</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> }, { $push</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { tags</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">mongodb</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> } });</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 <p>Remember to thoroughly test your update operations to ensure the modifications are done correctly, and always backup your data before making any substantial changes to your documents.</p>

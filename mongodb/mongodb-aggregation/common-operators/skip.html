@@ -5,7 +5,8 @@
 <span class="line"><span style="color:#F8F8F2">  {</span></span>
 <span class="line"><span style="color:#F8F8F2">    $skip</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> &#x3C;</span><span style="color:#FF79C6">number</span><span style="color:#F8F8F2">></span></span>
 <span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#F8F8F2">]);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">]);</span></span>
+<span class="line"></span></code></pre>
 <p>Here, <code>&#x3C;number></code> is the number of documents you want to skip in the collection.</p>
 <h2 id="example">Example</h2>
 <p>Let’s say we have a collection named <code>employees</code> and we want to skip the first 5 documents of the collection (e.g., for paginating results). We can do this using the <code>$skip</code> operator:</p>
@@ -13,7 +14,8 @@
 <span class="line"><span style="color:#F8F8F2">  {</span></span>
 <span class="line"><span style="color:#F8F8F2">    $skip</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 5</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
-<span class="line"><span style="color:#F8F8F2">]);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">]);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="important-notes">Important Notes</h2>
 <ul>
 <li>The <code>$skip</code> operator does not guarantee the order of documents passed through, so it’s recommended you use <code>$sort</code> before <code>$skip</code> when order matters.</li>

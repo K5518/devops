@@ -5,32 +5,38 @@
 <li>
 <p><strong>AND Operator (&#x26;&#x26;)</strong>
 The AND operator checks if both the operands/conditions are true, then the expression is true. If any one of the conditions is false, the whole expression will be false.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>(expression1 &#x26;&#x26; expression2)</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>(expression1 &#x26;&#x26; expression2)</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>Example:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> a </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 5</span><span style="color:#F8F8F2">, b </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 10</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">if</span><span style="color:#F8F8F2"> (a </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 0</span><span style="color:#FF79C6"> &#x26;&#x26;</span><span style="color:#F8F8F2"> b </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">) {</span></span>
 <span class="line"><span style="color:#F8F8F2">    cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Both values are positive.</span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> endl;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>OR Operator (||)</strong>
 The OR operator checks if either of the operands/conditions are true, then the expression is true. If both the conditions are false, it will be false.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>(expression1 || expression2)</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>(expression1 || expression2)</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>Example:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> a </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 5</span><span style="color:#F8F8F2">, b </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> -</span><span style="color:#BD93F9">10</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">if</span><span style="color:#F8F8F2"> (a </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 0</span><span style="color:#FF79C6"> ||</span><span style="color:#F8F8F2"> b </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">) {</span></span>
 <span class="line"><span style="color:#F8F8F2">    cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">At least one value is positive.</span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> endl;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>NOT Operator (!)</strong>
 The NOT operator reverses the result of the condition/expression it is applied on. If the condition is true, the NOT operator will make it false and vice versa.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>!(expression)</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>!(expression)</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>Example:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> a </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 5</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">if</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">!</span><span style="color:#F8F8F2">(a </span><span style="color:#FF79C6">&#x3C;</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">)) {</span></span>
 <span class="line"><span style="color:#F8F8F2">    cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">The value is not negative.</span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> endl;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 <p>Using these operators, you can create more complex logical expressions, for example:</p>
@@ -38,5 +44,6 @@ The NOT operator reverses the result of the condition/expression it is applied o
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">if</span><span style="color:#F8F8F2"> (a </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 0</span><span style="color:#FF79C6"> &#x26;&#x26;</span><span style="color:#F8F8F2"> (b </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 0</span><span style="color:#FF79C6"> ||</span><span style="color:#F8F8F2"> c </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">)) {</span></span>
 <span class="line"><span style="color:#F8F8F2">    cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">At least two values are positive.</span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> endl;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>This covers the essential information about logical operators in C++.</p>

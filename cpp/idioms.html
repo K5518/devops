@@ -11,7 +11,8 @@
 <span class="line"><span style="color:#FF79C6">void</span><span style="color:#50FA7B"> function</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#F8F8F2">    Resource r;</span><span style="color:#6272A4"> // Resource is acquired</span></span>
 <span class="line"><span style="color:#6272A4">    // ...</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span><span style="color:#6272A4"> // Resource is released when r goes out of scope</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span><span style="color:#6272A4"> // Resource is released when r goes out of scope</span></span>
+<span class="line"></span></code></pre>
 <h2 id="2-rule-of-three">2. Rule of Three</h2>
 <p>If a class defines any one of the following, it should define all three: copy constructor, copy assignment operator, and destructor.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> MyClass</span><span style="color:#F8F8F2"> {</span></span>
@@ -20,7 +21,8 @@
 <span class="line"><span style="color:#50FA7B">    MyClass</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">const</span><span style="color:#8BE9FD;font-style:italic"> MyClass</span><span style="color:#FF79C6">&#x26;</span><span style="color:#FFB86C;font-style:italic"> other</span><span style="color:#F8F8F2">);</span><span style="color:#6272A4"> // Copy constructor</span></span>
 <span class="line"><span style="color:#8BE9FD;font-style:italic">    MyClass</span><span style="color:#FF79C6">&#x26;</span><span style="color:#FF79C6"> operator</span><span style="color:#F8F8F2">=(</span><span style="color:#FF79C6">const</span><span style="color:#8BE9FD;font-style:italic"> MyClass</span><span style="color:#FF79C6">&#x26;</span><span style="color:#FFB86C;font-style:italic"> other</span><span style="color:#F8F8F2">);</span><span style="color:#6272A4"> // Copy assignment operator</span></span>
 <span class="line"><span style="color:#50FA7B">    ~MyClass</span><span style="color:#F8F8F2">();</span><span style="color:#6272A4"> // Destructor</span></span>
-<span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">};</span></span>
+<span class="line"></span></code></pre>
 <h2 id="3-rule-of-five">3. Rule of Five</h2>
 <p>With C++11, the rule of three was extended to five, covering move constructor and move assignment operator.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> MyClass</span><span style="color:#F8F8F2"> {</span></span>
@@ -31,7 +33,8 @@
 <span class="line"><span style="color:#8BE9FD;font-style:italic">    MyClass</span><span style="color:#FF79C6">&#x26;</span><span style="color:#FF79C6"> operator</span><span style="color:#F8F8F2">=(</span><span style="color:#FF79C6">const</span><span style="color:#8BE9FD;font-style:italic"> MyClass</span><span style="color:#FF79C6">&#x26;</span><span style="color:#FFB86C;font-style:italic"> other</span><span style="color:#F8F8F2">);</span><span style="color:#6272A4"> // Copy assignment operator</span></span>
 <span class="line"><span style="color:#8BE9FD;font-style:italic">    MyClass</span><span style="color:#FF79C6">&#x26;</span><span style="color:#FF79C6"> operator</span><span style="color:#F8F8F2">=(</span><span style="color:#8BE9FD;font-style:italic">MyClass</span><span style="color:#FF79C6">&#x26;&#x26;</span><span style="color:#FFB86C;font-style:italic"> other</span><span style="color:#F8F8F2">);</span><span style="color:#6272A4"> // Move assignment operator</span></span>
 <span class="line"><span style="color:#50FA7B">    ~MyClass</span><span style="color:#F8F8F2">();</span><span style="color:#6272A4"> // Destructor</span></span>
-<span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">};</span></span>
+<span class="line"></span></code></pre>
 <h2 id="4-pimpl-pointer-to-implementation-idiom">4. PImpl (Pointer to Implementation) Idiom</h2>
 <p>This idiom is used to separate the implementation details of a class from its interface, resulting in faster compile times and the ability to change implementation without affecting clients.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">// header file</span></span>
@@ -54,7 +57,8 @@
 <span class="line"></span>
 <span class="line"><span style="color:#F8F8F2">MyClass</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">MyClass</span><span style="color:#F8F8F2">() : </span><span style="color:#50FA7B">pImpl</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6;font-weight:bold">new</span><span style="color:#50FA7B"> Impl</span><span style="color:#F8F8F2">()) {}</span></span>
 <span class="line"><span style="color:#F8F8F2">MyClass</span><span style="color:#FF79C6">::~</span><span style="color:#50FA7B">MyClass</span><span style="color:#F8F8F2">() { </span><span style="color:#FF79C6">delete</span><span style="color:#F8F8F2"> pImpl; }</span></span>
-<span class="line"><span style="color:#FF79C6">void</span><span style="color:#F8F8F2"> MyClass</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">someMethod</span><span style="color:#F8F8F2">() { pImpl</span><span style="color:#FF79C6">-></span><span style="color:#50FA7B">someMethod</span><span style="color:#F8F8F2">(); }</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">void</span><span style="color:#F8F8F2"> MyClass</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">someMethod</span><span style="color:#F8F8F2">() { pImpl</span><span style="color:#FF79C6">-></span><span style="color:#50FA7B">someMethod</span><span style="color:#F8F8F2">(); }</span></span>
+<span class="line"></span></code></pre>
 <h2 id="5-non-virtual-interface-nvi">5. Non-Virtual Interface (NVI)</h2>
 <p>This enforces a fixed public interface and allows subclasses to only override specific private or protected virtual methods.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> Base</span><span style="color:#F8F8F2"> {</span></span>
@@ -73,5 +77,6 @@
 <span class="line"><span style="color:#FF79C6">    virtual</span><span style="color:#FF79C6"> void</span><span style="color:#50FA7B"> privateMethod</span><span style="color:#F8F8F2">() </span><span style="color:#FF79C6">override</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#6272A4">        // Derived implementation</span></span>
 <span class="line"><span style="color:#F8F8F2">    }</span></span>
-<span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">};</span></span>
+<span class="line"></span></code></pre>
 <p>These are just a few examples of the many idioms in C++ programming. They can provide guidance when designing and implementing your code, but it’s essential to understand the underlying concepts to adapt them to different situations.</p>

@@ -10,43 +10,53 @@
 <span class="line"><span style="color:#F8F8F2">  hire_date </span><span style="color:#FF79C6">DATE</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  department_id </span><span style="color:#FF79C6">INTEGER</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  salary </span><span style="color:#FF79C6">NUMERIC</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">10</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">NOT NULL</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="alter-table">ALTER TABLE</h2>
 <p>When you need to modify an existing table’s structure, the <code>ALTER TABLE</code> command comes in handy. You can use this query to add, modify, or drop columns, and to add, alter, or drop table constraints. Some common examples include:</p>
 <ul>
 <li>Add a column:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">ADD</span><span style="color:#F8F8F2"> COLUMN email </span><span style="color:#FF79C6">VARCHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">255</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">UNIQUE</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">ADD</span><span style="color:#F8F8F2"> COLUMN email </span><span style="color:#FF79C6">VARCHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">255</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">UNIQUE</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Modify a column’s data type:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">ALTER</span><span style="color:#F8F8F2"> COLUMN salary </span><span style="color:#FF79C6">TYPE</span><span style="color:#FF79C6"> NUMERIC</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">12</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">ALTER</span><span style="color:#F8F8F2"> COLUMN salary </span><span style="color:#FF79C6">TYPE</span><span style="color:#FF79C6"> NUMERIC</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">12</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Drop a column:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">DROP</span><span style="color:#F8F8F2"> COLUMN email;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">DROP</span><span style="color:#F8F8F2"> COLUMN email;</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Add a foreign key constraint:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">ADD</span><span style="color:#FF79C6"> CONSTRAINT</span><span style="color:#F8F8F2"> fk_department_id </span><span style="color:#FF79C6">FOREIGN KEY</span><span style="color:#F8F8F2"> (department_id) </span><span style="color:#FF79C6">REFERENCES</span><span style="color:#F8F8F2"> departments(id);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">ADD</span><span style="color:#FF79C6"> CONSTRAINT</span><span style="color:#F8F8F2"> fk_department_id </span><span style="color:#FF79C6">FOREIGN KEY</span><span style="color:#F8F8F2"> (department_id) </span><span style="color:#FF79C6">REFERENCES</span><span style="color:#F8F8F2"> departments(id);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="drop-table">DROP TABLE</h2>
 <p>If you want to delete a table and all of its data permanently, use the <code>DROP TABLE</code> command. Be careful with this query, as it cannot be undone. Here’s an example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> employees;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> employees;</span></span>
+<span class="line"></span></code></pre>
 <p>You can also use the <code>CASCADE</code> option to drop any dependent objects that reference the table:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> employees CASCADE;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> employees CASCADE;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="truncate-table">TRUNCATE TABLE</h2>
 <p>In some cases, you might want to delete all the data in a table without actually deleting the table itself. The <code>TRUNCATE TABLE</code> command does just that. It leaves the table structure intact but removes all rows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">TRUNCATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> employees;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">TRUNCATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> employees;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="copy-table">COPY TABLE</h2>
 <p>To copy data to and from a table in PostgreSQL, you can use the <code>COPY</code> command. This is especially useful for importing or exporting large quantities of data. Here’s an example:</p>
 <ul>
 <li>Copy data from a CSV file into a table:</li>
 </ul>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">COPY</span><span style="color:#F8F8F2"> employees (id, first_name, last_name, birth_date, hire_date, department_id, salary)</span></span>
-<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">/path/to/employees.csv</span><span style="color:#E9F284">'</span><span style="color:#FF79C6"> WITH</span><span style="color:#F8F8F2"> CSV HEADER;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">/path/to/employees.csv</span><span style="color:#E9F284">'</span><span style="color:#FF79C6"> WITH</span><span style="color:#F8F8F2"> CSV HEADER;</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Copy data from a table to a CSV file:</li>
 </ul>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">COPY</span><span style="color:#F8F8F2"> employees (id, first_name, last_name, birth_date, hire_date, department_id, salary)</span></span>
-<span class="line"><span style="color:#FF79C6">TO</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">/path/to/employees_export.csv</span><span style="color:#E9F284">'</span><span style="color:#FF79C6"> WITH</span><span style="color:#F8F8F2"> CSV HEADER;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">TO</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">/path/to/employees_export.csv</span><span style="color:#E9F284">'</span><span style="color:#FF79C6"> WITH</span><span style="color:#F8F8F2"> CSV HEADER;</span></span>
+<span class="line"></span></code></pre>
 <p>In conclusion, understanding DDL queries for tables is essential when working with PostgreSQL databases. This topic covered the basics of creating, altering, dropping, truncating, and copying tables. Keep practicing these commands and exploring the PostgreSQL documentation to become more proficient and confident in managing your database tables.</p>

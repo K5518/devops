@@ -13,13 +13,16 @@
 <p>To generate debugger symbols in C++, you need to specify specific options during the compilation process. We will use <code>g++</code> compiler as an example.</p>
 <p><strong>Internal Debugging Symbols (g++)</strong></p>
 <p>To create a debug build with internal debugging symbols, use the <code>-g</code> flag:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">g++</span><span style="color:#BD93F9"> -g</span><span style="color:#BD93F9"> -o</span><span style="color:#F1FA8C"> my_program</span><span style="color:#F1FA8C"> my_program.cpp</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">g++</span><span style="color:#BD93F9"> -g</span><span style="color:#BD93F9"> -o</span><span style="color:#F1FA8C"> my_program</span><span style="color:#F1FA8C"> my_program.cpp</span></span>
+<span class="line"></span></code></pre>
 <p>This command compiles <code>my_program.cpp</code> into an executable named <code>my_program</code> with internal debugging symbols.</p>
 <p><strong>External Debugging Symbols (g++)</strong></p>
 <p>In case you want to generate a separate file containing debugging symbols, you can use the <code>-gsplit-dwarf</code> flag:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">g++</span><span style="color:#BD93F9"> -g</span><span style="color:#BD93F9"> -gsplit-dwarf</span><span style="color:#BD93F9"> -o</span><span style="color:#F1FA8C"> my_program</span><span style="color:#F1FA8C"> my_program.cpp</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">g++</span><span style="color:#BD93F9"> -g</span><span style="color:#BD93F9"> -gsplit-dwarf</span><span style="color:#BD93F9"> -o</span><span style="color:#F1FA8C"> my_program</span><span style="color:#F1FA8C"> my_program.cpp</span></span>
+<span class="line"></span></code></pre>
 <p>This command compiles <code>my_program.cpp</code> into an executable named <code>my_program</code> and generates a separate file named <code>my_program.dwo</code> containing the debugging symbols.</p>
 <p>When sharing your compiled binary to end-users, you can remove the debugging symbols using the <code>strip</code> command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">strip</span><span style="color:#BD93F9"> --strip-debug</span><span style="color:#F1FA8C"> my_program</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">strip</span><span style="color:#BD93F9"> --strip-debug</span><span style="color:#F1FA8C"> my_program</span></span>
+<span class="line"></span></code></pre>
 <p>This command removes internal debug symbols, resulting in a smaller binary size while keeping the <code>.dwo</code> file for debugging purposes when needed.</p>
 <p>Remember that the availability and syntax of these options may vary between different compilers and platforms. Be sure to consult your compiler’s documentation to ensure proper usage of the debugging options.</p>

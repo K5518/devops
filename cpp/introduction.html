@@ -4,13 +4,15 @@
 <p>Here are some basic components and concepts in C++ programming:</p>
 <h2 id="including-libraries">Including Libraries</h2>
 <p>In C++, we use the <code>#include</code> directive to include libraries or header files into our program. For example, to include the standard input/output library, we write:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
+<span class="line"></span></code></pre>
 <h2 id="main-function">Main Function</h2>
 <p>The entry point of a C++ program is the <code>main</code> function. Every C++ program must have a <code>main</code> function:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#50FA7B"> main</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#6272A4">    // Your code goes here</span></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="inputoutput">Input/Output</h2>
 <p>To perform input and output operations in C++, we can use the built-in objects <code>std::cin</code> for input and <code>std::cout</code> for output, available in the <code>iostream</code> library. Here’s an example of reading an integer and printing its value:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
@@ -21,7 +23,8 @@
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cin </span><span style="color:#FF79C6">>></span><span style="color:#F8F8F2"> number;</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">You entered: </span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> number </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="variables-and-data-types">Variables and Data Types</h2>
 <p>C++ has several basic data types for representing integer, floating-point, and character values:</p>
 <ul>
@@ -34,7 +37,8 @@
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> x;</span></span>
 <span class="line"><span style="color:#FF79C6">float</span><span style="color:#F8F8F2"> y;</span></span>
 <span class="line"><span style="color:#FF79C6">double</span><span style="color:#F8F8F2"> z;</span></span>
-<span class="line"><span style="color:#FF79C6">char</span><span style="color:#F8F8F2"> c;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">char</span><span style="color:#F8F8F2"> c;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="control-structures">Control Structures</h2>
 <p>C++ provides control structures for conditional execution and iteration, such as <code>if</code>, <code>else</code>, <code>while</code>, <code>for</code>, and <code>switch</code> statements.</p>
 <h3 id="if-else-statement">If-Else Statement</h3>
@@ -42,15 +46,18 @@
 <span class="line"><span style="color:#6272A4">    // Code to execute if the condition is true</span></span>
 <span class="line"><span style="color:#F8F8F2">} </span><span style="color:#FF79C6">else</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#6272A4">    // Code to execute if the condition is false</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h3 id="while-loop">While Loop</h3>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">while</span><span style="color:#F8F8F2"> (condition) {</span></span>
 <span class="line"><span style="color:#6272A4">    // Code to execute while the condition is true</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h3 id="for-loop">For Loop</h3>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">for</span><span style="color:#F8F8F2"> (initialization; condition; update) {</span></span>
 <span class="line"><span style="color:#6272A4">    // Code to execute while the condition is true</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h3 id="switch-statement">Switch Statement</h3>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">switch</span><span style="color:#F8F8F2"> (variable) {</span></span>
 <span class="line"><span style="color:#FF79C6">    case</span><span style="color:#F8F8F2"> value1:</span></span>
@@ -62,14 +69,16 @@
 <span class="line"><span style="color:#6272A4">    // More cases...</span></span>
 <span class="line"><span style="color:#FF79C6">    default</span><span style="color:#F8F8F2">:</span></span>
 <span class="line"><span style="color:#6272A4">        // Code to execute if variable does not match any case value</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="functions">Functions</h2>
 <p>Functions are reusable blocks of code that can be called with arguments to perform a specific task. Functions are defined with a return type, a name, a parameter list, and a body.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD;font-style:italic">ReturnType</span><span style="color:#50FA7B"> functionName</span><span style="color:#F8F8F2">(</span><span style="color:#8BE9FD;font-style:italic">ParameterType1</span><span style="color:#FFB86C;font-style:italic"> parameter1</span><span style="color:#F8F8F2">, </span><span style="color:#8BE9FD;font-style:italic">ParameterType2</span><span style="color:#FFB86C;font-style:italic"> parameter2</span><span style="color:#F8F8F2">) {</span></span>
 <span class="line"><span style="color:#6272A4">    // Function body</span></span>
 <span class="line"><span style="color:#6272A4">    // ...</span></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#F8F8F2"> returnValue;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>For example, here’s a function that adds two integers and returns the result:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#50FA7B"> add</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> a</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> b</span><span style="color:#F8F8F2">) {</span></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#F8F8F2"> a </span><span style="color:#FF79C6">+</span><span style="color:#F8F8F2"> b;</span></span>
@@ -79,7 +88,8 @@
 <span class="line"><span style="color:#FF79C6">    int</span><span style="color:#F8F8F2"> result </span><span style="color:#FF79C6">=</span><span style="color:#50FA7B"> add</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">3</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">3 + 4 = </span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> result </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>This basic introduction to C++ should provide you with a good foundation for further learning. Explore more topics such as classes, objects, inheritance, polymorphism, templates, and the Standard Template Library (STL) to deepen your understanding of C++ and start writing more advanced programs.</p>
 <ul>
 <li><a href="https://www.learncpp.com/" rel="noopener noreferrer nofollow" target="_blank">LearnC++</a></li>

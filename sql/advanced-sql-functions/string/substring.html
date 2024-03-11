@@ -2,7 +2,8 @@
 <p>The SQL <code>SUBSTRING</code> function is used to extract a part of a string, where you can specify the start position and the length of the text. This function can be very beneficial when you only need a specific part of a string.</p>
 <h2 id="syntax">Syntax</h2>
 <p>The standardized SQL syntax for <code>SUBSTRING</code> is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">SUBSTRING</span><span style="color:#F8F8F2">(string, </span><span style="color:#FF79C6">start</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">length</span><span style="color:#F8F8F2">)</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">SUBSTRING</span><span style="color:#F8F8F2">(string, </span><span style="color:#FF79C6">start</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">length</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"></span></code></pre>
 <p>Where:</p>
 <ul>
 <li><code>string</code> is the source string from which you want to extract.</li>
@@ -11,19 +12,24 @@
 </ul>
 <h2 id="usage">Usage</h2>
 <p>For instance, if you want to extract the first 5 characters from the string ‘Hello World’:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> SUBSTRING</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Hello World</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">as</span><span style="color:#F8F8F2"> ExtractedString;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> SUBSTRING</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Hello World</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">as</span><span style="color:#F8F8F2"> ExtractedString;</span></span>
+<span class="line"></span></code></pre>
 <p>Result:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">| ExtractedString |</span></span>
 <span class="line"><span style="color:#F8F8F2">| </span><span style="color:#6272A4">--------------- |</span></span>
-<span class="line"><span style="color:#F8F8F2">| Hello           |</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">| Hello           |</span></span>
+<span class="line"></span></code></pre>
 <p>You can also use <code>SUBSTRING</code> on table columns, like so:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> SUBSTRING</span><span style="color:#F8F8F2">(column_name, </span><span style="color:#FF79C6">start</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">length</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> SUBSTRING</span><span style="color:#F8F8F2">(column_name, </span><span style="color:#FF79C6">start</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">length</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="substring-with-from-and-for">SUBSTRING with FROM and FOR</h2>
 <p>In some database systems (like PostgreSQL and SQL Server), the <code>SUBSTRING</code> function uses a different syntax:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">SUBSTRING</span><span style="color:#F8F8F2">(string </span><span style="color:#FF79C6">FROM</span><span style="color:#FF79C6"> start</span><span style="color:#FF79C6"> FOR</span><span style="color:#FF79C6"> length</span><span style="color:#F8F8F2">)</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">SUBSTRING</span><span style="color:#F8F8F2">(string </span><span style="color:#FF79C6">FROM</span><span style="color:#FF79C6"> start</span><span style="color:#FF79C6"> FOR</span><span style="color:#FF79C6"> length</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"></span></code></pre>
 <p>This format functions the same way as the previously mentioned syntax.</p>
 <p>For example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> SUBSTRING</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Hello World</span><span style="color:#E9F284">'</span><span style="color:#FF79C6"> FROM</span><span style="color:#BD93F9"> 1</span><span style="color:#FF79C6"> FOR</span><span style="color:#BD93F9"> 5</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">as</span><span style="color:#F8F8F2"> ExtractedString;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> SUBSTRING</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Hello World</span><span style="color:#E9F284">'</span><span style="color:#FF79C6"> FROM</span><span style="color:#BD93F9"> 1</span><span style="color:#FF79C6"> FOR</span><span style="color:#BD93F9"> 5</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">as</span><span style="color:#F8F8F2"> ExtractedString;</span></span>
+<span class="line"></span></code></pre>
 <p>This would yield the same result as the previous example - ‘Hello’.</p>
 <h2 id="note">Note</h2>
 <p>SQL is case-insensitive, meaning <code>SUBSTRING</code>, <code>substring</code>, and <code>Substring</code> will all function the same way.</p>

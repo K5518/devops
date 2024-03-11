@@ -6,37 +6,43 @@ of the data types can differ slightly. Here are the general types:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">INT</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#FF79C6">    Name</span><span style="color:#FF79C6"> VARCHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">30</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="decimal">DECIMAL</h2>
 <p><code>DECIMAL</code> is used for decimal and fractional numbers. For example:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Items</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">INT</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    Price </span><span style="color:#FF79C6">DECIMAL</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">,</span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="char">CHAR</h2>
 <p><code>CHAR</code> is used for fixed-length strings. For example:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">INT</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    Initial </span><span style="color:#FF79C6">CHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="varchar">VARCHAR</h2>
 <p><code>VARCHAR</code> is used for variable-length strings. For example:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">INT</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#FF79C6">    Name</span><span style="color:#FF79C6"> VARCHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">30</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="date">DATE</h2>
 <p><code>DATE</code> is used for dates in the format (<code>YYYY-MM-DD</code>).</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Employees</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">INT</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    BirthDate </span><span style="color:#FF79C6">DATE</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="datetime">DATETIME</h2>
 <p><code>DATETIME</code> is used for date and time values in the format (<code>YYYY-MM-DD HH:MI:SS</code>).</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> Orders</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    ID </span><span style="color:#FF79C6">INT</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    OrderDate </span><span style="color:#FF79C6">DATETIME</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="binary">BINARY</h2>
 <p><code>BINARY</code> is used for binary strings.</p>
 <h2 id="boolean">BOOLEAN</h2>

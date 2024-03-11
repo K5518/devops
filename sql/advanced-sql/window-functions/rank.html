@@ -7,7 +7,8 @@
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">RANK</span><span style="color:#F8F8F2"> () </span><span style="color:#FF79C6">OVER</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    [PARTITION BY column_1, column_2,…]</span></span>
 <span class="line"><span style="color:#FF79C6">    ORDER BY</span><span style="color:#F8F8F2"> column_3,column_4,… </span></span>
-<span class="line"><span style="color:#F8F8F2">)</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">)</span></span>
+<span class="line"></span></code></pre>
 <p><code>PARTITION BY</code>: This clause divides the rows into multiple groups or partitions upon which the <code>RANK()</code> function is applied.</p>
 <p><code>ORDER BY</code>: This clause sorts the rows in each partition.</p>
 <p>If <code>PARTITION BY</code> is not specified, the function treats all rows in the result set as a single partition.</p>
@@ -21,7 +22,8 @@
 <span class="line"><span style="color:#FF79C6">    ORDER BY</span><span style="color:#F8F8F2"> product_name </span><span style="color:#FF79C6">ASC</span></span>
 <span class="line"><span style="color:#F8F8F2">) Product_rank</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span></span>
-<span class="line"><span style="color:#F8F8F2">    products;</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">    products;</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, it generates a list of products, grouped by brand, and ranked by product_name within each brand. The <code>product_name</code> with the smallest value (alphabetically first when sorting ASC) gets a rank of 1 within its partition.</p>
 <h2 id="important-notes">Important Notes</h2>
 <ul>

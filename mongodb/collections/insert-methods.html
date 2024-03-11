@@ -11,7 +11,8 @@
 <span class="line"><span style="color:#F8F8F2">      bypassDocumentValidation: &#x3C;</span><span style="color:#FF79C6">boolean</span><span style="color:#F8F8F2">>,</span></span>
 <span class="line"><span style="color:#F8F8F2">      comment: &#x3C;</span><span style="color:#FF79C6">any</span><span style="color:#F8F8F2">></span></span>
 <span class="line"><span style="color:#F8F8F2">   }</span></span>
-<span class="line"><span style="color:#F8F8F2">)</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">)</span></span>
+<span class="line"></span></code></pre>
 <p><strong>Options:</strong></p>
 <ul>
 <li><code>writeConcern:</code> An optional document specifying the level of acknowledgment requested from MongoDB for the write operation.</li>
@@ -23,7 +24,8 @@
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.inventory.</span><span style="color:#50FA7B">insertOne</span><span style="color:#F8F8F2">({</span></span>
 <span class="line"><span style="color:#F8F8F2">  item</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">book</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  qty</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">,</span></span>
-<span class="line"><span style="color:#F8F8F2">});</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">});</span></span>
+<span class="line"></span></code></pre>
 <h2 id="insertmany">insertMany()</h2>
 <p>The <code>insertMany()</code> method is used to insert multiple documents into a collection at once. It returns an <code>InsertManyResult</code> object, displaying the status of the operation.</p>
 <p><strong>Syntax:</strong></p>
@@ -35,7 +37,8 @@
 <span class="line"><span style="color:#F8F8F2">      bypassDocumentValidation: &#x3C;</span><span style="color:#FF79C6">boolean</span><span style="color:#F8F8F2">>,</span></span>
 <span class="line"><span style="color:#F8F8F2">      comment: &#x3C;</span><span style="color:#FF79C6">any</span><span style="color:#F8F8F2">></span></span>
 <span class="line"><span style="color:#F8F8F2">   }</span></span>
-<span class="line"><span style="color:#F8F8F2">)</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">)</span></span>
+<span class="line"></span></code></pre>
 <p><strong>Options:</strong></p>
 <ul>
 <li><code>writeConcern:</code> Same as mentioned in <code>insertOne()</code> method.</li>
@@ -48,5 +51,6 @@
 <span class="line"><span style="color:#F8F8F2">  { item</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">pen</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, qty</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 5</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { item</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">pencil</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, qty</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 10</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { item</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">notebook</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, qty</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 25</span><span style="color:#F8F8F2"> },</span></span>
-<span class="line"><span style="color:#F8F8F2">]);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">]);</span></span>
+<span class="line"></span></code></pre>
 <p>In conclusion, insert methods in MongoDB allow users to add documents to a collection with a few simple commands. By understanding the syntax and options available for <code>insertOne()</code> and <code>insertMany()</code>, we can efficiently store and manage data within MongoDB collections.</p>

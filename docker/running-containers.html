@@ -1,21 +1,28 @@
 <div data-github-url="https://github.com/kamranahmedse/developer-roadmap/tree/master/src/data/roadmaps/docker/content/108-running-containers/index.md"></div> <h1 id="running-containers">Running Containers</h1>
 <p>To start a new container, we use the <code>docker run</code> command followed by the image name. The basic syntax is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#F8F8F2"> [options] IMAGE [COMMAND] [ARG...]</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#F8F8F2"> [options] IMAGE [COMMAND] [ARG...]</span></span>
+<span class="line"></span></code></pre>
 <p>For example, to run the official Nginx image, we would use:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> -p</span><span style="color:#BD93F9"> 8080</span><span style="color:#F1FA8C">:80</span><span style="color:#F1FA8C"> nginx</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> -p</span><span style="color:#BD93F9"> 8080</span><span style="color:#F1FA8C">:80</span><span style="color:#F1FA8C"> nginx</span></span>
+<span class="line"></span></code></pre>
 <p>This starts a new container and maps the host’s port 8080 to the container’s port 80.</p>
 <h2 id="listing-containers">Listing Containers</h2>
 <p>To list all running containers, use the <code>docker ps</code> command. To view all containers (including those that have stopped), use the <code>-a</code> flag:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> container</span><span style="color:#F1FA8C"> ls</span><span style="color:#BD93F9"> -a</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> container</span><span style="color:#F1FA8C"> ls</span><span style="color:#BD93F9"> -a</span></span>
+<span class="line"></span></code></pre>
 <h2 id="accessing-containers">Accessing Containers</h2>
 <p>To access a running container’s shell, use the <code>docker exec</code> command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> exec</span><span style="color:#BD93F9"> -it</span><span style="color:#F1FA8C"> CONTAINER_ID</span><span style="color:#F1FA8C"> bash</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> exec</span><span style="color:#BD93F9"> -it</span><span style="color:#F1FA8C"> CONTAINER_ID</span><span style="color:#F1FA8C"> bash</span></span>
+<span class="line"></span></code></pre>
 <p>Replace <code>CONTAINER_ID</code> with the ID or name of your desired container. You can find this in the output of <code>docker ps</code>.</p>
 <h2 id="stopping-containers">Stopping Containers</h2>
 <p>To stop a running container, use the <code>docker stop</code> command followed by the container ID or name:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> container</span><span style="color:#F1FA8C"> stop</span><span style="color:#F1FA8C"> CONTAINER_ID</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> container</span><span style="color:#F1FA8C"> stop</span><span style="color:#F1FA8C"> CONTAINER_ID</span></span>
+<span class="line"></span></code></pre>
 <h2 id="removing-containers">Removing Containers</h2>
 <p>Once a container is stopped, we can remove it using the <code>docker rm</code> command followed by the container ID or name:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> container</span><span style="color:#F1FA8C"> rm</span><span style="color:#F1FA8C"> CONTAINER_ID</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> container</span><span style="color:#F1FA8C"> rm</span><span style="color:#F1FA8C"> CONTAINER_ID</span></span>
+<span class="line"></span></code></pre>
 <p>To automatically remove containers when they exit, add the <code>--rm</code> flag when running a container:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> --rm</span><span style="color:#F1FA8C"> IMAGE</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> --rm</span><span style="color:#F1FA8C"> IMAGE</span></span>
+<span class="line"></span></code></pre>

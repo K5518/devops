@@ -14,7 +14,8 @@
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">thread </span><span style="color:#50FA7B">t</span><span style="color:#F8F8F2">(my_function);</span></span>
 <span class="line"><span style="color:#F8F8F2">    t.</span><span style="color:#50FA7B">join</span><span style="color:#F8F8F2">();</span><span style="color:#6272A4"> // waits for the thread to complete</span></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="thread-with-arguments">Thread with Arguments</h2>
 <p>You can pass arguments to the thread function by providing them as additional arguments to the <code>std::thread</code> constructor.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
@@ -28,7 +29,8 @@
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">thread </span><span style="color:#50FA7B">t</span><span style="color:#F8F8F2">(print_sum, </span><span style="color:#BD93F9">3</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"><span style="color:#F8F8F2">    t.</span><span style="color:#50FA7B">join</span><span style="color:#F8F8F2">();</span></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="mutex-and-locks">Mutex and Locks</h2>
 <p>When multiple threads access shared resources, there is a possibility of a data race. To avoid this, use mutex and locks to synchronize shared resource access.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
@@ -55,5 +57,6 @@
 <span class="line"><span style="color:#F8F8F2">    t2.</span><span style="color:#50FA7B">join</span><span style="color:#F8F8F2">();</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>This short introduction should help you get started with basic multithreading techniques in C++. There is a lot more to learn, such as thread pools, condition variables, and atomic operations for advanced synchronization and performance tuning.</p>

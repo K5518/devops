@@ -1,26 +1,31 @@
 <div data-github-url="https://github.com/kamranahmedse/developer-roadmap/tree/master/src/data/roadmaps/postgresql-dba/content/111-troubleshooting-techniques/100-system-views/101-pg-stat-statements.md"></div> <h1 id="pg-stat-statements">Pg Stat Statements</h1>
 <p><strong>Pg Stat Statements</strong> is a system view in PostgreSQL that provides detailed statistics on the execution of SQL queries. It is particularly useful for developers and database administrators to identify performance bottlenecks, optimize query performance, and troubleshoot issues. This view can be queried directly or accessed through various administration tools.</p>
 <p>To use Pg Stat Statements, you need to enable the <code>pg_stat_statements</code> extension by adding the following line to the <code>postgresql.conf</code> configuration file:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">shared_preload_libraries</span><span style="color:#FF79C6"> =</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">pg_stat_statements</span><span style="color:#E9F284">'</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">shared_preload_libraries</span><span style="color:#FF79C6"> =</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">pg_stat_statements</span><span style="color:#E9F284">'</span></span>
+<span class="line"></span></code></pre>
 <p>You might also want to adjust the following settings to control the amount of data collected:</p>
 <ul>
 <li><code>pg_stat_statements.max</code>: The maximum number of statements tracked (default is 5000).</li>
 <li><code>pg_stat_statements.track</code>: Controls which statements are tracked; can be set to <code>all</code>, <code>top</code>, or <code>none</code> (default is <code>top</code>).</li>
 </ul>
 <p>After enabling the extension, restart the PostgreSQL server and run the following command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#F8F8F2"> EXTENSION pg_stat_statements;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#F8F8F2"> EXTENSION pg_stat_statements;</span></span>
+<span class="line"></span></code></pre>
 <p>Now you can query the <code>pg_stat_statements</code> view to get useful information about query execution. Let’s take a look at some example queries.</p>
 <h2 id="finding-the-total-time-spent-on-queries">Finding the Total Time Spent on Queries</h2>
 <p>To see the total time spent on all queries executed by the system, use the following query:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> sum</span><span style="color:#F8F8F2">(total_time) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> total_time_spent</span></span>
-<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> pg_stat_statements;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> pg_stat_statements;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="top-10-slowest-queries">Top 10 Slowest Queries</h2>
 <p>To identify the top 10 slowest queries, you can sort the results on <code>mean_time</code> descending and limit the results to 10:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> query, total_time, calls, mean_time, stddev_time, </span><span style="color:#FF79C6">rows</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> pg_stat_statements</span></span>
 <span class="line"><span style="color:#FF79C6">ORDER BY</span><span style="color:#F8F8F2"> mean_time </span><span style="color:#FF79C6">DESC</span></span>
-<span class="line"><span style="color:#FF79C6">LIMIT</span><span style="color:#BD93F9"> 10</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">LIMIT</span><span style="color:#BD93F9"> 10</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="resetting-the-statistics">Resetting the Statistics</h2>
 <p>If needed, you can reset the statistics collected by <code>pg_stat_statements</code> using the following command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> pg_stat_statements_reset();</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> pg_stat_statements_reset();</span></span>
+<span class="line"></span></code></pre>
 <p>In summary, the <code>pg_stat_statements</code> system view in PostgreSQL is a valuable tool for analyzing query performance and identifying opportunities for optimization. Be sure to familiarize yourself with this view and leverage its capabilities in your day-to-day PostgreSQL tasks.</p>

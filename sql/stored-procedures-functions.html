@@ -9,9 +9,11 @@
 <span class="line"><span style="color:#FF79C6">  FROM</span><span style="color:#F8F8F2"> Employees</span></span>
 <span class="line"><span style="color:#FF79C6">  WHERE</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">></span><span style="color:#F8F8F2"> @minSalary</span></span>
 <span class="line"><span style="color:#FF79C6">END</span></span>
-<span class="line"><span style="color:#FF79C6">GO</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">GO</span></span>
+<span class="line"></span></code></pre>
 <p>To call this stored procedure, we would use:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">EXEC</span><span style="color:#F8F8F2"> getEmployeesBySalary </span><span style="color:#BD93F9">50000</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">EXEC</span><span style="color:#F8F8F2"> getEmployeesBySalary </span><span style="color:#BD93F9">50000</span></span>
+<span class="line"></span></code></pre>
 <h2 id="functions">Functions</h2>
 <p>A SQL function is a set of SQL statements that perform a specific task. Functions must return a value or result. We can use these functions in SELECT, INSERT, DELETE, UPDATE statements.</p>
 <p>There are two types of functions in SQL:</p>
@@ -23,7 +25,8 @@
 <span class="line"><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">BEGIN</span></span>
 <span class="line"><span style="color:#FF79C6">   RETURN</span><span style="color:#F8F8F2"> @a </span><span style="color:#FF79C6">+</span><span style="color:#F8F8F2"> @b</span></span>
-<span class="line"><span style="color:#FF79C6">END</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">END</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><strong>Table-valued functions</strong>, which return a table. They can be used in JOIN clauses as if they were a normal table. For example:</li>
 </ul>
@@ -34,7 +37,9 @@
 <span class="line"><span style="color:#FF79C6">   SELECT</span><span style="color:#BD93F9"> books</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">title</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">books</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">publicationYear</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">   FROM</span><span style="color:#F8F8F2"> books </span></span>
 <span class="line"><span style="color:#FF79C6">   WHERE</span><span style="color:#BD93F9"> books</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">authorID</span><span style="color:#FF79C6"> =</span><span style="color:#F8F8F2"> @authorID</span></span>
-<span class="line"><span style="color:#F8F8F2">)</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">)</span></span>
+<span class="line"></span></code></pre>
 <p>To call this function:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> title, publicationYear </span></span>
-<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> getBooks(</span><span style="color:#BD93F9">3</span><span style="color:#F8F8F2">)</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> getBooks(</span><span style="color:#BD93F9">3</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"></span></code></pre>

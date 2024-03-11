@@ -17,18 +17,23 @@
 <h2 id="working-with-object-id">Working with Object ID</h2>
 <p>Here are a few examples of how to work with Object IDs in MongoDB:</p>
 <p><strong>1. Inserting a document without specifying an <code>_id</code>:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">insertOne</span><span style="color:#F8F8F2">({ title</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Example</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">insertOne</span><span style="color:#F8F8F2">({ title</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Example</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> });</span></span>
+<span class="line"></span></code></pre>
 <p><strong>Output:</strong></p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#E9F284">  "</span><span style="color:#F1FA8C">_id</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#50FA7B">ObjectId</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">60c4237a89293ddc1ef23245</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">),</span></span>
 <span class="line"><span style="color:#E9F284">  "</span><span style="color:#F1FA8C">title</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">Example</span><span style="color:#E9F284">"</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p><strong>2. Creating Object ID manually:</strong></p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> { ObjectId } </span><span style="color:#FF79C6">=</span><span style="color:#50FA7B"> require</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">mongodb</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> objectId </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6;font-weight:bold"> new</span><span style="color:#50FA7B"> ObjectId</span><span style="color:#F8F8F2">();</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> objectId </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6;font-weight:bold"> new</span><span style="color:#50FA7B"> ObjectId</span><span style="color:#F8F8F2">();</span></span>
+<span class="line"></span></code></pre>
 <p><strong>3. Converting Object ID to a string:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> objectIdStr </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> objectId.</span><span style="color:#50FA7B">toString</span><span style="color:#F8F8F2">();</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> objectIdStr </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> objectId.</span><span style="color:#50FA7B">toString</span><span style="color:#F8F8F2">();</span></span>
+<span class="line"></span></code></pre>
 <p><strong>4. Converting a string back to an Object ID:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> objectIdFromStr </span><span style="color:#FF79C6">=</span><span style="color:#50FA7B"> ObjectId</span><span style="color:#F8F8F2">(objectIdStr);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> objectIdFromStr </span><span style="color:#FF79C6">=</span><span style="color:#50FA7B"> ObjectId</span><span style="color:#F8F8F2">(objectIdStr);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="conclusion">Conclusion</h2>
 <p>The Object ID datatype in MongoDB is a very powerful and efficient way to uniquely identify documents in a collection. Its structure provides valuable information about the document’s creation, and its design ensures high performance and scalability for large-scale MongoDB deployments. Understanding and effectively utilizing Object IDs is essential for successful MongoDB usage.</p>

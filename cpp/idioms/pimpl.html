@@ -14,7 +14,8 @@
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">private:</span></span>
 <span class="line"><span style="color:#F8F8F2">    MyClass_Impl </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2">pimpl;</span><span style="color:#6272A4"> // pointer to the implementation</span></span>
-<span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">};</span></span>
+<span class="line"></span></code></pre>
 <p><strong>my_class.cpp</strong></p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">my_class.h</span><span style="color:#E9F284">"</span></span>
 <span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> &#x3C;</span><span style="color:#F1FA8C">iostream</span><span style="color:#E9F284">></span></span>
@@ -35,5 +36,6 @@
 <span class="line"><span style="color:#FF79C6">void</span><span style="color:#F8F8F2"> MyClass</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">some_method</span><span style="color:#F8F8F2">()</span></span>
 <span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#F8F8F2">    pimpl</span><span style="color:#FF79C6">-></span><span style="color:#50FA7B">some_method</span><span style="color:#F8F8F2">();</span><span style="color:#6272A4"> // delegation to the implementation</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>Now, all the public methods of <code>MyClass</code> will delegate the calls to the corresponding methods of <code>MyClass_Impl</code>. By doing this, you can hide the details of class implementation, reduce the compile-time dependencies, and ease the maintenance of your code.</p>

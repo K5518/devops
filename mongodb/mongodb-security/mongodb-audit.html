@@ -9,7 +9,8 @@
 <span class="line"><span style="color:#8BE9FD">  destination</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> file</span></span>
 <span class="line"><span style="color:#8BE9FD">  format</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> JSON</span></span>
 <span class="line"><span style="color:#8BE9FD">  path</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">/path/to/audit/log/file.json</span><span style="color:#E9F284">'</span></span>
-<span class="line"><span style="color:#8BE9FD">  filter</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">{ atype: { $in: ['authenticate', 'createUser', 'dropUser', 'revokeRolesFromUser'] }}</span><span style="color:#E9F284">"</span></span></code></pre>
+<span class="line"><span style="color:#8BE9FD">  filter</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">{ atype: { $in: ['authenticate', 'createUser', 'dropUser', 'revokeRolesFromUser'] }}</span><span style="color:#E9F284">"</span></span>
+<span class="line"></span></code></pre>
 <h2 id="audit-log-formats">Audit Log Formats</h2>
 <p>MongoDB audit logs can be generated in two formats:</p>
 <ul>
@@ -24,7 +25,8 @@
 <p>To specify which events should be audited, you can provide a filter expression to the <code>auditLog.filter</code> configuration parameter.
 Example:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">auditLog</span><span style="color:#FF79C6">:</span></span>
-<span class="line"><span style="color:#8BE9FD">  filter</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">{ atype: { $in: ['authCheck', 'createUser', 'dropUser', 'revokeRolesFromUser'] }}</span><span style="color:#E9F284">"</span></span></code></pre>
+<span class="line"><span style="color:#8BE9FD">  filter</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">{ atype: { $in: ['authCheck', 'createUser', 'dropUser', 'revokeRolesFromUser'] }}</span><span style="color:#E9F284">"</span></span>
+<span class="line"></span></code></pre>
 <p>You can customize the filter criteria to suit your security requirements and avoid capturing unnecessary events.</p>
 <h2 id="analyzing-and-monitoring-audit-logs">Analyzing and Monitoring Audit Logs</h2>
 <p>You can analyze and monitor MongoDB audit logs using various tools, including log analysis software, SIEM systems, or built-in MongoDB utilities like <code>mongoaudit</code>. Regular audits can help identify unusual activities, data breaches, or unauthorized access, therefore ensuring the continued security and integrity of your database environment.</p>

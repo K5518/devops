@@ -29,7 +29,8 @@
 <span class="line"><span style="color:#FF79C6">    const</span><span style="color:#FF79C6"> char*</span><span style="color:#F8F8F2"> str </span><span style="color:#FF79C6">=</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Hello, world!</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#50FA7B">    printData</span><span style="color:#F8F8F2">(a);</span><span style="color:#6272A4"> // General template: 5</span></span>
 <span class="line"><span style="color:#50FA7B">    printData</span><span style="color:#F8F8F2">(str);</span><span style="color:#6272A4"> // Specialized template for const char*: Hello, world!</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="partial-template-specialization">Partial Template Specialization</h2>
 <p>Partial specialization is used when you want to create a separate implementation of a template for a subset of types that match a certain pattern or condition.</p>
 <p>Here is an example of how you can partially specialize a template class:</p>
@@ -69,5 +70,6 @@
 <span class="line"><span style="color:#F8F8F2">    MyPair</span><span style="color:#FF79C6">&#x3C;char</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">int></span><span style="color:#50FA7B"> p2</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">A</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">65</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"><span style="color:#F8F8F2">    p1.</span><span style="color:#50FA7B">print</span><span style="color:#F8F8F2">();</span><span style="color:#6272A4"> // General template: key = 3.2, value = example</span></span>
 <span class="line"><span style="color:#F8F8F2">    p2.</span><span style="color:#50FA7B">print</span><span style="color:#F8F8F2">();</span><span style="color:#6272A4"> // Partial specialization for int values: key = A, value = 65</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, the <code>MyPair</code> template class is partially specialized to provide a different behavior when the second template parameter is of type <code>int</code>.</p>

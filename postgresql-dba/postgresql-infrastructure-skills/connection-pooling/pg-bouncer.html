@@ -22,7 +22,8 @@
 <span class="line"><span style="color:#FF79C6">pool_mode</span><span style="color:#FF79C6"> =</span><span style="color:#F8F8F2"> session</span></span>
 <span class="line"><span style="color:#FF79C6">server_reset_query</span><span style="color:#FF79C6"> =</span><span style="color:#F8F8F2"> DISCARD ALL</span></span>
 <span class="line"><span style="color:#FF79C6">max_client_conn</span><span style="color:#FF79C6"> =</span><span style="color:#F8F8F2"> 100</span></span>
-<span class="line"><span style="color:#FF79C6">default_pool_size</span><span style="color:#FF79C6"> =</span><span style="color:#F8F8F2"> 20</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">default_pool_size</span><span style="color:#FF79C6"> =</span><span style="color:#F8F8F2"> 20</span></span>
+<span class="line"></span></code></pre>
 <p>The example above demonstrates a simple configuration to set up a PgBouncer instance listening on port 6432 and forwarding connections to a PostgreSQL server running on the same machine (localhost:5432).</p>
 <p>After configuring PgBouncer, don’t forget to create the <code>userlist.txt</code> file mentioned in the <code>auth_file</code> setting, which should contain the database users and their hashed passwords.</p>
 <p>Finally, start the PgBouncer daemon to enable connection pooling.</p>

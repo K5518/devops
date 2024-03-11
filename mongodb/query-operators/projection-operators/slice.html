@@ -8,20 +8,24 @@
 </ul>
 <h3 id="syntax">Syntax</h3>
 <p>The basic syntax for the <code>$slice</code> operator is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{ field: { $slice: &#x3C;</span><span style="color:#FF79C6">number</span><span style="color:#F8F8F2">> } }</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{ field: { $slice: &#x3C;</span><span style="color:#FF79C6">number</span><span style="color:#F8F8F2">> } }</span></span>
+<span class="line"></span></code></pre>
 <p>For the advanced usage, supplying a specific starting position:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{ field: { $slice: [&#x3C;</span><span style="color:#FF79C6">skip</span><span> </span><span style="color:#FF5555;font-style:italic;text-decoration:underline">(optional)>,</span><span> </span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;limit>]</span><span> </span><span style="color:#FF5555;font-style:italic;text-decoration:underline">}</span><span> </span><span style="color:#FF5555;font-style:italic;text-decoration:underline">}</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{ field: { $slice: [&#x3C;</span><span style="color:#FF79C6">skip</span><span> </span><span style="color:#FF5555;font-style:italic;text-decoration:underline">(optional)>,</span><span> </span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;limit>]</span><span> </span><span style="color:#FF5555;font-style:italic;text-decoration:underline">}</span><span> </span><span style="color:#FF5555;font-style:italic;text-decoration:underline">}</span></span>
+<span class="line"></span></code></pre>
 <h3 id="examples">Examples</h3>
 <ul>
 <li>Limit the number of elements returned:</li>
 </ul>
 <p>To return only the first 3 elements of the <code>tags</code> field, use the following projection:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({}, { tags</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $slice</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2"> } });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({}, { tags</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $slice</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2"> } });</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Define a specific starting position:</li>
 </ul>
 <p>To return 3 elements of the <code>tags</code> field starting from the 5th element, use the following projection:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({}, { tags</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $slice</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> [</span><span style="color:#BD93F9">4</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3</span><span style="color:#F8F8F2">] } });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({}, { tags</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $slice</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> [</span><span style="color:#BD93F9">4</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3</span><span style="color:#F8F8F2">] } });</span></span>
+<span class="line"></span></code></pre>
 <p>Keep in mind that the starting position uses a zero-based index, so the value ‘4’ in the example above refers to the 5th element in the array.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>In this section, we learned how to use the <code>$slice</code> projection operator to limit the number of array elements returned in our MongoDB queries. This can be a powerful tool for optimizing query performance and managing memory usage when working with large arrays.</p>

@@ -4,71 +4,85 @@
 <p>The <code>SELECT</code> statement is used to retrieve data from one or more tables. You can select specific columns or retrieve all columns, filter records, sort records, or even join multiple tables together. Below is the basic syntax of a SELECT statement:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ...</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name</span></span>
-<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="examples">Examples:</h2>
 <ul>
 <li>Selecting all columns from a table:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> employees;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> employees;</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Selecting specific columns from a table:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> first_name, last_name </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> employees;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> first_name, last_name </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> employees;</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Select records based on a condition:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 40000</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 40000</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Order records in ascending or descending order:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> first_name, last_name, salary </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">ORDER BY</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">ASC</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> first_name, last_name, salary </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> employees </span><span style="color:#FF79C6">ORDER BY</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">ASC</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="insert">INSERT</h2>
 <p>The <code>INSERT</code> statement is used to add new records to a table. You can specify the values for each column in the new record, or you can use a subquery to insert records from another table. Here is the basic syntax for an INSERT statement:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">INSERT INTO</span><span style="color:#F8F8F2"> table_name (column1, column2, ...)</span></span>
-<span class="line"><span style="color:#FF79C6">VALUES</span><span style="color:#F8F8F2"> (value1, value2, ...);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">VALUES</span><span style="color:#F8F8F2"> (value1, value2, ...);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="examples-1">Examples:</h2>
 <ul>
 <li>Inserting a single record:</li>
 </ul>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">INSERT INTO</span><span style="color:#F8F8F2"> employees (first_name, last_name, salary)</span></span>
-<span class="line"><span style="color:#FF79C6">VALUES</span><span style="color:#F8F8F2"> (</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">John</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Doe</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">50000</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">VALUES</span><span style="color:#F8F8F2"> (</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">John</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Doe</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">50000</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Insert multiple records at once:</li>
 </ul>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">INSERT INTO</span><span style="color:#F8F8F2"> employees (first_name, last_name, salary)</span></span>
 <span class="line"><span style="color:#FF79C6">VALUES</span><span style="color:#F8F8F2"> (</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">John</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Doe</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">50000</span><span style="color:#F8F8F2">),</span></span>
-<span class="line"><span style="color:#F8F8F2">       (</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Jane</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Doe</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">55000</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">       (</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Jane</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Doe</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">55000</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="update">UPDATE</h2>
 <p>The <code>UPDATE</code> statement is used to modify existing records in a table. You can set new values for individual columns or for all columns. Here is the basic syntax for an UPDATE statement:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">UPDATE</span><span style="color:#F8F8F2"> table_name</span></span>
 <span class="line"><span style="color:#FF79C6">SET</span><span style="color:#F8F8F2"> column1 </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> value1, column2 </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> value2, ...</span></span>
-<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="examples-2">Examples:</h2>
 <ul>
 <li>Updating a single record:</li>
 </ul>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">UPDATE</span><span style="color:#F8F8F2"> employees</span></span>
 <span class="line"><span style="color:#FF79C6">SET</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 60000</span></span>
-<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> employee_id </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> employee_id </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Updating multiple records:</li>
 </ul>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">UPDATE</span><span style="color:#F8F8F2"> employees</span></span>
 <span class="line"><span style="color:#FF79C6">SET</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">*</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">1</span></span>
-<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">&#x3C;</span><span style="color:#BD93F9"> 50000</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">&#x3C;</span><span style="color:#BD93F9"> 50000</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="delete">DELETE</h2>
 <p>The <code>DELETE</code> statement is used to remove records from a table. You can delete one record or multiple records based on a condition. Here is the basic syntax for a DELETE statement:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DELETE</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> table_name</span></span>
-<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="examples-3">Examples:</h2>
 <ul>
 <li>Deleting a single record:</li>
 </ul>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DELETE</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> employees</span></span>
-<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> employee_id </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> employee_id </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Deleting multiple records:</li>
 </ul>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DELETE</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> employees</span></span>
-<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">&#x3C;</span><span style="color:#BD93F9"> 40000</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> salary </span><span style="color:#FF79C6">&#x3C;</span><span style="color:#BD93F9"> 40000</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>In this section, we covered various DML queries for querying data in PostgreSQL. Practice these queries to have a better understanding of how to work with data stored in tables. Don’t forget that learning by doing is essential to mastering SQL and database management.</p>

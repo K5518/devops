@@ -5,17 +5,20 @@
 </ul>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#8BE9FD;font-style:italic">View</span><span style="color:#50FA7B;font-style:italic"> style</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">styles.container</span><span style="color:#FF79C6">}</span><span style="color:#F8F8F2">></span></span>
 <span class="line"><span style="color:#F8F8F2">  &#x3C;</span><span style="color:#8BE9FD;font-style:italic">Text</span><span style="color:#F8F8F2">>Hello World!&#x3C;/</span><span style="color:#8BE9FD;font-style:italic">Text</span><span style="color:#F8F8F2">></span></span>
-<span class="line"><span style="color:#F8F8F2">&#x3C;/</span><span style="color:#8BE9FD;font-style:italic">View</span><span style="color:#F8F8F2">></span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">&#x3C;/</span><span style="color:#8BE9FD;font-style:italic">View</span><span style="color:#F8F8F2">></span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><code>Text</code> is used to display text content in your app. It is similar to the <code>p</code> or <code>span</code> elements in HTML.</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#8BE9FD;font-style:italic">Text</span><span style="color:#50FA7B;font-style:italic"> style</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">styles.title</span><span style="color:#FF79C6">}</span><span style="color:#F8F8F2">>Welcome to my App&#x3C;/</span><span style="color:#8BE9FD;font-style:italic">Text</span><span style="color:#F8F8F2">></span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#8BE9FD;font-style:italic">Text</span><span style="color:#50FA7B;font-style:italic"> style</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">styles.title</span><span style="color:#FF79C6">}</span><span style="color:#F8F8F2">>Welcome to my App&#x3C;/</span><span style="color:#8BE9FD;font-style:italic">Text</span><span style="color:#F8F8F2">></span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><code>Image</code> is used to display images in your application. It can load images from local sources or remote URLs.</li>
 </ul>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#8BE9FD;font-style:italic">Image</span><span style="color:#50FA7B;font-style:italic"> source</span><span style="color:#FF79C6">={</span><span style="color:#50FA7B">require</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">./assets/logo.png</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">)</span><span style="color:#FF79C6">}</span><span style="color:#F8F8F2"> /></span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#8BE9FD;font-style:italic">Image</span><span style="color:#50FA7B;font-style:italic"> source</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">{ uri</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">https://example.com/image.png</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> }</span><span style="color:#FF79C6">}</span><span style="color:#F8F8F2"> /></span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#8BE9FD;font-style:italic">Image</span><span style="color:#50FA7B;font-style:italic"> source</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">{ uri</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">https://example.com/image.png</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> }</span><span style="color:#FF79C6">}</span><span style="color:#F8F8F2"> /></span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><code>TextInput</code> is a basic input field that allows users to type text into your app. It is similar to the <code>input</code> element in HTML.</li>
 </ul>
@@ -23,13 +26,15 @@
 <span class="line"><span style="color:#50FA7B;font-style:italic">  value</span><span style="color:#FF79C6">={</span><span style="color:#BD93F9;font-style:italic">this</span><span style="color:#F8F8F2">.state.text</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  onChangeText</span><span style="color:#FF79C6">={</span><span style="color:#FFB86C;font-style:italic">text</span><span style="color:#FF79C6"> =></span><span style="color:#BD93F9;font-style:italic"> this</span><span style="color:#F8F8F2">.</span><span style="color:#50FA7B">setState</span><span style="color:#F8F8F2">({ text })</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  style</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">styles.input</span><span style="color:#FF79C6">}</span></span>
-<span class="line"><span style="color:#F8F8F2">/></span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">/></span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><code>TouchableOpacity</code> is a wrapper for making elements like <code>View</code> and <code>Text</code> respond properly to touch events. It provides feedback by reducing the opacity of the wrapped component when pressed.</li>
 </ul>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#8BE9FD;font-style:italic">TouchableOpacity</span><span style="color:#50FA7B;font-style:italic"> onPress</span><span style="color:#FF79C6">={</span><span style="color:#BD93F9;font-style:italic">this</span><span style="color:#F8F8F2">.onButtonPress</span><span style="color:#FF79C6">}</span><span style="color:#F8F8F2">></span></span>
 <span class="line"><span style="color:#F8F8F2">  &#x3C;</span><span style="color:#8BE9FD;font-style:italic">Text</span><span style="color:#50FA7B;font-style:italic"> style</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">styles.buttonText</span><span style="color:#FF79C6">}</span><span style="color:#F8F8F2">>Press me!&#x3C;/</span><span style="color:#8BE9FD;font-style:italic">Text</span><span style="color:#F8F8F2">></span></span>
-<span class="line"><span style="color:#F8F8F2">&#x3C;/</span><span style="color:#8BE9FD;font-style:italic">TouchableOpacity</span><span style="color:#F8F8F2">></span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">&#x3C;/</span><span style="color:#8BE9FD;font-style:italic">TouchableOpacity</span><span style="color:#F8F8F2">></span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><code>ScrollView</code> is a scrollable container that allows users to scroll through its content. It is useful when you have content that exceeds the available screen size.</li>
 </ul>
@@ -37,7 +42,8 @@
 <span class="line"><span style="color:#F8F8F2">  &#x3C;</span><span style="color:#8BE9FD;font-style:italic">Text</span><span style="color:#F8F8F2">>Content 1&#x3C;/</span><span style="color:#8BE9FD;font-style:italic">Text</span><span style="color:#F8F8F2">></span></span>
 <span class="line"><span style="color:#F8F8F2">  &#x3C;</span><span style="color:#8BE9FD;font-style:italic">Text</span><span style="color:#F8F8F2">>Content 2&#x3C;/</span><span style="color:#8BE9FD;font-style:italic">Text</span><span style="color:#F8F8F2">></span></span>
 <span class="line"><span style="color:#FF79C6">  {</span><span style="color:#6272A4">/* ... */</span><span style="color:#FF79C6">}</span></span>
-<span class="line"><span style="color:#F8F8F2">&#x3C;/</span><span style="color:#8BE9FD;font-style:italic">ScrollView</span><span style="color:#F8F8F2">></span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">&#x3C;/</span><span style="color:#8BE9FD;font-style:italic">ScrollView</span><span style="color:#F8F8F2">></span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><code>FlatList</code> is used to render a list of items using a performant approach. It only renders items that are currently visible on the screen and removes others to save memory.</li>
 </ul>
@@ -45,5 +51,6 @@
 <span class="line"><span style="color:#50FA7B;font-style:italic">  data</span><span style="color:#FF79C6">={</span><span style="color:#BD93F9;font-style:italic">this</span><span style="color:#F8F8F2">.state.data</span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  renderItem</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">({ </span><span style="color:#FFB86C;font-style:italic">item</span><span style="color:#F8F8F2"> }) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> &#x3C;</span><span style="color:#8BE9FD;font-style:italic">Text</span><span style="color:#F8F8F2">></span><span style="color:#FF79C6">{</span><span style="color:#F8F8F2">item.name</span><span style="color:#FF79C6">}</span><span style="color:#F8F8F2">&#x3C;/</span><span style="color:#8BE9FD;font-style:italic">Text</span><span style="color:#F8F8F2">></span><span style="color:#FF79C6">}</span></span>
 <span class="line"><span style="color:#50FA7B;font-style:italic">  keyExtractor</span><span style="color:#FF79C6">={</span><span style="color:#FFB86C;font-style:italic">item</span><span style="color:#FF79C6"> =></span><span style="color:#F8F8F2"> item.id</span><span style="color:#FF79C6">}</span></span>
-<span class="line"><span style="color:#F8F8F2">/></span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">/></span></span>
+<span class="line"></span></code></pre>
 <p>These core components are foundational to creating functional and attractive interfaces for your React Native applications.</p>

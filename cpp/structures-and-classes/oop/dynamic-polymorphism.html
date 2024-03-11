@@ -47,8 +47,10 @@
 <span class="line"><span style="color:#F8F8F2">    shape</span><span style="color:#FF79C6">-></span><span style="color:#50FA7B">draw</span><span style="color:#F8F8F2">();</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>This code defines a base class <code>Shape</code> with a virtual function <code>draw</code>. Two derived classes <code>Circle</code> and <code>Rectangle</code> both override the <code>draw</code> function to provide their own implementations. Then in the <code>main</code> function, a pointer of type <code>Shape</code> is used to call the respective <code>draw</code> functions of <code>Circle</code> and <code>Rectangle</code> objects. The output of this program will be:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Drawing a circle</span></span>
-<span class="line"><span>Drawing a rectangle</span></span></code></pre>
+<span class="line"><span>Drawing a rectangle</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>As you can see, using dynamic polymorphism, we can determine at runtime which <code>draw</code> method should be called based on the type of object being used.</p>

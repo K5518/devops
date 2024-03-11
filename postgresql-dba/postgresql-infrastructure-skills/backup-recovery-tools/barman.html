@@ -12,13 +12,16 @@
 </ul>
 <h2 id="installation-and-configuration">Installation and Configuration</h2>
 <p>To install Barman, you can use <code>pip</code>, the Python package manager:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pip</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> barman</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pip</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> barman</span></span>
+<span class="line"></span></code></pre>
 <p>After installation, create a dedicated <code>barman</code> user and a configuration file:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>sudo adduser barman</span></span>
 <span class="line"><span>sudo mkdir /etc/barman.d</span></span>
-<span class="line"><span>sudo chown -R barman:barman /etc/barman.d</span></span></code></pre>
+<span class="line"><span>sudo chown -R barman:barman /etc/barman.d</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>Create a <code>barman.conf</code> configuration file in the <code>/etc/barman.d</code> directory:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> vi</span><span style="color:#F1FA8C"> /etc/barman.d/barman.conf</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> vi</span><span style="color:#F1FA8C"> /etc/barman.d/barman.conf</span></span>
+<span class="line"></span></code></pre>
 <p>Add the following sample configuration to configure Barman for a PostgreSQL server:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>[barman]</span></span>
 <span class="line"><span>barman_user = barman</span></span>
@@ -33,15 +36,19 @@
 <span class="line"><span>backup_method = postgres</span></span>
 <span class="line"><span>wal_level = replica</span></span>
 <span class="line"><span>streaming_archiver = on</span></span>
-<span class="line"><span>slot_name = barman</span></span></code></pre>
+<span class="line"><span>slot_name = barman</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>Replace <code>my_pg_server</code>, <code>my_dbname</code>, and other necessary details to match your PostgreSQL server.</p>
 <h2 id="usage">Usage</h2>
 <p>Perform a baseline backup using the following command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">barman</span><span style="color:#F1FA8C"> backup</span><span style="color:#F1FA8C"> my_pg_server</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">barman</span><span style="color:#F1FA8C"> backup</span><span style="color:#F1FA8C"> my_pg_server</span></span>
+<span class="line"></span></code></pre>
 <p>To recover your PostgreSQL instance, use the <code>barman recover</code> command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">barman</span><span style="color:#F1FA8C"> recover</span><span style="color:#BD93F9"> --target-time</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">2021-11-23 12:00:00</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C"> my_pg_server</span><span style="color:#F1FA8C"> latest</span><span style="color:#F1FA8C"> /path/to/recovery</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">barman</span><span style="color:#F1FA8C"> recover</span><span style="color:#BD93F9"> --target-time</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">2021-11-23 12:00:00</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C"> my_pg_server</span><span style="color:#F1FA8C"> latest</span><span style="color:#F1FA8C"> /path/to/recovery</span></span>
+<span class="line"></span></code></pre>
 <p>To list all backups, use:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">barman</span><span style="color:#F1FA8C"> list-backup</span><span style="color:#F1FA8C"> my_pg_server</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">barman</span><span style="color:#F1FA8C"> list-backup</span><span style="color:#F1FA8C"> my_pg_server</span></span>
+<span class="line"></span></code></pre>
 <p>For more help, consult the Barman documentation or use <code>barman --help</code>.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>Barman is a powerful and feature-rich backup recovery tool for PostgreSQL, suitable for various business and production environments. Its capabilities of taking remote backups, enforcing retention policies, performing point-in-time recovery, and offering monitoring features make it an indispensable tool for managing PostgreSQL databases.</p>

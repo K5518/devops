@@ -7,14 +7,16 @@
 <span class="line"><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> users</span></span>
 <span class="line"><span style="color:#FF79C6">FOR</span><span style="color:#FF79C6"> SELECT</span></span>
 <span class="line"><span style="color:#FF79C6">USING</span><span style="color:#F8F8F2"> (current_user </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> user_name);</span></span>
-<span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> users </span><span style="color:#FF79C6">FORCE</span><span style="color:#FF79C6"> ROW</span><span style="color:#FF79C6"> LEVEL</span><span style="color:#FF79C6"> SECURITY</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> users </span><span style="color:#FF79C6">FORCE</span><span style="color:#FF79C6"> ROW</span><span style="color:#FF79C6"> LEVEL</span><span style="color:#FF79C6"> SECURITY</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="security-enhanced-postgresql-se-postgresql">Security-Enhanced PostgreSQL (SE-PostgreSQL)</h2>
 <p>Security-Enhanced PostgreSQL (SE-PostgreSQL) is an extension of PostgreSQL that integrates SELinux (Security-Enhanced Linux) security features into the PostgreSQL database system. This ensures that strict mandatory access control policies are applied at both the operating system and database levels, providing additional security and protection against potential attacks.</p>
 <h2 id="auditing">Auditing</h2>
 <p>Auditing is a crucial aspect of database security, as it helps you monitor user activity and detect any unauthorized access or suspicious behavior. PostgreSQL offers various extensions for auditing, such as <code>pgAudit</code>, which provides detailed logs of user operations, including statement types and parameters.</p>
 <p><strong>Example:</strong></p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">shared_preload_libraries </span><span style="color:#FF79C6">=</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">pgaudit</span><span style="color:#E9F284">'</span></span>
-<span class="line"><span style="color:#BD93F9">pgaudit</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">log</span><span style="color:#FF79C6"> =</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">DDL, ROLE, FUNCTION</span><span style="color:#E9F284">'</span></span></code></pre>
+<span class="line"><span style="color:#BD93F9">pgaudit</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">log</span><span style="color:#FF79C6"> =</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">DDL, ROLE, FUNCTION</span><span style="color:#E9F284">'</span></span>
+<span class="line"></span></code></pre>
 <h2 id="connection-pooling-and-ssl-certificates">Connection Pooling and SSL Certificates</h2>
 <p>Connection pooling improves the efficiency of your PostgreSQL connections by reusing existing connections rather than creating new ones every time. This can greatly reduce the overhead of establishing secure connections. One popular connection pooler is <code>pgBouncer</code>, which also supports SSL for enhanced security.</p>
 <p>To further improve connection security, you can use SSL certificates to authenticate client-server connections, ensuring that data is encrypted in transit and reducing the risk of man-in-the-middle attacks.</p>
@@ -24,5 +26,6 @@
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">[global]</span></span>
 <span class="line"><span style="color:#FF79C6">repo1-path=</span><span style="color:#F8F8F2">/var/lib/pgbackrest</span></span>
 <span class="line"><span style="color:#FF79C6">repo1-cipher-type=</span><span style="color:#F8F8F2">aes-256-cbc</span></span>
-<span class="line"><span style="color:#FF79C6">repo1-cipher-pass=</span><span style="color:#F8F8F2">backup_passphrase</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">repo1-cipher-pass=</span><span style="color:#F8F8F2">backup_passphrase</span></span>
+<span class="line"></span></code></pre>
 <p>By understanding and implementing these advanced security topics in your PostgreSQL environment, you can ensure that your databases remain secure and protected from potential threats. Make sure to keep your PostgreSQL software up-to-date and regularly apply security patches to maintain a strong security posture.</p>

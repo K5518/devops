@@ -6,5 +6,6 @@
 <span class="line"><span>                      .build();</span></span>
 <span class="line"><span></span></span>
 <span class="line"><span>ExampleService service = retrofit.create(ExampleService.class);</span></span>
-<span class="line"><span>Call&#x3C;ExampleResponse> call = service.exampleCall();</span></span></code></pre>
+<span class="line"><span>Call&#x3C;ExampleResponse> call = service.exampleCall();</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>The <code>baseUrl()</code> is your API base URL. The <code>addConverterFactory()</code> specifies a factory to use for serialization and deserialization. In the example above, the Gson library will handle the conversion of JSON data. The <code>build()</code> call finishes the builder and returns the retrofit instance. Finally, <code>create()</code> generates an implementation of the <code>ExampleService</code> interface.</p>

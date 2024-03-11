@@ -11,13 +11,15 @@
 <span class="line"><span style="color:#FF79C6">await</span><span style="color:#F8F8F2"> Keychain.</span><span style="color:#50FA7B">setGenericPassword</span><span style="color:#F8F8F2">(username, password);</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">// Retrieve data from the keychain</span></span>
-<span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> credentials </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> await</span><span style="color:#F8F8F2"> Keychain.</span><span style="color:#50FA7B">getGenericPassword</span><span style="color:#F8F8F2">();</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> credentials </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> await</span><span style="color:#F8F8F2"> Keychain.</span><span style="color:#50FA7B">getGenericPassword</span><span style="color:#F8F8F2">();</span></span>
+<span class="line"></span></code></pre>
 <h2 id="2-secure-communication">2. Secure Communication</h2>
 <p>Use HTTPS for network communication with APIs and remote services. This ensures that the data exchanged between server and client is encrypted and secure.</p>
 <h3 id="example-1">Example:</h3>
 <p>Use the <a href="https://reactnative.dev/docs/network" rel="noopener noreferrer nofollow" target="_blank">fetch</a> method with URLs starting with ‘https://‘.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> response </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> await</span><span style="color:#50FA7B"> fetch</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">https://example.com/api/data</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> data </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> await</span><span style="color:#F8F8F2"> response.</span><span style="color:#50FA7B">json</span><span style="color:#F8F8F2">();</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> data </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> await</span><span style="color:#F8F8F2"> response.</span><span style="color:#50FA7B">json</span><span style="color:#F8F8F2">();</span></span>
+<span class="line"></span></code></pre>
 <h2 id="3-minimize-permissions">3. Minimize Permissions</h2>
 <p>Request only the necessary permissions from the user that your application needs to function, and do this at runtime when the feature actually needs the permission.</p>
 <h3 id="example-2">Example:</h3>
@@ -32,7 +34,8 @@
 <span class="line"><span style="color:#F8F8F2">  }</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">  return</span><span style="color:#F8F8F2"> result;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="4-validate-user-input">4. Validate User Input</h2>
 <p>Ensure you validate and sanitize all user input before processing it. This helps to prevent potential threats like SQL injection or cross-site scripting (XSS).</p>
 <h3 id="example-3">Example:</h3>
@@ -46,11 +49,13 @@
 <span class="line"><span style="color:#F8F8F2">    .</span><span style="color:#50FA7B">required</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Required</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">),</span></span>
 <span class="line"><span style="color:#F8F8F2">});</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F8F8F2">loginSchema.</span><span style="color:#50FA7B">validate</span><span style="color:#F8F8F2">({email</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">user@example.com</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, password</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">password</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">});</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">loginSchema.</span><span style="color:#50FA7B">validate</span><span style="color:#F8F8F2">({email</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">user@example.com</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, password</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">password</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">});</span></span>
+<span class="line"></span></code></pre>
 <h2 id="5-keep-dependencies-up-to-date">5. Keep Dependencies Up to Date</h2>
 <p>Regularly update your dependencies to ensure they don’t contain known security vulnerabilities. Use tools like <a href="https://docs.npmjs.com/cli/v7/commands/npm-audit" rel="noopener noreferrer nofollow" target="_blank">npm audit</a> and <a href="https://github.com/dependabot/dependabot-core" rel="noopener noreferrer nofollow" target="_blank">dependabot</a> to automatically audit and update your dependencies.</p>
 <h3 id="example-4">Example:</h3>
 <p>Using npm, you can update your dependencies and check for potential vulnerabilities:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> update</span></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> audit</span></span></code></pre>
+<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> audit</span></span>
+<span class="line"></span></code></pre>
 <p>Following these best practices will help you create more secure React Native applications, protecting your application’s data and your users’ information.</p>

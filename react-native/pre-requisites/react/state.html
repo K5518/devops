@@ -6,13 +6,15 @@
 <span class="line"><span style="color:#FF79C6">function</span><span style="color:#50FA7B"> App</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#FF79C6">  const</span><span style="color:#F8F8F2"> [text, setText] </span><span style="color:#FF79C6">=</span><span style="color:#50FA7B"> useState</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Hello, World!</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"><span style="color:#6272A4">  //...</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="accessing-state">Accessing State</h2>
 <p>In functional components, access the state by utilizing the first variable from the <code>useState</code> hook:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">function</span><span style="color:#50FA7B"> App</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#FF79C6">  const</span><span style="color:#F8F8F2"> [text, setText] </span><span style="color:#FF79C6">=</span><span style="color:#50FA7B"> useState</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Hello, World!</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"><span style="color:#FF79C6">  return</span><span style="color:#F8F8F2"> &#x3C;</span><span style="color:#FF79C6">div</span><span style="color:#F8F8F2">></span><span style="color:#FF79C6">{</span><span style="color:#F8F8F2">text</span><span style="color:#FF79C6">}</span><span style="color:#F8F8F2">&#x3C;/</span><span style="color:#FF79C6">div</span><span style="color:#F8F8F2">>;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="updating-state">Updating State</h2>
 <p>Utilize the second variable returned from the <code>useState</code> hook (which is a function) to update the state:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">function</span><span style="color:#50FA7B"> App</span><span style="color:#F8F8F2">() {</span></span>
@@ -28,7 +30,8 @@
 <span class="line"><span style="color:#F8F8F2">      &#x3C;</span><span style="color:#FF79C6">button</span><span style="color:#50FA7B;font-style:italic"> onClick</span><span style="color:#FF79C6">={</span><span style="color:#F8F8F2">handleClick</span><span style="color:#FF79C6">}</span><span style="color:#F8F8F2">>Update State&#x3C;/</span><span style="color:#FF79C6">button</span><span style="color:#F8F8F2">></span></span>
 <span class="line"><span style="color:#F8F8F2">    &#x3C;/</span><span style="color:#FF79C6">div</span><span style="color:#F8F8F2">></span></span>
 <span class="line"><span style="color:#F8F8F2">  );</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>Remember: do not modify the state directly; always use the <code>setState()</code> method or updater function provided by the <code>useState</code> hook.</p>
 <ul>
 <li><a href="https://react.dev/learn/managing-state" rel="noopener noreferrer nofollow" target="_blank">Component State</a></li>

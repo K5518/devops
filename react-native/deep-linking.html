@@ -8,7 +8,8 @@
 <h2 id="handling-deep-links-in-react-native">Handling Deep Links in React Native</h2>
 <p>In React Native, you can handle deep links using the <code>Linking</code> module which provides the necessary methods to work with deep links.</p>
 <p>First, you have to import <code>Linking</code> from <code>"react-native"</code>:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { Linking } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react-native</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { Linking } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react-native</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>To handle deep links, you need to add a listener that will be triggered when the app receives a deep link. You can add the listener in the <code>componentDidMount</code> lifecycle method and remove it in the <code>componentWillUnmount</code> method.</p>
 <p>For example:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> React </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
@@ -37,6 +38,7 @@
 <span class="line"><span style="color:#F8F8F2">  }</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#FF79C6">export</span><span style="color:#FF79C6"> default</span><span style="color:#F8F8F2"> App;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">export</span><span style="color:#FF79C6"> default</span><span style="color:#F8F8F2"> App;</span></span>
+<span class="line"></span></code></pre>
 <p>To work with universal links or app links, you need to configure your app on both iOS and Android. You can follow the official guide <a href="https://reactnative.dev/docs/linking" rel="noopener noreferrer nofollow" target="_blank">here</a>.</p>
 <p>You can also use popular libraries like <code>react-navigation</code> or <code>react-native-navigation</code> that provide built-in support for handling deep links in your app.</p>

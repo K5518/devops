@@ -9,7 +9,8 @@
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">int</span><span style="color:#50FA7B"> main</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Global variable: </span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> globalVar </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><strong>Local scope:</strong> Identifiers declared within a function or a block have a local scope. They can be accessed only within the function or the block they were declared in. Their lifetime is limited to the duration of the function/block execution.</li>
 </ul>
@@ -24,7 +25,8 @@
 <span class="line"><span style="color:#FF79C6">int</span><span style="color:#50FA7B"> main</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#50FA7B">    localExample</span><span style="color:#F8F8F2">();</span></span>
 <span class="line"><span style="color:#6272A4">    // std::cout &#x3C;&#x3C; localVar &#x3C;&#x3C; std::endl; //error: ‘localVar’ was not declared in this scope</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><strong>Namespace scope:</strong> A namespace is a named scope that groups related identifiers together. Identifiers declared within a namespace have the namespace scope. They can be accessed using the namespace name and the scope resolution operator <code>::</code>.</li>
 </ul>
@@ -36,7 +38,8 @@
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">int</span><span style="color:#50FA7B"> main</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Namespace variable: </span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> MyNamespace</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">namespaceVar </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><strong>Class scope:</strong> Identifiers declared within a class have a class scope. They can be accessed using the class name and the scope resolution operator <code>::</code> or, for non-static members, an object of the class and the dot <code>.</code> or arrow <code>-></code> operator.</li>
 </ul>
@@ -56,5 +59,6 @@
 <span class="line"><span style="color:#F8F8F2">    MyClass </span><span style="color:#50FA7B">obj</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">10</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Static member: </span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> MyClass</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">staticMember </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Non-static member: </span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> obj.nonStaticMember </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>Understanding various types of scope in C++ is essential for effective code structuring and management of resources in a codebase.</p>

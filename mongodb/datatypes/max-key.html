@@ -14,10 +14,12 @@
 <span class="line"><span style="color:#F8F8F2">  _id: </span><span style="color:#50FA7B">ObjectId</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">some_id_value</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">),</span></span>
 <span class="line"><span style="color:#F8F8F2">  field1: </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">value1</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  myMaxKeyField: </span><span style="color:#50FA7B">MaxKey</span><span style="color:#F8F8F2">()</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, <code>myMaxKeyField</code> is assigned the Max Key value.</p>
 <p>When you want to sort or compare documents in a collection, Max Key will help ensure that a document will always come last in the results when compared with other BSON types.</p>
 <p>Here is an example of how Max Key can be used in a range query:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.my_collection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ age</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $lte</span><span style="color:#FF79C6">:</span><span style="color:#50FA7B"> MaxKey</span><span style="color:#F8F8F2">() } });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.my_collection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ age</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $lte</span><span style="color:#FF79C6">:</span><span style="color:#50FA7B"> MaxKey</span><span style="color:#F8F8F2">() } });</span></span>
+<span class="line"></span></code></pre>
 <p>This query will return all the documents in <code>my_collection</code> where the <code>age</code> field is less than or equal to Max Key, essentially retrieving everything, as no value can be greater than Max Key.</p>
 <p>In summary, Max Key plays an essential role in MongoDB by providing a constant value that is always greater than other BSON types, thus ensuring proper sorting and comparing behavior in your implementation.</p>

@@ -11,12 +11,14 @@
 <span class="line"><span style="color:#FF79C6">  SELECT</span><span style="color:#F8F8F2"> CustomerID </span></span>
 <span class="line"><span style="color:#FF79C6">  FROM</span><span style="color:#F8F8F2"> Customers </span></span>
 <span class="line"><span style="color:#FF79C6">  WHERE</span><span style="color:#F8F8F2"> CustomerName </span><span style="color:#FF79C6">=</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">John Doe</span><span style="color:#E9F284">'</span></span>
-<span class="line"><span style="color:#F8F8F2">  );</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">  );</span></span>
+<span class="line"></span></code></pre>
 <p>Equivalent JOIN:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#BD93F9"> o</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">OrderNumber</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Orders o </span></span>
 <span class="line"><span style="color:#FF79C6">JOIN</span><span style="color:#F8F8F2"> Customers c </span><span style="color:#FF79C6">ON</span><span style="color:#BD93F9"> o</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerID</span><span style="color:#FF79C6"> =</span><span style="color:#BD93F9"> c</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerID</span><span style="color:#F8F8F2"> </span></span>
-<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#BD93F9"> c</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerName</span><span style="color:#FF79C6"> =</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">John Doe</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#BD93F9"> c</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerName</span><span style="color:#FF79C6"> =</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">John Doe</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <ol start="2">
 <li><strong>EXISTS:</strong> The EXISTS operator checks for the existence of rows returned by the subquery. Many times, a subquery can be replaced with an EXISTS clause which would greatly increase performance as EXISTS will stop processing once it hits a true condition and does not need to check all results like IN would.</li>
 </ol>
@@ -27,7 +29,8 @@
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> CustomerID </span><span style="color:#FF79C6">IN</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#FF79C6">  SELECT</span><span style="color:#F8F8F2"> CustomerID </span></span>
 <span class="line"><span style="color:#FF79C6">  FROM</span><span style="color:#F8F8F2"> Orders</span></span>
-<span class="line"><span style="color:#F8F8F2">  );</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">  );</span></span>
+<span class="line"></span></code></pre>
 <p>Equivalent EXISTS use case:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Customers c</span></span>
@@ -35,5 +38,6 @@
 <span class="line"><span style="color:#FF79C6">  SELECT</span><span style="color:#BD93F9"> 1</span></span>
 <span class="line"><span style="color:#FF79C6">  FROM</span><span style="color:#F8F8F2"> Orders o</span></span>
 <span class="line"><span style="color:#FF79C6">  WHERE</span><span style="color:#BD93F9"> c</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerID</span><span style="color:#FF79C6"> =</span><span style="color:#BD93F9"> o</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerID</span></span>
-<span class="line"><span style="color:#F8F8F2">  );</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">  );</span></span>
+<span class="line"></span></code></pre>
 <p>While it’s important to minimize subqueries whenever possible, there may be cases where you cannot replace a subquery, especially when dealing with correlated subqueries or complex queries where rewriting might be nontrivial or not feasible.</p>

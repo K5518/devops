@@ -3,20 +3,24 @@
 <h2 id="importing-data-using-copy">Importing Data using COPY</h2>
 <p>To import data from a file into a table, you can use the following syntax:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">COPY</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F8F8F2">table_name</span><span style="color:#FF79C6">></span><span style="color:#F8F8F2"> (column1, column2, ...)</span></span>
-<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">&#x3C;file_path></span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> [OPTIONS];</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">&#x3C;file_path></span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> [OPTIONS];</span></span>
+<span class="line"></span></code></pre>
 <p>For example, to import data from a CSV file named <code>data.csv</code> into a table called <code>employees</code> with columns <code>id</code>, <code>name</code>, and <code>salary</code>, you would use the following command:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">COPY</span><span style="color:#F8F8F2"> employees (id, </span><span style="color:#FF79C6">name</span><span style="color:#F8F8F2">, salary)</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">/path/to/data.csv</span><span style="color:#E9F284">'</span></span>
-<span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#F8F8F2"> (FORMAT csv, HEADER true);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#F8F8F2"> (FORMAT csv, HEADER true);</span></span>
+<span class="line"></span></code></pre>
 <p>Here, we’re specifying that the file is in CSV format and that the first row contains column headers.</p>
 <h2 id="exporting-data-using-copy">Exporting Data using COPY</h2>
 <p>To export data from a table or a query result to a file, you can use the following syntax:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">COPY</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> ... </span><span style="color:#FF79C6">FROM</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F8F8F2">table_name</span><span style="color:#FF79C6">></span><span style="color:#FF79C6"> WHERE</span><span style="color:#F8F8F2"> ...)</span></span>
-<span class="line"><span style="color:#FF79C6">TO</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">&#x3C;file_path></span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> [OPTIONS];</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">TO</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">&#x3C;file_path></span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> [OPTIONS];</span></span>
+<span class="line"></span></code></pre>
 <p>For example, to export data from the <code>employees</code> table to a CSV file named <code>export.csv</code>, you would use the following command:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">COPY</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> employees)</span></span>
 <span class="line"><span style="color:#FF79C6">TO</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">/path/to/export.csv</span><span style="color:#E9F284">'</span></span>
-<span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#F8F8F2"> (FORMAT csv, HEADER true);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#F8F8F2"> (FORMAT csv, HEADER true);</span></span>
+<span class="line"></span></code></pre>
 <p>Again, we’re specifying that the file should be in CSV format and that the first row contains column headers.</p>
 <h2 id="copy-options">COPY Options</h2>
 <p>The <code>COPY</code> command offers several options, including:</p>

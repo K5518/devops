@@ -9,25 +9,30 @@
 <span class="line"><span style="color:#E9F284">  "</span><span style="color:#F1FA8C">_id</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#50FA7B">ObjectId</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">123xyz</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">),</span></span>
 <span class="line"><span style="color:#E9F284">  "</span><span style="color:#F1FA8C">name</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">John Doe</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#E9F284">  "</span><span style="color:#F1FA8C">hobbies</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: [</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">reading</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">swimming</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">coding</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">]</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="querying-arrays">Querying Arrays</h2>
 <p>MongoDB provides various operators such as <code>$in</code>, <code>$all</code>, and <code>$size</code>, for querying documents with arrays. The following are some examples:</p>
 <ul>
 <li>Finding documents with a specific item in an array:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ hobbies</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">swimming</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ hobbies</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">swimming</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> });</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Finding documents with any of the specified items in an array:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ hobbies</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $in</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> [</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">swimming</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">coding</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">] } });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ hobbies</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $in</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> [</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">swimming</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">coding</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">] } });</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Finding documents with all specified items in an array:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ hobbies</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $all</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> [</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">reading</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">coding</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">] } });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ hobbies</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $all</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> [</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">reading</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">coding</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">] } });</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Finding documents with a specific array size:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ hobbies</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $size</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2"> } });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ hobbies</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $size</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2"> } });</span></span>
+<span class="line"></span></code></pre>
 <h2 id="updating-arrays">Updating Arrays</h2>
 <p>You can update documents containing arrays by using operators like <code>$push</code>, <code>$addToSet</code>, <code>$pull</code>, and <code>$pop</code>.</p>
 <ul>
@@ -36,21 +41,24 @@
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">updateOne</span><span style="color:#F8F8F2">(</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#50FA7B"> ObjectId</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">123xyz</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">) },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { $push</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { hobbies</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">painting</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> } }</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Adding unique items to an array:</li>
 </ul>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">updateOne</span><span style="color:#F8F8F2">(</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#50FA7B"> ObjectId</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">123xyz</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">) },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { $addToSet</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { hobbies</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">painting</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> } }</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Removing an item from an array:</li>
 </ul>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">updateOne</span><span style="color:#F8F8F2">(</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#50FA7B"> ObjectId</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">123xyz</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">) },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { $pull</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { hobbies</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">reading</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> } }</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>Removing the first or last item from an array:</li>
 </ul>
@@ -58,5 +66,6 @@
 <span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">updateOne</span><span style="color:#F8F8F2">({ _id</span><span style="color:#FF79C6">:</span><span style="color:#50FA7B"> ObjectId</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">123xyz</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">) }, { $pop</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { hobbies</span><span style="color:#FF79C6">:</span><span style="color:#FF79C6"> -</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2"> } });</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">// Remove the last item (use $pop with 1)</span></span>
-<span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">updateOne</span><span style="color:#F8F8F2">({ _id</span><span style="color:#FF79C6">:</span><span style="color:#50FA7B"> ObjectId</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">123xyz</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">) }, { $pop</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { hobbies</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2"> } });</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">updateOne</span><span style="color:#F8F8F2">({ _id</span><span style="color:#FF79C6">:</span><span style="color:#50FA7B"> ObjectId</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">123xyz</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">) }, { $pop</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { hobbies</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2"> } });</span></span>
+<span class="line"></span></code></pre>
 <p>In this section, we’ve covered the essentials of using the <code>Array</code> datatype in MongoDB. With this knowledge, you can efficiently model and query data that requires multiple related items within a single document.</p>

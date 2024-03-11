@@ -13,7 +13,8 @@
 <span class="line"><span style="color:#F8F8F2">}</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#50FA7B">loggingIdentity</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">3</span><span style="color:#F8F8F2">); </span><span style="color:#6272A4">// Error, number doesn't have a .length property</span></span>
-<span class="line"><span style="color:#50FA7B">loggingIdentity</span><span style="color:#F8F8F2">({ length</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 10</span><span style="color:#F8F8F2">, value</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2"> }); </span><span style="color:#6272A4">// OK</span></span></code></pre>
+<span class="line"><span style="color:#50FA7B">loggingIdentity</span><span style="color:#F8F8F2">({ length</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 10</span><span style="color:#F8F8F2">, value</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2"> }); </span><span style="color:#6272A4">// OK</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, the <code>Lengthwise</code> interface defines a <code>length</code> property. The <code>loggingIdentity</code> function uses a generic type parameter <code>T</code> that is constrained by the <code>Lengthwise</code> interface, meaning that the type parameter must extend or implement the <code>Lengthwise</code> interface. This constraint ensures that the length property is available on the argument passed to the <code>loggingIdentity</code> function.</p>
 <p>Learn more from the following resources:</p>
 <ul>

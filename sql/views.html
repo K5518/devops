@@ -4,19 +4,23 @@
 <p>You can create a view using the <code>CREATE VIEW</code> statement. In the following example, a new view named <code>CustomerView</code> is created which contains customer’s ID, name, and address from the <code>Customers</code> table:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> VIEW</span><span style="color:#50FA7B"> CustomerView</span><span style="color:#FF79C6"> AS</span></span>
 <span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> CustomerID, </span><span style="color:#FF79C6">Name</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">Address</span></span>
-<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Customers;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Customers;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="querying-views">Querying Views</h2>
 <p>After a view has been created, it can be used in the <code>FROM</code> clause of a <code>SELECT</code> statement, as if it’s an actual table. For instance, to select all from <code>CustomerView</code>:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span></span>
-<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> CustomerView;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> CustomerView;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="updating-views">Updating Views</h2>
 <p>The <code>CREATE OR REPLACE VIEW</code> statement is used to update a view. Consider the <code>CustomerView</code> we created earlier. If we want to include the customer’s phone, we can update it as follows:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE OR REPLACE</span><span style="color:#FF79C6"> VIEW</span><span style="color:#50FA7B"> CustomerView</span><span style="color:#FF79C6"> AS</span></span>
 <span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> CustomerID, </span><span style="color:#FF79C6">Name</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">Address</span><span style="color:#F8F8F2">, Phone</span></span>
-<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Customers;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Customers;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="dropping-views">Dropping Views</h2>
 <p>To delete a view, use the <code>DROP VIEW</code> statement:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#FF79C6"> VIEW</span><span style="color:#F8F8F2"> CustomerView;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">DROP</span><span style="color:#FF79C6"> VIEW</span><span style="color:#F8F8F2"> CustomerView;</span></span>
+<span class="line"></span></code></pre>
 <p>Keep in mind that not all database systems support the <code>CREATE OR REPLACE VIEW</code> statement. Also, the updatability of a view depends on whether it includes functions, expressions, or multiple tables. Some databases might not let you update a view at all.</p>
 <h2 id="restrictions">Restrictions</h2>
 <p>There are a few restrictions to bear in mind when working with views. SQL views can’t:</p>

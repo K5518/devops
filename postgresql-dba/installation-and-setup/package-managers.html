@@ -4,17 +4,21 @@
 <h2 id="apt-debianubuntu">APT (Debian/Ubuntu)</h2>
 <p>For Debian-based systems like Ubuntu, the APT (Advanced Package Tool) package manager can be used to install and manage software packages. The APT ecosystem consists of a set of tools and libraries, such as <code>apt-get</code>, <code>apt-cache</code>, and <code>dpkg</code>. To install PostgreSQL using APT, first update the package list, and then install the <code>postgresql</code> package:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> apt-get</span><span style="color:#F1FA8C"> update</span></span>
-<span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> apt-get</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> postgresql</span></span></code></pre>
+<span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> apt-get</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> postgresql</span></span>
+<span class="line"></span></code></pre>
 <h2 id="yum-fedoracentosrhel">YUM (Fedora/CentOS/RHEL)</h2>
 <p>For Fedora and its derivatives such as CentOS and RHEL, the YUM (Yellowdog Updater, Modified) package manager is widely used. YUM makes it easy to search, install, and update packages. To install PostgreSQL using YUM, first add the PostgreSQL repository, and then install the package:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> yum</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm</span></span>
-<span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> yum</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> postgresql</span></span></code></pre>
+<span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> yum</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> postgresql</span></span>
+<span class="line"></span></code></pre>
 <h2 id="zypper-opensuse">Zypper (openSUSE)</h2>
 <p>Zypper is the package manager for openSUSE and other SUSE-based distributions. It is similar to both APT and YUM, providing a simple and convenient way of managing software packages. To install PostgreSQL using Zypper, update the repository list, and then install the <code>postgresql</code> package:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> zypper</span><span style="color:#F1FA8C"> refresh</span></span>
-<span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> zypper</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> postgresql</span></span></code></pre>
+<span class="line"><span style="color:#50FA7B">sudo</span><span style="color:#F1FA8C"> zypper</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> postgresql</span></span>
+<span class="line"></span></code></pre>
 <h2 id="homebrew-macos">Homebrew (macOS)</h2>
 <p>Homebrew is a popular package manager for macOS, allowing users to install software on their Macs not available on the Apple App Store. To install PostgreSQL using Homebrew, first make sure you have Homebrew installed, and then install the <code>postgresql</code> package:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">brew</span><span style="color:#F1FA8C"> update</span></span>
-<span class="line"><span style="color:#50FA7B">brew</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> postgresql</span></span></code></pre>
+<span class="line"><span style="color:#50FA7B">brew</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> postgresql</span></span>
+<span class="line"></span></code></pre>
 <p>These examples demonstrate how package managers make it easy to install PostgreSQL on various systems. In general, package managers help simplify the installation and management of software, including keeping packages up-to-date and handling dependencies, making them an essential part of a successful PostgreSQL setup.</p>

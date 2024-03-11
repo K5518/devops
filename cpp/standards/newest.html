@@ -12,7 +12,8 @@
 <span class="line"><span>template&#x3C;Printable T></span></span>
 <span class="line"><span>void print(const T&#x26; x) {</span></span>
 <span class="line"><span>    std::cout &#x3C;&#x3C; x &#x3C;&#x3C; '\n';</span></span>
-<span class="line"><span>}</span></span></code></pre>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 <li>
 <p><strong>Ranges</strong>: Ranges build on the iterator concept and provide a more usable and composable framework for dealing with sequences of values. They simplify the way algorithms can be applied to collections of data.</p>
@@ -28,7 +29,8 @@
 <span class="line"><span>    for (int n : even_view) {</span></span>
 <span class="line"><span>        std::cout &#x3C;&#x3C; n &#x3C;&#x3C; ' ';</span></span>
 <span class="line"><span>    }</span></span>
-<span class="line"><span>}</span></span></code></pre>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 <li>
 <p><strong>Coroutines</strong>: Coroutines offer a way to split complex, long-running functions into smaller, more manageable chunks, allowing them to be suspended and resumed at specific points.</p>
@@ -44,7 +46,8 @@
 <span class="line"><span>int main() {</span></span>
 <span class="line"><span>    for (int value : generator())</span></span>
 <span class="line"><span>        std::cout &#x3C;&#x3C; value &#x3C;&#x3C; ' ';</span></span>
-<span class="line"><span>}</span></span></code></pre>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 <li>
 <p><strong>Lambdas with template parameters</strong>: C++20 enables using <code>auto</code> as a lambda parameter, allowing for generic lambdas with templated parameters.</p>
@@ -54,7 +57,8 @@
 <span class="line"><span>};</span></span>
 <span class="line"><span></span></span>
 <span class="line"><span>int res1 = sum(1, 2);           // int</span></span>
-<span class="line"><span>double res2 = sum(1.0, 2.0);    // double</span></span></code></pre>
+<span class="line"><span>double res2 = sum(1.0, 2.0);    // double</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 <li>
 <p><strong>Constexpr enhancements</strong>: <code>constexpr</code> support is extended with additional features, such as <code>constexpr</code> dynamic allocations, <code>constexpr</code> try-catch blocks, and <code>constexpr</code> lambdas.</p>
@@ -74,7 +78,8 @@
 <span class="line"><span>    return points;</span></span>
 <span class="line"><span>}</span></span>
 <span class="line"><span></span></span>
-<span class="line"><span>constexpr auto points = create_points();</span></span></code></pre>
+<span class="line"><span>constexpr auto points = create_points();</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 </ul>
 <p>There are many other features in C++20, such as new standard library improvements, <code>std::format</code>, improvements to compile-time programming, and more. These are just a few highlights that showcase the versatility and power of the newest standard of C++.</p>

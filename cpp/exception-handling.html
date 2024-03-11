@@ -32,7 +32,8 @@
 <span class="line"><span style="color:#F8F8F2">    }</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, we define a function <code>divide</code> that throws an exception if <code>b</code> is zero. In the <code>main</code> function, we use a <code>try</code> block to call <code>divide</code> and output the result. If an exception is thrown, it is caught inside the <code>catch</code> block, which outputs an error message. This way, we can handle the error gracefully rather than letting the program crash when attempting to divide by zero.</p>
 <h2 id="standard-exceptions">Standard Exceptions</h2>
 <p>C++ provides a standard set of exception classes under the <code>&#x3C;stdexcept></code> library which can be used as the exception type for more specific error handling. Some of these classes include:</p>
@@ -66,5 +67,6 @@
 <span class="line"><span style="color:#F8F8F2">    }</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, we modified the <code>divide</code> function to throw a <code>std::runtime_error</code> instead of a simple string. The catch block now catches exceptions derived from <code>std::exception</code> and uses the member function <code>what()</code> to display the error message.</p>

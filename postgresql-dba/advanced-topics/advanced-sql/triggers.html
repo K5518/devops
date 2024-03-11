@@ -21,7 +21,8 @@
 <span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TRIGGER</span><span style="color:#50FA7B"> update_modified_trigger</span></span>
 <span class="line"><span style="color:#FF79C6">BEFORE</span><span style="color:#FF79C6"> UPDATE</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> your_table</span></span>
 <span class="line"><span style="color:#FF79C6">FOR</span><span style="color:#F8F8F2"> EACH </span><span style="color:#FF79C6">ROW</span></span>
-<span class="line"><span style="color:#FF79C6">EXECUTE</span><span style="color:#FF79C6"> FUNCTION</span><span style="color:#F8F8F2"> update_modified_column();</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">EXECUTE</span><span style="color:#FF79C6"> FUNCTION</span><span style="color:#F8F8F2"> update_modified_column();</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, we created a trigger function <code>update_modified_column()</code> which updates the <code>modified</code> column with the current timestamp. We then created a trigger <code>update_modified_trigger</code> which binds this function to the <code>your_table</code> table. The trigger is set to execute <code>BEFORE UPDATE</code> and for <code>EACH ROW</code>.</p>
 <h2 id="trigger-events">Trigger Events</h2>
 <p>There are four events that can be associated with a trigger:</p>
@@ -34,7 +35,8 @@
 <p>You can also associate multiple events with a single trigger by using the <code>OR</code> keyword:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TRIGGER</span><span style="color:#50FA7B"> your_trigger</span></span>
 <span class="line"><span style="color:#FF79C6">BEFORE</span><span style="color:#FF79C6"> INSERT</span><span style="color:#FF79C6"> OR</span><span style="color:#FF79C6"> UPDATE</span><span style="color:#FF79C6"> OR</span><span style="color:#FF79C6"> DELETE</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> your_table</span></span>
-<span class="line"><span style="color:#F8F8F2">...</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">...</span></span>
+<span class="line"></span></code></pre>
 <h2 id="timing">Timing</h2>
 <p>Triggers can be set to execute at different times:</p>
 <ul>

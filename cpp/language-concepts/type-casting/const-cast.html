@@ -18,6 +18,7 @@
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Modified value: </span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2">non_const_value_ptr </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#F8F8F2"> std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">endl;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, we first create a <code>const</code> variable, <code>original_value</code>. Then we use <code>const_cast</code> to remove the constness of the variable and assign it to a non-const pointer, <code>non_const_value_ptr</code>. The <code>modifyVariable</code> function takes an <code>int*</code> as an argument and modifies the value pointed to by the pointer, which would not have been possible if we passed the original <code>const int</code> directly. Finally, we print the <code>original_value</code> and the <code>*non_const_value_ptr</code>, which shows that the value has been modified using <code>const_cast</code>.</p>
 <p>Please note that this example comes with some risks, as it touches undefined behavior. */</p>

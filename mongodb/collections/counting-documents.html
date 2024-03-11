@@ -7,7 +7,8 @@
 <h2 id="countdocuments">countDocuments()</h2>
 <p>The <code>countDocuments()</code> method is used to count the number of documents in a collection based on a specified filter. It provides an accurate count that may involve reading all documents in the collection.</p>
 <p><strong>Syntax:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">collection.</span><span style="color:#50FA7B">countDocuments</span><span style="color:#F8F8F2">(filter, options);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">collection.</span><span style="color:#50FA7B">countDocuments</span><span style="color:#F8F8F2">(filter, options);</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><code>filter</code>: (Optional) A query that will filter the documents before the count is applied.</li>
 <li><code>options</code>: (Optional) Additional options for the count operation such as <code>skip</code>, <code>limit</code>, and <code>collation</code>.</li>
@@ -18,18 +19,21 @@
 <span class="line"><span style="color:#F8F8F2">  (</span><span style="color:#FFB86C;font-style:italic">err</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">count</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#F8F8F2">    console.</span><span style="color:#50FA7B">log</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Number of completed orders: </span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, count);</span></span>
 <span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>In the example above, we count the number of documents in the <code>orders</code> collection that have a<code>status</code> field equal to <code>'completed'</code>.</p>
 <h2 id="estimateddocumentcount">estimatedDocumentCount()</h2>
 <p>The <code>estimatedDocumentCount()</code> method provides an approximate count of documents in the collection, without applying any filters. This method uses the collection’s metadata to determine the count and is generally faster than <code>countDocuments()</code>.</p>
 <p><strong>Syntax:</strong></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">collection.</span><span style="color:#50FA7B">estimatedDocumentCount</span><span style="color:#F8F8F2">(options);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">collection.</span><span style="color:#50FA7B">estimatedDocumentCount</span><span style="color:#F8F8F2">(options);</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><code>options</code>: (Optional) Additional options for the count operation such as <code>maxTimeMS</code>.</li>
 </ul>
 <p><strong>Example:</strong></p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.</span><span style="color:#50FA7B">collection</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">orders</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">).</span><span style="color:#50FA7B">estimatedDocumentCount</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">err</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">count</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#F8F8F2">  console.</span><span style="color:#50FA7B">log</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Estimated number of orders: </span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, count);</span></span>
-<span class="line"><span style="color:#F8F8F2">});</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">});</span></span>
+<span class="line"></span></code></pre>
 <p>In the example above, we get the estimated number of documents in the <code>orders</code> collection.</p>
 <p>Keep in mind that you should use the <code>countDocuments()</code> method when you need to apply filters to count documents, while <code>estimatedDocumentCount()</code> should be used when an approximate count is sufficient and you don’t need to apply any filters.</p>

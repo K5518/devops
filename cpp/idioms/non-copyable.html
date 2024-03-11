@@ -12,9 +12,11 @@
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">  // Delete the copy assignment operator</span></span>
 <span class="line"><span style="color:#8BE9FD;font-style:italic">  NonCopyable</span><span style="color:#FF79C6">&#x26;</span><span style="color:#FF79C6"> operator</span><span style="color:#F8F8F2">=(</span><span style="color:#FF79C6">const</span><span style="color:#8BE9FD;font-style:italic"> NonCopyable</span><span style="color:#FF79C6">&#x26;</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> delete</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">};</span></span>
+<span class="line"></span></code></pre>
 <p>To use the idiom, simply inherit from the <code>NonCopyable</code> class:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> MyClass</span><span style="color:#F8F8F2"> : </span><span style="color:#FF79C6">private</span><span style="color:#8BE9FD;font-style:italic"> NonCopyable</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#6272A4">  // MyClass is now non-copyable</span></span>
-<span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">};</span></span>
+<span class="line"></span></code></pre>
 <p>This ensures that any attempt to copy or assign objects of <code>MyClass</code> will result in a compilation error, thus preventing unwanted behavior.</p>

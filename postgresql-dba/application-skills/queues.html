@@ -22,9 +22,11 @@
 <span class="line"><span style="color:#FF79C6">  priority INTEGER</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#FF79C6">  status</span><span style="color:#FF79C6"> VARCHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">32</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">NOT NULL</span><span style="color:#FF79C6"> DEFAULT</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">pending</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  created_at </span><span style="color:#FF79C6">TIMESTAMPTZ</span><span style="color:#FF79C6"> NOT NULL</span><span style="color:#FF79C6"> DEFAULT</span><span style="color:#FF79C6"> NOW</span><span style="color:#F8F8F2">()</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>To enqueue a task:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">INSERT INTO</span><span style="color:#F8F8F2"> task_queue (task, priority) </span><span style="color:#FF79C6">VALUES</span><span style="color:#F8F8F2"> (</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Send email</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">INSERT INTO</span><span style="color:#F8F8F2"> task_queue (task, priority) </span><span style="color:#FF79C6">VALUES</span><span style="color:#F8F8F2"> (</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Send email</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>To dequeue a task:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#F8F8F2"> next_task </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#FF79C6">  SELECT</span><span style="color:#F8F8F2"> id </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> task_queue</span></span>
@@ -36,7 +38,8 @@
 <span class="line"><span style="color:#FF79C6">UPDATE</span><span style="color:#F8F8F2"> task_queue</span></span>
 <span class="line"><span style="color:#FF79C6">SET</span><span style="color:#FF79C6"> status</span><span style="color:#FF79C6"> =</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">processing</span><span style="color:#E9F284">'</span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> id </span><span style="color:#FF79C6">IN</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> id </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> next_task)</span></span>
-<span class="line"><span style="color:#F8F8F2">RETURNING </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">RETURNING </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="advanced-queuing-mechanisms">Advanced Queuing Mechanisms</h2>
 <p>The simple implementation described above can be further extended to handle more complex requirements, such as:</p>
 <ul>

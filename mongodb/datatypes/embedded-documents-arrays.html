@@ -18,7 +18,8 @@
 <span class="line"><span style="color:#F8F8F2">            zipcode</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">90001</span><span style="color:#E9F284">'</span></span>
 <span class="line"><span style="color:#F8F8F2">        }</span></span>
 <span class="line"><span style="color:#F8F8F2">    ]</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, the <code>addresses</code> field represents an array of embedded sub-documents that contain the address details for the user.</p>
 <h2 id="advantages">Advantages</h2>
 <p>Embedded Documents Arrays offer a few key advantages:</p>
@@ -39,5 +40,6 @@
 <h2 id="querying-embedded-documents-arrays">Querying Embedded Documents Arrays</h2>
 <p>Querying documents with embedded arrays is easy thanks to MongoDB’s built-in array query operators, such as <code>$elemMatch</code>, <code>$all</code>, and <code>$size</code>. You can also use dot notation to search and update embedded sub-documents.</p>
 <p>For example, to find all users with a specific street address, you would use the following query:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.users.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">addresses.street</span><span style="color:#E9F284">'</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">123 Main St</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.users.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">addresses.street</span><span style="color:#E9F284">'</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">123 Main St</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> });</span></span>
+<span class="line"></span></code></pre>
 <p>Overall, Embedded Documents Arrays are a powerful feature in MongoDB, allowing you to store complex data relationships in a performant and efficient manner. Use them wisely to take full advantage of MongoDB’s flexibility and scalability.</p>

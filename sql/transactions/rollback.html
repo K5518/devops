@@ -13,7 +13,8 @@
 <span class="line"><span style="color:#FF79C6">DELETE</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> Employee;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">-- Oh no! That's not what I wanted. Let's roll that back.</span></span>
-<span class="line"><span style="color:#FF79C6">ROLLBACK</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">ROLLBACK</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, the <code>ROLLBACK</code> command would restore all deleted data into the <code>Employee</code> table.</p>
 <p>SQL also allows the usage of <code>SAVEPOINT</code>s along with the <code>ROLLBACK</code> command, which allows rolling back to a specific point in a transaction, instead of rolling back the entire transaction.</p>
 <p>Here is an example of using <code>SAVEPOINT</code>s:</p>
@@ -32,5 +33,6 @@
 <span class="line"><span style="color:#FF79C6">INSERT INTO</span><span style="color:#F8F8F2"> Employee(ID, </span><span style="color:#FF79C6">Name</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">VALUES</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Jack</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">-- Commit the changes.</span></span>
-<span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, <code>ROLLBACK TO SAVEPOINT SP1</code> would undo the first insert into the <code>Employee</code> table while preserving the state of the database as it was at the savepoint <code>SP1</code>. So, the second insert command would properly add ‘Jack’ in place of ‘John’.</p>

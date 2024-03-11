@@ -6,7 +6,8 @@
 <span class="line"><span style="color:#F8F8F2">  &#x3C;</span><span style="color:#FF79C6">field</span><span style="color:#F8F8F2">>: </span><span style="color:#FF79C6">{</span></span>
 <span class="line"><span style="color:#F8F8F2">    $all: [&#x3C;</span><span style="color:#FF79C6">value1</span><span style="color:#F8F8F2">>, &#x3C;</span><span style="color:#FF79C6">value2</span><span style="color:#F8F8F2">>, ..., &#x3C;</span><span style="color:#8BE9FD;font-style:italic">valueN</span><span style="color:#F8F8F2">>]</span></span>
 <span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>Here, <code>&#x3C;field></code> refers to the name of the array field that should be queried, and <code>&#x3C;value1>, &#x3C;value2>, ..., &#x3C;valueN></code> are the values that you want to match against.</p>
 <h2 id="example">Example</h2>
 <p>Let’s assume we have a collection <code>movies</code> with documents containing the following fields: <code>_id</code>, <code>title</code>, and <code>tags</code>. The <code>tags</code> field is an array of string values.</p>
@@ -15,9 +16,11 @@
 <span class="line"><span style="color:#F8F8F2">  _id: </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  title: </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">The Matrix</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  tags: [</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">action</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">sci-fi</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">cyberpunk</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">]</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>If you want to find all movies with the tags “action” and “sci-fi”, you can use the <code>$all</code> operator as shown below:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.movies.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ tags</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $all</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> [</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">action</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">sci-fi</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">] } });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.movies.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ tags</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $all</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> [</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">action</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">sci-fi</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">] } });</span></span>
+<span class="line"></span></code></pre>
 <p>This query would return all documents where the <code>tags</code> array contains <strong>both</strong> “action” and “sci-fi” values.</p>
 <h2 id="summary">Summary</h2>
 <p>The <code>$all</code> operator allows you to match documents based on the presence of multiple values in an array field. It provides a simple and powerful way to query for documents that meet specific criteria within arrays.</p>

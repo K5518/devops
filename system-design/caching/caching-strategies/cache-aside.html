@@ -13,7 +13,8 @@
 <span class="line"><span style="color:#FF79C6">      if</span><span style="color:#F8F8F2"> user </span><span style="color:#FF79C6">is</span><span style="color:#FF79C6"> not</span><span style="color:#BD93F9"> None</span><span style="color:#F8F8F2">:</span></span>
 <span class="line"><span style="color:#F8F8F2">        key </span><span style="color:#FF79C6">=</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">user.</span><span style="color:#BD93F9">{0}</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">.format(user_id)</span></span>
 <span class="line"><span style="color:#F8F8F2">        cache.set(key, json.dumps(user))</span></span>
-<span class="line"><span style="color:#FF79C6">  return</span><span style="color:#F8F8F2"> user</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">  return</span><span style="color:#F8F8F2"> user</span></span>
+<span class="line"></span></code></pre>
 <p><a href="https://memcached.org/" rel="noopener noreferrer nofollow" target="_blank">Memcached</a> is generally used in this manner. Subsequent reads of data added to cache are fast. Cache-aside is also referred to as lazy loading. Only requested data is cached, which avoids filling up the cache with data that isn’t requested.</p>
 <p><img src="https://i.imgur.com/Ujf0awN.png" alt="Cache Aside"></p>
 <p>To learn more, have a look at the following resources:</p>

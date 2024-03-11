@@ -7,14 +7,16 @@
 <p>Example:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">vector</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> nums </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> {</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4</span><span style="color:#F8F8F2">};</span></span>
 <span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#8BE9FD;font-style:italic">istream_iterator</span><span style="color:#F8F8F2">&#x3C;</span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2">> </span><span style="color:#50FA7B">input</span><span style="color:#F8F8F2">(std</span><span style="color:#FF79C6">::</span><span style="color:#8BE9FD;font-style:italic">cin</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">copy</span><span style="color:#F8F8F2">(input, std</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">istream_iterator</span><span style="color:#F8F8F2">&#x3C;</span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2">>(), std</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">back_inserter</span><span style="color:#F8F8F2">(nums));</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">copy</span><span style="color:#F8F8F2">(input, std</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">istream_iterator</span><span style="color:#F8F8F2">&#x3C;</span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2">>(), std</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">back_inserter</span><span style="color:#F8F8F2">(nums));</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><strong>Output Iterator</strong>: Used to write elements in a container only once, in a forward direction. They cannot re-write elements.</li>
 </ul>
 <p>Example:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">vector</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> nums </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> {</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4</span><span style="color:#F8F8F2">};</span></span>
 <span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#8BE9FD;font-style:italic">ostream_iterator</span><span style="color:#F8F8F2">&#x3C;</span><span style="color:#FF79C6">int</span><span style="color:#F8F8F2">> </span><span style="color:#50FA7B">output</span><span style="color:#F8F8F2">(std</span><span style="color:#FF79C6">::</span><span style="color:#8BE9FD;font-style:italic">cout</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">, </span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">copy</span><span style="color:#F8F8F2">(nums.</span><span style="color:#50FA7B">begin</span><span style="color:#F8F8F2">(), nums.</span><span style="color:#50FA7B">end</span><span style="color:#F8F8F2">(), output);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">copy</span><span style="color:#F8F8F2">(nums.</span><span style="color:#50FA7B">begin</span><span style="color:#F8F8F2">(), nums.</span><span style="color:#50FA7B">end</span><span style="color:#F8F8F2">(), output);</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><strong>Forward Iterator</strong>: Similar to input iterators but can be used for multiple passes over the elements in a container. They cannot move backward.</li>
 </ul>
@@ -24,7 +26,8 @@
 <span class="line"><span style="color:#FF79C6">while</span><span style="color:#F8F8F2"> (itr </span><span style="color:#FF79C6">!=</span><span style="color:#F8F8F2"> nums.</span><span style="color:#50FA7B">end</span><span style="color:#F8F8F2">()) {</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2">itr </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#E9F284"> "</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">    ++</span><span style="color:#F8F8F2">itr;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p><strong>Reverse Iterator</strong>: Similar to input iterators but can be used for multiple passes over the elements in a container. They cannot move forward.</p>
 <p>Example:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">list</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> nums </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> {</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4</span><span style="color:#F8F8F2">};</span></span>
@@ -32,7 +35,8 @@
 <span class="line"><span style="color:#FF79C6">while</span><span style="color:#F8F8F2"> (itr </span><span style="color:#FF79C6">!=</span><span style="color:#F8F8F2"> nums.</span><span style="color:#50FA7B">rend</span><span style="color:#F8F8F2">()) {</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2">itr </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#E9F284"> "</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">    ++</span><span style="color:#F8F8F2">itr;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><strong>Bidirectional Iterator</strong>: These iterators offer the ability to move both forward and backward in a container. List and set containers have bi-directional iterators.</li>
 </ul>
@@ -44,7 +48,8 @@
 <span class="line"><span style="color:#F8F8F2">}</span></span>
 <span class="line"><span style="color:#FF79C6">for</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">--</span><span style="color:#F8F8F2">itr; itr </span><span style="color:#FF79C6">!=</span><span style="color:#F8F8F2"> nums.</span><span style="color:#50FA7B">begin</span><span style="color:#F8F8F2">(); </span><span style="color:#FF79C6">--</span><span style="color:#F8F8F2">itr) {</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2">itr </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#E9F284"> "</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><strong>Random Access Iterator</strong>: These iterators provide the most flexible ways to access elements in a container. They can move forwards, backwards, jump directly to other elements, and access elements at a given index.</li>
 </ul>
@@ -56,11 +61,13 @@
 <span class="line"><span style="color:#F8F8F2">}</span></span>
 <span class="line"><span style="color:#FF79C6">for</span><span style="color:#F8F8F2"> (itr </span><span style="color:#FF79C6">-=</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">; itr </span><span style="color:#FF79C6">!=</span><span style="color:#F8F8F2"> nums.</span><span style="color:#50FA7B">begin</span><span style="color:#F8F8F2">() </span><span style="color:#FF79C6">-</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">; </span><span style="color:#FF79C6">--</span><span style="color:#F8F8F2">itr) {</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2">itr </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#E9F284"> "</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>For most cases, you would want to start with the <code>auto</code> keyword and the appropriate container methods (like <code>begin()</code> and <code>end()</code>) to work with iterators.</p>
 <p>Example:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">vector</span><span style="color:#FF79C6">&#x3C;int></span><span style="color:#F8F8F2"> nums </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> {</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4</span><span style="color:#F8F8F2">};</span></span>
 <span class="line"><span style="color:#FF79C6">for</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">auto</span><span style="color:#F8F8F2"> itr </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> nums.</span><span style="color:#50FA7B">begin</span><span style="color:#F8F8F2">(); itr </span><span style="color:#FF79C6">!=</span><span style="color:#F8F8F2"> nums.</span><span style="color:#50FA7B">end</span><span style="color:#F8F8F2">(); </span><span style="color:#FF79C6">++</span><span style="color:#F8F8F2">itr) {</span></span>
 <span class="line"><span style="color:#F8F8F2">    std</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">cout </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2">itr </span><span style="color:#FF79C6">&#x3C;&#x3C;</span><span style="color:#E9F284"> "</span><span style="color:#E9F284"> "</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>When working with algorithms, remember that the C++ Standard Library provides various algorithms that already utilize iterators for tasks like searching, sorting, and manipulating elements.</p>

@@ -6,7 +6,8 @@
 <span class="line"><span style="color:#F8F8F2">(</span></span>
 <span class="line"><span style="color:#FF79C6">    SQL</span><span style="color:#F8F8F2"> Query</span></span>
 <span class="line"><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> CTE_Name</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> CTE_Name</span></span>
+<span class="line"></span></code></pre>
 <p>In this syntax, the “WITH” keyword is used to create a CTE. The SQL query inside the parentheses is the query that creates the CTE. The final SELECT statement is used to query the data from the CTE.</p>
 <h2 id="basic-usage">Basic Usage</h2>
 <p>An example of how to use a CTE is demonstrated below:</p>
@@ -21,7 +22,8 @@
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Employee E</span></span>
 <span class="line"><span style="color:#FF79C6">JOIN</span><span style="color:#F8F8F2"> Sales_CTE S</span></span>
 <span class="line"><span style="color:#FF79C6">ON</span><span style="color:#BD93F9"> E</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">EmployeeID</span><span style="color:#FF79C6"> =</span><span style="color:#BD93F9"> S</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">SalesPersonID</span></span>
-<span class="line"><span style="color:#FF79C6">ORDER BY</span><span style="color:#BD93F9"> S</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">NumberOfOrders</span><span style="color:#FF79C6"> DESC</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">ORDER BY</span><span style="color:#BD93F9"> S</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">NumberOfOrders</span><span style="color:#FF79C6"> DESC</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, the CTE groups sales data by <code>SalesPersonID</code> and then joins this with the <code>Employee</code> table based on the <code>EmployeeID</code> to get the corresponding employee details.</p>
 <h2 id="recursive-ctes">Recursive CTEs</h2>
 <p>SQL also supports recursive CTEs, which are CTEs that reference themselves. Recursive CTEs are generally used to solve problems that require iteration, such as traversing hierarchies. Here’s an example:</p>
@@ -36,5 +38,6 @@
 <span class="line"><span style="color:#FF79C6">  INNER JOIN</span><span style="color:#F8F8F2"> Recursive_CTE RCTE</span></span>
 <span class="line"><span style="color:#FF79C6">  ON</span><span style="color:#BD93F9"> E</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">ManagerID</span><span style="color:#FF79C6"> =</span><span style="color:#BD93F9"> RCTE</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">EmployeeID</span></span>
 <span class="line"><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> Recursive_CTE;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> Recursive_CTE;</span></span>
+<span class="line"></span></code></pre>
 <p>In the example above, the CTE starts with the employees who have no manager (<code>ManagerID IS NULL</code>). Then it recursively adds employees who are managed by the employees already in the CTE. The result is a list of all employees in the company, hierarchically organized by manager.</p>

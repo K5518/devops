@@ -6,23 +6,27 @@
 <li>
 <p><strong>Uninitialized Variables</strong>: Accessing the value of an uninitialized variable can lead to undefined behavior. The value of an uninitialized variable is arbitrary and depends on what was in the memory location before the variable was declared.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> x;</span></span>
-<span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> y </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> x </span><span style="color:#FF79C6">+</span><span style="color:#BD93F9"> 5</span><span style="color:#F8F8F2">;</span><span style="color:#6272A4"> // Undefined behavior since x is uninitialized</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> y </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> x </span><span style="color:#FF79C6">+</span><span style="color:#BD93F9"> 5</span><span style="color:#F8F8F2">;</span><span style="color:#6272A4"> // Undefined behavior since x is uninitialized</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Out-of-bounds Memory Access</strong>: Accessing memory outside the boundaries of an array or buffer may result in undefined behavior.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> arr[</span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">];</span></span>
-<span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> val </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> arr[</span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">];</span><span style="color:#6272A4"> // Undefined behavior since the valid indices are 0 to 4</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> val </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> arr[</span><span style="color:#BD93F9">5</span><span style="color:#F8F8F2">];</span><span style="color:#6272A4"> // Undefined behavior since the valid indices are 0 to 4</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Null Pointer Dereference</strong>: Dereferencing a null pointer may lead to undefined behavior.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2">ptr </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> nullptr</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> val </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2">ptr;</span><span style="color:#6272A4"> // Undefined behavior since ptr is a null pointer</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> val </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2">ptr;</span><span style="color:#6272A4"> // Undefined behavior since ptr is a null pointer</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Division by Zero</strong>: Performing a division operation by zero is undefined behavior in C++.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> x </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 5</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> y </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> z </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> x </span><span style="color:#FF79C6">/</span><span style="color:#F8F8F2"> y;</span><span style="color:#6272A4"> // Undefined behavior since division by zero is not allowed</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> z </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> x </span><span style="color:#FF79C6">/</span><span style="color:#F8F8F2"> y;</span><span style="color:#6272A4"> // Undefined behavior since division by zero is not allowed</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 <p>It is crucial to detect and fix the root cause of undefined behavior in your programs since it can lead to unpredictable results, data corruption, and security vulnerabilities. To mitigate undefined behavior, you can utilize tools like static code analyzers, dynamic analysis tools, and compiler options that help detect potential issues.</p>

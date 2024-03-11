@@ -9,37 +9,44 @@
 </ul>
 <h2 id="basic-usage">Basic Usage</h2>
 <p>To start using Tcpdump, open your terminal/command line and enter the following command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tcpdump</span><span style="color:#BD93F9"> -i</span><span style="color:#F1FA8C"> any</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tcpdump</span><span style="color:#BD93F9"> -i</span><span style="color:#F1FA8C"> any</span></span>
+<span class="line"></span></code></pre>
 <p>This command will capture packets on all network interfaces. The output will display source and destination IP addresses, port numbers, and packet length.</p>
 <h2 id="common-tcpdump-commands">Common Tcpdump Commands</h2>
 <p>Here are some essential tcpdump commands for different tasks:</p>
 <ul>
 <li>
 <p><strong>Monitor a specific interface</strong>: To monitor a specific network interface, replace <code>&#x3C;INTERFACE></code> with the name of the interface you want to monitor:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tcpdump</span><span style="color:#BD93F9"> -i</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">INTERFAC</span><span style="color:#F8F8F2">E</span><span style="color:#FF79C6">></span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tcpdump</span><span style="color:#BD93F9"> -i</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">INTERFAC</span><span style="color:#F8F8F2">E</span><span style="color:#FF79C6">></span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Capture specific number of packets:</strong> To capture a specific number of packets, use the <code>-c</code> option followed by the number of packets you want to capture:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tcpdump</span><span style="color:#BD93F9"> -i</span><span style="color:#F1FA8C"> any</span><span style="color:#BD93F9"> -c</span><span style="color:#BD93F9"> 10</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tcpdump</span><span style="color:#BD93F9"> -i</span><span style="color:#F1FA8C"> any</span><span style="color:#BD93F9"> -c</span><span style="color:#BD93F9"> 10</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Save captured packets to a file:</strong> Tcpdump can save the captured packets to a file for further analysis. To save the packets in a file, use the <code>-w</code> option followed by the file name:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tcpdump</span><span style="color:#BD93F9"> -i</span><span style="color:#F1FA8C"> any</span><span style="color:#BD93F9"> -w</span><span style="color:#F1FA8C"> capture.pcap</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tcpdump</span><span style="color:#BD93F9"> -i</span><span style="color:#F1FA8C"> any</span><span style="color:#BD93F9"> -w</span><span style="color:#F1FA8C"> capture.pcap</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Filter captured packets</strong>: You can filter the captured packets by various parameters such as IP addresses, protocol, or port numbers. Some examples of the filter are:</p>
 <ul>
 <li>
 <p>Capture packets from/to a specific IP address:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tcpdump</span><span style="color:#BD93F9"> -i</span><span style="color:#F1FA8C"> any</span><span style="color:#F1FA8C"> host</span><span style="color:#BD93F9"> 192.168</span><span style="color:#F1FA8C">.1.1</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tcpdump</span><span style="color:#BD93F9"> -i</span><span style="color:#F1FA8C"> any</span><span style="color:#F1FA8C"> host</span><span style="color:#BD93F9"> 192.168</span><span style="color:#F1FA8C">.1.1</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p>Capture packets related to a specific port:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tcpdump</span><span style="color:#BD93F9"> -i</span><span style="color:#F1FA8C"> any</span><span style="color:#F1FA8C"> port</span><span style="color:#BD93F9"> 80</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tcpdump</span><span style="color:#BD93F9"> -i</span><span style="color:#F1FA8C"> any</span><span style="color:#F1FA8C"> port</span><span style="color:#BD93F9"> 80</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p>Capture packets by protocol (e.g., icmp, tcp, or udp):</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tcpdump</span><span style="color:#BD93F9"> -i</span><span style="color:#F1FA8C"> any</span><span style="color:#F1FA8C"> icmp</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">tcpdump</span><span style="color:#BD93F9"> -i</span><span style="color:#F1FA8C"> any</span><span style="color:#F1FA8C"> icmp</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 </li>

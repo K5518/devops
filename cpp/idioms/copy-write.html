@@ -33,5 +33,6 @@
 <span class="line"></span>
 <span class="line"><span style="color:#F8F8F2">    str1.</span><span style="color:#50FA7B">write</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">Hello, World!</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span><span style="color:#6272A4"> // This is where the actual duplication happens.</span></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, we have a class <code>MyString</code> that simulates the Copy-Write idiom. When a <code>MyString</code> object is created, it constructs a <code>shared_ptr</code> pointing to a string. When a <code>MyString</code> object is copied, it does not perform any actual copy operation, but simply increases the reference count of the shared object. Finally, when the <code>write</code> function is called, it checks if there’s more than one reference to the data and if so, it actually creates a new copy and updates the reference. This way, unnecessary copies can be avoided until they are actually needed for modification.</p>

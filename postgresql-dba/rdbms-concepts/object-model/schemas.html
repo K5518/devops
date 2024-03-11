@@ -7,18 +7,22 @@
 <p>PostgreSQL comes with a default schema named <code>public</code>. When you create a new database, the <code>public</code> schema is automatically created for you. If you don’t specify a schema when creating a new object, like a table or function, it will be created within the default <code>public</code> schema.</p>
 <h2 id="creating-and-using-schemas">Creating and Using Schemas</h2>
 <p>You can create a new schema using the <code>CREATE SCHEMA</code> command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> SCHEMA</span><span style="color:#50FA7B"> schema_name</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> SCHEMA</span><span style="color:#50FA7B"> schema_name</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>To reference a schema when creating or using a database object, you can use the schema name followed by a period and the object name. For example, to create a table within a specific schema:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>CREATE TABLE schema_name.table_name (</span></span>
 <span class="line"><span>  col1 data_type PRIMARY KEY,</span></span>
 <span class="line"><span>  col2 data_type,</span></span>
 <span class="line"><span>  ...</span></span>
-<span class="line"><span>);</span></span></code></pre>
+<span class="line"><span>);</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>When querying a table, you should also reference the schema name:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#BD93F9"> schema_name</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">table_name</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#BD93F9"> schema_name</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">table_name</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="access-control">Access Control</h2>
 <p>Schemas are also useful for managing access control within your database. You can set permissions on a schema level, allowing you to control which users can access and modify particular database objects. This is helpful for managing a multi-user environment or ensuring that certain application components only have access to specific parts of your database.</p>
 <p>To grant access to a specific schema for a user, use the <code>GRANT</code> command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">GRANT</span><span style="color:#F8F8F2"> USAGE </span><span style="color:#FF79C6">ON</span><span style="color:#FF79C6"> SCHEMA</span><span style="color:#F8F8F2"> schema_name </span><span style="color:#FF79C6">TO</span><span style="color:#F8F8F2"> user_name;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">GRANT</span><span style="color:#F8F8F2"> USAGE </span><span style="color:#FF79C6">ON</span><span style="color:#FF79C6"> SCHEMA</span><span style="color:#F8F8F2"> schema_name </span><span style="color:#FF79C6">TO</span><span style="color:#F8F8F2"> user_name;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="conclusion">Conclusion</h2>
 <p>In summary, schemas are crucial elements in PostgreSQL that facilitate namespacing, organization, and access control. By properly utilizing schemas in your database design, you can create a clean and manageable structure, making it easier to scale and maintain your database applications.</p>

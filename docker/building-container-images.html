@@ -21,25 +21,34 @@
 <span class="line"><span style="color:#FF79C6">ENV</span><span style="color:#F8F8F2"> NAME World</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4"># Run app.py when the container launches</span></span>
-<span class="line"><span style="color:#FF79C6">CMD</span><span style="color:#F8F8F2"> [</span><span style="color:#F1FA8C">"python"</span><span style="color:#F8F8F2">, </span><span style="color:#F1FA8C">"app.py"</span><span style="color:#F8F8F2">]</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">CMD</span><span style="color:#F8F8F2"> [</span><span style="color:#F1FA8C">"python"</span><span style="color:#F8F8F2">, </span><span style="color:#F1FA8C">"app.py"</span><span style="color:#F8F8F2">]</span></span>
+<span class="line"></span></code></pre>
 <h2 id="building-an-image">Building an Image</h2>
 <p>Once you have created the Dockerfile, you can build the image using the <code>docker build</code> command. Execute the following command in the terminal from the directory containing the Dockerfile:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> build</span><span style="color:#BD93F9"> -t</span><span style="color:#F1FA8C"> your-image-name</span><span style="color:#F1FA8C"> .</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> build</span><span style="color:#BD93F9"> -t</span><span style="color:#F1FA8C"> your-image-name</span><span style="color:#F1FA8C"> .</span></span>
+<span class="line"></span></code></pre>
 <p>This command tells Docker to build an image using the Dockerfile in the current directory (<code>.</code>), and assign it a name (<code>-t your-image-name</code>).</p>
 <h2 id="inspecting-images-and-layers">Inspecting Images and Layers</h2>
 <p>After a successful build, you can inspect the created image using <code>docker image</code> command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> image</span><span style="color:#F1FA8C"> ls</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> image</span><span style="color:#F1FA8C"> ls</span></span>
+<span class="line"></span></code></pre>
 <p>To take a closer look at the individual layers of an image, use the <code>docker history</code> command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> history</span><span style="color:#F1FA8C"> your-image-name</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> history</span><span style="color:#F1FA8C"> your-image-name</span></span>
+<span class="line"></span></code></pre>
 <p>To view the layers of an image, you can also use the <code>docker inspect</code> command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> inspect</span><span style="color:#F1FA8C"> your-image-name</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> inspect</span><span style="color:#F1FA8C"> your-image-name</span></span>
+<span class="line"></span></code></pre>
 <p>To remove an image, use the <code>docker image rm</code> command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> image</span><span style="color:#F1FA8C"> rm</span><span style="color:#F1FA8C"> your-image-name</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> image</span><span style="color:#F1FA8C"> rm</span><span style="color:#F1FA8C"> your-image-name</span></span>
+<span class="line"></span></code></pre>
 <h2 id="pushing-images-to-a-registry">Pushing Images to a Registry</h2>
 <p>Once your image is built, you can push it to a container registry (e.g., Docker Hub, Google Container Registry, etc.) to easily distribute and deploy your application. First, log in to the registry using your credentials:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> login</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> login</span></span>
+<span class="line"></span></code></pre>
 <p>Then, tag your image with the registry URL:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> tag</span><span style="color:#F1FA8C"> your-image-name</span><span style="color:#F1FA8C"> username/repository:tag</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> tag</span><span style="color:#F1FA8C"> your-image-name</span><span style="color:#F1FA8C"> username/repository:tag</span></span>
+<span class="line"></span></code></pre>
 <p>Finally, push the tagged image to the registry:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> push</span><span style="color:#F1FA8C"> username/repository:tag</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> push</span><span style="color:#F1FA8C"> username/repository:tag</span></span>
+<span class="line"></span></code></pre>
 <p>Building container images is a crucial aspect of using Docker, as it enables you to package and deploy your applications with ease. By creating a Dockerfile with precise instructions, you can effortlessly build and distribute images across various platforms.</p>

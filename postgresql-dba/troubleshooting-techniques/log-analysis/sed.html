@@ -10,7 +10,8 @@
 </ul>
 <h2 id="basic-syntax">Basic Syntax</h2>
 <p>The general syntax of a sed command is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sed</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">script</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> input_file</span><span style="color:#FF79C6"> ></span><span style="color:#F1FA8C"> output_file</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sed</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">script</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> input_file</span><span style="color:#FF79C6"> ></span><span style="color:#F1FA8C"> output_file</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><code>sed</code>: The command itself.</li>
 <li><code>'script'</code>: One or more editing instructions enclosed in single quotes.</li>
@@ -22,15 +23,19 @@
 <ul>
 <li><strong>Substitution</strong>:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sed</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">s/search/replace/flags</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> input_file</span><span style="color:#FF79C6"> ></span><span style="color:#F1FA8C"> output_file</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sed</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">s/search/replace/flags</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> input_file</span><span style="color:#FF79C6"> ></span><span style="color:#F1FA8C"> output_file</span></span>
+<span class="line"></span></code></pre>
 <p>This command will search for a given pattern (<code>search</code>) in the input file and replace it with another string (<code>replace</code>). You can use different flags for modifying the substitution behavior, such as <code>g</code> (global) to replace all occurrences in the entire file.</p>
 <p>For example, to replace all instances of “apple” with “banana” in a file called <code>fruits.txt</code>:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sed</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">s/apple/banana/g</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> fruits.txt</span><span style="color:#FF79C6"> ></span><span style="color:#F1FA8C"> fruits_modified.txt</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sed</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">s/apple/banana/g</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> fruits.txt</span><span style="color:#FF79C6"> ></span><span style="color:#F1FA8C"> fruits_modified.txt</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><strong>Delete Lines</strong>:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sed</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">/pattern/d</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> input_file</span><span style="color:#FF79C6"> ></span><span style="color:#F1FA8C"> output_file</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sed</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">/pattern/d</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> input_file</span><span style="color:#FF79C6"> ></span><span style="color:#F1FA8C"> output_file</span></span>
+<span class="line"></span></code></pre>
 <p>This command will delete all lines containing a specified pattern from the input file. For example, to remove all lines containing the string “ERROR” from <code>log.txt</code>:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sed</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">/ERROR/d</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> log.txt</span><span style="color:#FF79C6"> ></span><span style="color:#F1FA8C"> log_filtered.txt</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">sed</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">/ERROR/d</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> log.txt</span><span style="color:#FF79C6"> ></span><span style="color:#F1FA8C"> log_filtered.txt</span></span>
+<span class="line"></span></code></pre>
 <h2 id="summary">Summary</h2>
 <p>Sed is an essential text-processing tool that finds multiple applications in various fields, such as log file analysis, data extraction, and text manipulation. With its versatile set of text-editing and manipulation capabilities, sed can save you a lot of manual effort and time in data processing tasks in PostgreSQL log analysis, among other use cases.</p>

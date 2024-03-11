@@ -5,7 +5,8 @@
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> DOMAIN</span><span style="color:#50FA7B"> domain_name</span><span style="color:#FF79C6"> AS</span><span style="color:#F8F8F2"> underlying_data_type</span></span>
 <span class="line"><span style="color:#F8F8F2">  [DEFAULT expression]</span></span>
 <span class="line"><span style="color:#F8F8F2">  [NOT NULL]</span></span>
-<span class="line"><span style="color:#F8F8F2">  [CHECK (condition)];</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">  [CHECK (condition)];</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><code>domain_name</code>: The name of the custom domain you want to create.</li>
 <li><code>underlying_data_type</code>: The existing PostgreSQL data type on which your domain is based.</li>
@@ -17,13 +18,15 @@
 <p>Suppose you want to create a custom domain to store phone numbers. This domain should only accept valid 10-digit phone numbers as input. Here’s an example of how you might define this domain:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> DOMAIN</span><span style="color:#50FA7B"> phone_number</span><span style="color:#FF79C6"> AS</span><span style="color:#FF79C6"> VARCHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">10</span><span style="color:#F8F8F2">)</span></span>
 <span class="line"><span style="color:#FF79C6">  NOT NULL</span></span>
-<span class="line"><span style="color:#FF79C6">  CHECK</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">VALUE</span><span style="color:#F8F8F2"> ~ </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">^[0-9]{10}$</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">  CHECK</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">VALUE</span><span style="color:#F8F8F2"> ~ </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">^[0-9]{10}$</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>Now that your <code>phone_number</code> domain is created, you can use it when defining columns in your tables. For example:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> customers</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">  id </span><span style="color:#FF79C6">serial</span><span style="color:#FF79C6"> PRIMARY KEY</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#FF79C6">  name</span><span style="color:#FF79C6"> VARCHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">50</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">NOT NULL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  phone phone_number</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, the <code>phone</code> column is based on the <code>phone_number</code> domain and will only accept values that pass the defined constraints.</p>
 <h2 id="modifying-and-deleting-domains">Modifying and Deleting Domains</h2>
 <p>You can alter your custom domains by using the <code>ALTER DOMAIN</code> command. To delete a domain, you can use the <code>DROP DOMAIN</code> command. Be aware that dropping a domain may affect the tables with columns based on it.</p>

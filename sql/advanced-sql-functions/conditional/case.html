@@ -11,7 +11,8 @@
 <span class="line"><span style="color:#F8F8F2">    ...</span></span>
 <span class="line"><span style="color:#FF79C6">    ELSE</span><span style="color:#F8F8F2"> result </span></span>
 <span class="line"><span style="color:#FF79C6">END</span><span style="color:#F8F8F2">) </span></span>
-<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name;</span></span>
+<span class="line"></span></code></pre>
 <ol start="2">
 <li><strong>Searched CASE expression</strong> - It evaluates a set of Boolean expressions to return a result.</li>
 </ol>
@@ -22,7 +23,8 @@
 <span class="line"><span style="color:#F8F8F2">    ...</span></span>
 <span class="line"><span style="color:#FF79C6">    ELSE</span><span style="color:#F8F8F2"> result</span></span>
 <span class="line"><span style="color:#FF79C6">END</span><span style="color:#F8F8F2">) </span></span>
-<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name;</span></span>
+<span class="line"></span></code></pre>
 <p>In both forms, <code>CASE</code> returns a result_1, result_2, …, if condition_1, condition_2, … is true. If no conditions are true, it returns the value in the <code>ELSE</code> clause. If the <code>ELSE</code> clause is omitted and no conditions are true, it returns NULL.</p>
 <p>Here’s a concrete example:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> OrderID, Quantity,</span></span>
@@ -31,5 +33,6 @@
 <span class="line"><span style="color:#FF79C6">     WHEN</span><span style="color:#F8F8F2"> Quantity </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 30</span><span style="color:#FF79C6"> THEN</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Equals 30</span><span style="color:#E9F284">'</span></span>
 <span class="line"><span style="color:#FF79C6">     ELSE</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Under 30</span><span style="color:#E9F284">'</span></span>
 <span class="line"><span style="color:#FF79C6"> END</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> QuantityText</span></span>
-<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> OrderDetails;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> OrderDetails;</span></span>
+<span class="line"></span></code></pre>
 <p>From the “OrderDetails” table, the statement lists ‘OrderID’, ‘Quantity’, and a column named ‘QuantityText’ that displays ‘Over 30’ if ‘Quantity > 30’ or ‘Equals 30’ if ‘Quantity = 30’ or ‘Under 30’ if both conditions are false.</p>

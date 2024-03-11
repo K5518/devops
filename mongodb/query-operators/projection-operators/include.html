@@ -3,9 +3,11 @@
 <p>The syntax for <code>$include</code> is as follows:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#F8F8F2">  field: </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>Here, <code>field</code> is the name of the field to include, and <code>1</code> indicates that you want the field included in the result documents. You can include multiple fields by specifying them in a comma-separated list:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{ field1: </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, field2: </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, field3: </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2"> }</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{ field1: </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, field2: </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">, field3: </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2"> }</span></span>
+<span class="line"></span></code></pre>
 <h2 id="example">Example</h2>
 <p>Suppose we have a collection called <code>books</code> with the following documents:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">[</span></span>
@@ -27,9 +29,11 @@
 <span class="line"><span style="color:#F8F8F2">    year</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1937</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    genre</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Novella</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
-<span class="line"><span style="color:#F8F8F2">];</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">];</span></span>
+<span class="line"></span></code></pre>
 <p>If you want to retrieve only the <code>title</code> and <code>author</code> fields from the documents in the <code>books</code> collection, you can use the <code>$include</code> projection operator as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.books.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({}, { title</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">, author</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">, _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2"> });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.books.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({}, { title</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">, author</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">, _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2"> });</span></span>
+<span class="line"></span></code></pre>
 <p>The result will be:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">[</span></span>
 <span class="line"><span style="color:#F8F8F2">  {</span></span>
@@ -44,6 +48,7 @@
 <span class="line"><span style="color:#F8F8F2">    title</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Of Mice and Men</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    author</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">John Steinbeck</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
-<span class="line"><span style="color:#F8F8F2">];</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">];</span></span>
+<span class="line"></span></code></pre>
 <p>Note that we have also excluded the <code>_id</code> field (which is included by default) by setting it to <code>0</code>.</p>
 <p>Keep in mind that you cannot combine <code>$include</code> and <code>$exclude</code> (or <code>1</code> and <code>0</code>) in the same query, except for the <code>_id</code> field, which can be excluded even when other fields are being included.</p>

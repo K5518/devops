@@ -9,7 +9,8 @@
 <span class="line"><span style="color:#6272A4">    // ...,</span></span>
 <span class="line"><span style="color:#F8F8F2">    { conditionN },</span></span>
 <span class="line"><span style="color:#F8F8F2">  ];</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="usage">Usage</h2>
 <p>To use the <code>$or</code> operator, you need to specify the conditions inside the <code>$or</code> array. Each condition should be an object containing one or more field-value pairs to be matched.</p>
 <p>Let’s consider a collection named <code>products</code> with the following documents:</p>
@@ -18,18 +19,21 @@
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 2</span><span style="color:#F8F8F2">, category</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Fruits</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 30</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2">, category</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Vegetables</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 10</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 4</span><span style="color:#F8F8F2">, category</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Vegetables</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 15</span><span style="color:#F8F8F2"> },</span></span>
-<span class="line"><span style="color:#F8F8F2">];</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">];</span></span>
+<span class="line"></span></code></pre>
 <p>If you want to find all the documents where the <code>category</code> is “Fruits” or the <code>price</code> is less than or equal to <code>15</code>, you can use the <code>$or</code> operator as shown below:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.products.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({</span></span>
 <span class="line"><span style="color:#F8F8F2">  $or</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> [{ category</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Fruits</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> }, { price</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $lte</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 15</span><span style="color:#F8F8F2"> } }],</span></span>
-<span class="line"><span style="color:#F8F8F2">});</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">});</span></span>
+<span class="line"></span></code></pre>
 <p>The result will include the documents that match either of the conditions:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">[</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">, category</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Fruits</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 20</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 2</span><span style="color:#F8F8F2">, category</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Fruits</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 30</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2">, category</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Vegetables</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 10</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 4</span><span style="color:#F8F8F2">, category</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Vegetables</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 15</span><span style="color:#F8F8F2"> },</span></span>
-<span class="line"><span style="color:#F8F8F2">];</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">];</span></span>
+<span class="line"></span></code></pre>
 <h2 id="combination-with-other-operators">Combination with Other Operators</h2>
 <p>The <code>$or</code> operator can be combined with other MongoDB operators to build more complex queries. For example, if you want to find all the documents where the <code>category</code> is “Fruits” and the <code>price</code> is either less than <code>20</code> or greater than <code>25</code>, you can use the <code>$and</code> and <code>$or</code> operators together:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.products.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({</span></span>
@@ -39,7 +43,9 @@
 <span class="line"><span style="color:#F8F8F2">      $or</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> [{ price</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $lt</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 20</span><span style="color:#F8F8F2"> } }, { price</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $gt</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 25</span><span style="color:#F8F8F2"> } }],</span></span>
 <span class="line"><span style="color:#F8F8F2">    },</span></span>
 <span class="line"><span style="color:#F8F8F2">  ],</span></span>
-<span class="line"><span style="color:#F8F8F2">});</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">});</span></span>
+<span class="line"></span></code></pre>
 <p>The result will include the documents that match the specified conditions:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">[{ _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 2</span><span style="color:#F8F8F2">, category</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Fruits</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 30</span><span style="color:#F8F8F2"> }];</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">[{ _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 2</span><span style="color:#F8F8F2">, category</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">Fruits</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 30</span><span style="color:#F8F8F2"> }];</span></span>
+<span class="line"></span></code></pre>
 <p>And that’s an overview of the <code>$or</code> logical operator in MongoDB! It enables you to create more flexible queries and fetch the desired documents based on multiple conditions. Use it wisely in conjunction with other operators to get the most out of your MongoDB queries.</p>

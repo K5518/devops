@@ -3,7 +3,8 @@
 <h2 id="syntax">Syntax</h2>
 <p>To create a full specialization of a template, you need to define the specific type for which the specialization should happen. The syntax looks as follows:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">template</span><span style="color:#F8F8F2"> &#x3C;></span><span style="color:#6272A4"> //Indicates that this is a specialization</span></span>
-<span class="line"><span style="color:#F8F8F2">className</span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2">specificType</span><span style="color:#FF79C6">></span><span style="color:#6272A4"> //The specialized class for the specific type</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">className</span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2">specificType</span><span style="color:#FF79C6">></span><span style="color:#6272A4"> //The specialized class for the specific type</span></span>
+<span class="line"></span></code></pre>
 <h2 id="example">Example</h2>
 <p>Consider the following example to demonstrate full template specialization:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#6272A4">// Generic template</span></span>
@@ -32,5 +33,6 @@
 <span class="line"><span style="color:#F8F8F2">    i.</span><span style="color:#50FA7B">print</span><span style="color:#F8F8F2">();</span><span style="color:#6272A4"> // Output: Container for integers.</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, we defined a generic <code>MyContainer</code> template class along with a full specialization for <code>int</code> type. When we use the container with the <code>int</code> type, the specialized implementation’s <code>print</code> method is called. For other types, the generic template implementation will be used.</p>

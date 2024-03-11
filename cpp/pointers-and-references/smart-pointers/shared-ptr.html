@@ -29,10 +29,12 @@
 <span class="line"><span style="color:#F8F8F2">    </span></span>
 <span class="line"><span style="color:#6272A4">    // the main function returns, ptr1 goes out of scope, and the reference counter becomes 0</span></span>
 <span class="line"><span style="color:#6272A4">    // this causes the MyClass object to be deleted and the destructor is called</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>Output:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>Constructor is called.</span></span>
 <span class="line"><span>Inside the inner scope.</span></span>
 <span class="line"><span>Outside the inner scope.</span></span>
-<span class="line"><span>Destructor is called.</span></span></code></pre>
+<span class="line"><span>Destructor is called.</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>In this example, <code>ptr1</code> and <code>ptr2</code> share ownership of the same object. The object is only destroyed when both pointers go out of scope and the reference counter becomes zero.</p>

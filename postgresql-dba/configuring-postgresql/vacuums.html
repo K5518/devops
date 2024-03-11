@@ -23,7 +23,8 @@
 <li><code>autovacuum_vacuum_cost_limit</code>: Sets the cost limit value for vacuuming a single table. Higher cost limit values lead to more aggressive vacuuming. Default is <code>200</code>.</li>
 </ul>
 <p>To disable auto-vacuum for a particular table, you can use the following command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> table_name </span><span style="color:#FF79C6">SET</span><span style="color:#F8F8F2"> (autovacuum_enabled </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> false);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> table_name </span><span style="color:#FF79C6">SET</span><span style="color:#F8F8F2"> (autovacuum_enabled </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> false);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="manual-vacuuming">Manual Vacuuming</h2>
 <p>For ad-hoc maintenance, you can still perform manual vacuum and vacuum full operations as desired:</p>
 <ul>

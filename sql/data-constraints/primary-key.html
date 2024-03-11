@@ -14,12 +14,14 @@
 <span class="line"><span style="color:#FF79C6">    NAME</span><span style="color:#FF79C6"> TEXT</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    AGE </span><span style="color:#FF79C6">INT</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#FF79C6">    ADDRESS</span><span style="color:#FF79C6"> CHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">50</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, <code>ID</code> is the primary key which must consist of unique values and can’t be null.</p>
 <h2 id="modify-table-to-add-primary-key">Modify Table to Add Primary Key</h2>
 <p>If you want to add a primary key to an existing table, you can use <code>ALTER TABLE</code> syntax.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> TABLE</span><span style="color:#F8F8F2"> Employees</span></span>
-<span class="line"><span style="color:#FF79C6">ADD</span><span style="color:#FF79C6"> PRIMARY KEY</span><span style="color:#F8F8F2"> (ID);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">ADD</span><span style="color:#FF79C6"> PRIMARY KEY</span><span style="color:#F8F8F2"> (ID);</span></span>
+<span class="line"></span></code></pre>
 <p>This will add a primary key to <code>ID</code> column in the <code>Employees</code> table.</p>
 <h2 id="composite-primary-key">Composite Primary Key</h2>
 <p>We can also use multiple columns to define a primary key. Such key is known as composite key.</p>
@@ -27,5 +29,6 @@
 <span class="line"><span style="color:#F8F8F2">    CustomerID </span><span style="color:#FF79C6">INT</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    StoreID </span><span style="color:#FF79C6">INT</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#FF79C6">    CONSTRAINT</span><span style="color:#F8F8F2"> pk_CustomerID_StoreID </span><span style="color:#FF79C6">PRIMARY KEY</span><span style="color:#F8F8F2"> (CustomerID,StoreID)</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>In this case, each combination of <code>CustomerID</code> and <code>StoreID</code> must be unique across the whole table.</p>

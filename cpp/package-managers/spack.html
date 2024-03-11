@@ -13,27 +13,34 @@
 <p>To install Spack, clone its Git repository and set up your environment:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">git</span><span style="color:#F1FA8C"> clone</span><span style="color:#F1FA8C"> https://github.com/spack/spack.git</span></span>
 <span class="line"><span style="color:#8BE9FD">cd</span><span style="color:#F1FA8C"> spack</span></span>
-<span class="line"><span style="color:#8BE9FD">.</span><span style="color:#F1FA8C"> share/spack/setup-env.sh</span></span></code></pre>
+<span class="line"><span style="color:#8BE9FD">.</span><span style="color:#F1FA8C"> share/spack/setup-env.sh</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p>Install a package using Spack:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">spack</span><span style="color:#F1FA8C"> install</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">package-nam</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">spack</span><span style="color:#F1FA8C"> install</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">package-nam</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span></span>
+<span class="line"></span></code></pre>
 <p>For example, to install <code>hdf5</code>:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">spack</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> hdf5</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">spack</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> hdf5</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p>Load a package in your environment:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">spack</span><span style="color:#F1FA8C"> load</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">package-nam</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">spack</span><span style="color:#F1FA8C"> load</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">package-nam</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span></span>
+<span class="line"></span></code></pre>
 <p>For example, to load <code>hdf5</code>:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">spack</span><span style="color:#F1FA8C"> load</span><span style="color:#F1FA8C"> hdf5</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">spack</span><span style="color:#F1FA8C"> load</span><span style="color:#F1FA8C"> hdf5</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p>List installed packages:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">spack</span><span style="color:#F1FA8C"> find</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">spack</span><span style="color:#F1FA8C"> find</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p>Uninstall a package:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">spack</span><span style="color:#F1FA8C"> uninstall</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">package-nam</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">spack</span><span style="color:#F1FA8C"> uninstall</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">package-nam</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 <p>For more advanced usage, like installing specific versions or using different compilers, consult the <a href="https://spack.readthedocs.io/" rel="noopener noreferrer nofollow" target="_blank">Spack documentation</a>.</p>

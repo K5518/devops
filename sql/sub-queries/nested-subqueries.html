@@ -7,7 +7,8 @@
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2">  column_name OPERATOR</span></span>
 <span class="line"><span style="color:#F8F8F2">   (</span><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column_name [, column_name ]</span></span>
 <span class="line"><span style="color:#FF79C6">   FROM</span><span style="color:#F8F8F2"> table1 [, table2 ]</span></span>
-<span class="line"><span style="color:#F8F8F2">   [WHERE])</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">   [WHERE])</span></span>
+<span class="line"></span></code></pre>
 <h2 id="how-they-work">How They Work:</h2>
 <p>In a nested subquery, the inner subquery will run first and its result will be used to run the outer query.</p>
 <h2 id="example">Example:</h2>
@@ -18,7 +19,8 @@
 <span class="line"><span style="color:#F8F8F2">    (</span><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> CustomerID </span></span>
 <span class="line"><span style="color:#FF79C6">     FROM</span><span style="color:#F8F8F2"> Orders</span></span>
 <span class="line"><span style="color:#FF79C6">     WHERE</span><span style="color:#F8F8F2"> Amount</span><span style="color:#FF79C6">></span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> AVG</span><span style="color:#F8F8F2">(Amount) </span></span>
-<span class="line"><span style="color:#FF79C6">                    FROM</span><span style="color:#F8F8F2"> Orders))</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">                    FROM</span><span style="color:#F8F8F2"> Orders))</span></span>
+<span class="line"></span></code></pre>
 <p>In the above code:</p>
 <ul>
 <li>The innermost query calculates the average order amount.</li>

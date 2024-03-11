@@ -5,7 +5,8 @@
 <p><code>pg_ctlcluster</code> is hardware-agnostic and can be used on various platforms, including Debian, Ubuntu, and other Linux distributions.</p>
 <h2 id="syntax">Syntax</h2>
 <p>The basic syntax for <code>pg_ctlcluster</code> is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>pg_ctlcluster &#x3C;version> &#x3C;cluster name> &#x3C;action> [&#x3C;options>]</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>pg_ctlcluster &#x3C;version> &#x3C;cluster name> &#x3C;action> [&#x3C;options>]</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>Where:</p>
 <ul>
 <li><code>&#x3C;version></code>: The PostgreSQL version you want to operate on.</li>
@@ -18,27 +19,33 @@
 <ul>
 <li>
 <p><strong>Start a cluster</strong>: To start a specific PostgreSQL cluster running at a particular version, you can use the following command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pg_ctlcluster</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">versio</span><span style="color:#F8F8F2">n</span><span style="color:#FF79C6">></span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">cluster</span><span style="color:#F1FA8C"> nam</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span><span style="color:#F1FA8C"> start</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pg_ctlcluster</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">versio</span><span style="color:#F8F8F2">n</span><span style="color:#FF79C6">></span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">cluster</span><span style="color:#F1FA8C"> nam</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span><span style="color:#F1FA8C"> start</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Stop a cluster</strong>: To stop a specific PostgreSQL cluster running at a particular version, use the following command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pg_ctlcluster</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">versio</span><span style="color:#F8F8F2">n</span><span style="color:#FF79C6">></span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">cluster</span><span style="color:#F1FA8C"> nam</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span><span style="color:#F1FA8C"> stop</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pg_ctlcluster</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">versio</span><span style="color:#F8F8F2">n</span><span style="color:#FF79C6">></span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">cluster</span><span style="color:#F1FA8C"> nam</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span><span style="color:#F1FA8C"> stop</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Restart a cluster</strong>: To restart a specific PostgreSQL cluster running at a particular version, use the following command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pg_ctlcluster</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">versio</span><span style="color:#F8F8F2">n</span><span style="color:#FF79C6">></span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">cluster</span><span style="color:#F1FA8C"> nam</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span><span style="color:#F1FA8C"> restart</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pg_ctlcluster</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">versio</span><span style="color:#F8F8F2">n</span><span style="color:#FF79C6">></span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">cluster</span><span style="color:#F1FA8C"> nam</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span><span style="color:#F1FA8C"> restart</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Reload a cluster</strong>: To reload the PostgreSQL cluster configuration without stopping and starting the server, use:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pg_ctlcluster</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">versio</span><span style="color:#F8F8F2">n</span><span style="color:#FF79C6">></span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">cluster</span><span style="color:#F1FA8C"> nam</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span><span style="color:#F1FA8C"> reload</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pg_ctlcluster</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">versio</span><span style="color:#F8F8F2">n</span><span style="color:#FF79C6">></span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">cluster</span><span style="color:#F1FA8C"> nam</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span><span style="color:#F1FA8C"> reload</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Get cluster status</strong>: To check the status of a specific PostgreSQL cluster running at a particular version, use:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pg_ctlcluster</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">versio</span><span style="color:#F8F8F2">n</span><span style="color:#FF79C6">></span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">cluster</span><span style="color:#F1FA8C"> nam</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span><span style="color:#F1FA8C"> status</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pg_ctlcluster</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">versio</span><span style="color:#F8F8F2">n</span><span style="color:#FF79C6">></span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">cluster</span><span style="color:#F1FA8C"> nam</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span><span style="color:#F1FA8C"> status</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Promote a cluster</strong>: To promote a standby cluster to the primary cluster (useful in replication scenarios), you can use:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pg_ctlcluster</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">versio</span><span style="color:#F8F8F2">n</span><span style="color:#FF79C6">></span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">cluster</span><span style="color:#F1FA8C"> nam</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span><span style="color:#F1FA8C"> promote</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">pg_ctlcluster</span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">versio</span><span style="color:#F8F8F2">n</span><span style="color:#FF79C6">></span><span style="color:#FF79C6"> &#x3C;</span><span style="color:#F1FA8C">cluster</span><span style="color:#F1FA8C"> nam</span><span style="color:#F8F8F2">e</span><span style="color:#FF79C6">></span><span style="color:#F1FA8C"> promote</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 <h2 id="additional-options">Additional Options</h2>

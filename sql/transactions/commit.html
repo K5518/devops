@@ -2,14 +2,16 @@
 <p>The SQL COMMIT command is used to save all the modifications made by the current transaction to the database. A COMMIT command ends the current transaction and makes permanent all changes performed in the transaction. It is a way of ending your transaction and saving your changes to the database.</p>
 <p>After the SQL COMMIT statement is executed, it can not be rolled back, which means you can’t undo the operations. COMMIT command is used when the user is satisfied with the changes made in the transaction, and these changes can now be made permanent in the database.</p>
 <h2 id="syntax">Syntax:</h2>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>In some databases, if AUTOCOMMIT is enabled (which is typically the default setting), then every single SQL statement is treated as a transaction and automatically committed right after it is executed.</p>
 <p>Example:</p>
 <p>Imagine you have a transaction that transfers money from Account A to Account B. The SQL might look something like this:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">START TRANSACTION</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">UPDATE</span><span style="color:#F8F8F2"> Account </span><span style="color:#FF79C6">SET</span><span style="color:#F8F8F2"> amount </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> amount </span><span style="color:#FF79C6">-</span><span style="color:#BD93F9"> 2000</span><span style="color:#FF79C6"> WHERE</span><span style="color:#FF79C6"> name</span><span style="color:#FF79C6"> =</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">A</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">UPDATE</span><span style="color:#F8F8F2"> Account </span><span style="color:#FF79C6">SET</span><span style="color:#F8F8F2"> amount </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> amount </span><span style="color:#FF79C6">+</span><span style="color:#BD93F9"> 2000</span><span style="color:#FF79C6"> WHERE</span><span style="color:#FF79C6"> name</span><span style="color:#FF79C6"> =</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">B</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>In this transaction, $2000 is transferred from account ‘A’ to account ‘B’. The COMMIT statement makes these changes permanent in the database.</p>
 <p>However, keep in mind that if there was an error during this transaction (for instance if Account A did not have enough money), you’d want to ROLLBACK the transaction, not COMMIT, to undo any changes made before the error occurred.</p>
 <h2 id="syntax-with-rollback">Syntax with ROLLBACK:</h2>
@@ -19,5 +21,6 @@
 <span class="line"><span style="color:#FF79C6">IF</span><span style="color:#F8F8F2"> @@ERROR </span><span style="color:#FF79C6">!=</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2"> </span></span>
 <span class="line"><span style="color:#FF79C6">   ROLLBACK</span><span style="color:#F8F8F2">  </span></span>
 <span class="line"><span style="color:#FF79C6">ELSE</span><span style="color:#F8F8F2"> </span></span>
-<span class="line"><span style="color:#FF79C6">   COMMIT</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">   COMMIT</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>Here, if @@ERROR is not 0, the transaction will be rolled back. Otherwise, the transaction will be committed.</p>

@@ -5,7 +5,8 @@
 <p>Here is the basic syntax for a <code>SELF JOIN</code> statement:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#BD93F9"> a</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">column_name</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">b</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">column_name</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table_name </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> a, table_name </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> b</span></span>
-<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#BD93F9"> a</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">common_field</span><span style="color:#FF79C6"> =</span><span style="color:#BD93F9"> b</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">common_field</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#BD93F9"> a</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">common_field</span><span style="color:#FF79C6"> =</span><span style="color:#BD93F9"> b</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">common_field</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>In this query:</p>
 <ul>
 <li><code>table_name</code>: is the name of the table to join to itself.</li>
@@ -54,5 +55,6 @@
 <p>If you want to find out all the employees and who their manager is, you can do so using a <code>SELF JOIN</code>:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#BD93F9"> a</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">Name</span><span style="color:#FF79C6"> AS</span><span style="color:#F8F8F2"> Employee, </span><span style="color:#BD93F9">b</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">Name</span><span style="color:#FF79C6"> AS</span><span style="color:#F8F8F2"> Manager</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> EMPLOYEES a, EMPLOYEES b</span></span>
-<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#BD93F9"> a</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">ManagerID</span><span style="color:#FF79C6"> =</span><span style="color:#BD93F9"> b</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">EmployeeID</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#BD93F9"> a</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">ManagerID</span><span style="color:#FF79C6"> =</span><span style="color:#BD93F9"> b</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">EmployeeID</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>This query will return the name of each employee along with the name of their respective manager.</p>

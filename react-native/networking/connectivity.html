@@ -6,7 +6,8 @@
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">fetch</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">https://api.example.com/data</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">)</span></span>
 <span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">then</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">response</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> response.</span><span style="color:#50FA7B">json</span><span style="color:#F8F8F2">())</span></span>
 <span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">then</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">data</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> console.</span><span style="color:#50FA7B">log</span><span style="color:#F8F8F2">(data))</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">catch</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">error</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> console.</span><span style="color:#50FA7B">error</span><span style="color:#F8F8F2">(error));</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">catch</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">error</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> console.</span><span style="color:#50FA7B">error</span><span style="color:#F8F8F2">(error));</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li>
 <p><strong>XMLHttpRequest</strong>: React Native has built-in support for XMLHttpRequest, which is a popular choice for communication with APIs. It can deal with various data types, like XML, JSON, or even binary data.</p>
@@ -18,7 +19,8 @@
 <span class="line"><span style="color:#F8F8F2">  }</span></span>
 <span class="line"><span style="color:#F8F8F2">};</span></span>
 <span class="line"><span style="color:#F8F8F2">xhr.</span><span style="color:#50FA7B">open</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">GET</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">https://api.example.com/data</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">true</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">xhr.</span><span style="color:#50FA7B">send</span><span style="color:#F8F8F2">();</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">xhr.</span><span style="color:#50FA7B">send</span><span style="color:#F8F8F2">();</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>WebSockets</strong>: WebSockets allow you to establish real-time communication between your React Native app and a server. It provides a two-way communication mechanism over a single, long-held TCP connection, enabling real-time data transfer.</p>
@@ -39,7 +41,8 @@
 <span class="line"></span>
 <span class="line"><span style="color:#F8F8F2">webSocket.</span><span style="color:#50FA7B">onclose</span><span style="color:#FF79C6"> =</span><span style="color:#F8F8F2"> (</span><span style="color:#FFB86C;font-style:italic">event</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#F8F8F2">  console.</span><span style="color:#50FA7B">log</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">WebSocket connection closed:</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, event.code, event.reason);</span></span>
-<span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">};</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 <h2 id="libraries-for-networking">Libraries for Networking</h2>
@@ -53,7 +56,8 @@
 <span class="line"><span style="color:#F8F8F2">axios</span></span>
 <span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">get</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">https://api.example.com/data</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">)</span></span>
 <span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">then</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">response</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> console.</span><span style="color:#50FA7B">log</span><span style="color:#F8F8F2">(response.data))</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">catch</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">error</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> console.</span><span style="color:#50FA7B">error</span><span style="color:#F8F8F2">(error));</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">catch</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">error</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> console.</span><span style="color:#50FA7B">error</span><span style="color:#F8F8F2">(error));</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Apollo Client</strong>: Apollo Client is a comprehensive GraphQL client that helps you manage your data in a better and more efficient way, making it easier to build powerful and scalable applications.</p>
@@ -77,7 +81,8 @@
 <span class="line"><span style="color:#F1FA8C">    `</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">  })</span></span>
 <span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">then</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">result</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> console.</span><span style="color:#50FA7B">log</span><span style="color:#F8F8F2">(result))</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">catch</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">error</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> console.</span><span style="color:#50FA7B">error</span><span style="color:#F8F8F2">(error));</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">catch</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">error</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> console.</span><span style="color:#50FA7B">error</span><span style="color:#F8F8F2">(error));</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 <p>By understanding these options, you can choose the most appropriate connectivity method for your React Native app, and efficiently communicate with APIs, servers, and external systems.</p>

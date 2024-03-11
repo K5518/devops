@@ -6,7 +6,8 @@
 <span class="line"><span style="color:#F8F8F2">  field: {</span></span>
 <span class="line"><span style="color:#F8F8F2">    $gte: value;</span></span>
 <span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>Where <code>field</code> is the name of the field being compared, and <code>value</code> is the comparison value.</p>
 <h2 id="example">Example</h2>
 <p>Let’s explore an example using the <code>$gte</code> operator. Assume we have a collection <code>products</code> with the following documents:</p>
@@ -16,14 +17,17 @@
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2">, product</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">C</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 30</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 4</span><span style="color:#F8F8F2">, product</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">D</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 40</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 5</span><span style="color:#F8F8F2">, product</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">E</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 50</span><span style="color:#F8F8F2"> },</span></span>
-<span class="line"><span style="color:#F8F8F2">];</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">];</span></span>
+<span class="line"></span></code></pre>
 <p>To find all documents where <code>price</code> is greater than or equal to <code>20</code>, you can use the following query:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.products.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ price</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $gte</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 20</span><span style="color:#F8F8F2"> } });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.products.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ price</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $gte</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 20</span><span style="color:#F8F8F2"> } });</span></span>
+<span class="line"></span></code></pre>
 <p>The output will be:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">[</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 2</span><span style="color:#F8F8F2">, product</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">B</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 20</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2">, product</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">C</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 30</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 4</span><span style="color:#F8F8F2">, product</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">D</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 40</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { _id</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 5</span><span style="color:#F8F8F2">, product</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">E</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, price</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 50</span><span style="color:#F8F8F2"> },</span></span>
-<span class="line"><span style="color:#F8F8F2">];</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">];</span></span>
+<span class="line"></span></code></pre>
 <p>As we can see, the <code>$gte</code> operator successfully filtered the documents based on the specified criteria. This operator is extremely helpful when you need to narrow down your search or filter documents depending on certain conditions, making it a valuable addition to the toolbox of any MongoDB developer.</p>

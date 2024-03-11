@@ -6,55 +6,66 @@
 <p><code>String</code> is used to store text data. It must be a valid UTF-8 encoded string.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#E9F284">   "</span><span style="color:#F1FA8C">name</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">John Doe</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="boolean">Boolean</h2>
 <p><code>Boolean</code> is used to store true or false values.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#E9F284">   "</span><span style="color:#F1FA8C">isActive</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#BD93F9">true</span><span style="color:#F8F8F2">,</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="integer">Integer</h2>
 <p><code>Integer</code> is used to store an integer value. MongoDB supports two integer types: 32-bit (<code>int</code>) and 64-bit (<code>long</code>).</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#E9F284">   "</span><span style="color:#F1FA8C">age</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#BD93F9">28</span><span style="color:#F8F8F2">,</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="double">Double</h2>
 <p><code>Double</code> is used to store floating-point numbers.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#E9F284">   "</span><span style="color:#F1FA8C">price</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#BD93F9">12.99</span><span style="color:#F8F8F2">,</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="date">Date</h2>
 <p><code>Date</code> is used to store the date and time in Unix time format (milliseconds timestamp since January 1, 1970, 00:00:00 UTC).</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#E9F284">   "</span><span style="color:#F1FA8C">createdAt</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#50FA7B">ISODate</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">2019-02-18T19:29:22.381Z</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">),</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="array">Array</h2>
 <p><code>Array</code> is used to store a list of values in a single field. The values can be of different data types.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#E9F284">   "</span><span style="color:#F1FA8C">tags</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: [</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">mongodb</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">database</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">noSQL</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">],</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="object">Object</h2>
 <p><code>Object</code> is used to store embedded documents, meaning a document can contain another document.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#E9F284">   "</span><span style="color:#F1FA8C">address</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: { </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">street</span><span style="color:#E9F284">"</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">123 Main St</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">city</span><span style="color:#E9F284">"</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">San Francisco</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">state</span><span style="color:#E9F284">"</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">CA</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2"> },</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="null">Null</h2>
 <p><code>Null</code> is used to store a null value, representing the absence of a value or the field.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#E9F284">   "</span><span style="color:#F1FA8C">middleName</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#BD93F9">null</span><span style="color:#F8F8F2">,</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="binary-data">Binary Data</h2>
 <p><code>Binary Data</code> is used to store binary data or byte arrays.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#E9F284">   "</span><span style="color:#F1FA8C">data</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#50FA7B">BinData</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">c3VyZS4=</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">),</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="code">Code</h2>
 <p><code>Code</code> is used to store JavaScript code.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#E9F284">   "</span><span style="color:#F1FA8C">script</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#50FA7B">Code</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">function() { return 'Hello, World!'; }</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">),</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="regular-expression">Regular Expression</h2>
 <p><code>Regular Expression</code> is used to store regular expressions.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">{</span></span>
 <span class="line"><span style="color:#E9F284">   "</span><span style="color:#F1FA8C">pattern</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">:</span><span style="color:#FF5555"> /</span><span style="color:#FF79C6">^</span><span style="color:#F1FA8C">mongodb</span><span style="color:#FF5555">/</span><span style="color:#FF79C6">i</span><span style="color:#F8F8F2">,</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>Understanding and using the appropriate data types while designing your MongoDB schema can significantly improve the performance, storage, and retrieval of your data. Don’t forget to consider the specific use cases of your application when choosing data types.</p>

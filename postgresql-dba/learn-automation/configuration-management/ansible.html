@@ -51,12 +51,14 @@
 <span class="line"><span style="color:#8BE9FD">          systemd</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> name=postgresql state=reloaded</span></span>
 <span class="line"><span style="color:#8BE9FD">  handlers</span><span style="color:#FF79C6">:</span></span>
 <span class="line"><span style="color:#FF79C6">    -</span><span style="color:#8BE9FD"> name</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> Restart PostgreSQL</span></span>
-<span class="line"><span style="color:#8BE9FD">      systemd</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> name=postgresql state=restarted</span></span></code></pre>
+<span class="line"><span style="color:#8BE9FD">      systemd</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> name=postgresql state=restarted</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, the playbook installs the required packages, configures PostgreSQL using a custom <code>pg_hba.conf</code> file (from a Jinja2 template), and then reloads and restarts the PostgreSQL service.</p>
 <h2 id="pglift-for-ansible">pgLift for Ansible</h2>
 <p>pgLift is a PostgreSQL automation tool that helps you manage your PostgreSQL servers and databases. It includes a set of Ansible modules that can be used to automate common tasks, such as creating databases, users, and extensions, or managing replication and backups.</p>
 <p>pgLift modules are available on <a href="https://galaxy.ansible.com/pglift" rel="noopener noreferrer nofollow" target="_blank">Ansible Galaxy</a>, and can be installed using the <code>ansible-galaxy</code> command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">ansible-galaxy</span><span style="color:#F1FA8C"> collection</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> pglift.pglift</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">ansible-galaxy</span><span style="color:#F1FA8C"> collection</span><span style="color:#F1FA8C"> install</span><span style="color:#F1FA8C"> pglift.pglift</span></span>
+<span class="line"></span></code></pre>
 <p>Once installed, you can use the modules in your playbooks:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">---</span></span>
 <span class="line"><span style="color:#FF79C6">-</span><span style="color:#8BE9FD"> name</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> Create a database</span></span>
@@ -71,6 +73,7 @@
 <span class="line"><span style="color:#8BE9FD">        lc_collate</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> en_US.UTF-8</span></span>
 <span class="line"><span style="color:#8BE9FD">        lc_ctype</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> en_US.UTF-8</span></span>
 <span class="line"><span style="color:#8BE9FD">        template</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> template0</span></span>
-<span class="line"><span style="color:#8BE9FD">        state</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> present</span></span></code></pre>
+<span class="line"><span style="color:#8BE9FD">        state</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> present</span></span>
+<span class="line"></span></code></pre>
 <h2 id="conclusion">Conclusion</h2>
 <p>Ansible is a powerful configuration management tool that can greatly simplify the maintenance and deployment of PostgreSQL servers. By using Ansible playbooks and PostgreSQL modules, you can automate repetitive tasks, ensure consistent configurations, and reduce human error.</p>

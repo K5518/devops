@@ -11,12 +11,14 @@
 <span class="line"><span>    string name = 1;</span></span>
 <span class="line"><span>    int32 age = 2;</span></span>
 <span class="line"><span>    string email = 3;</span></span>
-<span class="line"><span>}</span></span></code></pre>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 <li>
 <p><strong>Compile the <code>.proto</code> file:</strong> You need to compile your <code>.proto</code> file to generate C++ classes for serialization and deserialization.</p>
 <p><em>Example:</em></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">protoc</span><span style="color:#BD93F9"> --cpp_out=.</span><span style="color:#F1FA8C"> person.proto</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">protoc</span><span style="color:#BD93F9"> --cpp_out=.</span><span style="color:#F1FA8C"> person.proto</span></span>
+<span class="line"></span></code></pre>
 <p>This will generate two files: <code>person.pb.cc</code> and <code>person.pb.h</code> that contains the C++ class definitions.</p>
 </li>
 <li>
@@ -54,12 +56,14 @@
 <span class="line"><span style="color:#F8F8F2">    google</span><span style="color:#FF79C6">::</span><span style="color:#F8F8F2">protobuf</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">ShutdownProtobufLibrary</span><span style="color:#F8F8F2">();</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Compile and link your C++ code:</strong> Finally, compile your C++ code and link it to the protobuf library.</p>
 <p><em>Example:</em></p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">g++</span><span style="color:#BD93F9"> -std=c++11</span><span style="color:#BD93F9"> -o</span><span style="color:#F1FA8C"> main</span><span style="color:#F1FA8C"> main.cpp</span><span style="color:#F1FA8C"> person.pb.cc</span><span style="color:#BD93F9"> -lprotobuf</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">g++</span><span style="color:#BD93F9"> -std=c++11</span><span style="color:#BD93F9"> -o</span><span style="color:#F1FA8C"> main</span><span style="color:#F1FA8C"> main.cpp</span><span style="color:#F1FA8C"> person.pb.cc</span><span style="color:#BD93F9"> -lprotobuf</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 <p>For more information and examples, you can refer to the <a href="https://developers.google.com/protocol-buffers/docs/cpptutorial" rel="noopener noreferrer nofollow" target="_blank">official protobuf C++ tutorial</a>.</p>

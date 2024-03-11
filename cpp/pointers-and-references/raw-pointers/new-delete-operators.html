@@ -4,14 +4,16 @@
 <p>The <code>new</code> operator is used to allocate memory on the heap. The memory allocated using <code>new</code> remains available until you explicitly deallocate it using the corresponding <code>delete</code> operator.</p>
 <p>Here’s an example of using the <code>new</code> operator:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int*</span><span style="color:#F8F8F2"> ptr </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6;font-weight:bold"> new</span><span style="color:#FF79C6"> int</span><span style="color:#F8F8F2">;</span><span style="color:#6272A4"> // Dynamically allocates an int on the heap</span></span>
-<span class="line"><span style="color:#FF79C6">*</span><span style="color:#F8F8F2">ptr </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 42</span><span style="color:#F8F8F2">;</span><span style="color:#6272A4"> // Assigns the value 42 to the allocated int</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">*</span><span style="color:#F8F8F2">ptr </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 42</span><span style="color:#F8F8F2">;</span><span style="color:#6272A4"> // Assigns the value 42 to the allocated int</span></span>
+<span class="line"></span></code></pre>
 <h2 id="delete-operator"><code>delete</code> Operator</h2>
 <p>The <code>delete</code> operator is used to deallocate memory that has been allocated using <code>new</code>. After memory is deallocated, it’s available to be reallocated for other purposes. Failing to properly deallocate memory can lead to memory leaks.</p>
 <p>Here’s an example of using the <code>delete</code> operator:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">int*</span><span style="color:#F8F8F2"> ptr </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6;font-weight:bold"> new</span><span style="color:#FF79C6"> int</span><span style="color:#F8F8F2">;</span><span style="color:#6272A4"> // Dynamically allocates an int on the heap</span></span>
 <span class="line"><span style="color:#FF79C6">*</span><span style="color:#F8F8F2">ptr </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 42</span><span style="color:#F8F8F2">;</span><span style="color:#6272A4"> // Assigns the value 42 to the allocated int</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#FF79C6">delete</span><span style="color:#F8F8F2"> ptr;</span><span style="color:#6272A4"> // Deallocates the memory assigned to ptr</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">delete</span><span style="color:#F8F8F2"> ptr;</span><span style="color:#6272A4"> // Deallocates the memory assigned to ptr</span></span>
+<span class="line"></span></code></pre>
 <h2 id="new-and-delete-operators"><code>new[]</code> and <code>delete[]</code> Operators</h2>
 <p>The <code>new[]</code> and <code>delete[]</code> operators are used for allocating and deallocating memory for an array of objects. The syntax for <code>new[]</code> and <code>delete[]</code> is very similar to that of <code>new</code> and <code>delete</code>.</p>
 <p>Here’s an example of using the <code>new[]</code> and <code>delete[]</code> operators:</p>
@@ -23,5 +25,6 @@
 <span class="line"><span style="color:#F8F8F2">  arr[i] </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> i;</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#FF79C6">delete[]</span><span style="color:#F8F8F2"> arr;</span><span style="color:#6272A4"> // Deallocates the memory assigned to the array</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">delete[]</span><span style="color:#F8F8F2"> arr;</span><span style="color:#6272A4"> // Deallocates the memory assigned to the array</span></span>
+<span class="line"></span></code></pre>
 <p>In summary, raw pointers, and <code>new</code> and <code>delete</code> operators allow manual memory management in C++, providing control over allocation and deallocation. Make sure to always deallocate memory allocated with <code>new</code> or <code>new[]</code>, to avoid memory leaks in your programs.</p>

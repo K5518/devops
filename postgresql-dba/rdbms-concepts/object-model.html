@@ -7,22 +7,26 @@
 <span class="line"><span style="color:#F8F8F2">    x </span><span style="color:#FF79C6">REAL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    y </span><span style="color:#FF79C6">REAL</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    z </span><span style="color:#FF79C6">REAL</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <h2 id="inheritance">Inheritance</h2>
 <p>Another element of the object model in PostgreSQL is table inheritance. This feature allows you to define a table that inherits the columns, data types, and constraints of another table. Inheritance in PostgreSQL is a powerful mechanism to organize and reuse common data structures across multiple tables.</p>
 <p>The syntax for creating a table that inherits another table is as follows:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> child_table_name</span><span style="color:#F8F8F2"> ()</span></span>
-<span class="line"><span style="color:#F8F8F2">    INHERITS (parent_table_name);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">    INHERITS (parent_table_name);</span></span>
+<span class="line"></span></code></pre>
 <p>For example, consider a base table <code>person</code>:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> person</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#F8F8F2">    id </span><span style="color:#FF79C6">SERIAL</span><span style="color:#FF79C6"> PRIMARY KEY</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    first_name </span><span style="color:#FF79C6">VARCHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">100</span><span style="color:#F8F8F2">),</span></span>
 <span class="line"><span style="color:#F8F8F2">    last_name </span><span style="color:#FF79C6">VARCHAR</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">100</span><span style="color:#F8F8F2">),</span></span>
 <span class="line"><span style="color:#F8F8F2">    dob </span><span style="color:#FF79C6">DATE</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>You can create an <code>employee</code> table that inherits the attributes of <code>person</code>:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> TABLE</span><span style="color:#50FA7B"> employee</span><span style="color:#F8F8F2"> ()</span></span>
-<span class="line"><span style="color:#F8F8F2">    INHERITS (person);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">    INHERITS (person);</span></span>
+<span class="line"></span></code></pre>
 <p>The <code>employee</code> table now has all the columns of the <code>person</code> table, and you can add additional columns or constraints specific to the <code>employee</code> table.</p>
 <h2 id="polymorphism">Polymorphism</h2>
 <p>Polymorphism is another valuable feature of the PostgreSQL object model. Polymorphism allows you to create functions and operators that can accept and return multiple data types. This flexibility enables you to work with a variety of data types conveniently.</p>
@@ -34,5 +38,6 @@
 <p>For example, consider the following function which accepts anyelement type:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">CREATE</span><span style="color:#FF79C6"> FUNCTION</span><span style="color:#50FA7B"> simple_add</span><span style="color:#F8F8F2">(x anyelement, y anyelement) </span><span style="color:#FF79C6">RETURNS</span><span style="color:#F8F8F2"> anyelement</span></span>
 <span class="line"><span style="color:#FF79C6">    AS</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">SELECT x + y;</span><span style="color:#E9F284">'</span></span>
-<span class="line"><span style="color:#FF79C6">    LANGUAGE</span><span style="color:#FF79C6"> SQL</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">    LANGUAGE</span><span style="color:#FF79C6"> SQL</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>This function can work with any data type that supports the addition operator.</p>

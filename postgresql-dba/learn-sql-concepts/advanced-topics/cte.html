@@ -6,7 +6,8 @@
 <span class="line"><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> (</span></span>
 <span class="line"><span style="color:#6272A4">    -- CTE query goes here</span></span>
 <span class="line"><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#6272A4">-- Main query that references the CTE</span></span></code></pre>
+<span class="line"><span style="color:#6272A4">-- Main query that references the CTE</span></span>
+<span class="line"></span></code></pre>
 <h2 id="simple-example">Simple Example</h2>
 <p>Here is a simple example illustrating the use of a CTE:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">WITH</span><span style="color:#F8F8F2"> employees_over_30 (</span><span style="color:#FF79C6">name</span><span style="color:#F8F8F2">, age) </span></span>
@@ -16,7 +17,8 @@
 <span class="line"><span style="color:#FF79C6">    WHERE</span><span style="color:#F8F8F2"> age </span><span style="color:#FF79C6">></span><span style="color:#BD93F9"> 30</span></span>
 <span class="line"><span style="color:#F8F8F2">)</span></span>
 <span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> </span></span>
-<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> employees_over_30;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> employees_over_30;</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, we create a CTE called <code>employees_over_30</code>, which contains the name and age of employees who are older than 30. We then reference this CTE in our main query to get the desired results.</p>
 <h2 id="recursive-ctes">Recursive CTEs</h2>
 <p>One powerful feature of CTEs is the ability to create recursive queries. Recursive CTEs make it easier to work with hierarchical or tree-structured data. The basic syntax for a recursive CTE is as follows:</p>
@@ -29,7 +31,8 @@
 <span class="line"><span style="color:#FF79C6">    SELECT</span><span style="color:#F8F8F2"> ...</span></span>
 <span class="line"><span style="color:#FF79C6">    FROM</span><span style="color:#F8F8F2"> cte_name</span></span>
 <span class="line"><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#6272A4">-- Main query that references the CTE</span></span></code></pre>
+<span class="line"><span style="color:#6272A4">-- Main query that references the CTE</span></span>
+<span class="line"></span></code></pre>
 <p>A recursive CTE consists of two parts: the non-recursive term and the recursive term, combined using the <code>UNION ALL</code> clause. The non-recursive term acts as the base case, while the recursive term is used to build the hierarchy iteratively.</p>
 <h2 id="recursive-example">Recursive Example</h2>
 <p>Here’s an example of a recursive CTE that calculates the factorial of a number:</p>
@@ -44,7 +47,8 @@
 <span class="line"><span style="color:#FF79C6">    WHERE</span><span style="color:#F8F8F2"> n </span><span style="color:#FF79C6">&#x3C;</span><span style="color:#BD93F9"> 5</span></span>
 <span class="line"><span style="color:#F8F8F2">)</span></span>
 <span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> </span></span>
-<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> factorial;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> factorial;</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, the non-recursive term initializes the <code>n</code> and <code>fact</code> columns with the base case of <code>1</code> and <code>1</code>. The recursive term calculates the factorial of each incremented number up to <code>5</code>. The final query returns the factorial of each number from <code>1</code> to <code>5</code>.</p>
 <h2 id="key-takeaways">Key Takeaways</h2>
 <ul>

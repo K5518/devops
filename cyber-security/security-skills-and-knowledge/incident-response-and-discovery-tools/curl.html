@@ -14,29 +14,35 @@
 <p><strong>HTTP Requests:</strong>
 Curl can be used to test and troubleshoot web services by making GET or POST requests, specifying headers, or sending data. You can also use it to automate certain tasks.</p>
 <p>GET Request Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>curl https://example.com</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>curl https://example.com</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>POST Request Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>curl -X POST -d "data=sample" https://example.com</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>curl -X POST -d "data=sample" https://example.com</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 <li>
 <p><strong>HTTPS with SSL/TLS:</strong>
 Curl can be utilized to verify and test SSL/TLS configurations and certificates for web services.</p>
 <p>Test a site’s SSL/TLS configuration:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>curl -Iv https://example.com</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>curl -Iv https://example.com</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 <li>
 <p><strong>File Transfers:</strong>
 Curl can be used for transferring files using protocols like FTP, SCP, and SFTP.</p>
 <p>FTP Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>curl -u username:password ftp://example.com/path/to/file</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>curl -u username:password ftp://example.com/path/to/file</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 <li>
 <p><strong>Web Application Testing:</strong>
 Curl can help you find vulnerabilities in web applications by sending customized HTTP requests, injecting payloads or exploiting their features.</p>
 <p>Send Cookie Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>curl -H "Cookie: session=12345" https://example.com</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>curl -H "Cookie: session=12345" https://example.com</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>Detect Server Software Example:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>curl -I https://example.com</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>curl -I https://example.com</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 </ul>
 <p>Curl is a powerful tool in the arsenal of anyone working in cybersecurity. Understanding and mastering its usage can greatly enhance your capabilities when dealing with various network protocols, web services, and web applications.</p>

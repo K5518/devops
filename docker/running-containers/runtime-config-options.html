@@ -4,33 +4,39 @@
 <ul>
 <li>
 <p><strong>CPU:</strong> You can limit the CPU usage of a container with the <code>--cpus</code> and <code>--cpu-shares</code> options. <code>--cpus</code> limits the number of CPU cores a container can use, while <code>--cpu-shares</code> assigns relative share of CPU time for the container.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> --cpus=2</span><span style="color:#BD93F9"> --cpu-shares=512</span><span style="color:#F1FA8C"> your-image</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> --cpus=2</span><span style="color:#BD93F9"> --cpu-shares=512</span><span style="color:#F1FA8C"> your-image</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Memory:</strong> You can limit and reserve memory for a container using the <code>--memory</code> and <code>--memory-reservation</code> options. This can help prevent a container from consuming too many system resources.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> --memory=1G</span><span style="color:#BD93F9"> --memory-reservation=500M</span><span style="color:#F1FA8C"> your-image</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> --memory=1G</span><span style="color:#BD93F9"> --memory-reservation=500M</span><span style="color:#F1FA8C"> your-image</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 <h3 id="security">Security</h3>
 <ul>
 <li>
 <p><strong>User:</strong> By default, containers run as the <code>root</code> user. To increase security, you can use the <code>--user</code> option to run a container as another user or UID.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> --user</span><span style="color:#BD93F9"> 1000</span><span style="color:#F1FA8C"> your-image</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> --user</span><span style="color:#BD93F9"> 1000</span><span style="color:#F1FA8C"> your-image</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Read-only root file system:</strong> To prevent unwanted changes to the container file system, you can use the <code>--read-only</code> option to mount the root file system as read-only.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> --read-only</span><span style="color:#F1FA8C"> your-image</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> --read-only</span><span style="color:#F1FA8C"> your-image</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 <h3 id="networking">Networking</h3>
 <ul>
 <li>
 <p><strong>Publish Ports:</strong> You can use the <code>--publish</code> (or <code>-p</code>) option to publish a container’s ports to the host system. This allows external systems to access the containerized service.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -p</span><span style="color:#BD93F9"> 80</span><span style="color:#F1FA8C">:80</span><span style="color:#F1FA8C"> your-image</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -p</span><span style="color:#BD93F9"> 80</span><span style="color:#F1FA8C">:80</span><span style="color:#F1FA8C"> your-image</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p><strong>Hostname and DNS:</strong> You can customize the hostname and DNS settings of a container using the <code>--hostname</code> and <code>--dns</code> options.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> --hostname=my-container</span><span style="color:#BD93F9"> --dns=8.8.8.8</span><span style="color:#F1FA8C"> your-image</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> --hostname=my-container</span><span style="color:#BD93F9"> --dns=8.8.8.8</span><span style="color:#F1FA8C"> your-image</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 <p>Including these runtime configuration options will allow you to effectively manage your containers’ resources, security, and networking needs. For a full list of available runtime configuration options, refer to Docker’s <a href="https://docs.docker.com/engine/reference/run/" rel="noopener noreferrer nofollow" target="_blank">official documentation</a>.</p>

@@ -4,10 +4,12 @@
 <h2 id="examples">Examples</h2>
 <p>Let’s take an example where you have a “students” table with the following columns: Id, Name, Age, Gender, Department, and City. If you only need Name and Department information, you should use a selective projection to specify only these columns in your SELECT statement:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> Name</span><span style="color:#F8F8F2">, Department </span></span>
-<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> students</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> students</span></span>
+<span class="line"></span></code></pre>
 <p>This query returns just the Name and Department columns, rather than all fields in the students table.</p>
 <p>In contrast, if you used a <code>SELECT *</code> statement:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#F8F8F2"> </span></span>
-<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> students</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> students</span></span>
+<span class="line"></span></code></pre>
 <p>This would return all columns from the “students” table which can be inefficient if you don’t need all that data.</p>
 <p>Selective projection can greatly optimize your SQL queries by minimizing the amount of data handled. It’s especially beneficial when tables have large amounts of data and many columns, but only a subset of information is required.</p>

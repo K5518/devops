@@ -5,9 +5,11 @@
 <p>Once you’ve initiated a transaction with <code>BEGIN</code>, all the subsequent SQL statements will be a part of this transaction until an explicit <code>COMMIT</code> or <code>ROLLBACK</code> is given.</p>
 <h2 id="syntax">Syntax</h2>
 <p>The syntax to start a transaction is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#FF79C6"> TRANSACTION</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>or simply,</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="example">Example</h2>
 <p>Below is a simple example of using <code>BEGIN</code> in SQL:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">BEGIN</span><span style="color:#F8F8F2">;</span></span>
@@ -15,7 +17,8 @@
 <span class="line"><span style="color:#FF79C6">INSERT INTO</span><span style="color:#F8F8F2"> Customers (CustomerName, ContactName, </span><span style="color:#FF79C6">Address</span><span style="color:#F8F8F2">, City, PostalCode, Country)</span></span>
 <span class="line"><span style="color:#FF79C6">VALUES</span><span style="color:#F8F8F2"> (</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Cardinal</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Tom B. Erichsen</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Skagen 21</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Stavanger</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">4006</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Norway</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">COMMIT</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>In this example:</p>
 <ul>
 <li><code>BEGIN;</code> marks the start of the transaction.</li>

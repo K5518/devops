@@ -1,7 +1,8 @@
 <div data-github-url="https://github.com/kamranahmedse/developer-roadmap/tree/master/src/data/roadmaps/typescript/content/107-interfaces/103-hybrid-types.md"></div> <h1 id="hybrid-types">Hybrid Types</h1>
 <p>In TypeScript, a hybrid type is a type that combines multiple types into a single type. The resulting type is considered a union of those types. This allows you to specify that a value can have multiple types, rather than just one.</p>
 <p>For example, you can create a hybrid type that can accept either a string or a number:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">type</span><span style="color:#8BE9FD;font-style:italic"> StringOrNumber</span><span style="color:#FF79C6"> =</span><span style="color:#8BE9FD;font-style:italic"> string</span><span style="color:#FF79C6"> |</span><span style="color:#8BE9FD;font-style:italic"> number</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">type</span><span style="color:#8BE9FD;font-style:italic"> StringOrNumber</span><span style="color:#FF79C6"> =</span><span style="color:#8BE9FD;font-style:italic"> string</span><span style="color:#FF79C6"> |</span><span style="color:#8BE9FD;font-style:italic"> number</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>You can also use hybrid types to create more complex types that can represent a combination of several different types of values. For example:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">type</span><span style="color:#8BE9FD;font-style:italic"> Education</span><span style="color:#FF79C6"> =</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#F8F8F2">  degree</span><span style="color:#FF79C6">:</span><span style="color:#8BE9FD;font-style:italic"> string</span><span style="color:#F8F8F2">;</span></span>
@@ -14,4 +15,5 @@
 <span class="line"><span style="color:#F8F8F2">  age</span><span style="color:#FF79C6">:</span><span style="color:#8BE9FD;font-style:italic"> number</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#F8F8F2">  email</span><span style="color:#FF79C6">:</span><span style="color:#8BE9FD;font-style:italic"> string</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#F8F8F2">  education</span><span style="color:#FF79C6">:</span><span style="color:#8BE9FD;font-style:italic"> Education</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">};</span></span>
+<span class="line"></span></code></pre>

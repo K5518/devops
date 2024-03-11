@@ -11,19 +11,23 @@
 <span class="line"><span style="color:#F8F8F2">    [ IN SCHEMA schema_name [, ...] ]</span></span>
 <span class="line"><span style="color:#F8F8F2">    { </span><span style="color:#FF79C6">GRANT</span><span style="color:#F8F8F2"> | </span><span style="color:#FF79C6">REVOKE</span><span style="color:#F8F8F2"> } privs</span></span>
 <span class="line"><span style="color:#F8F8F2">    [ GRANT OPTION ]</span></span>
-<span class="line"><span style="color:#F8F8F2">    [ CASCADE | RESTRICT ]</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">    [ CASCADE | RESTRICT ]</span></span>
+<span class="line"></span></code></pre>
 <p>Let’s go through some examples to better understand how to use this command:</p>
 <p><strong>Example 1:</strong> Grant SELECT privilege on all tables created by user1 to user2:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> DEFAULT</span><span style="color:#F8F8F2"> PRIVILEGES </span><span style="color:#FF79C6">FOR</span><span style="color:#F8F8F2"> USER user1</span></span>
-<span class="line"><span style="color:#FF79C6">    GRANT</span><span style="color:#FF79C6"> SELECT</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> TABLES </span><span style="color:#FF79C6">TO</span><span style="color:#F8F8F2"> user2;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">    GRANT</span><span style="color:#FF79C6"> SELECT</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> TABLES </span><span style="color:#FF79C6">TO</span><span style="color:#F8F8F2"> user2;</span></span>
+<span class="line"></span></code></pre>
 <p><strong>Example 2:</strong> Revoke INSERT privilege on all sequences created by user1 in schema ‘public’ from user3:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> DEFAULT</span><span style="color:#F8F8F2"> PRIVILEGES </span><span style="color:#FF79C6">FOR</span><span style="color:#F8F8F2"> USER user1</span></span>
 <span class="line"><span style="color:#FF79C6">    IN</span><span style="color:#FF79C6"> SCHEMA</span><span style="color:#F8F8F2"> public</span></span>
-<span class="line"><span style="color:#FF79C6">    REVOKE</span><span style="color:#FF79C6"> INSERT</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> SEQUENCES </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> user3;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">    REVOKE</span><span style="color:#FF79C6"> INSERT</span><span style="color:#FF79C6"> ON</span><span style="color:#F8F8F2"> SEQUENCES </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> user3;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="resetting-default-privileges">Resetting default privileges</h2>
 <p>To reset the default privileges to the system defaults, you can simply revoke the previously granted privileges using the <code>ALTER DEFAULT PRIVILEGES</code> command along with the <code>REVOKE</code> clause.</p>
 <p>For example, to reset the default privileges on tables created by user1:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">ALTER</span><span style="color:#FF79C6"> DEFAULT</span><span style="color:#F8F8F2"> PRIVILEGES </span><span style="color:#FF79C6">FOR</span><span style="color:#F8F8F2"> USER user1</span></span>
-<span class="line"><span style="color:#FF79C6">    REVOKE</span><span style="color:#F8F8F2"> ALL PRIVILEGES </span><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> TABLES </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> PUBLIC;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">    REVOKE</span><span style="color:#F8F8F2"> ALL PRIVILEGES </span><span style="color:#FF79C6">ON</span><span style="color:#F8F8F2"> TABLES </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> PUBLIC;</span></span>
+<span class="line"></span></code></pre>
 <h2 id="summary">Summary</h2>
 <p>In conclusion, default privileges in PostgreSQL are a convenient way to automatically grant or restrict users’ access to database objects. You can control the default privileges using the <code>ALTER DEFAULT PRIVILEGES</code> command, making it easier to manage object-level permissions across your database for specific users or groups.</p>

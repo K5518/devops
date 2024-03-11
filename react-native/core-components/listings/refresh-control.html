@@ -4,7 +4,8 @@
 <ul>
 <li>
 <p>Import <code>RefreshControl</code> from ‘react-native’:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>import { RefreshControl } from 'react-native';</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>import { RefreshControl } from 'react-native';</span></span>
+<span class="line"><span></span></span></code></pre>
 </li>
 <li>
 <p>Add <code>RefreshControl</code> to a scrollable component (<code>ScrollView</code>, <code>ListView</code>, or <code>FlatList</code>). Here is an example with <code>FlatList</code>:</p>
@@ -36,7 +37,8 @@
 <span class="line"><span style="color:#F8F8F2">    );</span></span>
 <span class="line"><span style="color:#F8F8F2">};</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#FF79C6">export</span><span style="color:#FF79C6"> default</span><span style="color:#F8F8F2"> App;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">export</span><span style="color:#FF79C6"> default</span><span style="color:#F8F8F2"> App;</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 <p>In the example above, we have a <code>FlatList</code> that renders a list of items. When the user pulls down the list, the <code>onRefresh</code> function is triggered and fetches new data. The <code>refreshing</code> state is used to control the visibility of the refresh indicator. When <code>refreshing</code> is set to <code>true</code>, the refresh indicator is shown. It is hidden when <code>refreshing</code> is set to <code>false</code>.</p>

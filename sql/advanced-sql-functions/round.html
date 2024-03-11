@@ -3,7 +3,8 @@
 <p>Most usually, <code>ROUND</code> accepts two arguments. The first one is the value that needs to be rounded, and the second is the number of decimal places to which the first argument will be rounded off. When dealing with decimals, SQL will round up when the number after the decimal point is 5 or higher, whereas it will round down if it’s less than 5.</p>
 <h2 id="syntax">Syntax</h2>
 <p>The basic syntax for <code>ROUND</code> can be described as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">ROUND</span><span style="color:#F8F8F2"> ( numeric_expression, </span><span style="color:#FF79C6">length</span><span style="color:#F8F8F2"> [ , function ] )</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">ROUND</span><span style="color:#F8F8F2"> ( numeric_expression, </span><span style="color:#FF79C6">length</span><span style="color:#F8F8F2"> [ , function ] )</span></span>
+<span class="line"></span></code></pre>
 <ul>
 <li><code>numeric_expression</code>: A floating point number to round.</li>
 <li><code>length</code>: The precision to which <code>numeric_expression</code> is to be rounded. When <code>length</code> is a positive number, rounding affects the right side of the decimal point. If <code>length</code> is negative, rounding affects the left side of the decimal point.</li>
@@ -11,14 +12,17 @@
 </ul>
 <h2 id="example-1">Example 1:</h2>
 <p>Round off a decimal to the nearest whole number.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> ROUND</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">125</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">215</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> ROUND</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">125</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">215</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>This will result in <code>125</code>.</p>
 <h2 id="example-2">Example 2:</h2>
 <p>Round off a number to a specified decimal place.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> ROUND</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">125</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">215</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> ROUND</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">125</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">215</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>This will result in <code>125.2</code> as the second decimal place (5) is less than 5.</p>
 <h2 id="example-3">Example 3:</h2>
 <p>Round off the left side of the decimal.</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> ROUND</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">125</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">215</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">-</span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> ROUND</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">125</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">215</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">-</span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"></span></code></pre>
 <p>This will result in <code>100</code> as rounding now affects digits before the decimal point.</p>
 <p>Whenever you need to round off numeric data in SQL, the <code>ROUND</code> function is a valuable tool to have in your kit. It proficiently handles both positive and negative rounding, and its simple syntax makes it extremely user-friendly.</p>

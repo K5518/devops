@@ -6,14 +6,16 @@
 </ol>
 <p>Code example:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">INSERT INTO</span><span style="color:#F8F8F2"> table_name </span></span>
-<span class="line"><span style="color:#FF79C6">VALUES</span><span style="color:#F8F8F2"> (value1, value2, ..., valueN);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">VALUES</span><span style="color:#F8F8F2"> (value1, value2, ..., valueN);</span></span>
+<span class="line"></span></code></pre>
 <p>In the example above, you need to provide values for all columns available in the table.</p>
 <ol start="2">
 <li><strong>Selectively insert data:</strong></li>
 </ol>
 <p>Code example:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">INSERT INTO</span><span style="color:#F8F8F2"> table_name (column1, column2, ..., columnN)  </span></span>
-<span class="line"><span style="color:#FF79C6">VALUES</span><span style="color:#F8F8F2"> (value1, value2, ..., valueN);</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">VALUES</span><span style="color:#F8F8F2"> (value1, value2, ..., valueN);</span></span>
+<span class="line"></span></code></pre>
 <p>Here, you only provide values for certain columns of the table. Other columns will take on their default values (if any).</p>
 <ol start="3">
 <li><strong>Insert data from another table:</strong></li>
@@ -23,7 +25,8 @@
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">INSERT INTO</span><span style="color:#F8F8F2"> table1 (column1, column2, ... , columnN)</span></span>
 <span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> column1, column2, ... , columnN </span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> table2 </span></span>
-<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> condition;</span></span>
+<span class="line"></span></code></pre>
 <p>In this scenario, <code>table2</code> should already have the data we need and the WHERE clause can be used to select only those rows that satisfy certain conditions.</p>
 <blockquote>
 <p>Note: The crucial point is that your columns in both SELECT and INSERT INTO command must be in same order and their datatypes must be compatible.</p>

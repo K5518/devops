@@ -4,7 +4,8 @@
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>SELECT column_name(s)</span></span>
 <span class="line"><span>FROM table1</span></span>
 <span class="line"><span>LEFT JOIN table2</span></span>
-<span class="line"><span>ON table1.column_name = table2.column_name;</span></span></code></pre>
+<span class="line"><span>ON table1.column_name = table2.column_name;</span></span>
+<span class="line"><span></span></span></code></pre>
 <h2 id="how-sql-left-join-works">How SQL LEFT JOIN Works</h2>
 <p>The <code>LEFT JOIN</code> keyword returns all records from the left table (table1), and the matched records from the right table (table2). The result is <code>NULL</code> from the right side, if there is no match.</p>
 <p><img src="https://www.w3schools.com/sql/img_leftjoin.gif" alt="LEFT JOIN Diagram"></p>
@@ -13,5 +14,6 @@
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#BD93F9"> Orders</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">OrderID</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">Customers</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerName</span></span>
 <span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Orders</span></span>
 <span class="line"><span style="color:#FF79C6">LEFT JOIN</span><span style="color:#F8F8F2"> Customers</span></span>
-<span class="line"><span style="color:#FF79C6">ON</span><span style="color:#BD93F9"> Orders</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerID</span><span style="color:#FF79C6"> =</span><span style="color:#BD93F9"> Customers</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerID</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">ON</span><span style="color:#BD93F9"> Orders</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerID</span><span style="color:#FF79C6"> =</span><span style="color:#BD93F9"> Customers</span><span style="color:#F8F8F2">.</span><span style="color:#BD93F9">CustomerID</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span></code></pre>
 <p>This SQL statement would return all OrderID and the matching CustomerName. If there is no match, the result is <code>NULL</code>.</p>

@@ -6,19 +6,22 @@
 </ol>
 <p>These are created based on only one table column. The syntax for creating a single column index is as follows:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>CREATE INDEX index_name</span></span>
-<span class="line"><span>ON table_name (column1);</span></span></code></pre>
+<span class="line"><span>ON table_name (column1);</span></span>
+<span class="line"><span></span></span></code></pre>
 <ol start="2">
 <li><strong>Unique Indexes:</strong></li>
 </ol>
 <p>They ensure the data contained in a column or a combination of two or more columns is unique. Syntax to create unique index is as follows:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>CREATE UNIQUE INDEX index_name</span></span>
-<span class="line"><span>ON table_name (column1, column2...);</span></span></code></pre>
+<span class="line"><span>ON table_name (column1, column2...);</span></span>
+<span class="line"><span></span></span></code></pre>
 <ol start="3">
 <li><strong>Composite Indexes:</strong></li>
 </ol>
 <p>These are based on two or more columns of a table. It’s important to note that, the order of columns in the definition of an index is important. Syntax to create a Composite Indexes is as follows:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>CREATE INDEX index_name</span></span>
-<span class="line"><span>ON table_name (column1, column2);</span></span></code></pre>
+<span class="line"><span>ON table_name (column1, column2);</span></span>
+<span class="line"><span></span></span></code></pre>
 <ol start="4">
 <li><strong>Implicit Indexes:</strong></li>
 </ol>

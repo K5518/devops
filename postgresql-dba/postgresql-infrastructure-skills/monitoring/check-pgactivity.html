@@ -22,11 +22,14 @@
 <h3 id="usage">Usage</h3>
 <p>To use check_pgactivity, you will first need to install it on your system. You can download the latest version from the <a href="https://github.com/OPMDG/check_pgactivity/releases" rel="noopener noreferrer nofollow" target="_blank">official repository</a>. Ensure that you have the required Perl modules (DBD::Pg and DBI) installed.</p>
 <p>Once installed, you can execute the script to perform different monitoring tasks:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>check_pgactivity -s &#x3C;SERVICE_NAME> -h &#x3C;HOSTNAME> -U &#x3C;USERNAME> -p &#x3C;PORT> -d &#x3C;DB_NAME></span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>check_pgactivity -s &#x3C;SERVICE_NAME> -h &#x3C;HOSTNAME> -U &#x3C;USERNAME> -p &#x3C;PORT> -d &#x3C;DB_NAME></span></span>
+<span class="line"><span></span></span></code></pre>
 <p>Replace the placeholders with appropriate connection details, and choose the desired service check as per your monitoring requirements. For a full list of supported services, refer to the <a href="https://github.com/OPMDG/check_pgactivity/blob/master/doc/check_pgactivity.pod" rel="noopener noreferrer nofollow" target="_blank">official documentation</a>.</p>
 <h3 id="examples">Examples</h3>
 <p>To monitor the number of connections in a PostgreSQL database:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>check_pgactivity -s connections -h localhost -U postgres -p 5432 -d my_database</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>check_pgactivity -s connections -h localhost -U postgres -p 5432 -d my_database</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>To check the oldest transaction:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>check_pgactivity -s oldest_2pc -h localhost -U postgres -p 5432 -d my_database</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>check_pgactivity -s oldest_2pc -h localhost -U postgres -p 5432 -d my_database</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>In conclusion, check_pgactivity is a powerful and versatile tool that can help you effectively monitor your PostgreSQL databases. By tracking various performance metrics and integrating with other monitoring solutions like Nagios, it provides comprehensive insights into your PostgreSQL environment and allows you to fine-tune and optimize its performance.</p>

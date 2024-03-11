@@ -2,10 +2,12 @@
 <p>Awk is a versatile text processing tool that is widely used for various data manipulation, log analysis, and text reporting tasks. It is especially suitable for working with structured text data, such as data in columns. Awk can easily extract specific fields or perform calculations on them, making it an ideal choice for log analysis.</p>
 <h2 id="basic-awk-syntax">Basic Awk Syntax</h2>
 <p>The basic syntax of an Awk command is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">awk</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">pattern { action }</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> filename</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">awk</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">pattern { action }</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> filename</span></span>
+<span class="line"></span></code></pre>
 <p>Here, <code>pattern</code> is a regular expression that is matched against the input lines, and <code>action</code> is a series of commands that are executed for each line matching the pattern. If no pattern is specified, the action is applied to all input lines. If no action is specified, the default action is to print the entire line.</p>
 <p>An example of a simple Awk command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">awk</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">{ print $1 }</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> filename</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">awk</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">{ print $1 }</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> filename</span></span>
+<span class="line"></span></code></pre>
 <p>This command will print the first field (column) of each line in the file.</p>
 <h2 id="key-features-of-awk">Key Features of Awk</h2>
 <ul>
@@ -33,15 +35,18 @@
 <ul>
 <li>
 <p>Count the number of lines in a log file:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">awk</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">END { print NR }</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> logfile</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">awk</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">END { print NR }</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> logfile</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p>Extract the 5th field from a log file and print the unique values and their occurrence count:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">awk</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">{ count[$5]++ } END { for (value in count) print value, count[value] }</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> logfile</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">awk</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">{ count[$5]++ } END { for (value in count) print value, count[value] }</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> logfile</span></span>
+<span class="line"></span></code></pre>
 </li>
 <li>
 <p>Calculate the average of the 3rd field in a log file:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">awk</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">{ sum += $3; n++ } END { print sum/n }</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> logfile</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">awk</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">{ sum += $3; n++ } END { print sum/n }</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C"> logfile</span></span>
+<span class="line"></span></code></pre>
 </li>
 </ul>
 <p>Using Awk can greatly simplify log analysis tasks, making it easier to extract valuable insights from your PostgreSQL logs. Keep exploring Awk commands and their functionality to uncover more possibilities in log analysis.</p>

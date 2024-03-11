@@ -8,7 +8,8 @@
 <span class="line"><span style="color:#F8F8F2">  console.</span><span style="color:#50FA7B">log</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Running on iOS</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"><span style="color:#F8F8F2">} </span><span style="color:#FF79C6">else</span><span style="color:#FF79C6"> if</span><span style="color:#F8F8F2"> (Platform.</span><span style="color:#BD93F9">OS</span><span style="color:#FF79C6"> ===</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">android</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">) {</span></span>
 <span class="line"><span style="color:#F8F8F2">  console.</span><span style="color:#50FA7B">log</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">Running on Android</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>For a more elegant way to define platform-specific properties, React Native provides the <code>Platform.select</code> method. This method takes an object with keys <code>'ios'</code> and <code>'android'</code>, representing the respective platforms, and returns the value associated with the current platform.</p>
 <p>Here’s an example of <code>Platform.select</code> in use:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { Platform, StyleSheet } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">react-native</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
@@ -24,6 +25,7 @@
 <span class="line"><span style="color:#F8F8F2">      },</span></span>
 <span class="line"><span style="color:#F8F8F2">    }),</span></span>
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
-<span class="line"><span style="color:#F8F8F2">});</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">});</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, the container’s background color will be red on iOS and blue on Android.</p>
 <p>With the Platform module, you can easily create platform-specific code, enabling you to have the best user experience for each platform. Just remember to import the module and use the provided properties and methods.</p>

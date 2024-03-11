@@ -8,7 +8,8 @@
 <span class="line"><span style="color:#F8F8F2">    }</span></span>
 <span class="line"><span style="color:#F8F8F2">}</span></span>
 <span class="line"><span style="color:#6272A4">// to use the function</span></span>
-<span class="line"><span style="color:#F8F8F2">MyNamespace</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">aFunction</span><span style="color:#F8F8F2">();</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">MyNamespace</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">aFunction</span><span style="color:#F8F8F2">();</span></span>
+<span class="line"></span></code></pre>
 <h2 id="include-guards">Include Guards</h2>
 <p>Include guards are a tool for preventing multiple inclusions of a header file in your project. They consist of preprocessor directives that conditionally include the header file only once, even if it’s included in multiple places.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#ifndef</span><span style="color:#50FA7B"> MY_HEADER_FILE_H</span></span>
@@ -16,7 +17,8 @@
 <span class="line"></span>
 <span class="line"><span style="color:#6272A4">// Your code here</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#FF79C6">#endif</span><span style="color:#6272A4"> // MY_HEADER_FILE_H</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">#endif</span><span style="color:#6272A4"> // MY_HEADER_FILE_H</span></span>
+<span class="line"></span></code></pre>
 <h2 id="header-and-source-files">Header and Source Files</h2>
 <p>Separating your implementation and declarations into header (<em>.h) and source (</em>.cpp) files is a key aspect of structuring your codebase in C++. Header files usually contain class and function declarations, while source files contain their definitions.</p>
 <p>// MyClass.h</p>
@@ -30,7 +32,8 @@
 <span class="line"><span style="color:#FF79C6">    int</span><span style="color:#50FA7B"> myMethod</span><span style="color:#F8F8F2">();</span></span>
 <span class="line"><span style="color:#F8F8F2">};</span></span>
 <span class="line"><span style="color:#F8F8F2"> </span></span>
-<span class="line"><span style="color:#FF79C6">#endif</span><span style="color:#6272A4"> // MY_CLASS_H</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">#endif</span><span style="color:#6272A4"> // MY_CLASS_H</span></span>
+<span class="line"></span></code></pre>
 <p>// MyClass.cpp</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">#include</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">MyClass.h</span><span style="color:#E9F284">"</span></span>
 <span class="line"></span>
@@ -40,6 +43,7 @@
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">int</span><span style="color:#F8F8F2"> MyClass</span><span style="color:#FF79C6">::</span><span style="color:#50FA7B">myMethod</span><span style="color:#F8F8F2">() {</span></span>
 <span class="line"><span style="color:#6272A4">    // method implementation</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="code-formatting">Code Formatting</h2>
 <p>Consistent code formatting and indentation play a crucial role in structuring your codebase, making it easier to read and understand for both you and other developers. A style guide such as the <a href="https://google.github.io/styleguide/cppguide.html" rel="noopener noreferrer nofollow" target="_blank">Google C++ Style Guide</a> can help you maintain consistent formatting throughout your project.</p>

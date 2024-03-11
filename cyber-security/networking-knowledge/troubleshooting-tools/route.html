@@ -2,7 +2,8 @@
 <p><code>route</code> is a command-line utility that allows you to view and manipulate the IP routing table in your computer. The primary function of the routing table is to determine the best path for sending IP packets to their destination. Properly managing this table is crucial for network administrators, as it plays a direct role in your computer’s ability to communicate with other devices on the network effectively.</p>
 <h2 id="using-the-route-command">Using the Route Command</h2>
 <p>The syntax for the route command is as follows:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>route [COMMAND] [OPTIONS]</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>route [COMMAND] [OPTIONS]</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>Here are some basic commands that you can use with <code>route</code>:</p>
 <ul>
 <li><strong>route add</strong> - Adds a new route to the table</li>
@@ -16,22 +17,26 @@
 <ul>
 <li><strong>View the routing table</strong></li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>route -n</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>route -n</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>This command will display the current routing table in a numerical format, which includes the destination, gateway, and interface.</p>
 <ul>
 <li><strong>Add a new route</strong></li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>sudo route add -net 192.168.2.0 netmask 255.255.255.0 gw 192.168.1.1</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>sudo route add -net 192.168.2.0 netmask 255.255.255.0 gw 192.168.1.1</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>This command adds a new route to the destination network 192.168.2.0 with a netmask of 255.255.255.0 and a gateway of 192.168.1.1.</p>
 <ul>
 <li><strong>Delete a route</strong></li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>sudo route delete -net 192.168.2.0 netmask 255.255.255.0</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>sudo route delete -net 192.168.2.0 netmask 255.255.255.0</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>This command removes the route to the destination network 192.168.2.0 with a netmask of 255.255.255.0.</p>
 <ul>
 <li><strong>Change an existing route</strong></li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>sudo route change -net 192.168.2.0 netmask 255.255.255.0 gw 192.168.1.2</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>sudo route change -net 192.168.2.0 netmask 255.255.255.0 gw 192.168.1.2</span></span>
+<span class="line"><span></span></span></code></pre>
 <p>This command modifies the existing route to the destination network 192.168.2.0 with a new gateway of 192.168.1.2.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>The <code>route</code> command is an essential tool for network administrators and anyone involved in cyber security. Understanding and being able to manipulate the IP routing table can help ensure that your computer is able to communicate effectively with other devices on the network, thus contributing to a more secure and efficient network environment.</p>

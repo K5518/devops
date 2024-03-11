@@ -9,7 +9,8 @@
 <span class="line"><span style="color:#FF79C6">        ...</span></span>
 <span class="line"><span style="color:#F8F8F2">      }</span></span>
 <span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#F8F8F2">])</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">])</span></span>
+<span class="line"></span></code></pre>
 <p>The value <code>1</code> or <code>0</code> in the syntax represents whether the field should be included or excluded, respectively.</p>
 <p>Let’s assume we have the following documents in a <code>students</code> collection:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">[</span></span>
@@ -20,7 +21,8 @@
 <span class="line"><span style="color:#8BE9FE">    "</span><span style="color:#8BE9FD">age</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 23</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#8BE9FE">    "</span><span style="color:#8BE9FD">subjects</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> [</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">Chemistry</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">Biology</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">]</span></span>
 <span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#F8F8F2">]</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">]</span></span>
+<span class="line"></span></code></pre>
 <p>We can use the <code>$project</code> operator to include only the name and age fields, excluding the subjects:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.students.</span><span style="color:#50FA7B">aggregate</span><span style="color:#F8F8F2">([</span></span>
 <span class="line"><span style="color:#F8F8F2">  {</span></span>
@@ -30,12 +32,14 @@
 <span class="line"><span style="color:#F8F8F2">      age</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    },</span></span>
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
-<span class="line"><span style="color:#F8F8F2">]);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">]);</span></span>
+<span class="line"></span></code></pre>
 <p>Returned documents:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">[</span></span>
 <span class="line"><span style="color:#F8F8F2">  { </span><span style="color:#8BE9FE">"</span><span style="color:#8BE9FD">name</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">John Doe</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#8BE9FE">"</span><span style="color:#8BE9FD">age</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 20</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { </span><span style="color:#8BE9FE">"</span><span style="color:#8BE9FD">name</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Jane Smith</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#8BE9FE">"</span><span style="color:#8BE9FD">age</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 23</span><span style="color:#F8F8F2"> }</span></span>
-<span class="line"><span style="color:#F8F8F2">]</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">]</span></span>
+<span class="line"></span></code></pre>
 <p>Notice that the resulting documents do not include the “_id” and “subjects” fields.</p>
 <p>In the example below, we’ll exclude the “subjects” field:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.students.</span><span style="color:#50FA7B">aggregate</span><span style="color:#F8F8F2">([</span></span>
@@ -44,10 +48,12 @@
 <span class="line"><span style="color:#F8F8F2">      subjects</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#F8F8F2">    },</span></span>
 <span class="line"><span style="color:#F8F8F2">  },</span></span>
-<span class="line"><span style="color:#F8F8F2">]);</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">]);</span></span>
+<span class="line"></span></code></pre>
 <p>Returned documents:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">[</span></span>
 <span class="line"><span style="color:#F8F8F2">  { </span><span style="color:#8BE9FE">"</span><span style="color:#8BE9FD">_id</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">, </span><span style="color:#8BE9FE">"</span><span style="color:#8BE9FD">name</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">John Doe</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#8BE9FE">"</span><span style="color:#8BE9FD">age</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 20</span><span style="color:#F8F8F2"> },</span></span>
 <span class="line"><span style="color:#F8F8F2">  { </span><span style="color:#8BE9FE">"</span><span style="color:#8BE9FD">_id</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 2</span><span style="color:#F8F8F2">, </span><span style="color:#8BE9FE">"</span><span style="color:#8BE9FD">name</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Jane Smith</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, </span><span style="color:#8BE9FE">"</span><span style="color:#8BE9FD">age</span><span style="color:#8BE9FE">"</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 23</span><span style="color:#F8F8F2"> }</span></span>
-<span class="line"><span style="color:#F8F8F2">]</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">]</span></span>
+<span class="line"></span></code></pre>
 <p>Now that you have a basic understanding of the <code>$project</code> operator, you can try it out with various scenarios to reshape your MongoDB documents according to your needs. This operator can also be used in conjunction with other operators to perform complex data manipulations within the aggregation pipeline.</p>

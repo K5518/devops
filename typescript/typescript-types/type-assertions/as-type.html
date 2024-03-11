@@ -4,7 +4,8 @@
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> someValue</span><span style="color:#FF79C6">:</span><span style="color:#8BE9FD;font-style:italic"> any</span><span style="color:#FF79C6"> =</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">Hello, TypeScript!</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">;</span></span>
 <span class="line"><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> strLength</span><span style="color:#FF79C6">:</span><span style="color:#8BE9FD;font-style:italic"> number</span><span style="color:#FF79C6"> =</span><span style="color:#F8F8F2"> (someValue </span><span style="color:#FF79C6">as</span><span style="color:#8BE9FD;font-style:italic"> string</span><span style="color:#F8F8F2">).length;</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F8F8F2">console.</span><span style="color:#50FA7B">log</span><span style="color:#F8F8F2">(strLength); </span><span style="color:#6272A4">// Outputs: 18</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">console.</span><span style="color:#50FA7B">log</span><span style="color:#F8F8F2">(strLength); </span><span style="color:#6272A4">// Outputs: 18</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, someValue is initially of type any, and we use the as operator to assert that it is of type string before accessing its length property.</p>
 <p>It’s important to note that type assertions do not change the runtime type of a value, and do not cause any type of conversion. They are a compile-time construct used for static type checking in TypeScript.</p>
 <ul>

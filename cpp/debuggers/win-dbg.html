@@ -6,7 +6,8 @@
 <p>WinDbg relies on symbol files (*.pdb) to provide more useful information about a program’s internal structures, functions, and variables. To load symbols properly, you may need to configure the symbol path:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span>!sym noisy</span></span>
 <span class="line"><span>.sympath SRV*C:\symbols*http://msdl.microsoft.com/download/symbols</span></span>
-<span class="line"><span>.reload /f</span></span></code></pre>
+<span class="line"><span>.reload /f</span></span>
+<span class="line"><span></span></span></code></pre>
 <h2 id="opening-executables-and-crash-dumps">Opening Executables and Crash Dumps</h2>
 <p>To debug an executable using WinDbg, go to <code>File > Open Executable...</code>, then locate and open the target program. To analyze a crash dump, use <code>File > Open Crash Dump...</code> instead.</p>
 <h2 id="basic-commands">Basic Commands</h2>

@@ -12,7 +12,8 @@
 <span class="line"><span style="color:#E9F284">    "</span><span style="color:#F1FA8C">name</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">John Doe</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#E9F284">    "</span><span style="color:#F1FA8C">city</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">New York</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
 <span class="line"><span style="color:#E9F284">    "</span><span style="color:#F1FA8C">description</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">: </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">A software developer working at XYZ company.</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, <code>name</code>, <code>city</code>, and <code>description</code> are keys with string values: <code>"John Doe"</code>, <code>"New York"</code>, and <code>"A software developer working at XYZ company."</code>.</p>
 <p><strong>Queries with strings:</strong></p>
 <p>You can also perform various queries using strings in MongoDB. Some common query operators used for string manipulation are:</p>
@@ -21,6 +22,7 @@
 <li><code>$text</code>: Perform a text search on the specified fields in a collection.</li>
 </ul>
 <p>An example of a query with <code>$regex</code>:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ name</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $regex</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">J.*</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> } });</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#F8F8F2">db.collection.</span><span style="color:#50FA7B">find</span><span style="color:#F8F8F2">({ name</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> { $regex</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">J.*</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> } });</span></span>
+<span class="line"></span></code></pre>
 <p>This query searches for all documents in the collection with a <code>name</code> field starting with the letter <code>"J"</code>.</p>
 <p>In summary, strings are an essential data type in MongoDB that can store a wide range of texts and support multiple languages with UTF-8 encoding. They can be used to create flexible documents and perform various queries.</p>

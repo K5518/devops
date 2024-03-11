@@ -2,24 +2,30 @@
 <p>Volume mounts are a way to map a folder or file on the host system to a folder or file inside a container. This allows the data to persist outside the container even when the container is removed. Additionally, multiple containers can share the same volume, making data sharing between containers easy.</p>
 <h2 id="creating-a-volume">Creating a Volume</h2>
 <p>To create a volume in Docker, you need to run the following command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> volume</span><span style="color:#F1FA8C"> create</span><span style="color:#F1FA8C"> my-volume</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> volume</span><span style="color:#F1FA8C"> create</span><span style="color:#F1FA8C"> my-volume</span></span>
+<span class="line"></span></code></pre>
 <p>This command will create a volume named <code>my-volume</code>. You can inspect the details of the created volume using the command:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> volume</span><span style="color:#F1FA8C"> inspect</span><span style="color:#F1FA8C"> my-volume</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> volume</span><span style="color:#F1FA8C"> inspect</span><span style="color:#F1FA8C"> my-volume</span></span>
+<span class="line"></span></code></pre>
 <h2 id="mounting-a-volume-in-a-container">Mounting a Volume in a Container</h2>
 <p>To mount a volume to a container, you need to use the <code>-v</code> or <code>--mount</code> flag while running the container. Here’s an example:</p>
 <p>Using <code>-v</code> flag:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> -v</span><span style="color:#F1FA8C"> my-volume:/data</span><span style="color:#F1FA8C"> your-image</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> -v</span><span style="color:#F1FA8C"> my-volume:/data</span><span style="color:#F1FA8C"> your-image</span></span>
+<span class="line"></span></code></pre>
 <p>Using <code>--mount</code> flag:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> --mount</span><span style="color:#F1FA8C"> source=my-volume,destination=/data</span><span style="color:#F1FA8C"> your-image</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> --mount</span><span style="color:#F1FA8C"> source=my-volume,destination=/data</span><span style="color:#F1FA8C"> your-image</span></span>
+<span class="line"></span></code></pre>
 <p>In both examples above, <code>my-volume</code> is the name of the volume we created earlier, and <code>/data</code> is the path inside the container where the volume will be mounted.</p>
 <h2 id="sharing-volumes-between-containers">Sharing Volumes Between Containers</h2>
 <p>To share a volume between multiple containers, simply mount the same volume on multiple containers. Here’s how to share <code>my-volume</code> between two containers running different images:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> -v</span><span style="color:#F1FA8C"> my-volume:/data1</span><span style="color:#F1FA8C"> image1</span></span>
-<span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> -v</span><span style="color:#F1FA8C"> my-volume:/data2</span><span style="color:#F1FA8C"> image2</span></span></code></pre>
+<span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> -v</span><span style="color:#F1FA8C"> my-volume:/data2</span><span style="color:#F1FA8C"> image2</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, <code>image1</code> and <code>image2</code> would have access to the same data stored in <code>my-volume</code>.</p>
 <h2 id="removing-a-volume">Removing a Volume</h2>
 <p>To remove a volume, you can use the <code>docker volume rm</code> command followed by the volume name:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> volume</span><span style="color:#F1FA8C"> rm</span><span style="color:#F1FA8C"> my-volume</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> volume</span><span style="color:#F1FA8C"> rm</span><span style="color:#F1FA8C"> my-volume</span></span>
+<span class="line"></span></code></pre>
 <p>That’s it! Now you have a basic understanding of volume mounts in Docker. You can use them to persist and share data between your containers efficiently and securely.</p>
 <ul>
 <li><a href="https://docs.docker.com/storage/volumes/" rel="noopener noreferrer nofollow" target="_blank">Docker Volumes</a>.</li>

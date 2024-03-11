@@ -2,14 +2,16 @@
 <p>Forward declaration is a way of declaring a symbol (class, function, or variable) before defining it in the code. It helps the compiler understand the type, size, and existence of the symbol. This declaration is particularly useful when we have cyclic dependencies or to reduce compilation time by avoiding unnecessary header inclusions in the source file.</p>
 <h2 id="class-forward-declaration">Class Forward Declaration</h2>
 <p>To use a class type before it is defined, you can declare the class without defining its members, like this:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> ClassA</span><span style="color:#F8F8F2">;</span><span style="color:#6272A4"> // forward declaration</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> ClassA</span><span style="color:#F8F8F2">;</span><span style="color:#6272A4"> // forward declaration</span></span>
+<span class="line"></span></code></pre>
 <p>You can then use pointers or references to the class in your code before defining the class itself:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">void</span><span style="color:#50FA7B"> do_something</span><span style="color:#F8F8F2"> (</span><span style="color:#8BE9FD;font-style:italic">ClassA</span><span style="color:#FF79C6">&#x26;</span><span style="color:#FFB86C;font-style:italic"> obj</span><span style="color:#F8F8F2">);</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">class</span><span style="color:#8BE9FD"> ClassB</span><span style="color:#F8F8F2"> {</span></span>
 <span class="line"><span style="color:#FF79C6">public:</span></span>
 <span class="line"><span style="color:#FF79C6">    void</span><span style="color:#50FA7B"> another_function</span><span style="color:#F8F8F2">(</span><span style="color:#8BE9FD;font-style:italic">ClassA</span><span style="color:#FF79C6">&#x26;</span><span style="color:#FFB86C;font-style:italic"> obj</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">};</span></span>
+<span class="line"></span></code></pre>
 <p>However, if you try to make an object of <code>ClassA</code> or call its member functions without defining the class, you will get a compilation error.</p>
 <h2 id="function-forward-declaration">Function Forward Declaration</h2>
 <p>Functions must be declared before using them, and a forward declaration can be used to declare a function without defining it:</p>
@@ -22,7 +24,8 @@
 <span class="line"></span>
 <span class="line"><span style="color:#FF79C6">int</span><span style="color:#50FA7B"> add</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> a</span><span style="color:#F8F8F2">, </span><span style="color:#FF79C6">int</span><span style="color:#FFB86C;font-style:italic"> b</span><span style="color:#F8F8F2">) {</span></span>
 <span class="line"><span style="color:#FF79C6">    return</span><span style="color:#F8F8F2"> a </span><span style="color:#FF79C6">+</span><span style="color:#F8F8F2"> b;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre>
 <h2 id="enum-and-typedef-forward-declaration">Enum and Typedef Forward Declaration</h2>
 <p>For <code>enum</code> and <code>typedef</code>, it is not possible to forward declare because they don’t have separate declaration and definition stages.</p>
 <p>Keep in mind that forward declarations should be used cautiously, as they can make the code more difficult to understand.</p>

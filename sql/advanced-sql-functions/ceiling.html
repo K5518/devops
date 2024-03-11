@@ -1,11 +1,13 @@
 <div data-github-url="https://github.com/kamranahmedse/developer-roadmap/tree/master/src/data/roadmaps/sql/content/108-advanced-sql-functions/102-ceiling.md"></div> <h1 id="ceiling">CEILING</h1>
 <p><code>CEILING</code> is an advanced SQL function that is used to round up values. The function takes a single argument, which is a numeric or decimal number, and returns the smallest integer that is greater than or equal to the supplied number.</p>
 <p>The syntax for using the <code>CEILING</code> function is:</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">CEILING</span><span style="color:#F8F8F2"> (numeric_expression)</span></span></code></pre>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#8BE9FD">CEILING</span><span style="color:#F8F8F2"> (numeric_expression)</span></span>
+<span class="line"></span></code></pre>
 <p>The <code>numeric_expression</code> is an expression of the exact numeric or approximate numeric data type categories, or types that can be implicitly converted to one of these categories.</p>
 <p>For example, you have a table called ‘Products’ with a ‘Price’ column. Here’s how you can use the <code>CEILING</code> function to round up all the prices to the nearest whole number:</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#F8F8F2"> ProductName, Price, </span><span style="color:#8BE9FD">CEILING</span><span style="color:#F8F8F2"> (Price) </span><span style="color:#FF79C6">AS</span><span style="color:#F8F8F2"> RoundedUpPrice</span></span>
-<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Products;</span></span></code></pre>
+<span class="line"><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> Products;</span></span>
+<span class="line"></span></code></pre>
 <p>In this example, if the original price was $10.25, the <code>RoundedUpPrice</code> will be $11. This is because the <code>CEILING</code> function rounds up the ‘Price’ value to the nearest whole number.</p>
 <p>It’s essential to remember that <code>CEILING</code> always rounds up. So even if the Price is $10.01, the RoundedUpPrice according to <code>CEILING</code> would still be $11. If you want to round to the nearest whole number, you might want to use the <code>ROUND</code> function instead.</p>
 <p>Another important note is that the return type of <code>CEILING</code> will be of the same type as the provided numeric expression. For instance, if you supply a numeric expression of type decimal, the return type will also be of type decimal.</p>
