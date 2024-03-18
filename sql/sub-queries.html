@@ -27,7 +27,7 @@
 <span class="line"></span></code></pre>
 </li>
 <li>
-<p><strong>Row subquery</strong>: It returns single row of two or more values.</p>
+<p><strong>Row subquery</strong>: It returns a single row or multiple rows of two or more values.</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#FF79C6">SELECT</span><span style="color:#FF79C6"> *</span><span style="color:#FF79C6"> FROM</span><span style="color:#F8F8F2"> student </span></span>
 <span class="line"><span style="color:#FF79C6">WHERE</span><span style="color:#F8F8F2"> (roll_id, age)</span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">SELECT</span><span style="color:#8BE9FD"> MIN</span><span style="color:#F8F8F2">(roll_id),</span><span style="color:#8BE9FD">MIN</span><span style="color:#F8F8F2">(age) </span><span style="color:#FF79C6">FROM</span><span style="color:#F8F8F2"> student);</span></span>
 <span class="line"></span></code></pre>
