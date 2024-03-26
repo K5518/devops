@@ -28,12 +28,12 @@
 <ul>
 <li>Run an Nginx web server and publish the port 80 on the host:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> --name=my-nginx</span><span style="color:#BD93F9"> -p</span><span style="color:#BD93F9"> 80</span><span style="color:#F1FA8C">:80</span><span style="color:#F1FA8C"> nginx</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> --name=my-nginx</span><span style="color:#BD93F9"> -p</span><span style="color:#F1FA8C"> 80:80</span><span style="color:#F1FA8C"> nginx</span></span>
 <span class="line"></span></code></pre>
 <ul>
 <li>Run a MySQL container with custom environment variables for configuring the database:</li>
 </ul>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> --name=my-mysql</span><span style="color:#BD93F9"> -e</span><span style="color:#F1FA8C"> MYSQL_ROOT_PASSWORD=secret</span><span style="color:#BD93F9"> -e</span><span style="color:#F1FA8C"> MYSQL_DATABASE=mydb</span><span style="color:#BD93F9"> -p</span><span style="color:#BD93F9"> 3306</span><span style="color:#F1FA8C">:3306</span><span style="color:#F1FA8C"> mysql</span></span>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -d</span><span style="color:#BD93F9"> --name=my-mysql</span><span style="color:#BD93F9"> -e</span><span style="color:#F1FA8C"> MYSQL_ROOT_PASSWORD=secret</span><span style="color:#BD93F9"> -e</span><span style="color:#F1FA8C"> MYSQL_DATABASE=mydb</span><span style="color:#BD93F9"> -p</span><span style="color:#F1FA8C"> 3306:3306</span><span style="color:#F1FA8C"> mysql</span></span>
 <span class="line"></span></code></pre>
 <ul>
 <li>Run a container with a bind-mounted volume:</li>
