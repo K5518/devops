@@ -16,11 +16,17 @@ import { showLoginPopup } from '../../lib/popup';
 import { replaceChildren } from '../../lib/dom.ts';
 import {setUrlParams} from "../../lib/browser.ts";
 
+type Topic = {
+  element: HTMLElement,
+  isSubGroup: boolean
+}
+
 export class Renderer {
   resourceId: string;
   resourceType: ResourceType | string;
   jsonUrl: string;
   loaderHTML: string | null;
+  selectedTopic: Topic
 
   containerId: string;
   loaderId: string;
@@ -30,6 +36,10 @@ export class Renderer {
     this.resourceType = '';
     this.jsonUrl = '';
     this.loaderHTML = null;
+    this.selectedTopic = {
+      element: document.createElement('div'),
+      isSubGroup: false
+    }
 
     this.containerId = 'resource-svg-wrap';
     this.loaderId = 'resource-loader';
@@ -207,6 +217,13 @@ export class Renderer {
   handleSvgClick(e: any) {
     const targetGroup = e.target?.closest('g') || {};
     const groupId = targetGroup.dataset ? targetGroup.dataset.groupId : '';
+
+    if(this.selectedTopic.isSubGroup) {
+      this.selectedTopic.element.setAttribute("fill", "rgb(255,229,153)")
+    } else {
+      this.selectedTopic.element.setAttribute("fill", "rgb(255,255,0)")
+    }
+
     if (!groupId) {
       return;
     }
@@ -261,6 +278,11 @@ export class Renderer {
 
     const isCurrentStatusLearning = targetGroup.classList.contains('learning');
     const isCurrentStatusSkipped = targetGroup.classList.contains('skipped');
+
+    const rect = targetGroup.firstElementChild;
+    this.selectedTopic.element = rect;
+    this.selectedTopic.isSubGroup = targetGroup.getAttribute("data-group-id").includes(":") ? true : false;
+    rect.setAttribute("fill", "rgb(255,155,0)")
 
     if (e.shiftKey) {
       e.preventDefault();
