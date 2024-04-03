@@ -22,13 +22,13 @@
 
 ![](https://i.imgur.com/waxVImv.png)
 
-Roadmaps are now interactive, you can click the nodes to read more about the topics.
+### Roadmaps are now interactive, you can click the nodes to read more about the topics.
 
 ### [View all Roadmaps](https://roadmap.sh) &nbsp;&middot;&nbsp; [Best Practices](https://roadmap.sh/best-practices) &nbsp;&middot;&nbsp; [Questions](https://roadmap.sh/questions)
 
 ![](https://i.imgur.com/waxVImv.png)
 
-Here is the list of available roadmaps with more being actively worked upon.
+## Here is the list of available roadmaps with more being actively worked upon.
 
 > Have a look at the [get started](https://roadmap.sh/get-started) page that might help you pick up a path.
 
